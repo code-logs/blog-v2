@@ -1,0 +1,15 @@
+.label {
+  display: inline-flex;
+}
+
+.icon {
+  color: var(--color-dark-gray);
+}
+
+.input {
+  border: none;
+
+  outline: none;
+  padding: var(--narrow-spacing);
+  font-size: 0.8em;
+}

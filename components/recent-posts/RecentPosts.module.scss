@@ -1,0 +1,5 @@
+.container {
+  :last-child {
+    margin-bottom: var(--common-spacing);
+  }
+}
