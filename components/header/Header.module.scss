@@ -1,0 +1,44 @@
+.header {
+  display: grid;
+
+  grid-template-areas: '. title socialIcons' '. navBar .';
+  grid-template-columns: auto 1fr auto;
+
+  padding-bottom: var(--wide-spacing);
+  border-bottom: 1px solid var(--color-light-gray);
+
+  position: sticky;
+  top: 0;
+  background-color: var(--header-container-color, white);
+  z-index: 1;
+}
+
+.title {
+  grid-area: title;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
+
+.socialIcons {
+  grid-area: socialIcons;
+  padding: var(--common-spacing);
+  display: flex;
+  gap: var(--common-spacing);
+  margin: auto;
+
+  li {
+    margin: auto 0;
+  }
+
+  svg {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 800px) {
+  .header {
+    grid-template-areas: 'title' 'socialIcons' 'navBar';
+    grid-template-columns: 1fr;
+  }
+}

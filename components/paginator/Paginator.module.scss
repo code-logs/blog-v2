@@ -1,0 +1,39 @@
+.container {
+  display: grid;
+
+  ul {
+    margin: auto;
+    padding: 0;
+    display: inline-flex;
+    gap: var(--wide-spacing);
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    height: 30px;
+    display: inline-grid;
+  }
+
+  svg {
+    margin: auto;
+    font-size: 1.5em;
+    color: var(--color-light-gray);
+  }
+
+  li {
+    margin: auto;
+    font-size: 1em;
+
+    > a {
+      color: var(--color-light-gray);
+    }
+
+    .currentPage {
+      background-color: var(--color-blue);
+      padding: var(--narrow-spacing) var(--common-spacing);
+      border-radius: 4px;
+      color: white;
+    }
+  }
+}
