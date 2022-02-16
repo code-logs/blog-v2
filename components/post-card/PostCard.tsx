@@ -25,8 +25,11 @@ const PostCard = ({ post }: PostCardProps) => {
 
   return (
     <article className={styles.card}>
-      <a href={`${blogConfig.baseURL}/${PostUtil.normalizeTitle(post.title)}`}>
-        <h3 className={styles.title}>{post.title}</h3>
+      <a
+        className={styles.title}
+        href={`${blogConfig.baseURL}/${PostUtil.normalizeTitle(post.title)}`}
+      >
+        <h3>{post.title}</h3>
       </a>
 
       <span className={styles.category}>{post.category}</span>
@@ -35,8 +38,11 @@ const PostCard = ({ post }: PostCardProps) => {
         {formatHumanReadableDate(post.publishedAt)}
       </span>
 
-      <a href={`${blogConfig.baseURL}/${PostUtil.normalizeTitle(post.title)}`}>
-        <p className={styles.description}>{post.description}</p>
+      <a
+        className={styles.description}
+        href={`${blogConfig.baseURL}/${PostUtil.normalizeTitle(post.title)}`}
+      >
+        <p>{post.description}</p>
       </a>
 
       {post.thumbnailName && (
@@ -52,6 +58,7 @@ const PostCard = ({ post }: PostCardProps) => {
               alt={post.description}
               width="448"
               height="315"
+              priority
             />
           </a>
         </div>

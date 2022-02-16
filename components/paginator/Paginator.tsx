@@ -13,6 +13,7 @@ export interface PaginatorProps {
   page: number
   lastPage: number
   displayCount?: number
+  query?: string
   enableQuickPaging?: boolean
 }
 
@@ -20,6 +21,7 @@ const Paginator = ({
   page,
   lastPage,
   displayCount = 5,
+  query,
   enableQuickPaging = false,
 }: PaginatorProps) => {
   const [pageList, setPageList] = useState<number[]>([])
@@ -40,12 +42,21 @@ const Paginator = ({
     setPageList([...prevPages, page, ...nextPages])
   }, [page, lastPage, displayCount])
 
+  useEffect(() => {}, [])
+
+  const buildURL = (page: number) => {
+    let url = `${blogConfig.baseURL}/posts/${page}`
+    if (query) url += `?query=${query}`
+
+    return url
+  }
+
   return (
     <div className={styles.container}>
       <ul>
         {page > 1 && (
           <li>
-            <a href={`${blogConfig.baseURL}/posts/${page - 1}`}>
+            <a href={buildURL(page - 1)}>
               <ChevronLeftRounded />
             </a>
           </li>
@@ -54,7 +65,7 @@ const Paginator = ({
         {page > 1 && !pageList.includes(1) && (
           <>
             <li>
-              <a href={`${blogConfig.baseURL}/posts/1`}>{1}</a>
+              <a href={buildURL(1)}>{1}</a>
             </li>
             <MoreHorizRounded />
           </>
@@ -64,7 +75,7 @@ const Paginator = ({
           <li key={pageNum}>
             <a
               className={page === pageNum ? styles.currentPage : ''}
-              href={`${blogConfig.baseURL}/posts/${pageNum}`}
+              href={buildURL(pageNum)}
             >
               {pageNum}
             </a>
@@ -75,13 +86,13 @@ const Paginator = ({
           <>
             <MoreHorizRounded />
             <li>
-              <a href={`${blogConfig.baseURL}/posts/${lastPage}`}>{lastPage}</a>
+              <a href={buildURL(lastPage)}>{lastPage}</a>
             </li>
           </>
         )}
         {page < lastPage && (
           <li>
-            <a href={`${blogConfig.baseURL}/posts/${page + 1}`}>
+            <a href={buildURL(page + 1)}>
               <ChevronRightRounded />
             </a>
           </li>

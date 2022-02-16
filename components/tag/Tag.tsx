@@ -8,7 +8,7 @@ export interface TagProps {
 
 const Tag = (props: TagProps) => {
   return (
-    <a href={`${blogConfig.baseURL}/posts?query=${encodeURI(props.tag)}`}>
+    <a href={`${blogConfig.baseURL}/posts/1?query=${encodeURI(props.tag)}`}>
       <span className={styles.tag}>
         {props.tag} {props.count && props.count}
       </span>

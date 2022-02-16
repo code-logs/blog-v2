@@ -12,7 +12,9 @@ class PostDatabase extends Database<Post> {
   }
 
   findByTitle(title: string) {
-    return this.dataset.find((post) => PostUtil.normalizeTitle(post.title) === title)
+    return this.dataset.find(
+      (post) => PostUtil.normalizeTitle(post.title) === title
+    )
   }
 
   hasNewByCategory(category: string) {
@@ -36,7 +38,7 @@ class PostDatabase extends Database<Post> {
     return this.dataset.filter((post) => post.tags.includes(tag)).length
   }
 
-  query(condition: string, limit?: number) {
+  query(condition: string, limit?: number, skip: number = 0) {
     const normalizedConditions = condition
       .split(/\s/)
       .map((cond) => cond.toLowerCase())
@@ -52,7 +54,7 @@ class PostDatabase extends Database<Post> {
       })
     })
 
-    if (limit !== undefined) return foundPosts.slice(0, limit)
+    if (limit !== undefined) return foundPosts.slice(skip, skip + limit)
     return foundPosts
   }
 }

@@ -1,4 +1,5 @@
 import { GetStaticProps, NextPage } from 'next'
+import { useEffect, useState } from 'react'
 
 import Paginator from '../../components/paginator/Paginator'
 import PathUtil from '../../utils/PathUtil'
@@ -40,27 +41,53 @@ export async function getStaticProps(context: { params: { page: string } }) {
 const Posts: NextPage<{ page: number; lastPage: number; posts: Post[] }> = (
   props
 ) => {
-  // const router = useRouter()
-  // const url = new URL(PathUtil.absolutePath(router.asPath))
+  const { page } = props
+  const [lastPage, setLastPage] = useState(props.lastPage)
+  const [posts, setPosts] = useState(props.posts)
+  const [query, setQuery] = useState<string>()
+  const router = useRouter()
 
-  // if (url.search) {
-  //   const searchParams = new URLSearchParams(url.search)
-  //   const query = searchParams.get('query')
-  //   if (query) posts = postsDatabase.query(query)
-  // }
+  useEffect(() => {
+    const url = new URL(PathUtil.absolutePath(router.asPath))
+
+    if (url.search) {
+      const searchParams = new URLSearchParams(url.search)
+      const query = searchParams.get('query')
+      if (query) {
+        setQuery(encodeURI(query))
+        const pageLimit = blogConfig.pageLimit
+        const skip = (page - 1) * pageLimit
+        setPosts(postsDatabase.query(query, pageLimit, skip))
+        setLastPage(Math.ceil(postsDatabase.query(query).length / pageLimit))
+      }
+    }
+  }, [page, router.asPath])
 
   return (
     <>
       <h2>Posts</h2>
-      <form>
+      <form
+        onSubmit={(event) => {
+          event.preventDefault()
+
+          const form = event.currentTarget
+          const query = new FormData(form).get('query')
+          if (!query) return
+
+          const url = new URL(location.href)
+          url.pathname = '/posts/1'
+          url.search = `query=${encodeURI(query.toString())}`
+
+          location.href = url.href
+        }}
+      >
         <SearchInput placeholder="Search..." name="query" />
       </form>
 
-      {props.posts.map((post, idx) => (
-        <PostCard key={idx} post={post} />
-      ))}
+      {Boolean(posts?.length) &&
+        posts.map((post, idx) => <PostCard key={idx} post={post} />)}
 
-      <Paginator page={props.page} lastPage={props.lastPage} />
+      <Paginator page={page} lastPage={lastPage} query={query} />
     </>
   )
 }

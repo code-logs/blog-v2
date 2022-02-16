@@ -14,10 +14,13 @@
 }
 
 .title {
-  color: var(--color-dark-gray);
   grid-area: title;
-  font-size: 1.5em;
-  margin: var(--common-spacing) 0;
+
+  > h3 {
+    color: var(--color-dark-gray);
+    font-size: 1.5em;
+    margin: var(--common-spacing) 0;
+  }
 }
 
 .category {
@@ -31,8 +34,11 @@
 
 .description {
   grid-area: description;
-  margin: 0;
-  color: var(--color-gray);
+
+  > p {
+    margin: 0;
+    color: var(--color-gray);
+  }
 }
 
 .publishedAt {
