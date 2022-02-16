@@ -14,6 +14,7 @@
 }
 
 .title {
+  color: var(--color-dark-gray);
   grid-area: title;
   font-size: 1.5em;
   margin: var(--common-spacing) 0;
@@ -21,6 +22,8 @@
 
 .category {
   grid-area: category;
+  font-size: 0.9em;
+  font-weight: 300;
   text-transform: capitalize;
   font-style: italic;
   color: var(--color-gray);
@@ -35,6 +38,8 @@
 .publishedAt {
   grid-area: publishedAt;
   text-align: right;
+  font-size: 0.9em;
+  font-weight: 300;
   color: var(--color-gray);
 }
 
