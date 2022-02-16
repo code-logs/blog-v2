@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import { Post } from '../recent-posts/RecentPosts'
+import PostUtil from '../../utils/PostUtil'
 import Tags from '../tags/Tags'
+import blogConfig from '../../config/blog.config'
 import styles from './PostCard.module.scss'
 
 export interface PostCardProps {
@@ -23,7 +25,9 @@ const PostCard = ({ post }: PostCardProps) => {
 
   return (
     <article className={styles.card}>
-      <h3 className={styles.title}>{post.title}</h3>
+      <a href={`${blogConfig.baseURL}/${PostUtil.normalizeTitle(post.title)}`}>
+        <h3 className={styles.title}>{post.title}</h3>
+      </a>
 
       <span className={styles.category}>{post.category}</span>
 
@@ -31,17 +35,25 @@ const PostCard = ({ post }: PostCardProps) => {
         {formatHumanReadableDate(post.publishedAt)}
       </span>
 
-      <p className={styles.description}>{post.description}</p>
+      <a href={`${blogConfig.baseURL}/${PostUtil.normalizeTitle(post.title)}`}>
+        <p className={styles.description}>{post.description}</p>
+      </a>
 
       {post.thumbnailName && (
         <div className={styles.thumbnail}>
-          <Image
-            className={'thumbnail'}
-            src={buildImagePath(post.thumbnailName)}
-            alt={post.description}
-            width="448"
-            height="315"
-          />
+          <a
+            href={`${blogConfig.baseURL}/${PostUtil.normalizeTitle(
+              post.title
+            )}`}
+          >
+            <Image
+              className={'thumbnail'}
+              src={buildImagePath(post.thumbnailName)}
+              alt={post.description}
+              width="448"
+              height="315"
+            />
+          </a>
         </div>
       )}
 

@@ -1,4 +1,4 @@
-import { Post } from '../../components/recent-posts/RecentPosts'
+import { Post } from '../components/recent-posts/RecentPosts'
 
 const posts: Post[] = [
   {
@@ -21,7 +21,7 @@ const posts: Post[] = [
       'robots.txt',
       'sitemap.xml',
     ],
-    thumbnailName: 'seo-thumbnail.jpg',
+    thumbnailName: 'seo-thumbnail.jpg'
   },
   {
     title: 'Tagged Template Literal',
@@ -151,6 +151,13 @@ const posts: Post[] = [
     publishedAt: '2022-02-13',
     tags: ['svelte', 'frontend', 'get started'],
     thumbnailName: 'get-started-svelte.jpg',
+    references: [{
+      title: 'Svelte',
+      url: 'https://svelte.dev/'
+    }, {
+      title: 'Naver',
+      url: 'https://naver.com/'
+    }]
   },
 ]
 

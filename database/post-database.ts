@@ -1,6 +1,7 @@
 import Database from '.'
 import { Post } from '../components/recent-posts/RecentPosts'
-import posts from './datasets/posts'
+import PostUtil from '../utils/PostUtil'
+import posts from '../config/posts.config'
 
 class PostDatabase extends Database<Post> {
   constructor() {
@@ -8,6 +9,10 @@ class PostDatabase extends Database<Post> {
     this.sort((a, b) =>
       new Date(a.publishedAt) > new Date(b.publishedAt) ? -1 : 1
     )
+  }
+
+  findByTitle(title: string) {
+    return this.dataset.find((post) => PostUtil.normalizeTitle(post.title) === title)
   }
 
   hasNewByCategory(category: string) {
@@ -47,7 +52,7 @@ class PostDatabase extends Database<Post> {
       })
     })
 
-    if(limit !== undefined) return foundPosts.slice(0, limit)
+    if (limit !== undefined) return foundPosts.slice(0, limit)
     return foundPosts
   }
 }
