@@ -77,7 +77,7 @@ const PostDetail: NextPage<{ post: Post; content: string }> = (props: {
       <section className={styles.utterances}>
         <h2>Comments</h2>
         <Utterances
-          repo={'code-logs/blog-v2'}
+          repo={'code-logs/code-logs.github.io'}
           theme={'github-light'}
           issueTerm={'title'}
           issueLabel={'Comment'}
