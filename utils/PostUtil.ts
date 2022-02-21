@@ -7,7 +7,7 @@ class PostUtil {
   }
 
   public static getMarkdownFilePath(post: Post) {
-    return path.join('./posts', post.category, post.fileName)
+    return path.join('../posts', post.category, post.fileName)
   }
 }
 
