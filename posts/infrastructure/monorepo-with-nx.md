@@ -94,7 +94,7 @@ nx ${script} ${package}
 nx run-many --target=${script} --all
 ```
 
-> 특정 패키지를 대상으로 스크립트를 실행하려면 `--all` 옵션 대신 `--prlejcts=package1,package2` 옵션을 추가한다.
+> 특정 패키지를 대상으로 스크립트를 실행하려면 `--all` 옵션 대신 `--projects=package1,package2` 옵션을 추가한다.
 
 이렇게 실행한 scripts는 비동기적으로 평행하게 수행된다.
 
@@ -129,7 +129,7 @@ console.log('Hello World')
 
 ## NX Graph
 
-아래의 커맨드를 실행하면 헌재 Workspace에 존재하는 패키지간의 상관관계를 볼 수 있는 데시보드를 실행 할 수 있다.
+아래의 커맨드를 실행하면 헌재 Workspace에 존재하는 패키지간의 상관관계를 볼 수 있는 dashboard를 실행 할 수 있다.
 
 ```sh
 nx graph
@@ -184,8 +184,8 @@ nx g @nrwl/js:library ${library name}
 ```sh
 nx g @nrwl/react:library
 ```
-타입스크립트 생성과 유사한 `lint`, `testing` 환경이 갖춰진 패키지를 생성해낸다.
-React Library도 기본적으로 타입스크립트 베이스로 생성되며 마냥 자바스크립트 베이스의 React 라이브러리를 생성하고자 한다면 `--js=false` 옵션을 추가해야 한다.
+타입스크립트 생성과 유사한 `linting`, `testing` 환경이 갖춰진 패키지를 생성해낸다.
+React Library도 기본적으로 타입스크립트 베이스로 생성되며 만약 자바스크립트 베이스의 React 라이브러리를 생성하고자 한다면 `--js=false` 옵션을 추가해야 한다.
 
 ## 마치며
 `nx`는 패키지를 개발과정의 `workflow`를 관리하는 툴에 가깝다. `lerna`와 유사한 기능을 제공할거라고 기대한 (물론 대부분의 기능을 nx도 제공하지만 module publishing이나 versioning은 lerna가 나에게는 더 수월하다는 생각이든다.) 것과는 약간 다른 성격을 가지고 있었다.
