@@ -1,11 +1,13 @@
-import { OpenInNew, OpenInNewRounded } from '@material-ui/icons'
-
-import { MarkdownUtil } from '../utils/MarkdownUtil'
+import hljs from 'highlight.js'
 import { NextPage } from 'next'
+import Image from 'next/image'
+import { useEffect } from 'react'
 import { Post } from '../components/recent-posts/RecentPosts'
-import PostUtil from '../utils/PostUtil'
 import Utterances from '../components/utterrances/Utterrances'
 import postsDatabase from '../database/post-database'
+import { MarkdownUtil } from '../utils/MarkdownUtil'
+import PathUtil from '../utils/PathUtil'
+import PostUtil from '../utils/PostUtil'
 import styles from './PostDetail.module.scss'
 
 export async function getStaticPaths() {
@@ -33,9 +35,24 @@ const PostDetail: NextPage<{ post: Post; content: string }> = (props: {
   post: Post
   content: string
 }) => {
+  useEffect(() => {
+    hljs.highlightAll()
+  }, [])
+
   return (
     <>
       <article className={styles.container}>
+        <section className={styles.thumbnailWrapper}>
+          {props.post.thumbnailName && (
+            <Image
+              src={PathUtil.buildImagePath(props.post.thumbnailName)}
+              layout="fill"
+              objectFit="cover"
+              alt={props.post.description}
+            />
+          )}
+        </section>
+
         <section>
           <h1>{props.post.title}</h1>
           <p className={styles.description}>{props.post.description}</p>

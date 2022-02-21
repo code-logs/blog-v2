@@ -22,7 +22,6 @@ const Paginator = ({
   lastPage,
   displayCount = 5,
   query,
-  enableQuickPaging = false,
 }: PaginatorProps) => {
   const [pageList, setPageList] = useState<number[]>([])
   useEffect(() => {
