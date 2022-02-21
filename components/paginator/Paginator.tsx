@@ -2,7 +2,7 @@ import {
   ChevronLeftRounded,
   ChevronRightRounded,
   MoreHorizRounded,
-} from '@material-ui/icons'
+} from '@mui/icons-material'
 import { useEffect, useState } from 'react'
 
 import blogConfig from '../../config/blog.config'

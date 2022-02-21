@@ -1,4 +1,4 @@
-import { SearchRounded } from '@material-ui/icons'
+import { SearchRounded } from '@mui/icons-material'
 import styles from './SearchInput.module.scss'
 
 export interface SearchInputProps

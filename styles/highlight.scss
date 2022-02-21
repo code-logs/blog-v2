@@ -99,6 +99,15 @@ code.hljs {
 .hljs-punctuation {
   color: #ffd703;
 }
-.hljs-attr {
+.hljs-attr, .hljs-number, .hljs-attribute {
   color: #4db0d7;
+}
+.hljs-tag {
+  color: #e26674;
+}
+.hljs-tag .hljs-name {
+  color: #e26674;
+}
+.hljs-selector-tag, .hljs-selector-id {
+  color: #ffd703;
 }
