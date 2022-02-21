@@ -44,10 +44,8 @@ const PostDetail: NextPage<{ post: Post; content: string }> = (props: {
       <article className={styles.container}>
         <section className={styles.thumbnailWrapper}>
           {props.post.thumbnailName && (
-            <Image
+            <img
               src={PathUtil.buildImagePath(props.post.thumbnailName)}
-              layout="fill"
-              objectFit="cover"
               alt={props.post.description}
             />
           )}

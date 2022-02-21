@@ -53,12 +53,10 @@ const PostCard = ({ titleLevel = 3, post }: PostCardProps) => {
               post.title
             )}`}
           >
-            <Image
+            <img
               className={'thumbnail'}
               src={PathUtil.buildImagePath(post.thumbnailName)}
               alt={post.description}
-              width="448"
-              height="315"
             />
           </a>
         </div>

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Tag from '../tag/Tag'
 import Tags from '../tags/Tags'
 import styles from './TagIndexer.module.scss'
@@ -20,9 +21,9 @@ const TagIndexer = (props: TagIndexerProps) => {
     <section>
       <h2>
         Tags
-        <a className={styles.seeMore} href="/tags">
-          See more
-        </a>
+        <Link href="/tags">
+          <a className={styles.seeMore}>See more</a>
+        </Link>
       </h2>
 
       <div className={styles.container}>
