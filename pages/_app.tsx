@@ -1,5 +1,6 @@
 import 'normalize.css'
 import '../styles/globals.scss'
+import '../styles/highlight.scss'
 
 import type { AppProps } from 'next/app'
 import Footer from '../components/Footer/Footer'

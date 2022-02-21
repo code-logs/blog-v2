@@ -16,7 +16,7 @@
 
 ## Monorepo
 
-`Monorepo`는 방대한 양의 프로젝트 코드를 단일 Repository에서 관리하는 전략이다. 개인적으로 4년 전쯤 (2022년 기준) 처음 도입해서 사용했는데, 프론트엔드 개발자로서 컴퍼넌트 개발을 많이했고 각 컴퍼넌트들이 분산된 저장소에서 관리 됨으로 발생하는 문제점들을 획기적으로 개선하는 경험을 했다.
+`Monorepo`는 방대한 양의 프로젝트 코드를 단일 Repository에서 관리하는 전략이다. 개인적으로 4년 전쯤 (2022년 기준) 처음 도입해서 사용했는데, 프론트엔드 개발자로서 컴퍼넌트 개발을 많이했고 각 컴퍼넌트들이 분산된 저장소에서 관리됨으로 발생하는 문제점들을 획기적으로 개선하는 경험을 했다.
 
 그 이후 라이브러리 성향의 프로젝트를 구성할 경우에는 `Monorepo`를 필수적으로 체택하게 되었다.
 
@@ -33,12 +33,13 @@
 
 `Nrwl`은 Google의 Angular 팀 멤버에 의해 만들어진 법인으로 세계 여러 국가의 IT 컨설팅 외 다수의 작업을 하는 것으로 보인다. [Nrwl](https://nrwl.io/)
 
+## Nx 프로젝트 구성하기
 ### 새로운 Workspace 생성
 
 아래의 커맨드를 통해 새로운 workspace를 생성한다
 
 ```sh
-$ npx create-nx-workspace@latest --preset=core
+npx create-nx-workspace@latest --preset=core
 ```
 
 > `--preset=core` 옵션은 npm 패키지를 위한 빈 (yarn workspace와 유사한) 워크스페이스를 생성한다.
@@ -54,7 +55,7 @@ $ npx create-nx-workspace@latest --preset=core
 아래의 커맨드를 통해 새로운 패키지(sample)를 workspace에 추가 할 수 있다.
 
 ```sh
-$ nx g npm-package sample
+nx g npm-package sample
 ```
 
 이렇게 생성된 패키지의 `package.json` 파일을 열어 보면
@@ -76,12 +77,12 @@ $ nx g npm-package sample
 패키지 내부에 정의된 script를 실행하기 위해 아래의 커맨드를 입력한다.
 
 ```sh
-$ nx ${script} ${package}
+nx ${script} ${package}
 ```
 
 > `yarn`과 `lerna`로 구성한 monorepo에서는
 >
-> `$ yarn workspace ${package} ${script}`
+> `yarn workspace ${package} ${script}`
 >
 > 형식으로 스크립트를 실행 할 수 있는데 `${package}`를 `@nx-sample-workspace/sample`과 같이 패키지의 이름 전체를 입력해야 한다.
 
@@ -90,7 +91,7 @@ $ nx ${script} ${package}
 빌드를 실행하거나 테스트 커맨드를 실행하는 등 전체 또는 복수의 package를 대상으로 script를 실행하려면 아래의 커맨드를 입력한다.
 
 ```sh
-$ nx run-many --target=${script} --all
+nx run-many --target=${script} --all
 ```
 
 > 특정 패키지를 대상으로 스크립트를 실행하려면 `--all` 옵션 대신 `--prlejcts=package1,package2` 옵션을 추가한다.
@@ -108,7 +109,7 @@ $ nx run-many --target=${script} --all
 패키지간의 참조 설정을 위해 또 다른 패키지를 생성한다.
 
 ```sh
-$ nx g npm-package rely-on-sample
+nx g npm-package rely-on-sample
 ```
 
 `packages/rely-on-sample/index.js`를 열어 `sample` 패키지를 참조하도록 아래와 같이 수정한다.
@@ -131,7 +132,7 @@ console.log('Hello World')
 아래의 커맨드를 실행하면 헌재 Workspace에 존재하는 패키지간의 상관관계를 볼 수 있는 데시보드를 실행 할 수 있다.
 
 ```sh
-$ nx graph
+nx graph
 ```
 
 ## Generator
@@ -148,7 +149,7 @@ $ nx graph
 설치가 완료되면 아래 커맨드를 통해 타입스크립트 기반의 라이브러리를 생성한다.
 
 ```sh
-$ nx g @nrwl/js:library ${library name}
+nx g @nrwl/js:library ${library name}
 ```
 > Typescript 기반의 라이브러리를 생성하는데 `@nrwl/js`라는 패키지를 설치하는 것은 nx의 generator가 기본적으로 ts를 사용하도록 설정되어 있기 때문이다.
 >
@@ -156,9 +157,9 @@ $ nx g @nrwl/js:library ${library name}
 >
 > 다시 말해 Javascript 베이스의 라이브러리를 생성하고 싶다면 아래의 커맨드를 입력해야 한다.
 >
-> `$ nx g @nrwl/js:library --js=false
+> `nx g @nrwl/js:library --js=false
 
-> --buildable 옵션
+> `--buildable 옵션`
 >
 > 상기 커맨드를 통해 생성된 라이브러리는 기본적으로 `빌드 할 수 없는` 형태이다.
 >
@@ -166,7 +167,7 @@ $ nx g @nrwl/js:library ${library name}
 
 그 외에도 라이브러리를 생성하며 전달할 수 있는 옵션들이 다수 있으니 공식 문서를 참조하면 조금 더 다채로운 형태의 라이브러리를 생성 할 수 있다.
 
-> --compiler 옵션
+> `--compiler 옵션`
 >
 > 타입스크립트 라이브러리를 생성하며 `--compiler=swc` 옵션을 추가하면 `tsc` 대신 `swc`를 컴파일러로 설정 할 수 있다.
 
@@ -181,7 +182,7 @@ $ nx g @nrwl/js:library ${library name}
 리액트 라이브러리 패키지를 생성하기 위해 `@nrwl/react` 디펜던시를 설치한다. 패키지 생성 명령은 앞서 살펴본 타입스크립트의 경우와 동일한 형식을 갖는다.
 
 ```sh
-$ nx g @nrwl/react:library
+nx g @nrwl/react:library
 ```
 타입스크립트 생성과 유사한 `lint`, `testing` 환경이 갖춰진 패키지를 생성해낸다.
 React Library도 기본적으로 타입스크립트 베이스로 생성되며 마냥 자바스크립트 베이스의 React 라이브러리를 생성하고자 한다면 `--js=false` 옵션을 추가해야 한다.

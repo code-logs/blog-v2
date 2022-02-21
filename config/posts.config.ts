@@ -147,7 +147,7 @@ const posts: Post[] = [
     fileName: 'get-started-svelte.md',
     description: 'Svelte 맛보기',
     category: 'svelte',
-    published: true,
+    published: false,
     publishedAt: '2022-02-13',
     tags: ['svelte', 'frontend', 'get started'],
     thumbnailName: 'get-started-svelte.jpg',

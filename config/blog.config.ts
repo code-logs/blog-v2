@@ -7,7 +7,7 @@ interface BlogConfig {
 const blogConfig: BlogConfig = {
   title: 'Code Logs',
   baseURL: 'http://localhost:3000',
-  pageLimit: 2
+  pageLimit: 20
 }
 
 export default blogConfig

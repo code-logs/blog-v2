@@ -4,15 +4,14 @@ import PostUtil from '../../utils/PostUtil'
 import Tags from '../tags/Tags'
 import blogConfig from '../../config/blog.config'
 import styles from './PostCard.module.scss'
+import PathUtil from '../../utils/PathUtil'
 
 export interface PostCardProps {
+  titleLevel?: 1 | 2 | 3
   post: Post
 }
 
-const PostCard = ({ post }: PostCardProps) => {
-  const buildImagePath = (fileName: string) =>
-    `/assets/images/${post.thumbnailName}`
-
+const PostCard = ({ titleLevel = 3, post }: PostCardProps) => {
   const formatHumanReadableDate = (date: Date | string) => {
     if (typeof date === 'string') date = new Date(date)
 
@@ -29,7 +28,9 @@ const PostCard = ({ post }: PostCardProps) => {
         className={styles.title}
         href={`${blogConfig.baseURL}/${PostUtil.normalizeTitle(post.title)}`}
       >
-        <h3>{post.title}</h3>
+        {titleLevel === 1 && <h1>{post.title}</h1>}
+        {titleLevel === 2 && <h2>{post.title}</h2>}
+        {titleLevel === 3 && <h3>{post.title}</h3>}
       </a>
 
       <span className={styles.category}>{post.category}</span>
@@ -54,11 +55,10 @@ const PostCard = ({ post }: PostCardProps) => {
           >
             <Image
               className={'thumbnail'}
-              src={buildImagePath(post.thumbnailName)}
+              src={PathUtil.buildImagePath(post.thumbnailName)}
               alt={post.description}
               width="448"
               height="315"
-              priority
             />
           </a>
         </div>

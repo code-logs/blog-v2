@@ -1,7 +1,6 @@
+import { useRef, useState } from 'react'
+import useScroll from '../../hooks/useScroll'
 import NavBar, { Menu } from '../nav-bar/NavBar'
-
-import MarkedAnchor from '../marked-anchor/MarkedAnchor'
-import menus from '../../config/menu.config'
 import styles from './Header.module.scss'
 
 export interface SocialIcon {

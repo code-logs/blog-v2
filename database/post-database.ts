@@ -5,7 +5,7 @@ import posts from '../config/posts.config'
 
 class PostDatabase extends Database<Post> {
   constructor() {
-    super(posts)
+    super(posts.filter((post) => post.published))
     this.sort((a, b) =>
       new Date(a.publishedAt) > new Date(b.publishedAt) ? -1 : 1
     )
