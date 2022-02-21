@@ -1,4 +1,4 @@
-import { GitHub, LinkedIn } from '@material-ui/icons'
+import { GitHub, LinkedIn } from '@mui/icons-material'
 
 import { SocialIcon } from '../components/header/Header'
 
