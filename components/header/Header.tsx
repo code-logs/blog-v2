@@ -1,5 +1,3 @@
-import { useRef, useState } from 'react'
-import useScroll from '../../hooks/useScroll'
 import NavBar, { Menu } from '../nav-bar/NavBar'
 import styles from './Header.module.scss'
 

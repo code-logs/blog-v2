@@ -14,7 +14,7 @@ export interface Post {
   category: string
   published: boolean
   publishedAt: string
-  thumbnailName?: string
+  thumbnailName: string
   tags: string[]
   references?: PostRef[]
 }

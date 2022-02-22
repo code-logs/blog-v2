@@ -57,6 +57,12 @@ class PostDatabase extends Database<Post> {
     if (limit !== undefined) return foundPosts.slice(skip, skip + limit)
     return foundPosts
   }
+
+  findByNormalizedTitle(normalizedTitle: string) {
+    return this.dataset.find((post) => {
+      PostUtil.normalizeTitle(post.title) === normalizedTitle
+    })
+  }
 }
 
 const postsDatabase = new PostDatabase()
