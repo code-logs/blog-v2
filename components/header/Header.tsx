@@ -4,6 +4,7 @@ import styles from './Header.module.scss'
 export interface SocialIcon {
   href: string
   icon: JSX.Element
+  label: string
 }
 
 export interface HeaderProps {
@@ -20,7 +21,7 @@ const Header = ({ title, menus, socialIcons }: HeaderProps) => {
       <ul className={styles.socialIcons}>
         {socialIcons.map((socialIcon, idx) => (
           <li key={idx}>
-            <a href={socialIcon.href} target="_blank" rel="noreferrer">
+            <a href={socialIcon.href} target="_blank" rel="noreferrer" aria-label={socialIcon.label}>
               {socialIcon.icon}
             </a>
           </li>

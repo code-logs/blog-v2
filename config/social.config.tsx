@@ -6,10 +6,12 @@ const socialIcons: SocialIcon[] = [
   {
     href: 'https://github.com/possible819',
     icon: <GitHub />,
+    label: 'My Github'
   },
   {
     href: 'https://linkedin.com/in/jaylee819',
     icon: <LinkedIn />,
+    label: 'My Linked in'
   },
 ]
 

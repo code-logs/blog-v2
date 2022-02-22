@@ -22,7 +22,9 @@ const TagIndexer = (props: TagIndexerProps) => {
       <h2>
         Tags
         <Link href="/tags">
-          <a className={styles.seeMore}>See more</a>
+          <a className={styles.seeMore}>
+            <span>See more</span>
+          </a>
         </Link>
       </h2>
 
