@@ -60,7 +60,7 @@ class PostDatabase extends Database<Post> {
 
   findByNormalizedTitle(normalizedTitle: string) {
     return this.dataset.find((post) => {
-      PostUtil.normalizeTitle(post.title) === normalizedTitle
+      return PostUtil.normalizeTitle(post.title) === normalizedTitle
     })
   }
 }
