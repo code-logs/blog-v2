@@ -8,8 +8,7 @@ interface BlogConfig {
 
 const blogConfig: BlogConfig = {
   title: 'Code Logs',
-  // baseURL: 'https://code-logs.github.io',
-  baseURL: 'http://localhost:3000',
+  baseURL: 'https://code-logs.github.io',
   pageLimit: 20,
   author: 'Jay Lee'
 }
