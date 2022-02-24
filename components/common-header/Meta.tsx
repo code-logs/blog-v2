@@ -1,6 +1,6 @@
 export interface MetaProps {
   author?: string
-  description?: string
+  description: string
   keywords?: string[]
   customMeta?: JSX.Element
 }
@@ -10,7 +10,7 @@ const Meta = (props: MetaProps) => {
 
   return (
     <>
-      {description && <meta name="description" content={description} />}
+      <meta name="description" content={description} />
       {Boolean(keywords?.length) && (
         <meta name="keyword" content={keywords!.join(', ')} />
       )}
