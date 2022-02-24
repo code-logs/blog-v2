@@ -1,8 +1,13 @@
 import styles from './Footer.module.scss'
 
-const Footer = () => {
+export interface FooterProps {
+  author: string
+  message?: string
+}
+
+const Footer = (props: FooterProps) => {
   return <footer className={styles.footer}>
-      <p>ⓒ 2021. Jay Lee  all rights reserved.</p>
+      <p>{props.message ? props.message : `ⓒ 2021. ${props.author}  all rights reserved.`}</p>
   </footer>
 }
 
