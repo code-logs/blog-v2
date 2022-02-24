@@ -68,7 +68,7 @@ const MainApp = ({ Component, pageProps }: AppProps) => {
         description={description}
         url={url}
         imageURL={imageURL}
-        author={'Jay Lee'}
+        author={blogConfig.author}
         canonicalURL={url}
         keywords={keywords}
       />
@@ -83,7 +83,7 @@ const MainApp = ({ Component, pageProps }: AppProps) => {
         <Component {...pageProps} />
       </main>
 
-      <Footer />
+      <Footer author={blogConfig.author} />
     </>
   )
 }
