@@ -1,8 +1,8 @@
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import 'normalize.css'
-import CommonHead from '../components/CommonHead/CommonHead'
-import Footer from '../components/Footer/Footer'
+import CommonHead from '../components/common-header/CommonHead'
+import Footer from '../components/footer/Footer'
 import Header from '../components/header/Header'
 import blogConfig from '../config/blog.config'
 import gaConfig from '../config/ga.config'
@@ -17,7 +17,7 @@ const MainApp = ({ Component, pageProps }: AppProps) => {
   const router = useRouter()
   let title = ''
   let description = 'Code Logs에 오신 것을 환영 합니다.'
-  let imageURL = '/assets/icons/icon-512x512.png'
+  let imageURL = '/icons/icon-512x512.png'
   let keywords: string[] = []
 
   const url = PathUtil.absolutePath(router.asPath)
@@ -29,7 +29,8 @@ const MainApp = ({ Component, pageProps }: AppProps) => {
 
     case '/tags':
       title = 'Tags'
-      description = 'Code Logs에 작성된 포스팅을 Tag를 기준으로 색인 할 수 있습니다.'
+      description =
+        'Code Logs에 작성된 포스팅을 Tag를 기준으로 색인 할 수 있습니다.'
       break
 
     case '/about':
@@ -53,7 +54,8 @@ const MainApp = ({ Component, pageProps }: AppProps) => {
 
     default:
       title = 'Home'
-      description = 'Code Logs에 오신 것을 환영 합니다. Web 개발과 관련된 컨텐츠를 포스팅하는 개인 공간 입니다.'
+      description =
+        'Code Logs에 오신 것을 환영 합니다. Web 개발과 관련된 컨텐츠를 포스팅하는 개인 공간 입니다.'
       break
   }
 

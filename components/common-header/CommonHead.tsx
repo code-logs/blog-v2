@@ -4,8 +4,7 @@ import blogConfig from '../../config/blog.config'
 import GAScript, { GAScriptProps } from './GAScript'
 import Meta, { MetaProps } from './Meta'
 import OpenGraph, { OpenGraphProp } from './OpenGraph'
-import PWAScript from './PWAScript'
-
+import PWA from './PWA'
 
 export type CommonHeadProps = GAScriptProps &
   OpenGraphProp &
@@ -19,7 +18,10 @@ const CommonHead = (props: CommonHeadProps): JSX.Element => {
   return (
     <Head>
       <GAScript gaID={props.gaID} />
-      <PWAScript />
+      <PWA
+        themeColor={blogConfig.themeColor}
+        appleTouchIconPath={blogConfig.appleTouchIconPath}
+      />
 
       <OpenGraph
         title={pageTitle}
