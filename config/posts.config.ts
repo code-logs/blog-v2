@@ -1,33 +1,33 @@
 import { Post } from '../components/recent-posts/RecentPosts'
 
+enum Categories {
+  SEO = 'SEO',
+  Javascript = 'javascript',
+  CSS = 'CSS',
+  React = 'react',
+  UIandUX = 'UI and UX',
+  Typescript = 'typescript',
+  Elasticsearch = 'elasticsearch',
+  Infrastructure = 'infrastructure',
+  Svelt = 'svelte',
+}
+
 const posts: Post[] = [
   {
     title: '검색 엔진 최적화를 위한 설정',
     fileName: 'config-for-seo.md',
-    description:
-      '검색 엔진 최적화를 위한 설정 (Title, Meta Tag, 절대경로, robots.txt, sitemap.xml)',
-    category: 'SEO',
+    description: '검색 엔진 최적화를 위한 설정 (Title, Meta Tag, 절대경로, robots.txt, sitemap.xml)',
+    category: Categories.SEO,
     published: true,
     publishedAt: '2021-10-10',
-    tags: [
-      'Search Engine Optimization',
-      'SEO',
-      '검색',
-      '메타',
-      '메타 태그',
-      'meta tag',
-      '검색엔진',
-      '검색엔진 최적화',
-      'robots.txt',
-      'sitemap.xml',
-    ],
-    thumbnailName: 'seo-thumbnail.jpg'
+    tags: ['Search Engine Optimization', 'SEO', '검색', '메타', '메타 태그', 'meta tag', '검색엔진', '검색엔진 최적화', 'robots.txt', 'sitemap.xml'],
+    thumbnailName: 'seo-thumbnail.jpg',
   },
   {
     title: 'Tagged Template Literal',
     fileName: 'tagged-template-literal.md',
     description: 'Javascript ES6 Tagged Template Literal',
-    category: 'javascript',
+    category: Categories.Javascript,
     published: true,
     publishedAt: '2021-10-11',
     tags: ['javascript', 'tagged template', 'tagged template literal', 'es6'],
@@ -36,28 +36,18 @@ const posts: Post[] = [
   {
     title: 'Iterator and Generator',
     fileName: 'iterator-generator.md',
-    description:
-      'Javascript ES6 Iterator & Generator, 열거형, 제너레이터 함수, generator function, yield, function*',
-    category: 'javascript',
+    description: 'Javascript ES6 Iterator & Generator, 열거형, 제너레이터 함수, generator function, yield, function*',
+    category: Categories.Javascript,
     published: true,
     publishedAt: '2021-10-17',
-    tags: [
-      'javascript',
-      'iterator',
-      'iterable',
-      'generator',
-      'es6',
-      'function*',
-      'yield',
-    ],
+    tags: ['javascript', 'iterator', 'iterable', 'generator', 'es6', 'function*', 'yield'],
     thumbnailName: 'iterator-generator.jpg',
   },
   {
     title: 'Proxy',
     fileName: 'proxy.md',
-    description:
-      'Javascript ES6 Proxy, Proxy, Trap, 프락시를 이용한 객체 조작의 제어',
-    category: 'javascript',
+    description: 'Javascript ES6 Proxy, Proxy, Trap, 프락시를 이용한 객체 조작의 제어',
+    category: Categories.Javascript,
     published: true,
     publishedAt: '2021-10-25',
     tags: ['javascript', 'proxy', 'trap', 'es6'],
@@ -66,28 +56,18 @@ const posts: Post[] = [
   {
     title: 'CSS Position',
     fileName: 'css-position.md',
-    description:
-      'CSS Position (Static, Absolute, Fixed, Sticky)에 따른 고정 헤더 스타일',
-    category: 'CSS',
+    description: 'CSS Position (Static, Absolute, Fixed, Sticky)에 따른 고정 헤더 스타일',
+    category: Categories.CSS,
     published: true,
     publishedAt: '2021-10-26',
-    tags: [
-      'css',
-      'position',
-      'static',
-      'absolute',
-      'fixed',
-      'sticky',
-      'header',
-      'style',
-    ],
+    tags: ['css', 'position', 'static', 'absolute', 'fixed', 'sticky', 'header', 'style'],
     thumbnailName: 'css-position.jpg',
   },
   {
     title: '고차 컴퍼넌트 (HOC: Higher Order Component)',
     fileName: 'hoc.md',
     description: 'React - 고차 컴퍼넌트를 이용한 컴퍼넌트의 재사용',
-    category: 'react',
+    category: Categories.React,
     published: true,
     publishedAt: '2021-10-30',
     tags: ['hoc', 'higher order component', '고차 컴퍼넌트', 'react'],
@@ -96,9 +76,8 @@ const posts: Post[] = [
   {
     title: 'Scroll sequence animation',
     fileName: 'scroll-sequence-animation.md',
-    description:
-      'Apple 제품 페이지 같은 애니메이션을 구현해보자 - Scroll sequence animation',
-    category: 'UI and UX',
+    description: 'Apple 제품 페이지 같은 애니메이션을 구현해보자 - Scroll sequence animation',
+    category: Categories.UIandUX,
     published: true,
     publishedAt: '2021-10-31',
     tags: ['scroll sequence', 'scroll sequence animation', 'ui', 'ux'],
@@ -108,7 +87,7 @@ const posts: Post[] = [
     title: 'Any | Unknown | Never',
     fileName: 'any-unknown-never.md',
     description: 'TypeScript - Any | Unknown | Never',
-    category: 'typescript',
+    category: Categories.Typescript,
     published: true,
     publishedAt: '2021-11-15',
     tags: ['typescript', 'any', 'unknown', 'never'],
@@ -118,7 +97,7 @@ const posts: Post[] = [
     title: 'Elasticsearch: Full-text search (전문검색)',
     fileName: 'full-text-search.md',
     description: 'Elasticsearch를 이용한 Full-text search',
-    category: 'elasticsearch',
+    category: Categories.Elasticsearch,
     published: true,
     publishedAt: '2021-11-16',
     tags: ['elasticsearch', 'full-text search', 'searching engine'],
@@ -128,19 +107,27 @@ const posts: Post[] = [
     title: 'Nx build system 맛보기',
     fileName: 'monorepo-with-nx.md',
     description: 'Nx build system을 이용한 Monorepo 구성하기',
-    category: 'infrastructure',
+    category: Categories.Infrastructure,
     published: true,
     publishedAt: '2022-02-12',
-    tags: [
-      'nx',
-      'build',
-      'build system',
-      'monorepo',
-      '빌드',
-      '빌드 시스템',
-      '모노리포',
-    ],
+    tags: ['nx', 'build', 'build system', 'monorepo', '빌드', '빌드 시스템', '모노리포'],
     thumbnailName: 'monorepo-with-nx.jpg',
+  },
+  {
+    title: 'yarn berry로 구성하는 monorepo',
+    fileName: 'yarn-berry-monorepo.md',
+    description: 'yarn berry와 yarn workspaces를 이용해 monorepo 구성 - 환경 설정, 샘플 프로젝트',
+    category: Categories.Infrastructure,
+    published: true,
+    publishedAt: '2022-02-26',
+    tags: ['yar', 'yarn berry', 'berry', 'monorepo', 'workspace', 'workspaces', '모노리포', 'zero-install', 'zero install'],
+    thumbnailName: 'yar-berry-monorepo.jpg',
+    references: [
+      {
+        title: 'yarn workspaces',
+        url: 'https://yarnpkg.com/features/workspaces',
+      }
+    ],
   },
   {
     title: "Svelte - Let's get started",
@@ -148,16 +135,19 @@ const posts: Post[] = [
     description: 'Svelte 맛보기',
     category: 'svelte',
     published: false,
-    publishedAt: '2022-02-13',
+    publishedAt: '2099-02-13',
     tags: ['svelte', 'frontend', 'get started'],
     thumbnailName: 'get-started-svelte.jpg',
-    references: [{
-      title: 'Svelte',
-      url: 'https://svelte.dev/'
-    }, {
-      title: 'Naver',
-      url: 'https://naver.com/'
-    }]
+    references: [
+      {
+        title: 'Svelte',
+        url: 'https://svelte.dev/',
+      },
+      {
+        title: 'Naver',
+        url: 'https://naver.com/',
+      },
+    ],
   },
 ]
 
