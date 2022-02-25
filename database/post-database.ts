@@ -58,6 +58,13 @@ class PostDatabase extends Database<Post> {
     return foundPosts
   }
 
+  findByCategory(category: string, limit?: number, skip: number = 0) {
+    const foundPosts = this.dataset.filter((post) => post.category === category)
+
+    if (limit !== undefined) return foundPosts.slice(skip, skip + limit)
+    return foundPosts
+  }
+
   findByNormalizedTitle(normalizedTitle: string) {
     return this.dataset.find((post) => {
       return PostUtil.normalizeTitle(post.title) === normalizedTitle
