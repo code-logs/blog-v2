@@ -29,7 +29,7 @@ jobs:
         uses: joshmgross/send-slack-message@v1.0.1
         with:
           # The Slack message to send
-          message: "<!here> Code Logs built successfully. :+1:\n :link: [바로가기](https://code-logs.github.io/)"
+          message: "<!here> Code Logs built successfully. :+1:\n\n <http://code-logs.github.io|바로가기 :black_cat:>"
           # A bot user access token, see https://api.slack.com/bot-users
           slack-token: ${{ secrets.SLACK_BOT_TOKEN }}
           # The Slack channel ID
