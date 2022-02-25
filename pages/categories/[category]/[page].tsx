@@ -37,7 +37,7 @@ export async function getStaticProps(context: {
   const pageLimit = blogConfig.pageLimit
   const skip = (page - 1) * pageLimit
 
-  const lastPage = Math.ceil(postsDatabase.findByCategory(category).length / 1)
+  const lastPage = Math.ceil(postsDatabase.findByCategory(category).length / pageLimit)
   const posts = postsDatabase.findByCategory(category, pageLimit, skip)
 
   return {
