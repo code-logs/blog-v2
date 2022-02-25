@@ -1,14 +1,14 @@
-import { NextPage } from 'next'
-import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
+
+import { NextPage } from 'next'
 import Paginator from '../../components/paginator/Paginator'
-import PostCard from '../../components/post-card/PostCard'
+import PathUtil from '../../utils/PathUtil'
 import { Post } from '../../components/recent-posts/RecentPosts'
+import PostCard from '../../components/post-card/PostCard'
 import SearchInput from '../../components/search-input/SearchInput'
 import blogConfig from '../../config/blog.config'
 import postsDatabase from '../../database/post-database'
-import PathUtil from '../../utils/PathUtil'
-
+import { useRouter } from 'next/router'
 
 export async function getStaticPaths() {
   const posts = postsDatabase.find()
@@ -85,9 +85,16 @@ const Posts: NextPage<{ page: number; lastPage: number; posts: Post[] }> = (
       </form>
 
       {Boolean(posts?.length) &&
-        posts.map((post, idx) => <PostCard titleLevel={2} key={idx} post={post} />)}
+        posts.map((post, idx) => (
+          <PostCard titleLevel={2} key={idx} post={post} />
+        ))}
 
-      <Paginator page={page} lastPage={lastPage} query={query} />
+      <Paginator
+        page={page}
+        lastPage={lastPage}
+        query={query}
+        baseURL={`${blogConfig.baseURL}/posts`}
+      />
     </>
   )
 }
