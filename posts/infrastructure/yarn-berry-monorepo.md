@@ -24,7 +24,7 @@ yarn set version berry
 
 Yarn berry를 활성화하게 되면 몇가지 파일이 자동적으로 생성되는데 디펜던시를 관리하기 위한 metadata (.pnp.cjs)와 현재 `workspace` (root 디렉토리도 결국 하나의 workspace와 같다)의 설정들 (설치된 plugins, sdk 등) 그리고 가장 중요한 압축된 형식의 디펜던시들이다.
 
-yarn berry를 이용하는 것은 디펜던시를 node_modules 디렉토리에 저장하는 것이 아닌 압축된 파일로 저장하게 되고 패키지의 디펜던시 참조 관계를 하나의 파일을 통해 확인한다. (.pnp.cjs 디펜던시 추가 이후 생성됨) 이를 통해 예전의 상위 디렉토리로 올라가며 node_modules를 탐색하던 방식의 성능이 획기적으로 개선된다.
+yarn berry를 이용하는 것은 디펜던시를 node_modules 디렉토리에 저장하는 것이 아닌 압축된 파일로 저장하게 되고 패키지의 디펜던시 참조 관계를 하나의 파일을 통해 확인한다. (.pnp.cjs 파일은 디펜던시 추가 이후 생성됨) 이를 통해 예전의 상위 디렉토리로 올라가며 node_modules를 탐색하던 방식의 성능이 획기적으로 개선된다.
 
 ## Workspace 구성
 
@@ -38,7 +38,7 @@ workspace 구성을 위해선 프로젝트 root 디렉토리의 `package.json` �
 
 상기 설정은 `packages` 디렉토리 하위의 모든 디렉토리를 패키지로 본다.
 
-만약 한 dept 더 들어가게 구성하고 싶을 경우 (예를들어 `components`, `utils` 와 같이 유형에 따라 디렉토리를 달리하고 싶을 경우) 아래와 같이 설정해야한다.
+만약 한 depth 더 들어가게 구성하고 싶을 경우 (예를들어 `components`, `utils` 와 같이 유형에 따라 디렉토리를 달리하고 싶을 경우) 아래와 같이 설정해야한다.
 
 ```json
 {
