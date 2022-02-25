@@ -1,14 +1,16 @@
-import hljs from 'highlight.js'
-import { NextPage } from 'next'
-import Image from 'next/image'
-import { useEffect } from 'react'
-import { Post } from '../components/recent-posts/RecentPosts'
-import Utterances from '../components/utterrances/Utterrances'
-import postsDatabase from '../database/post-database'
+import CommonMeta from '../components/common-meta/CommonMeta'
 import { MarkdownUtil } from '../utils/MarkdownUtil'
+import { NextPage } from 'next'
 import PathUtil from '../utils/PathUtil'
+import { Post } from '../components/recent-posts/RecentPosts'
 import PostUtil from '../utils/PostUtil'
+import TitleUtil from '../utils/TitleUtil'
+import Utterances from '../components/utterrances/Utterrances'
+import blogConfig from '../config/blog.config'
+import hljs from 'highlight.js'
+import postsDatabase from '../database/post-database'
 import styles from './PostDetail.module.scss'
+import { useEffect } from 'react'
 
 export async function getStaticPaths() {
   const posts = postsDatabase.find()
@@ -22,33 +24,31 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context: { params: { title: string } }) {
   const post = postsDatabase.findByTitle(context.params.title)!
-  const content = MarkdownUtil.getMarkdownContent(
-    PostUtil.getMarkdownFilePath(post)
-  )
+  const content = MarkdownUtil.getMarkdownContent(PostUtil.getMarkdownFilePath(post))
 
   return {
     props: { post, content },
   }
 }
 
-const PostDetail: NextPage<{ post: Post; content: string }> = (props: {
-  post: Post
-  content: string
-}) => {
+const PostDetail: NextPage<{ post: Post; content: string }> = (props: { post: Post; content: string }) => {
   useEffect(() => {
     hljs.highlightAll()
   }, [])
 
   return (
     <>
+      <CommonMeta
+        title={TitleUtil.buildPageTitle(props.post.title)}
+        description={props.post.description}
+        url={`${blogConfig.baseURL}/${PostUtil.normalizeTitle(props.post.title)}`}
+        imageURL={PathUtil.buildImagePath(props.post.thumbnailName)}
+        keywords={[...props.post.tags, props.post.title, props.post.description, props.post.category]}
+      />
+
       <article className={styles.container}>
         <section className={styles.thumbnailWrapper}>
-          {props.post.thumbnailName && (
-            <img
-              src={PathUtil.buildImagePath(props.post.thumbnailName)}
-              alt={props.post.description}
-            />
-          )}
+          {props.post.thumbnailName && <img src={PathUtil.buildImagePath(props.post.thumbnailName)} alt={props.post.description} />}
         </section>
 
         <section>
@@ -76,12 +76,7 @@ const PostDetail: NextPage<{ post: Post; content: string }> = (props: {
 
       <section className={styles.utterances}>
         <h2>Comments</h2>
-        <Utterances
-          repo={'code-logs/code-logs.github.io'}
-          theme={'github-light'}
-          issueTerm={'title'}
-          issueLabel={'Comment'}
-        />
+        <Utterances repo={'code-logs/code-logs.github.io'} theme={'github-light'} issueTerm={'title'} issueLabel={'Comment'} />
       </section>
     </>
   )
