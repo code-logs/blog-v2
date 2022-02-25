@@ -121,7 +121,7 @@ const posts: Post[] = [
     published: true,
     publishedAt: '2022-02-26',
     tags: ['yar', 'yarn berry', 'berry', 'monorepo', 'workspace', 'workspaces', '모노리포', 'zero-install', 'zero install'],
-    thumbnailName: 'yar-berry-monorepo.jpg',
+    thumbnailName: 'yarn-berry-monorepo.jpg',
     references: [
       {
         title: 'yarn workspaces',
