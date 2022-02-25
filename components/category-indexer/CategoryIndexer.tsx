@@ -14,7 +14,7 @@ const CategoryIndexer = (props: CategoryIndexerProps) => {
       <ul>
         {props.categories.map((category, idx) => (
           <li key={idx}>
-            <Link href={`${blogConfig.baseURL}/categories/${category}`}>
+            <Link href={`${blogConfig.baseURL}/categories/${encodeURI(category)}/1`}>
               <a>
                 {postsDatabase.hasNewByCategory(category) && (
                   <span className={styles.newTag}>New</span>

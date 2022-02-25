@@ -15,6 +15,7 @@ export interface PaginatorProps {
   displayCount?: number
   query?: string
   enableQuickPaging?: boolean
+  baseURL: string
 }
 
 const Paginator = ({
@@ -22,6 +23,7 @@ const Paginator = ({
   lastPage,
   displayCount = 5,
   query,
+  baseURL,
 }: PaginatorProps) => {
   const [pageList, setPageList] = useState<number[]>([])
   useEffect(() => {
@@ -44,7 +46,7 @@ const Paginator = ({
   useEffect(() => {}, [])
 
   const buildURL = (page: number) => {
-    let url = `${blogConfig.baseURL}/posts/${page}`
+    let url = `${baseURL}/${page}`
     if (query) url += `?query=${query}`
 
     return url
