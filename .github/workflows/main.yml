@@ -1,8 +1,8 @@
-name: Docs
+name: Slack test
 
 on:
   push:
-    branches: [ main ]
+    branches: [ slack_test ]
 
 jobs:
   build:
