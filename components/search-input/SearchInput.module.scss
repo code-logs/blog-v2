@@ -1,5 +1,6 @@
 .label {
   display: inline-flex;
+  width: 100%;
 }
 
 .icon {
@@ -8,7 +9,9 @@
 }
 
 .input {
+  flex: 1;
   border: none;
+  background-color: transparent;
 
   outline: none;
   padding: var(--narrow-spacing);
