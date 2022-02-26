@@ -128,7 +128,7 @@ root 디렉토리에 `tsconfig.base.json` 파일을 생성한다. 이 파일에 
 
 이제 Button 컴퍼넌트 파일을 열어보면 아래와 같이 에러가 발생한 것을 확인 할 수 있다.
 
-![소스 코드 상에서 발생하는 에러](/examples/infrastructure/yarn-berry-monorepo-img-001.png)
+![소스 코드 상에서 발생하는 에러](/examples/infrastructure/yarn-berry-monorepo/1883FDBB-569A-4E8D-BBA8-8124244809A3.png)
 
 소스 코드 상에서 발생하는 에러
 
