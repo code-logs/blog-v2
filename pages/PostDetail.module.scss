@@ -73,6 +73,13 @@
     font-style: italic;
     text-decoration: underline;
   }
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--wide-spacing) 0px;
+  }
 }
 
 .description {

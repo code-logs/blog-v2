@@ -7,7 +7,7 @@ export interface GTagScriptProps {
 const GTagScript = (props: GTagScriptProps) => {
   return (
     <>
-      <Script src={`https://www.googletagmanager.com/gtag/js?id=${props.gaID}`}></Script>
+      <Script src={`https://www.googletagmanager.com/gtag/js?id=${props.gaID}`} strategy="lazyOnload" />
       <Script id="gtag-script">
         {`
           // Load Gtag script
