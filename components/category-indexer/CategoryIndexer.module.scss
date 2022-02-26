@@ -7,7 +7,7 @@
   li > a {
     display: flex;
     gap: var(--common-spacing);
-    border-bottom: 1px solid var(--color-light-gray);
+    border-bottom: 1px solid var(--theme-light-color);
     padding: var(--common-spacing);
     font-size: 0.9em;
   }
@@ -27,13 +27,11 @@
   font-style: italic;
   font-size: 0.7em;
   margin: auto 0;
-
-  box-shadow: var(--common-shadow, 2px 2px 2px #aaa);
 }
 
 .count {
   border-radius: 50px;
-  background-color: var(--color-gray);
+  background-color: var(--theme-color);
   color: #fff;
 
   width: 25px;

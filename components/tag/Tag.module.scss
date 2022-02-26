@@ -1,10 +1,9 @@
 .tag {
   display: block;
   padding: 8px;
-  background-color: black;
+  background-color: var(--theme-tag-bg-color);
   color: white;
   border-radius: 20px;
-  box-shadow: var(--common-shadow, 2px 2px 2px #aaa);
   min-width: 40px;
   text-align: center;
 

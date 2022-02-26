@@ -1,7 +1,7 @@
 .container {
   display: grid;
   padding: var(--wide-spacing);
-  border-top: 1px solid var(--color-light-gray);
+  border-top: 1px solid var(--theme-light-color);
 
   ul {
     margin: auto;
@@ -13,7 +13,7 @@
   svg {
     margin: auto;
     font-size: 1.5em;
-    color: var(--color-gray);
+    color: var(--theme-color);
   }
 
   li {
@@ -22,11 +22,11 @@
 
     > a {
       display: inline-grid;
-      color: var(--color-gray);
+      color: var(--theme-color);
     }
 
     .currentPage {
-      background-color: var(--color-blue);
+      background-color: var(--theme-blue);
       padding: var(--narrow-spacing) var(--common-spacing);
       border-radius: 4px;
       color: white;

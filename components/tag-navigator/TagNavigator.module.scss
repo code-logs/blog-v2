@@ -12,16 +12,16 @@
     }
 
     a {
-      color: var(--color-light-gray);
+      color: var(--theme-light-color);
       font-weight: 200;
     }
 
     a.active {
-      color: var(--color-dark-gray);
+      color: var(--theme-dark-color);
       font-weight: 500;
 
       > li {
-        border-bottom: 1px solid var(--color-dark-gray);
+        border-bottom: 1px solid var(--theme-dark-color);
       }
     }
   }

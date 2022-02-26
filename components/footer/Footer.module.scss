@@ -1,10 +1,10 @@
 .footer {
-  border-top: 1px solid var(--color-light-gray);
-  background-color: var(--footer-container-color, white);
+  border-top: 1px solid var(--theme-light-color);
+  background-color: var(--theme-footer-bg-color);
 
   > p {
     text-align: center;
-    color: var(--color-gray);
+    color: var(--theme-color);
     font-weight: 100;
   }
 }

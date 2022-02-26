@@ -4,7 +4,7 @@
   grid-template-rows: auto auto 1fr auto;
   grid-template-areas: 'category publishedAt' 'thumbnail title' 'thumbnail description' 'tags tags';
   gap: var(--common-spacing);
-  border-top: 1px solid var(--color-light-gray);
+  border-top: 1px solid var(--theme-light-color);
   padding: var(--wide-spacing) 0;
 
   @media (max-width: 800px) {
@@ -19,7 +19,7 @@
   > h1,
   h2,
   h3 {
-    color: var(--color-dark-gray);
+    color: var(--theme-dark-color);
     font-size: 1.5em;
     margin: var(--common-spacing) 0;
   }
@@ -31,7 +31,7 @@
   font-weight: 300;
   text-transform: capitalize;
   font-style: italic;
-  color: var(--color-gray);
+  color: var(--theme-color);
 }
 
 .description {
@@ -39,7 +39,7 @@
 
   > p {
     margin: 0;
-    color: var(--color-gray);
+    color: var(--theme-color);
   }
 }
 
@@ -48,7 +48,7 @@
   text-align: right;
   font-size: 0.9em;
   font-weight: 300;
-  color: var(--color-gray);
+  color: var(--theme-color);
 }
 
 .thumbnail {
