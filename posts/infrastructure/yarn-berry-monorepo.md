@@ -128,9 +128,10 @@ root 디렉토리에 `tsconfig.base.json` 파일을 생성한다. 이 파일에 
 
 이제 Button 컴퍼넌트 파일을 열어보면 아래와 같이 에러가 발생한 것을 확인 할 수 있다.
 
-![소스 코드 상에서 발생하는 에러](/examples/infrastructure/yarn-berry-monorepo/1883FDBB-569A-4E8D-BBA8-8124244809A3.png)
-
-소스 코드 상에서 발생하는 에러
+<figure>
+  <img src="/examples/infrastructure/yarn-berry-monorepo/001.png" alt="소스 코드 상에서 발생하는 에러" />
+  <figcaption>소스 코드 상에서 발생하는 에러</figcaption>
+</figure>
 
 이것은 코드상의 문제가 아니라 SDK(VSCode)의 모듈 참조 과정이 일반적이지 (기존 npm 또는 yarn과 다른 방식의 참조 방식을 사용하기 때문에) 않기 때문인데 이것을 해결하기 위해 yarn의 플러그인과 SDK 호환을 위한 extension을 설치해야 한다.
 
