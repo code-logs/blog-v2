@@ -120,7 +120,7 @@ const posts: Post[] = [
     category: Categories.Infrastructure,
     published: true,
     publishedAt: '2022-02-26',
-    tags: ['yar', 'yarn berry', 'berry', 'monorepo', 'workspace', 'workspaces', '모노리포', 'zero-install'],
+    tags: ['yarn', 'yarn berry', 'berry', 'monorepo', 'workspace', 'workspaces', '모노리포', 'zero-install'],
     thumbnailName: 'yarn-berry-monorepo.jpg',
     references: [
       {

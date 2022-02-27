@@ -63,19 +63,18 @@ a {
 
 h1 {
   font-size: 1.2em;
-  color: var(--theme-font-color);
 }
 
 h2 {
   font-size: 1em;
-  color: var(--theme-font-color);
 }
 
-h3 {
-  color: var(--theme-font-color);
-}
-
-p {
+h1,
+h2,
+h3,
+p,
+ul,
+li {
   color: var(--theme-font-color);
 }
 
