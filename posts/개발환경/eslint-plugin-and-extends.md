@@ -9,7 +9,7 @@
 
 `Plugin`은 `ESLint` rule이 들어 있는 하나의 `Rule set` 이다.
 
-`Plugin`은 일반적으로 `eslint-plugin-${plugin-name}` 형식의 이름을 갖는 패키지이다.
+`Plugin`은 일반적으로 `eslint-plugin-${plugin-name}` 형식의 이름을 갖는 패키지다.
 
 플러그인을 사용하기 위해선 필요한 플러그인을 설치하고 ESLint 설정파일의 `plugins` 프로퍼티에 추가하면 된다.
 
@@ -27,7 +27,7 @@
 
 사용하고자 하는 룰은 `rules` 프로퍼티를 통해 정의한다.
 
-프러그인이 제공하는 Rule set의 수는 상당히 방대하고 이것들을 모두 수동으로 설정하는 것은 번거로운 일이다.
+플러그인이 제공하는 Rule set의 수는 상당히 방대하고 이것들을 모두 수동으로 설정하는 것은 번거로운 일이다.
 
 ## Sharable config
 
@@ -45,7 +45,7 @@ sharable config의 사용여부는 ESLint 설정파일의 `extends` 프로퍼티
 
 ## Plugin with Config
 
-일부 플러그인은 sharable config를 함께 가지고 있기도 하다. plugin과 config를 각각 설치하는 것이 아닌 plugin 설치를 통해 config 까지 함께 설치되는 것이다.
+일부 플러그인은 sharable config를 함께 가지고 있다. plugin과 config를 각각 설치하는 것이 아닌 plugin 설치를 통해 config 까지 함께 설치되는 것이다.
 
 plugin이 내장하고 있는 config를 사용하기 위해서는 sharable config 설정과 동일한 방법으로 하돼 `plugin:` Prefix를 붙여준다.
 
@@ -55,7 +55,7 @@ plugin이 내장하고 있는 config를 사용하기 위해서는 sharable confi
 }
 ```
 
-> `eslint-plugin-react` 가 제공하는 `recomended` config를 사용하는 예제로 마찬가지로 `eslint-plugin` 은 생략 가능하다.
+> `eslint-plugin-react`가 제공하는 `recomended` config를 사용하는 예제로 prefix인  `eslint-plugin`은 생략 가능하다.
 
 > Plugin이 제공하는 config를 확인하기 위해선 해당 플러그인의 `root/index.js` 를 참고하면 된다. (일반적으로) index.js 에서 export 하는 Object에서 configs property를 통해 어떤 config가 제공되고 있는지 확인 할 수 있다.
 >
