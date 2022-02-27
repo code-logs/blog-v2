@@ -15,6 +15,8 @@ const CommonMeta = (props: CommonMetaProps) => {
 
   return (
     <Head>
+      <link rel="canonical" href={blogConfig.baseURL} />
+
       {/* PWA */}
       <link rel="apple-touch-icon" href={blogConfig.appleTouchIconPath} />
       <link rel="manifest" href="/manifest.json" />
