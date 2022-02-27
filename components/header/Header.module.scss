@@ -7,10 +7,7 @@
   padding-bottom: var(--wide-spacing);
   border-bottom: 1px solid var(--theme-light-color);
 
-  position: sticky;
-  top: 0;
   background-color: var(--theme-header-bg-color, white);
-  z-index: 1;
 }
 
 .title {
