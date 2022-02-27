@@ -50,7 +50,7 @@ const posts: Post[] = [
     category: Categories.Javascript,
     published: true,
     publishedAt: '2021-10-25',
-    tags: ['javascript', 'proxy', 'trap', 'es6'],
+    tags: ['javascript', 'proxy', 'trap', 'es6', '프록시'],
     thumbnailName: 'proxy.jpg',
   },
   {
@@ -60,7 +60,7 @@ const posts: Post[] = [
     category: Categories.CSS,
     published: true,
     publishedAt: '2021-10-26',
-    tags: ['css', 'position', 'static', 'absolute', 'fixed', 'sticky', 'header', 'style'],
+    tags: ['css', 'position', 'static', 'absolute', 'fixed', 'sticky', 'header', 'style', '스타일', '포지션', '헤더'],
     thumbnailName: 'css-position.jpg',
   },
   {
@@ -70,7 +70,7 @@ const posts: Post[] = [
     category: Categories.React,
     published: true,
     publishedAt: '2021-10-30',
-    tags: ['hoc', 'higher order component', '고차 컴퍼넌트', 'react'],
+    tags: ['hoc', 'higher order component', '고차 컴퍼넌트', 'react', '리액트'],
     thumbnailName: 'hoc.jpg',
   },
   {
@@ -90,7 +90,7 @@ const posts: Post[] = [
     category: Categories.Typescript,
     published: true,
     publishedAt: '2021-11-15',
-    tags: ['typescript', 'any', 'unknown', 'never'],
+    tags: ['typescript', 'any', 'unknown', 'never', '타입스크립트'],
     thumbnailName: 'ts-any-unknown-never.jpg',
   },
   {
@@ -100,7 +100,7 @@ const posts: Post[] = [
     category: Categories.Elasticsearch,
     published: true,
     publishedAt: '2021-11-16',
-    tags: ['elasticsearch', 'full-text search', 'searching engine'],
+    tags: ['elasticsearch', 'full-text search', 'searching engine', '엘라스틱서치', '전문검색'],
     thumbnailName: 'elasticsearch-full-text-search.jpg',
   },
   {
@@ -120,7 +120,7 @@ const posts: Post[] = [
     category: Categories.Infrastructure,
     published: true,
     publishedAt: '2022-02-26',
-    tags: ['yar', 'yarn berry', 'berry', 'monorepo', 'workspace', 'workspaces', '모노리포', 'zero-install', 'zero install'],
+    tags: ['yar', 'yarn berry', 'berry', 'monorepo', 'workspace', 'workspaces', '모노리포', 'zero-install'],
     thumbnailName: 'yarn-berry-monorepo.jpg',
     references: [
       {
