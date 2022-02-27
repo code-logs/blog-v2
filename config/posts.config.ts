@@ -9,6 +9,7 @@ enum Categories {
   Typescript = 'typescript',
   Elasticsearch = 'elasticsearch',
   Infrastructure = 'infrastructure',
+  DevEnv = '개발환경',
   Svelt = 'svelte',
 }
 
@@ -126,7 +127,23 @@ const posts: Post[] = [
       {
         title: 'yarn workspaces',
         url: 'https://yarnpkg.com/features/workspaces',
-      }
+      },
+    ],
+  },
+  {
+    title: 'ESLint - Plugin and Extends',
+    fileName: 'eslint-plugin-and-extends.md',
+    description: 'ESLint의 Plugin과 Extends의 차이는 무엇일까?',
+    category: Categories.DevEnv,
+    published: true,
+    publishedAt: '2022-02-27',
+    tags: ['개발환경', 'eslint', 'plugin', 'extends', 'eslint plugin', 'eslint extends', 'lint'],
+    thumbnailName: 'eslint-plugin-and-extends.jpg',
+    references: [
+      {
+        title: 'eslint-plugin-react Github repository',
+        url: 'https://github.com/yannickcr/eslint-plugin-react/blob/master/index.js#L118-L179',
+      },
     ],
   },
   {

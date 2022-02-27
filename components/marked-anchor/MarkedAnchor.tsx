@@ -10,11 +10,12 @@ const MarkedAnchor = ({ display, ...rest }: MarkedAnchorProps) => {
   const [matched, setMatched] = useState(false)
 
   useEffect(() => {
-    setMatched(location.pathname === rest.href)
+    const isMatched = location.pathname.split('/')[1] === new URL(rest.href!).pathname.split('/')[1]
+    setMatched(isMatched)
   }, [rest.href])
 
   return (
-    <a className={matched ? styles.matched : ''} {...rest}>
+    <a className={matched ? `${styles.matched} ${styles.anchor}` : styles.anchor} {...rest}>
       {display}
     </a>
   )
