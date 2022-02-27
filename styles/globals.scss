@@ -23,6 +23,9 @@
   --theme-anchor-color: var(--theme-blue);
 
   --code-bg-color: #212836;
+
+  --header-height: 140px;
+  --footer-height: 50px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -82,18 +85,39 @@ li {
   list-style: none;
 }
 
+header {
+  height: var(--header-height);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
 main {
   max-width: 60vw;
   margin: 0 auto;
+  padding-top: var(--header-height);
+  padding-bottom: var(--footer-height);
+}
+
+footer {
+  height: var(--footer-height);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 @media (max-width: 800px) {
   :root {
     font-size: 12px;
+    --header-height: 48px;
+    --footer-height: 38.8px;
   }
 
   main {
     max-width: none;
-    padding: var(--wide-spacing);
+    padding: var(--header-height) var(--wide-spacing) var(--footer-height) var(--wide-spacing);
   }
 }

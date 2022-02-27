@@ -11,8 +11,9 @@ const NotFound = () => {
         url={blogConfig.baseURL}
         imageURL={'/icons/icon-512x512.png'}
       />
-
-      <h1>404 - Page Not Found</h1>
+      <section>
+        <h1>Page Not Found</h1>
+      </section>
     </>
   )
 }
