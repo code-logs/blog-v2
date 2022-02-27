@@ -10,7 +10,7 @@ interface BlogConfig {
 const blogConfig: BlogConfig = {
   title: 'Code Logs',
   baseURL: 'https://code-logs.github.io',
-  pageLimit: 20,
+  pageLimit: 5,
   author: 'Jay Lee',
   themeColor: '#fff',
   appleTouchIconPath: '/icons/icon-192x-192.png'
