@@ -147,6 +147,22 @@ const posts: Post[] = [
     ],
   },
   {
+    title: 'Focus on Button - Safari VS Chrome',
+    fileName: 'focus-on-button-safari-vs-chrome.md',
+    description: 'Safari, Chrome 브라우저에 따라 달라지는 button의 focus 속성',
+    category: Categories.CSS,
+    published: true,
+    publishedAt: '2022-02-28',
+    tags: ['CSS', 'focus', 'focus-within', 'focus-visible', 'safari', 'chrome', 'brower', '사파리', '크롬', '브라우저'],
+    thumbnailName: ['focus-on-button.jpg'],
+    references: [
+      {
+        title: 'Clicking and focus - MDN Web Docs',
+        url: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#clicking_and_focus',
+      },
+    ],
+  },
+  {
     title: "Svelte - Let's get started",
     fileName: 'get-started-svelte.md',
     description: 'Svelte 맛보기',
