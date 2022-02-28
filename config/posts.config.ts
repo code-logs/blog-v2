@@ -154,7 +154,7 @@ const posts: Post[] = [
     published: true,
     publishedAt: '2022-02-28',
     tags: ['CSS', 'focus', 'focus-within', 'focus-visible', 'safari', 'chrome', 'brower', '사파리', '크롬', '브라우저'],
-    thumbnailName: ['focus-on-button.jpg'],
+    thumbnailName: 'focus-on-button.jpg',
     references: [
       {
         title: 'Clicking and focus - MDN Web Docs',
