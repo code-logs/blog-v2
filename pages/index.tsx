@@ -50,11 +50,11 @@ const Home: NextPage<{
 
       <RecentPosts posts={props.recentPosts} />
 
-      <section className={styles.index}>
+      <div className={styles.index}>
         <CategoryIndexer categories={props.categories} />
 
         <TagIndexer tagsWithCount={props.tagsWithCount} limit={20} />
-      </section>
+      </div>
     </>
   )
 }
