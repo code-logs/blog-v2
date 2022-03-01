@@ -89,6 +89,11 @@
     padding: var(--wide-spacing) 0px;
     color: var(--theme-font-color);
   }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
 }
 
 .description {
