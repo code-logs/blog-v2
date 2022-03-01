@@ -13,7 +13,7 @@ const blogConfig: BlogConfig = {
   pageLimit: 5,
   author: 'Jay Lee',
   themeColor: '#fff',
-  appleTouchIconPath: '/icons/icon-192x-192.png'
+  appleTouchIconPath: '/icons/icon-192x-192.png',
 }
 
 export default blogConfig

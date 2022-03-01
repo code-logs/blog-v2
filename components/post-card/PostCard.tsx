@@ -5,6 +5,7 @@ import Tags from '../tags/Tags'
 import blogConfig from '../../config/blog.config'
 import styles from './PostCard.module.scss'
 import PathUtil from '../../utils/PathUtil'
+import Link from 'next/link'
 
 export interface PostCardProps {
   titleLevel?: 1 | 2 | 3
@@ -24,41 +25,31 @@ const PostCard = ({ titleLevel = 3, post }: PostCardProps) => {
 
   return (
     <article className={styles.card}>
-      <a
-        className={styles.title}
-        href={`${blogConfig.baseURL}/${PostUtil.normalizeTitle(post.title)}`}
-      >
-        {titleLevel === 1 && <h1>{post.title}</h1>}
-        {titleLevel === 2 && <h2>{post.title}</h2>}
-        {titleLevel === 3 && <h3>{post.title}</h3>}
-      </a>
+      <Link href={`${blogConfig.baseURL}/${PostUtil.normalizeTitle(post.title)}`}>
+        <a className={styles.title}>
+          {titleLevel === 1 && <h1>{post.title}</h1>}
+          {titleLevel === 2 && <h2>{post.title}</h2>}
+          {titleLevel === 3 && <h3>{post.title}</h3>}
+        </a>
+      </Link>
 
       <span className={styles.category}>{post.category}</span>
 
-      <span className={styles.publishedAt}>
-        {formatHumanReadableDate(post.publishedAt)}
-      </span>
+      <span className={styles.publishedAt}>{formatHumanReadableDate(post.publishedAt)}</span>
 
-      <a
-        className={styles.description}
-        href={`${blogConfig.baseURL}/${PostUtil.normalizeTitle(post.title)}`}
-      >
-        <p>{post.description}</p>
-      </a>
+      <Link href={`${blogConfig.baseURL}/${PostUtil.normalizeTitle(post.title)}`}>
+        <a className={styles.description}>
+          <p>{post.description}</p>
+        </a>
+      </Link>
 
       {post.thumbnailName && (
         <div className={styles.thumbnail}>
-          <a
-            href={`${blogConfig.baseURL}/${PostUtil.normalizeTitle(
-              post.title
-            )}`}
-          >
-            <img
-              className={'thumbnail'}
-              src={PathUtil.buildImagePath(post.thumbnailName)}
-              alt={post.description}
-            />
-          </a>
+          <Link href={`${blogConfig.baseURL}/${PostUtil.normalizeTitle(post.title)}`}>
+            <a>
+              <img className={'thumbnail'} src={PathUtil.buildImagePath(post.thumbnailName)} alt={post.description} />
+            </a>
+          </Link>
         </div>
       )}
 
