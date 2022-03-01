@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import blogConfig from '../../config/blog.config'
+import useAdsense from '../../hooks/useAdsense'
 
 export interface CommonMetaProps {
   title: string
@@ -12,16 +13,16 @@ export interface CommonMetaProps {
 
 const CommonMeta = (props: CommonMetaProps) => {
   const { title, description, keywords, url, imageURL, customMeta } = props
+  useAdsense()
 
   return (
     <Head>
-      <link rel="canonical" href={blogConfig.baseURL} />
+      <link rel="canonical" href={url} />
 
       {/* PWA */}
       <link rel="apple-touch-icon" href={blogConfig.appleTouchIconPath} />
       <link rel="manifest" href="/manifest.json" />
       <meta name="theme-color" key="theme-color" content={blogConfig.themeColor} />
-
 
       {/* Common meta */}
       {/* Static meta */}
