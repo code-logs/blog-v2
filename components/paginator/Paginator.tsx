@@ -1,12 +1,6 @@
-import {
-  ChevronLeftRounded,
-  ChevronRightRounded,
-  MoreHorizRounded,
-} from '@mui/icons-material'
+import { ChevronLeftRounded, ChevronRightRounded, MoreHorizRounded } from '@mui/icons-material'
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
-
-import blogConfig from '../../config/blog.config'
-import { debug } from 'console'
 import styles from './Paginator.module.scss'
 
 export interface PaginatorProps {
@@ -18,13 +12,7 @@ export interface PaginatorProps {
   baseURL: string
 }
 
-const Paginator = ({
-  page,
-  lastPage,
-  displayCount = 5,
-  query,
-  baseURL,
-}: PaginatorProps) => {
+const Paginator = ({ page, lastPage, displayCount = 5, query, baseURL }: PaginatorProps) => {
   const [pageList, setPageList] = useState<number[]>([])
   useEffect(() => {
     const prevPages = []
@@ -57,16 +45,20 @@ const Paginator = ({
       <ul>
         {page > 1 && (
           <li>
-            <a href={buildURL(page - 1)}>
-              <ChevronLeftRounded />
-            </a>
+            <Link href={buildURL(page - 1)}>
+              <a>
+                <ChevronLeftRounded />
+              </a>
+            </Link>
           </li>
         )}
 
         {page > 1 && !pageList.includes(1) && (
           <>
             <li>
-              <a href={buildURL(1)}>{1}</a>
+              <Link href={buildURL(1)}>
+                <a>{1}</a>
+              </Link>
             </li>
             <MoreHorizRounded />
           </>
@@ -74,10 +66,7 @@ const Paginator = ({
 
         {pageList.map((pageNum) => (
           <li key={pageNum}>
-            <a
-              className={page === pageNum ? styles.currentPage : ''}
-              href={buildURL(pageNum)}
-            >
+            <a className={page === pageNum ? styles.currentPage : ''} href={buildURL(pageNum)}>
               {pageNum}
             </a>
           </li>
@@ -87,15 +76,19 @@ const Paginator = ({
           <>
             <MoreHorizRounded />
             <li>
-              <a href={buildURL(lastPage)}>{lastPage}</a>
+              <Link href={buildURL(lastPage)}>
+                <a>{lastPage}</a>
+              </Link>
             </li>
           </>
         )}
         {page < lastPage && (
           <li>
-            <a href={buildURL(page + 1)}>
-              <ChevronRightRounded />
-            </a>
+            <Link href={buildURL(page + 1)}>
+              <a>
+                <ChevronRightRounded />
+              </a>
+            </Link>
           </li>
         )}
       </ul>

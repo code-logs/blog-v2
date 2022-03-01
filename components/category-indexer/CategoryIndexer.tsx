@@ -16,9 +16,7 @@ const CategoryIndexer = (props: CategoryIndexerProps) => {
           <li key={idx}>
             <Link href={`${blogConfig.baseURL}/categories/${encodeURI(category)}/1`}>
               <a>
-                {postsDatabase.hasNewByCategory(category) && (
-                  <span className={styles.newTag}>New</span>
-                )}
+                {postsDatabase.hasNewByCategory(category) && <span className={styles.newTag}>New</span>}
                 <span className={styles.category}>{category}</span>
                 <span className={styles.count}>
                   <span>{postsDatabase.countByCategory(category)}</span>

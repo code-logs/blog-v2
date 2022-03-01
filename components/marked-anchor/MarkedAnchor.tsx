@@ -1,24 +1,16 @@
-import { useEffect, useState } from 'react'
-
+import Link from 'next/link'
 import styles from './MarkedAnchor.module.scss'
 
-export interface MarkedAnchorProps extends React.HTMLProps<HTMLAnchorElement> {
+export interface MarkedAnchorProps {
   display: string
+  href: string
+  matched: boolean
 }
 
-const MarkedAnchor = ({ display, ...rest }: MarkedAnchorProps) => {
-  const [matched, setMatched] = useState(false)
-
-  useEffect(() => {
-    const isMatched = location.pathname.split('/')[1] === new URL(rest.href!).pathname.split('/')[1]
-    setMatched(isMatched)
-  }, [rest.href])
-
-  return (
-    <a className={matched ? `${styles.matched} ${styles.anchor}` : styles.anchor} {...rest}>
-      {display}
-    </a>
-  )
-}
+const MarkedAnchor = (props: MarkedAnchorProps) => (
+  <Link href={props.href}>
+    <a className={props.matched ? `${styles.matched} ${styles.anchor}` : styles.anchor}>{props.display}</a>
+  </Link>
+)
 
 export default MarkedAnchor

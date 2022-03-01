@@ -6,10 +6,9 @@
 
   li > a {
     display: flex;
-    gap: var(--common-spacing);
+    gap: var(--narrow-spacing);
     border-bottom: 1px solid var(--theme-light-color);
-    padding: var(--common-spacing);
-    font-size: 0.9em;
+    padding: var(--narrow-spacing);
   }
 }
 
@@ -20,7 +19,7 @@
 
 .newTag {
   background-color: rgb(253, 69, 74);
-  padding: var(--narrow-spacing) var(--common-spacing);
+  padding: var(--narrow-spacing) var(--narrow-spacing);
   border-radius: 50px;
   color: #fff;
   font-weight: 600;

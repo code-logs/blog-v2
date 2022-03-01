@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styles from './TagNavigator.module.scss'
 
 export interface TagNavigatorProps {
@@ -13,15 +14,11 @@ const TagNavigator = (props: TagNavigatorProps) => {
         return (
           <ol key={keyIdx}>
             {indexes.map((index) => (
-              <a
-                href={`#${index}`}
-                className={
-                  indexesSet.has(index) ? styles.active : ''
-                }
-                key={index}
-              >
-                <li>{index}</li>
-              </a>
+              <Link key={index} href={`#${index}`}>
+                <a className={indexesSet.has(index) ? styles.active : ''}>
+                  <li>{index}</li>
+                </a>
+              </Link>
             ))}
           </ol>
         )

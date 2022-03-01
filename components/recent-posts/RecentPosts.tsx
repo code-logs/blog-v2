@@ -1,6 +1,5 @@
 import PostCard from '../post-card/PostCard'
 import TitleWithCount from '../title-with-count/TitleWithCount'
-import styles from './RecentPosts.module.scss'
 
 export interface PostRef {
   title: string
@@ -25,12 +24,8 @@ export interface RecentPostsProps {
 
 const RecentPosts = (props: RecentPostsProps) => {
   return (
-    <section className={styles.container}>
-      <TitleWithCount
-        level={2}
-        count={props.posts.length}
-        title="Recent posts"
-      />
+    <section>
+      <TitleWithCount level={2} count={props.posts.length} title="Recent posts" />
 
       {props.posts.map((post, idx) => (
         <PostCard key={idx} post={post} />
