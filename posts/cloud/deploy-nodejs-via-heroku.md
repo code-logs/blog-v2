@@ -44,15 +44,16 @@ $ heroku create ${APPLICATION_NAME} --region ${REGION}
 
 `heroku create` 명령어를 통해 `heroku` 애플리케이션을 생성한다 `APPLICATION_NAME`과 `REGION`은 필수값이 아니며 해당 옵션들이 없는 상태에서도 애플리케이션 생성을 진행 할 수 있다.
 
-> `APPLICATION_NAME`을 설정하지 않으면 임의이 문자가 자동으로 생성된다. 원하는 이름이 있다면 입력하면 된다.
-> `APPLICATION_NAME`은 이후 서비스에 접근하기 위한 URL을 구성하는데 사용되기 때문에 알파벳과 `-` 로만 구성돼야 한다.
-
-> Region
-> 다른 클라우드 서비스와 마찬가지로 서버의 지리적 위치를 설정한다. 당연히 서비스가 주로 제공되는 곳에서 물리적으로 가까운 데이터센터를 선택하는 것이 좋은 네트워크 성능을 보장 할 수 있는 방법이다.
-
-`heroku regions` 커맨드를 통해 사용 가능한 region 리스트를 확인 할 수 있으며, `Heroku`는 외부에 공개 할 용도의 `Common Spaces` 유형과 분리된 네트워크 환경을 갖는 `Private Spaces` 유형을 제공한다.
-
+> `APPLICATION_NAME`
 >
+> `APPLICATION_NAME`을 설정하지 않으면 임의이 문자가 자동으로 생성된다. 원하는 이름이 있다면 입력하면 된다.
+> `APPLICATION_NAME`은 이후 서비스에 접근하기 위한 URL을 구성하는데 사용되기 때문에 알파벳과 숫자 그리고 `-` 로만 구성돼야 한다.
+
+> `Region`
+>
+> 다른 클라우드 서비스와 마찬가지로 서버의 지리적 위치를 선택하는 옵션이다. 당연히 서비스가 주로 제공되는 곳에서 부터 물리적으로 가까운 곳에 위치한 데이터센터를 선택하는 것이 조금 더 좋은 네트워크 성능을 제공 받는데 도움이 될 것이다
+>
+> `heroku regions` 커맨드를 통해 사용 가능한 region 리스트를 확인 할 수 있으며, `Heroku`는 외부에 공개 할 용도의 `Common Spaces` 유형과 분리된 네트워크 환경을 갖는 `Private Spaces` 유형을 제공한다.
 
 ## 배포하기 - Heroku 원격 저장소로 Push
 
@@ -71,11 +72,11 @@ $ git push heroku main
 ```
 
 > 애플리케이션 디펜던시 설정
-> `heroku`는 `package.json` 파일을 감지하고 Node.js 프로젝트임을 감지하고 `package-lock.json` 파일을 통해 필요한 디펜던시를 확인하고 설치하게 된다. (yarn을 사용할 경우 yarn-lock.json 파일) 따라서 프로젝트의 디펜던시를 설치한 이후 생성되는 package-lock.json 파일을 반드시 커밋 대상으로 추가하고 커밋해야 한다.
+> `heroku`는 `package.json` 파일의 존재를 확인하고 Node.js 프로젝트임을 감지한다. `package-lock.json` 파일을 통해 필요한 디펜던시를 확인하고 설치하게 된다. (yarn을 사용할 경우 yarn-lock.json 파일) 따라서 프로젝트의 디펜던시를 설치한 이후 생성되는 package-lock.json 파일을 커밋하는 것이 좋다.
 
 push 커맨드를 실행하면 소스코드를 업로드 하고 빌드와 배포를 자동으로 진행하게 된다.
 
-배포가 모두 완료되면 아래 커맨드를 통해 배포된 애플리케이션이 적어도 한개 이상의 노드에서 실행 중인지 확인 할 수 있다.
+배포가 완료되면 애플리케이션안 적어도 한개 이상의 노드에서 실행 돼야한다. 아래의 커맨드를 통해 실행중인 노드의 정보를 확인 할 수 있다.
 
 ```bash
 $ heroku ps:scale
@@ -83,9 +84,9 @@ $ heroku ps:scale
 
 ## 앱 실행을 위한 스크립트 정의 - Procfile
 
-`heroku`는 배포된 디렉토리의 구조를 통해 해당 프로젝트가 어떤 언어의 프로젝트인지 판단한다. Node.js의 경우 `package.json` 파일을 통해 이를 확인하고 `scripts` 프로퍼티를 통해 애플리케이션을 실행하기 위해 필요한 작업들은 진행한다.
+`heroku`는 배포된 파일을 통해 해당 프로젝트가 어떤 언어의 프로젝트인지 판단한다. Node.js의 경우 `package.json` 파일로 Node.js 프로젝트임을 확인하고 `scripts` 프로퍼티를 통해 애플리케이션을 실행하기 위해 필요한 작업들은 진행한다.
 
-변경사항을 `heroku` 원격 저장소에 push 하면 로그를 출력하는데 이 로그를 확인하면 `heroku` 어떤 작업들을 수행하는지 확인 할 수 있다.
+변경사항을 `heroku` 원격 저장소에 push 하면 로그를 출력하는데 이 로그를 확인하면 `heroku`가 어떤 작업들을 수행하는지 확인 할 수 있다.
 
 간추려서 이야기 해보면 `node 설치` → `npm 또는 yarn 설치` → `dependency 설치` → `build script 실행` → `dev dependency 삭제` → `start script 실행`의 순서로 작업을 수행하게 된다.
 
