@@ -163,6 +163,22 @@ const posts: Post[] = [
     ],
   },
   {
+    title: 'Heroku로 Node.js 애플리케이션 배포하기',
+    fileName: 'deploy-nodejs-via-heroku.md',
+    description: 'Heroku를 이용한 NodeJS  애플리케이션 배포하기',
+    category: 'cloud',
+    published: true,
+    publishedAt: '2022-03-04',
+    tags: ['heroku', 'node.js', 'cloud', 'cloud service', 'paas', 'deploy', '배포'],
+    thumbnailName: 'deploy-node-js-via-heroku.png',
+    references: [
+      {
+        title: 'Heroku Dev Center',
+        url: 'https://devcenter.heroku.com/',
+      },
+    ],
+  },
+  {
     title: "Svelte - Let's get started",
     fileName: 'get-started-svelte.md',
     description: 'Svelte 맛보기',
