@@ -5,6 +5,7 @@
 1. [배포의 시작 - Heroku create](#배포의-시작---heroku-create)
 1. [배포하기 - Heroku 원격 저장소로 Push](#배포하기---heroku-원격-저장소에-push)
 1. [앱 실행을 위한 스크립트 정의 - Procfile](#앱-실행을-위한-스크립트-정의---procfile)
+1. [자동배포 - GitHub로 간단하게](#자동배포---github로-간단하게)
 1. [Scaling - Scale up/down & Scale out/in](#scaling---scale-updown--scale-outin)
    1. [Scale up/down](#scale-updown)
    1. [Scale out/in](#scale-outin)
@@ -14,6 +15,7 @@
    1. [서비스 접속하기 - Heroku open](#서비스-접속하기---heroku-open)
    1. [명령어와 로그 보기 - DEBUG=\*](#명령어와-로그-보기---debug)
    1. [Project 커맨드 실행하기 - Heroku run ${cmd}](#Project%20%EC%BB%A4%EB%A7%A8%EB%93%9C%20%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0%20-%20Heroku%20run%20$%7Bcmd%7D)
+   1. [Heroku 무료요금 정책](#heroku-무료요금-정책)
 1. [마치며](#마치며)
 
 ## What is Heroku?
@@ -72,11 +74,12 @@ $ git push heroku main
 ```
 
 > 애플리케이션 디펜던시 설정
+>
 > `heroku`는 `package.json` 파일의 존재를 확인하고 Node.js 프로젝트임을 감지한다. `package-lock.json` 파일을 통해 필요한 디펜던시를 확인하고 설치하게 된다. (yarn을 사용할 경우 yarn-lock.json 파일) 따라서 프로젝트의 디펜던시를 설치한 이후 생성되는 package-lock.json 파일을 커밋하는 것이 좋다.
 
 push 커맨드를 실행하면 소스코드를 업로드 하고 빌드와 배포를 자동으로 진행하게 된다.
 
-배포가 완료되면 애플리케이션안 적어도 한개 이상의 노드에서 실행 돼야한다. 아래의 커맨드를 통해 실행중인 노드의 정보를 확인 할 수 있다.
+배포가 완료되면 애플리케이션은 적어도 한개 이상의 노드에서 실행 돼야한다. 아래의 커맨드를 통해 실행중인 노드의 정보를 확인 할 수 있다.
 
 ```bash
 $ heroku ps:scale
@@ -96,20 +99,27 @@ $ heroku ps:scale
 Start script 실행
 start script를 실행 할 때 heroku는 기본적으로 `start`라는 명칭의 스크립트를 찾고 있다면 이것을 실행한다.
 
+> `devDependency prune`
 >
-
-> devDependency prune
 > heroku는 배포 프로세스를 수행하고 가장 마지막 단계에서 devDependency를 삭제하는 절차를 포함하고 있다. 저장공간의 점유를 최소화 하기 위함이 아닐까 생각이 든다.
 > 사용자로서 주의할 점은 대부분의 경우 소스 코드를 빌드해 내는 과정에 devDependency를 사용하게 되는데 빌드 시점이 적절하지 않은 경우 devDependency가 이미 삭제된 이후 빌드를 시도 할 수 있으며 결과적으로 정상적으로 빌드를 끝 마칠 수 없다.
 > 이러한 경우 또는 일정 시점에 추가적인 Action을 수행 할 수 있도록 Heroku는 빌드 스탭에 따른 스크립트를 정의를 지원한다. - [참조](https://devcenter.heroku.com/articles/nodejs-support#heroku-specific-build-steps)
 
 `Procfile`은 애플리케이션 실행시 실행할 커맨드를 정의할 수 있는 파일이다. 프로젝트 root 디렉토리에 파일을 생성하고 `<process>: <command>`의 형태로 내용을 추가하면 `Heroku`는 이 파일을 기준으로 커맨드를 실행하게 된다.
 
-```bash
+```
 web: npm start
 ```
 
 그 밖의 다양한 커맨드를 설정 할 수 있으며 자세한 내용은 [가이드](https://devcenter.heroku.com/articles/procfile)를 참조
+
+## 자동배포 - GitHub로 간단하게
+Github 연동은 [heroku 사이트](https://heroku.com/)에 방문해서 아주 간단히 해결 할 수 있다.
+
+애플리케이션이 정상적으로 설치되었다면 heroku 사이트에 로그인한 뒤 생성한 애플리케이션 목록을 확인 할 수 있다.
+
+애플리케이션 목록을 클릭해 상세 설정으로 이동하고 `Deploy` 메뉴로 이동한다.
+`Deploy method` 중 GitHub을 선택하고 `인증` → `배포 대상 브랜치 선택`만 해주면 자동배포 설정이 완료된다.
 
 ## Scaling - Scale up/down & Scale out/in
 
@@ -120,8 +130,9 @@ $ heroku ps:scale
 web=1:Free
 ```
 
-> Dynos
-> `Heroku`는 일반적으로 node 또는 container라고 부르는 실행환경을 Dynos라고 부른다.
+> `Dynos`
+>
+> `Heroku`는 일반적으로 node 또는 container라고 부르는 실행환경을 `Dynos`라고 부른다.
 
 `heroku ps:scale` 커맨드를 통해 확인한 web=1:Free는 `Dynos유형:Dynos수량:Dynos크기`의 조합이다.
 
@@ -145,12 +156,14 @@ $ heroku ps:scale web=2
 
 `web` 유형의 dynos는 무료 서비스로 위 커맨드를 그대로 실행 할 경우 무료 서비스에 한해 스케일 아웃 할 수 없다는 에러 메시지가 출력된다.
 
-> Dynos types
+> `Dynos types`
+>
 > Dynos는 `Web`, `Worker`, `One-off` 세가지 유형이 존재한다.
 > 각 유형은 배포하고자 하는 애플리케이션의 성향에 알맞도록 선택해야 한다.
 > `Web`은 일반적인 Web application을, `Worker`는 Batch 성향의 백그라운드 프로세스를, `One-off`는 idle 상태를 유지하다 필요한 순간에만 active 되는 서비스를 배포하기에 적절한 유형이다 - [자세히 보기](https://devcenter.heroku.com/articles/dynos#dyno-configurations)
-
-> Dynos 크기
+>
+> `Dynos 크기`
+>
 > Dynos 크기는 쉽게 이야기해서 하드웨어 성능을 의미한다.
 > Heroku가 제공하는 Dynos 크기의 종류 및 각 크기별 spec은 [링크](https://devcenter.heroku.com/articles/dyno-types)를 통해 확인 할 수 있다.
 
@@ -206,11 +219,29 @@ $ DEBUG=* heroku local web
 $ heroku run echo HelloWorld
 ```
 
+### Heroku 무료요금 정책
+
+Web dyno는 기본적으로 무료이다. 그런데 몇가지 제약 조건이 있는다 제약 조건은 아래와 같다.
+
+**Sleep 상태로 전환**
+
+30분간 트래픽이 발생하지 않을 경우 IDLE 상태로 전환되고, 다시 트래픽이 발생하면 약간의 delay를 두고 활성화 됨
+
+**Dyno hour pool**
+
+사용자는 매달 web dyno를 운영 할 수 있는 시간의 제약이 있다. 기본적으로는 매달 550 시간이 주어지고 유효한 결재정보를 입력한 사용자의 경우 추가적으로 450 시간의 무료 이용 시간을 제공 받을 수 있다. 아래 명령을 통해 잔여 시간을 확인 할 수 있다.
+
+```bash
+$ heroku ps -a ${APPLICATION_NAME}`
+Free dyno hours quota remaining this month: 1000h 0m (100%)
+Free dyno usage for this app: 0h 0m (0%)
+```
+
 ## 마치며
 
-블로그에서 사용할 `[hit-counter](https://github.com/code-logs/hit-counter)`를 개발해서 배포하려다가 예전에 한번 해봤던 heroku를 통해 배포하기로 결정했고 그참에 다시금 heroku를 조금 더 상세히 확인하는 계기가 되었다.
+블로그에서 사용할 `[hit-counter](https://github.com/code-logs/hit-counter)`를 개발해서 배포하려다가 예전에 해봤던 heroku를 통해 배포하기로 결정했고 그참에 다시금 heroku를 조금 더 상세히 확인하는 계기가 되었다.
 이전에 사용경험이 그리 좋지 않았었는데 아무래도 당시 내가 이해하기에는 조금 버거운 내용들이 있어서 그랬던게 아닐까 생각하게 된다.
 
-다시 사용해본 heroku는 상당히 많은 부분이 자동화 되어 있고 정말 편하게 배포를 할 수 있다는 인상을 받았다 또 적재적소에 커스터마이징 할 수 있는 요소들을 배포 과정에 고민하게 되는 많은 문제점들을 해결 해 줄 수 있으리라는 생각도 들었다.
+다시 사용해 본 heroku는 상당히 많은 부분이 자동화 되어 있고 정말 편하게 배포를 할 수 있다는 인상을 받았다 또 적재적소에 커스터마이징 할 수 있는 요소들을 배포 과정에 고민하게 되는 많은 문제점들을 해결 해 줄 수 있으리라는 생각도 들었다.
 
 배포에 필요한 꽤 많은 부분에 대해 정리했다고 생각이 드는데 heroku가 제공해주는 기능중 극히 일부분만 정리된 것이라는 것도 참 놀라운 일이다.
