@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 const useHitCount = () => {
   useEffect(() => {
     const hitCount = async () => {
-      await fetch('https://simple-hit-counter.herokuapp.com/hit_count', {
+      await fetch(process.env.NEXT_PUBLIC_HIT_COUNT_API_HOST || 'http://localhost:8080/hit_count', {
         method: 'POST',
         headers: {
           'content-type': 'application/json',
