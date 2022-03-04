@@ -114,6 +114,7 @@ web: npm start
 그 밖의 다양한 커맨드를 설정 할 수 있으며 자세한 내용은 [가이드](https://devcenter.heroku.com/articles/procfile)를 참조
 
 ## 자동배포 - GitHub로 간단하게
+
 Github 연동은 [heroku 사이트](https://heroku.com/)에 방문해서 아주 간단히 해결 할 수 있다.
 
 애플리케이션이 정상적으로 설치되었다면 heroku 사이트에 로그인한 뒤 생성한 애플리케이션 목록을 확인 할 수 있다.
