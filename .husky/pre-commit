@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npx ts-node --skipProject precommit.ts
+# npx ts-node --skipProject precommit.ts
