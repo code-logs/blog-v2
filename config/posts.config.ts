@@ -176,6 +176,10 @@ const posts: Post[] = [
         title: 'Heroku Dev Center',
         url: 'https://devcenter.heroku.com/',
       },
+      {
+        title: 'Wiki - PaaS',
+        url: 'https://en.wikipedia.org/wiki/Platform_as_a_service'
+      }
     ],
   },
   {
