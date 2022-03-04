@@ -10,12 +10,12 @@ interface BlogConfig {
 
 const blogConfig: BlogConfig = {
   title: 'Code Logs',
-  baseURL: 'https://code-logs.github.io',
+  baseURL: process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000',
   pageLimit: 5,
   author: 'Jay Lee',
   themeColor: '#fff',
   appleTouchIconPath: '/icons/icon-192x-192.png',
-  adsenseURL: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7134579063537339'
+  adsenseURL: process.env.NEXT_PUBLIC_ADSENSE_URL || '',
 }
 
 export default blogConfig

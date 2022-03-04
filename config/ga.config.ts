@@ -3,7 +3,7 @@ interface GAConfig {
 }
 
 const gaConfig: GAConfig = {
-  id: 'G-1V105VZWBB',
+  id: process.env.NEXT_PUBLIC_GA_ID || ''
 }
 
 export default gaConfig
