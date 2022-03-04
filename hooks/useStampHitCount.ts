@@ -13,7 +13,7 @@ const useStampHitCount = (pathname: string) => {
     if (!pathname) return
 
     const fetchAPI = async () => {
-      const response = await fetch(process.env.NEXT_PUBLIC_HIT_COUNT_API_HOST || 'http://localhost:8080/hit_count', {
+      const response = await fetch(process.env.NEXT_PUBLIC_HIT_COUNT_API || 'http://localhost:8080/hit_count', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ pathname }),
