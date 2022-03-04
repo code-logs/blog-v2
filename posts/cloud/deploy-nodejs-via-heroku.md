@@ -246,7 +246,7 @@ $ heroku run echo HelloWorld
 
 **Sleep 상태로 전환**
 
-30분간 트래픽이 발생하지 않을 경우 IDLE 상태로 전환되고, 다시 트래픽이 발생하면 약간의 delay를 두고 활성화 됨
+한시간 동안 트래픽이 발생하지 않을 경우 IDLE 상태로 전환되고, 다시 트래픽이 발생하면 약간의 delay를 두고 활성화 됨
 
 **Dyno hour pool**
 
