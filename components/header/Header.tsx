@@ -16,7 +16,7 @@ export interface HeaderProps {
 const Header = ({ title, menus, socialIcons }: HeaderProps) => {
   return (
     <header className={styles.header}>
-      <p className={styles.title}>{process.env.NEXT_PUBLIC_BASE_URL}</p>
+      <p className={styles.title}>{title}</p>
 
       <ul className={styles.socialIcons}>
         {socialIcons.map((socialIcon, idx) => (

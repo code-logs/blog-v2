@@ -11,6 +11,8 @@ import hljs from 'highlight.js'
 import postsDatabase from '../database/post-database'
 import styles from './PostDetail.module.scss'
 import { useEffect } from 'react'
+import useStampHitCount from '../hooks/useStampHitCount'
+import useHumanReadableDate from '../hooks/useHumanReadableDate'
 
 export async function getStaticPaths() {
   const posts = postsDatabase.find()
@@ -32,6 +34,9 @@ export async function getStaticProps(context: { params: { title: string } }) {
 }
 
 const PostDetail: NextPage<{ post: Post; content: string }> = (props: { post: Post; content: string }) => {
+  const { pageHitCount } = useStampHitCount(PostUtil.normalizeTitle(props.post.title))
+  const publishedAt = useHumanReadableDate(new Date(props.post.publishedAt))
+
   useEffect(() => {
     hljs.highlightAll()
   }, [])
@@ -47,6 +52,10 @@ const PostDetail: NextPage<{ post: Post; content: string }> = (props: { post: Po
       />
 
       <article className={styles.container}>
+        <p className={styles.dateCount}>
+          <span>{publishedAt}</span>
+          <span>Views {pageHitCount}</span>
+        </p>
         <section className={styles.thumbnailWrapper}>
           <img src={PathUtil.buildImagePath(props.post.thumbnailName)} alt={props.post.description} />
         </section>

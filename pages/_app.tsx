@@ -11,8 +11,11 @@ import blogConfig from '../config/blog.config'
 import gaConfig from '../config/ga.config'
 import menus from '../config/menu.config'
 import socialIcons from '../config/social.config'
+import useStampHitCount from '../hooks/useStampHitCount'
 
 const MainApp = ({ Component, pageProps }: AppProps) => {
+  useStampHitCount('/')
+
   return (
     <>
       <GTagScript gaID={gaConfig.id} />

@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import blogConfig from '../../config/blog.config'
 import useAdsense from '../../hooks/useAdsense'
-import useHitCount from '../../hooks/useHitCount'
 
 export interface CommonMetaProps {
   title: string
@@ -15,7 +14,6 @@ export interface CommonMetaProps {
 const CommonMeta = (props: CommonMetaProps) => {
   const { title, description, keywords, url, imageURL, customMeta } = props
   useAdsense()
-  useHitCount()
 
   return (
     <Head>

@@ -1,11 +1,12 @@
-import Image from 'next/image'
-import { Post } from '../recent-posts/RecentPosts'
-import PostUtil from '../../utils/PostUtil'
-import Tags from '../tags/Tags'
-import blogConfig from '../../config/blog.config'
-import styles from './PostCard.module.scss'
-import PathUtil from '../../utils/PathUtil'
 import Link from 'next/link'
+import blogConfig from '../../config/blog.config'
+import useHumanReadableDate from '../../hooks/useHumanReadableDate'
+import PathUtil from '../../utils/PathUtil'
+import PostUtil from '../../utils/PostUtil'
+import { Post } from '../recent-posts/RecentPosts'
+import Tags from '../tags/Tags'
+import ViewCounter from '../view-counter/ViewCounter'
+import styles from './PostCard.module.scss'
 
 export interface PostCardProps {
   titleLevel?: 1 | 2 | 3
@@ -13,16 +14,8 @@ export interface PostCardProps {
 }
 
 const PostCard = ({ titleLevel = 3, post }: PostCardProps) => {
-  const formatHumanReadableDate = (date: Date | string) => {
-    if (typeof date === 'string') date = new Date(date)
-
-    const year = String(date.getFullYear()).slice(2)
-    const month = String(date.getMonth() + 1).padStart(2, '0')
-    const day = String(date.getDate()).padStart(2, '0')
-
-    return `${year}/${month}/${day}`
-  }
-
+  const publishedAt = useHumanReadableDate(new Date(post.publishedAt))
+  
   return (
     <article className={styles.card}>
       <Link href={`${blogConfig.baseURL}/${PostUtil.normalizeTitle(post.title)}`}>
@@ -35,7 +28,11 @@ const PostCard = ({ titleLevel = 3, post }: PostCardProps) => {
 
       <span className={styles.category}>{post.category}</span>
 
-      <span className={styles.publishedAt}>{formatHumanReadableDate(post.publishedAt)}</span>
+      <span className={styles.publishedAt}>{publishedAt}</span>
+
+      <span className={styles.viewCount}>
+        Views <ViewCounter post={post} />
+      </span>
 
       <Link href={`${blogConfig.baseURL}/${PostUtil.normalizeTitle(post.title)}`}>
         <a className={styles.description}>
