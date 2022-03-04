@@ -7,7 +7,7 @@ const useHitCount = (pathname: string) => {
     if (!pathname) return
 
     const fetchAPI = async () => {
-      const apiURL = new URL(process.env.NEXT_PUBLIC_HIT_COUNT_API_HOST || 'http://localhost:8080/hit_count')
+      const apiURL = new URL(process.env.NEXT_PUBLIC_HIT_COUNT_API || 'http://localhost:8080/hit_count')
       apiURL.search = `pathname=${pathname}`
 
       const response = await fetch(apiURL.href, {
