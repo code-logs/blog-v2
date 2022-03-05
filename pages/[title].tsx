@@ -66,7 +66,7 @@ const PostDetail: NextPage<{ post: Post; content: string }> = (props: { post: Po
 
         <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
 
-        <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5230991824" />
+        <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5391522351" />
 
         <section dangerouslySetInnerHTML={{ __html: props.content }}></section>
 
