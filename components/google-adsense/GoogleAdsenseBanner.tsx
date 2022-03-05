@@ -1,6 +1,4 @@
-import Script from 'next/script'
 import { useEffect } from 'react'
-import styles from './GoogleAdsenseBanner.module.scss'
 
 export interface GoogleAdsenseBannerProps {
   adClient: string
@@ -15,10 +13,12 @@ declare global {
 
 const GoogleAdsenseBanner = (props: GoogleAdsenseBannerProps) => {
   useEffect(() => {
-    window.onload = () => {
-      window.adsbygoogle = window.adsbygoogle || []
-      window.adsbygoogle.push({})
-    }
+    // window.onload = () => {
+    //   window.adsbygoogle = window.adsbygoogle || []
+    //   window.adsbygoogle.push({})
+    // }
+    window.adsbygoogle = window.adsbygoogle || []
+    window.adsbygoogle.push({})
   }, [])
 
   return (
@@ -30,7 +30,7 @@ const GoogleAdsenseBanner = (props: GoogleAdsenseBannerProps) => {
         data-ad-slot={props.adSlot}
         data-ad-format="auto"
         data-full-width-responsive="true"
-        onLoad={() => console.log('Loaded')}
+        onLoad={() => console.log('loaded')}
       ></ins>
     </>
   )

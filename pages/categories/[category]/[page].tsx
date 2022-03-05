@@ -76,7 +76,7 @@ const Category: NextPage<{
 
       <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
 
-      <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5230991824" />
+      <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5391522351" />
 
       <Paginator page={page} lastPage={lastPage} baseURL={`${blogConfig.baseURL}/categories/${category}`} />
     </>

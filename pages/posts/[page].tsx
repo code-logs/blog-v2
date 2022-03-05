@@ -97,7 +97,7 @@ const Posts: NextPage<{ page: number; lastPage: number; posts: Post[] }> = (prop
 
       <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
 
-      <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5230991824" />
+      <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5391522351" />
 
       <Paginator page={page} lastPage={lastPage} query={query} baseURL={`${blogConfig.baseURL}/posts`} />
     </>
