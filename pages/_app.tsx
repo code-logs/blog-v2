@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app'
 import 'normalize.css'
 import Footer from '../components/footer/Footer'
+import GoogleAdsenseBanner from '../components/google-adsense/GoogleAdsenseBanner'
 import GTagScript from '../components/gtag-script/GTagScript'
 import Header from '../components/header/Header'
 import KakaoAdfitBanner from '../components/kakao-adfit/KakaoAdfitBanner'
