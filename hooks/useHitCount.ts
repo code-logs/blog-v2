@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 const useHitCount = (pathname: string) => {
-  const [hitCount, setHitCount] = useState(0)
+  const [hitCount, setHitCount] = useState('')
 
   useEffect(() => {
     if (!pathname) return
@@ -16,7 +16,7 @@ const useHitCount = (pathname: string) => {
       })
 
       if (!response.ok) throw new Error(response.statusText)
-      const { count } = (await response.json()) || 0
+      const { count } = (await response.json())
       setHitCount(count)
     }
 
