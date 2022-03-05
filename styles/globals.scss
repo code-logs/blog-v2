@@ -104,7 +104,7 @@ header {
 
 main {
   grid-area: main;
-  max-width: 60vw;
+  width: 60vw;
   margin: 0 0 0 20vw;
   padding-top: var(--header-height);
   padding-bottom: var(--footer-height);
@@ -132,7 +132,7 @@ footer {
 
   main {
     margin: 0;
-    max-width: none;
+    width: 100%;
     padding: var(--header-height) var(--wide-spacing) var(--footer-height) var(--wide-spacing);
   }
 

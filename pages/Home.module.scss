@@ -1,9 +1,10 @@
 .index {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: var(--wide-spacing);
 
-    @media (max-width: 800px) {
-        grid-template-columns: 1fr;
-        gap: var(--common-spacing)
-    }
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+    gap: var(--common-spacing);
+  }
 }
