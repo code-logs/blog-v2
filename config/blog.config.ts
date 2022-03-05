@@ -6,6 +6,10 @@ interface BlogConfig {
   themeColor: string
   appleTouchIconPath: string
   adsenseURL: string
+  kakaoAdfitUnitIDs: {
+    mainBannerID: string
+    asideBannerID: string
+  }
 }
 
 const blogConfig: BlogConfig = {
@@ -16,6 +20,10 @@ const blogConfig: BlogConfig = {
   themeColor: '#fff',
   appleTouchIconPath: '/icons/icon-192x-192.png',
   adsenseURL: process.env.NEXT_PUBLIC_ADSENSE_URL || '',
+  kakaoAdfitUnitIDs: {
+    mainBannerID: 'DAN-zmsqzE1rgaSFsiBI',
+    asideBannerID: 'DAN-sesUHkpoX0lrw1xF',
+  },
 }
 
 export default blogConfig

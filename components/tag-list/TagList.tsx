@@ -14,12 +14,14 @@ const TagList = (props: TagListProps) => {
     <ol className={styles.container}>
       {props.indexGroups.map((indexGroup, idx) => (
         <ol key={idx}>
-          {indexGroup.map((index, idx) => (
-            <li key={idx}>
-              <h2 id={index}>{index}</h2>
-              <Tags tags={props.tagsByIndexes[index]} />
-            </li>
-          ))}
+          {indexGroup
+            .filter((index) => props.tagsByIndexes[index].length)
+            .map((index, idx) => (
+              <li key={idx}>
+                <h2 id={index}>{index}</h2>
+                <Tags tags={props.tagsByIndexes[index]} />
+              </li>
+            ))}
         </ol>
       ))}
     </ol>
