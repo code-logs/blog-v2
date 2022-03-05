@@ -6,6 +6,7 @@ import PostCard from '../../../components/post-card/PostCard'
 import TitleUtil from '../../../utils/TitleUtil'
 import blogConfig from '../../../config/blog.config'
 import postsDatabase from '../../../database/post-database'
+import KakaoAdfitBanner from '../../../components/kakao-adfit/KakaoAdfitBanner'
 
 export async function getStaticPaths() {
   const posts = postsDatabase.find()
@@ -68,10 +69,14 @@ const Category: NextPage<{
         keywords={posts.map((post) => [...post.tags, post.title, post.category, post.description]).flat()}
       />
 
+      <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
+
       <h1>{category}</h1>
 
       {Boolean(posts?.length) && posts.map((post, idx) => <PostCard titleLevel={2} key={idx} post={post} />)}
 
+      <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
+      
       <Paginator page={page} lastPage={lastPage} baseURL={`${blogConfig.baseURL}/categories/${category}`} />
     </>
   )

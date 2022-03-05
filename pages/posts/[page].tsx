@@ -11,6 +11,7 @@ import TitleUtil from '../../utils/TitleUtil'
 import blogConfig from '../../config/blog.config'
 import postsDatabase from '../../database/post-database'
 import { useRouter } from 'next/router'
+import KakaoAdfitBanner from '../../components/kakao-adfit/KakaoAdfitBanner'
 
 export async function getStaticPaths() {
   const posts = postsDatabase.find()
@@ -72,7 +73,7 @@ const Posts: NextPage<{ page: number; lastPage: number; posts: Post[] }> = (prop
         imageURL={'/icons/icon-512x512.png'}
         keywords={posts.map((post) => [...post.tags, post.title, post.description]).flat()}
       />
-
+      <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
       <h1>Posts</h1>
       <form
         onSubmit={(event) => {
@@ -93,6 +94,8 @@ const Posts: NextPage<{ page: number; lastPage: number; posts: Post[] }> = (prop
       </form>
 
       {Boolean(posts?.length) && posts.map((post, idx) => <PostCard titleLevel={2} key={idx} post={post} />)}
+
+      <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
 
       <Paginator page={page} lastPage={lastPage} query={query} baseURL={`${blogConfig.baseURL}/posts`} />
     </>

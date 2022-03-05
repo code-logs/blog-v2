@@ -8,6 +8,7 @@ import TitleUtil from '../utils/TitleUtil'
 import blogConfig from '../config/blog.config'
 import postsDatabase from '../database/post-database'
 import styles from './Home.module.scss'
+import KakaoAdfitBanner from '../components/kakao-adfit/KakaoAdfitBanner'
 
 export async function getStaticProps() {
   const posts = postsDatabase.find()
@@ -46,6 +47,8 @@ const Home: NextPage<{
         imageURL={'/icons/icon-512x512.png'}
       />
 
+      <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
+
       <h1>Home</h1>
 
       <RecentPosts posts={props.recentPosts} />
@@ -55,6 +58,8 @@ const Home: NextPage<{
 
         <TagIndexer tagsWithCount={props.tagsWithCount} limit={20} />
       </div>
+
+      <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
     </>
   )
 }

@@ -7,6 +7,8 @@ import { TagWithCount } from '../../components/tag-indexer/TagIndexer'
 import TitleWithCount from '../../components/title-with-count/TitleWithCount'
 import blogConfig from '../../config/blog.config'
 import postsDatabase from '../../database/post-database'
+import TitleUtil from '../../utils/TitleUtil'
+import KakaoAdfitBanner from '../../components/kakao-adfit/KakaoAdfitBanner'
 
 export async function getStaticProps() {
   const tags = postsDatabase
@@ -77,17 +79,21 @@ const Tags: NextPage<{ tags: string[] }> = ({ tags }) => {
   return (
     <section>
       <CommonMeta
-        title={'Tags 목록'}
+        title={TitleUtil.buildPageTitle('Tags 목록')}
         description={'Tag를 기준으로 포스팅을 색인합니다.'}
         url={`${blogConfig.baseURL}/tags`}
         imageURL={'/icons/icon-512x512.png'}
       />
+
+      <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
 
       <TitleWithCount level={1} title="Tags" count={tags.length}></TitleWithCount>
 
       <TagNavigator activatedIndexes={activatedIndexes} indexGroups={indexGroups} />
 
       <TagList indexGroups={indexGroups} tagsByIndexes={tagsByIndexes} />
+
+      <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
     </section>
   )
 }
