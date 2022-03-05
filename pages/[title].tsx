@@ -13,6 +13,7 @@ import styles from './PostDetail.module.scss'
 import { useEffect } from 'react'
 import useStampHitCount from '../hooks/useStampHitCount'
 import useHumanReadableDate from '../hooks/useHumanReadableDate'
+import KakaoAdfitBanner from '../components/kakao-adfit/KakaoAdfitBanner'
 
 export async function getStaticPaths() {
   const posts = postsDatabase.find()
@@ -62,6 +63,8 @@ const PostDetail: NextPage<{ post: Post; content: string }> = (props: { post: Po
           <h1>{props.post.title}</h1>
           <p className={styles.description}>{props.post.description}</p>
         </section>
+
+        <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
 
         <section dangerouslySetInnerHTML={{ __html: props.content }}></section>
 
