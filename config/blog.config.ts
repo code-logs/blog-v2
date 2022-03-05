@@ -5,10 +5,12 @@ interface BlogConfig {
   author: string
   themeColor: string
   appleTouchIconPath: string
-  adsenseURL: string
   kakaoAdfitUnitIDs: {
     mainBannerID: string
     asideBannerID: string
+  },
+  googleAdsense: {
+    adClient: string
   }
 }
 
@@ -19,11 +21,13 @@ const blogConfig: BlogConfig = {
   author: 'Jay Lee',
   themeColor: '#fff',
   appleTouchIconPath: '/icons/icon-192x-192.png',
-  adsenseURL: process.env.NEXT_PUBLIC_ADSENSE_URL || '',
   kakaoAdfitUnitIDs: {
-    mainBannerID: 'DAN-zmsqzE1rgaSFsiBI',
-    asideBannerID: 'DAN-sesUHkpoX0lrw1xF',
+    mainBannerID: 'DAN-77VcMo8qRv55JIat',
+    asideBannerID: 'DAN-sspT2WysGuBsayRb',
   },
+  googleAdsense: {
+    adClient: 'ca-pub-7134579063537339'
+  }
 }
 
 export default blogConfig

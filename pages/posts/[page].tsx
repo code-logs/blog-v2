@@ -12,6 +12,7 @@ import blogConfig from '../../config/blog.config'
 import postsDatabase from '../../database/post-database'
 import { useRouter } from 'next/router'
 import KakaoAdfitBanner from '../../components/kakao-adfit/KakaoAdfitBanner'
+import GoogleAdsenseBanner from '../../components/google-adsense/GoogleAdsenseBanner'
 
 export async function getStaticPaths() {
   const posts = postsDatabase.find()
@@ -73,6 +74,7 @@ const Posts: NextPage<{ page: number; lastPage: number; posts: Post[] }> = (prop
         imageURL={'/icons/icon-512x512.png'}
         keywords={posts.map((post) => [...post.tags, post.title, post.description]).flat()}
       />
+      <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5426432942" />
       <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
       <h1>Posts</h1>
       <form
