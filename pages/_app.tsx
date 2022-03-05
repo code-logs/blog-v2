@@ -11,7 +11,6 @@ import socialIcons from '../config/social.config'
 import '../styles/globals.scss'
 import '../styles/highlight.scss'
 
-
 const MainApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
@@ -22,6 +21,8 @@ const MainApp = ({ Component, pageProps }: AppProps) => {
       <main>
         <Component {...pageProps} />
       </main>
+
+      <aside></aside>
 
       <Footer author={blogConfig.author} />
     </>
