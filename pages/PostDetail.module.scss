@@ -101,9 +101,11 @@
   }
 }
 
-.dateCount {
-  display: flex;
-  justify-content: space-between;
+.publishedAt {
+  font-size: 0.9em;
+  color: var(--theme-color);
+  margin-bottom: 0;
+  text-align: right;
 }
 
 .description {
