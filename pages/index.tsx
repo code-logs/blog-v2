@@ -1,14 +1,14 @@
-import RecentPosts, { Post } from '../components/recent-posts/RecentPosts'
-import TagIndexer, { TagWithCount } from '../components/tag-indexer/TagIndexer'
-
+import type { NextPage } from 'next'
 import CategoryIndexer from '../components/category-indexer/CategoryIndexer'
 import CommonMeta from '../components/common-meta/CommonMeta'
-import type { NextPage } from 'next'
-import TitleUtil from '../utils/TitleUtil'
+import GoogleAdsenseBanner from '../components/google-adsense/GoogleAdsenseBanner'
+import KakaoAdfitBanner from '../components/kakao-adfit/KakaoAdfitBanner'
+import RecentPosts, { Post } from '../components/recent-posts/RecentPosts'
+import TagIndexer, { TagWithCount } from '../components/tag-indexer/TagIndexer'
 import blogConfig from '../config/blog.config'
 import postsDatabase from '../database/post-database'
+import TitleUtil from '../utils/TitleUtil'
 import styles from './Home.module.scss'
-import KakaoAdfitBanner from '../components/kakao-adfit/KakaoAdfitBanner'
 
 export async function getStaticProps() {
   const posts = postsDatabase.find()
@@ -47,8 +47,6 @@ const Home: NextPage<{
         imageURL={'/icons/icon-512x512.png'}
       />
 
-      <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
-
       <h1>Home</h1>
 
       <RecentPosts posts={props.recentPosts} />
@@ -60,6 +58,8 @@ const Home: NextPage<{
       </div>
 
       <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
+
+      <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5230991824" />
     </>
   )
 }

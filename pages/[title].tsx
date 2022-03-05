@@ -2,6 +2,7 @@ import hljs from 'highlight.js'
 import { NextPage } from 'next'
 import { useEffect } from 'react'
 import CommonMeta from '../components/common-meta/CommonMeta'
+import GoogleAdsenseBanner from '../components/google-adsense/GoogleAdsenseBanner'
 import KakaoAdfitBanner from '../components/kakao-adfit/KakaoAdfitBanner'
 import { Post } from '../components/recent-posts/RecentPosts'
 import Utterances from '../components/utterrances/Utterrances'
@@ -64,6 +65,8 @@ const PostDetail: NextPage<{ post: Post; content: string }> = (props: { post: Po
         </section>
 
         <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
+
+        <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5230991824" />
 
         <section dangerouslySetInnerHTML={{ __html: props.content }}></section>
 

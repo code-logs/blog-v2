@@ -74,8 +74,6 @@ const Posts: NextPage<{ page: number; lastPage: number; posts: Post[] }> = (prop
         imageURL={'/icons/icon-512x512.png'}
         keywords={posts.map((post) => [...post.tags, post.title, post.description]).flat()}
       />
-      <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5426432942" />
-      <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
       <h1>Posts</h1>
       <form
         onSubmit={(event) => {
@@ -98,6 +96,8 @@ const Posts: NextPage<{ page: number; lastPage: number; posts: Post[] }> = (prop
       {Boolean(posts?.length) && posts.map((post, idx) => <PostCard titleLevel={2} key={idx} post={post} />)}
 
       <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
+
+      <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5230991824" />
 
       <Paginator page={page} lastPage={lastPage} query={query} baseURL={`${blogConfig.baseURL}/posts`} />
     </>

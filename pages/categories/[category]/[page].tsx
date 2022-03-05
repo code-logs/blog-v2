@@ -1,12 +1,13 @@
-import CommonMeta from '../../../components/common-meta/CommonMeta'
 import { NextPage } from 'next'
+import CommonMeta from '../../../components/common-meta/CommonMeta'
+import GoogleAdsenseBanner from '../../../components/google-adsense/GoogleAdsenseBanner'
+import KakaoAdfitBanner from '../../../components/kakao-adfit/KakaoAdfitBanner'
 import Paginator from '../../../components/paginator/Paginator'
-import { Post } from '../../../components/recent-posts/RecentPosts'
 import PostCard from '../../../components/post-card/PostCard'
-import TitleUtil from '../../../utils/TitleUtil'
+import { Post } from '../../../components/recent-posts/RecentPosts'
 import blogConfig from '../../../config/blog.config'
 import postsDatabase from '../../../database/post-database'
-import KakaoAdfitBanner from '../../../components/kakao-adfit/KakaoAdfitBanner'
+import TitleUtil from '../../../utils/TitleUtil'
 
 export async function getStaticPaths() {
   const posts = postsDatabase.find()
@@ -69,14 +70,14 @@ const Category: NextPage<{
         keywords={posts.map((post) => [...post.tags, post.title, post.category, post.description]).flat()}
       />
 
-      <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
-
       <h1>{category}</h1>
 
       {Boolean(posts?.length) && posts.map((post, idx) => <PostCard titleLevel={2} key={idx} post={post} />)}
 
       <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
-      
+
+      <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5230991824" />
+
       <Paginator page={page} lastPage={lastPage} baseURL={`${blogConfig.baseURL}/categories/${category}`} />
     </>
   )

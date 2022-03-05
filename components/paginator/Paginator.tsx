@@ -56,9 +56,7 @@ const Paginator = ({ page, lastPage, displayCount = 5, query, baseURL }: Paginat
         {page > 1 && !pageList.includes(1) && (
           <>
             <li>
-              <Link href={buildURL(1)}>
-                <a>{1}</a>
-              </Link>
+              <a href={buildURL(1)}>{1}</a>
             </li>
             <MoreHorizRounded />
           </>
@@ -76,19 +74,15 @@ const Paginator = ({ page, lastPage, displayCount = 5, query, baseURL }: Paginat
           <>
             <MoreHorizRounded />
             <li>
-              <Link href={buildURL(lastPage)}>
-                <a>{lastPage}</a>
-              </Link>
+              <a href={buildURL(lastPage)}>{lastPage}</a>
             </li>
           </>
         )}
         {page < lastPage && (
           <li>
-            <Link href={buildURL(page + 1)}>
-              <a>
-                <ChevronRightRounded />
-              </a>
-            </Link>
+            <a href={buildURL(page + 1)}>
+              <ChevronRightRounded />
+            </a>
           </li>
         )}
       </ul>
