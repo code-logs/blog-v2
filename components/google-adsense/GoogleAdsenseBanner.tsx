@@ -30,6 +30,7 @@ const GoogleAdsenseBanner = (props: GoogleAdsenseBannerProps) => {
         data-ad-slot={props.adSlot}
         data-ad-format="auto"
         data-full-width-responsive="true"
+        onLoad={() => console.log('Loaded')}
       ></ins>
     </>
   )
