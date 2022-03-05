@@ -1,14 +1,14 @@
-import TagList, { TagsByIndexes } from '../../components/tag-list/TagList'
-
-import CommonMeta from '../../components/common-meta/CommonMeta'
 import { NextPage } from 'next'
-import TagNavigator from '../../components/tag-navigator/TagNavigator'
+import CommonMeta from '../../components/common-meta/CommonMeta'
+import GoogleAdsenseBanner from '../../components/google-adsense/GoogleAdsenseBanner'
+import KakaoAdfitBanner from '../../components/kakao-adfit/KakaoAdfitBanner'
 import { TagWithCount } from '../../components/tag-indexer/TagIndexer'
+import TagList, { TagsByIndexes } from '../../components/tag-list/TagList'
+import TagNavigator from '../../components/tag-navigator/TagNavigator'
 import TitleWithCount from '../../components/title-with-count/TitleWithCount'
 import blogConfig from '../../config/blog.config'
 import postsDatabase from '../../database/post-database'
 import TitleUtil from '../../utils/TitleUtil'
-import KakaoAdfitBanner from '../../components/kakao-adfit/KakaoAdfitBanner'
 
 export async function getStaticProps() {
   const tags = postsDatabase
@@ -85,8 +85,6 @@ const Tags: NextPage<{ tags: string[] }> = ({ tags }) => {
         imageURL={'/icons/icon-512x512.png'}
       />
 
-      <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
-
       <TitleWithCount level={1} title="Tags" count={tags.length}></TitleWithCount>
 
       <TagNavigator activatedIndexes={activatedIndexes} indexGroups={indexGroups} />
@@ -94,6 +92,8 @@ const Tags: NextPage<{ tags: string[] }> = ({ tags }) => {
       <TagList indexGroups={indexGroups} tagsByIndexes={tagsByIndexes} />
 
       <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
+
+      <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5230991824" />
     </section>
   )
 }
