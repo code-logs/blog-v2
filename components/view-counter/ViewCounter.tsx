@@ -10,7 +10,7 @@ const ViewCounter = (props: ViewCounterProps) => {
   const { post } = props
   const hitCount = useHitCount(PostUtil.normalizeTitle(post.title))
 
-  return <>{hitCount || 0}</>
+  return <>{hitCount || ''}</>
 }
 
 export default ViewCounter
