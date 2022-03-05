@@ -64,10 +64,6 @@ const PostDetail: NextPage<{ post: Post; content: string }> = (props: { post: Po
           <p className={styles.description}>{props.post.description}</p>
         </section>
 
-        <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
-
-        <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5391522351" />
-
         <section dangerouslySetInnerHTML={{ __html: props.content }}></section>
 
         {props.post.references?.length && (
@@ -90,6 +86,10 @@ const PostDetail: NextPage<{ post: Post; content: string }> = (props: { post: Po
         <h2>Comments</h2>
         <Utterances repo={'code-logs/code-logs.github.io'} theme={'preferred-color-scheme'} issueTerm={'title'} issueLabel={'Comment'} />
       </section>
+
+      <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
+
+      <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5391522351" />
     </>
   )
 }
