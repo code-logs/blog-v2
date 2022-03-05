@@ -30,10 +30,6 @@ const PostCard = ({ titleLevel = 3, post }: PostCardProps) => {
 
       <span className={styles.publishedAt}>{publishedAt}</span>
 
-      <span className={styles.viewCount}>
-        Views <ViewCounter post={post} />
-      </span>
-
       <Link href={`${blogConfig.baseURL}/${PostUtil.normalizeTitle(post.title)}`}>
         <a className={styles.description}>
           <p>{post.description}</p>

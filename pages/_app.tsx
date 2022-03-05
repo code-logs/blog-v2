@@ -1,8 +1,5 @@
-import 'normalize.css'
-import '../styles/globals.scss'
-import '../styles/highlight.scss'
-
 import type { AppProps } from 'next/app'
+import 'normalize.css'
 import Footer from '../components/footer/Footer'
 import GTagScript from '../components/gtag-script/GTagScript'
 import Header from '../components/header/Header'
@@ -11,11 +8,11 @@ import blogConfig from '../config/blog.config'
 import gaConfig from '../config/ga.config'
 import menus from '../config/menu.config'
 import socialIcons from '../config/social.config'
-import useStampHitCount from '../hooks/useStampHitCount'
+import '../styles/globals.scss'
+import '../styles/highlight.scss'
+
 
 const MainApp = ({ Component, pageProps }: AppProps) => {
-  useStampHitCount('/')
-
   return (
     <>
       <GTagScript gaID={gaConfig.id} />
