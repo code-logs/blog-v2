@@ -14,9 +14,8 @@ const About = () => {
         imageURL={'/icons/icon-512x512.png'}
       />
 
-      <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
-
       <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5391522351" />
+      <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
       <h1>About</h1>
     </>
   )
