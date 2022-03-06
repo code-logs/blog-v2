@@ -1,17 +1,4 @@
-import { Post } from '../components/recent-posts/RecentPosts'
-
-enum Categories {
-  SEO = 'SEO',
-  Javascript = 'javascript',
-  CSS = 'CSS',
-  React = 'react',
-  UIandUX = 'UI and UX',
-  Typescript = 'typescript',
-  Elasticsearch = 'elasticsearch',
-  Infrastructure = 'infrastructure',
-  DevEnv = '개발환경',
-  Svelt = 'svelte',
-}
+import { Categories, Post } from '../components/recent-posts/RecentPosts'
 
 const posts: Post[] = [
   {
@@ -32,7 +19,7 @@ const posts: Post[] = [
     published: true,
     publishedAt: '2021-10-11',
     tags: ['javascript', 'tagged template', 'tagged template literal', 'es6'],
-    thumbnailName: 'tagged-template-literal.jpg',
+    thumbnailName: 'tagged-template-literal.png',
   },
   {
     title: 'Iterator and Generator',
@@ -42,7 +29,7 @@ const posts: Post[] = [
     published: true,
     publishedAt: '2021-10-17',
     tags: ['javascript', 'iterator', 'iterable', 'generator', 'es6', 'function*', 'yield'],
-    thumbnailName: 'iterator-generator.jpg',
+    thumbnailName: 'iterator-generator.png',
   },
   {
     title: 'Proxy',
@@ -52,7 +39,7 @@ const posts: Post[] = [
     published: true,
     publishedAt: '2021-10-25',
     tags: ['javascript', 'proxy', 'trap', 'es6', '프록시'],
-    thumbnailName: 'proxy.jpg',
+    thumbnailName: 'proxy.png',
   },
   {
     title: 'CSS Position',
@@ -62,7 +49,7 @@ const posts: Post[] = [
     published: true,
     publishedAt: '2021-10-26',
     tags: ['css', 'position', 'static', 'absolute', 'fixed', 'sticky', 'header', 'style', '스타일', '포지션', '헤더'],
-    thumbnailName: 'css-position.jpg',
+    thumbnailName: 'css-position.png',
   },
   {
     title: '고차 컴퍼넌트 (HOC: Higher Order Component)',
@@ -72,7 +59,7 @@ const posts: Post[] = [
     published: true,
     publishedAt: '2021-10-30',
     tags: ['hoc', 'higher order component', '고차 컴퍼넌트', 'react', '리액트'],
-    thumbnailName: 'hoc.jpg',
+    thumbnailName: 'hoc.png',
   },
   {
     title: 'Scroll sequence animation',
@@ -82,7 +69,7 @@ const posts: Post[] = [
     published: true,
     publishedAt: '2021-10-31',
     tags: ['scroll sequence', 'scroll sequence animation', 'ui', 'ux'],
-    thumbnailName: 'scroll-sequence.jpg',
+    thumbnailName: 'scroll-sequence.png',
   },
   {
     title: 'Any | Unknown | Never',
@@ -92,7 +79,7 @@ const posts: Post[] = [
     published: true,
     publishedAt: '2021-11-15',
     tags: ['typescript', 'any', 'unknown', 'never', '타입스크립트'],
-    thumbnailName: 'ts-any-unknown-never.jpg',
+    thumbnailName: 'ts-any-unknown-never.png',
   },
   {
     title: 'Elasticsearch: Full-text search (전문검색)',
@@ -102,7 +89,7 @@ const posts: Post[] = [
     published: true,
     publishedAt: '2021-11-16',
     tags: ['elasticsearch', 'full-text search', 'searching engine', '엘라스틱서치', '전문검색'],
-    thumbnailName: 'elasticsearch-full-text-search.jpg',
+    thumbnailName: 'elasticsearch-full-text-search.png',
   },
   {
     title: 'Nx build system 맛보기',
@@ -112,7 +99,7 @@ const posts: Post[] = [
     published: true,
     publishedAt: '2022-02-12',
     tags: ['nx', 'build', 'build system', 'monorepo', '빌드', '빌드 시스템', '모노리포'],
-    thumbnailName: 'monorepo-with-nx.jpg',
+    thumbnailName: 'monorepo-with-nx.png',
   },
   {
     title: 'yarn berry로 구성하는 monorepo',
@@ -122,7 +109,7 @@ const posts: Post[] = [
     published: true,
     publishedAt: '2022-02-26',
     tags: ['yarn', 'yarn berry', 'berry', 'monorepo', 'workspace', 'workspaces', '모노리포', 'zero-install'],
-    thumbnailName: 'yarn-berry-monorepo.jpg',
+    thumbnailName: 'yarn-berry-monorepo.png',
     references: [
       {
         title: 'yarn workspaces',
@@ -138,7 +125,7 @@ const posts: Post[] = [
     published: true,
     publishedAt: '2022-02-27',
     tags: ['개발환경', 'eslint', 'plugin', 'extends', 'eslint plugin', 'eslint extends', 'lint'],
-    thumbnailName: 'eslint-plugin-and-extends.jpg',
+    thumbnailName: 'eslint-plugin-and-extends.png',
     references: [
       {
         title: 'eslint-plugin-react Github repository',
@@ -154,7 +141,7 @@ const posts: Post[] = [
     published: true,
     publishedAt: '2022-02-28',
     tags: ['CSS', 'focus', 'focus-within', 'focus-visible', 'safari', 'chrome', 'brower', '사파리', '크롬', '브라우저'],
-    thumbnailName: 'focus-on-button.jpg',
+    thumbnailName: 'focus-on-button.png',
     references: [
       {
         title: 'Clicking and focus - MDN Web Docs',
@@ -166,7 +153,7 @@ const posts: Post[] = [
     title: 'Heroku로 Node.js 애플리케이션 배포하기',
     fileName: 'deploy-nodejs-via-heroku.md',
     description: 'Heroku를 이용한 NodeJS  애플리케이션 배포하기',
-    category: 'cloud',
+    category: Categories.Cloud,
     published: true,
     publishedAt: '2022-03-04',
     tags: ['heroku', 'node.js', 'cloud', 'cloud service', 'paas', 'deploy', '배포'],
@@ -178,19 +165,35 @@ const posts: Post[] = [
       },
       {
         title: 'Wiki - PaaS',
-        url: 'https://en.wikipedia.org/wiki/Platform_as_a_service'
-      }
+        url: 'https://en.wikipedia.org/wiki/Platform_as_a_service',
+      },
+    ],
+  },
+  {
+    title: '브라우저 보안 정책 CHIPS - (feat. Chrome 쿠키 입력 불가)',
+    fileName: 'chips.md',
+    description: 'CHIPS - Cookies Having Independent Partitioned State\n (Chrome 98 버그를 찾아 헤매다 발견하게 된 브라우저의 Cookie 관리 정책)',
+    category: Categories.Security,
+    published: true,
+    publishedAt: '2022-03-06',
+    tags: ['CHIPS', 'cookie', 'security', 'browser', 'policy', 'security policy', 'chrome'],
+    thumbnailName: 'chips.png',
+    references: [
+      {
+        title: 'Chrome Platform Status',
+        url: 'https://chromestatus.com/feature/5179189105786880',
+      },
     ],
   },
   {
     title: "Svelte - Let's get started",
     fileName: 'get-started-svelte.md',
     description: 'Svelte 맛보기',
-    category: 'svelte',
+    category: Categories.Svelte,
     published: false,
     publishedAt: '2099-02-13',
     tags: ['svelte', 'frontend', 'get started'],
-    thumbnailName: 'get-started-svelte.jpg',
+    thumbnailName: 'get-started-svelte.png',
     references: [
       {
         title: 'Svelte',
