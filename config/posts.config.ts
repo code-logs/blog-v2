@@ -32,7 +32,7 @@ const posts: Post[] = [
     published: true,
     publishedAt: '2021-10-11',
     tags: ['javascript', 'tagged template', 'tagged template literal', 'es6'],
-    thumbnailName: 'tagged-template-literal.jpg',
+    thumbnailName: 'tagged-template-literal.png',
   },
   {
     title: 'Iterator and Generator',
@@ -42,7 +42,7 @@ const posts: Post[] = [
     published: true,
     publishedAt: '2021-10-17',
     tags: ['javascript', 'iterator', 'iterable', 'generator', 'es6', 'function*', 'yield'],
-    thumbnailName: 'iterator-generator.jpg',
+    thumbnailName: 'iterator-generator.png',
   },
   {
     title: 'Proxy',
@@ -52,7 +52,7 @@ const posts: Post[] = [
     published: true,
     publishedAt: '2021-10-25',
     tags: ['javascript', 'proxy', 'trap', 'es6', '프록시'],
-    thumbnailName: 'proxy.jpg',
+    thumbnailName: 'proxy.png',
   },
   {
     title: 'CSS Position',
@@ -62,7 +62,7 @@ const posts: Post[] = [
     published: true,
     publishedAt: '2021-10-26',
     tags: ['css', 'position', 'static', 'absolute', 'fixed', 'sticky', 'header', 'style', '스타일', '포지션', '헤더'],
-    thumbnailName: 'css-position.jpg',
+    thumbnailName: 'css-position.png',
   },
   {
     title: '고차 컴퍼넌트 (HOC: Higher Order Component)',
@@ -72,7 +72,7 @@ const posts: Post[] = [
     published: true,
     publishedAt: '2021-10-30',
     tags: ['hoc', 'higher order component', '고차 컴퍼넌트', 'react', '리액트'],
-    thumbnailName: 'hoc.jpg',
+    thumbnailName: 'hoc.png',
   },
   {
     title: 'Scroll sequence animation',
@@ -82,7 +82,7 @@ const posts: Post[] = [
     published: true,
     publishedAt: '2021-10-31',
     tags: ['scroll sequence', 'scroll sequence animation', 'ui', 'ux'],
-    thumbnailName: 'scroll-sequence.jpg',
+    thumbnailName: 'scroll-sequence.png',
   },
   {
     title: 'Any | Unknown | Never',
@@ -92,7 +92,7 @@ const posts: Post[] = [
     published: true,
     publishedAt: '2021-11-15',
     tags: ['typescript', 'any', 'unknown', 'never', '타입스크립트'],
-    thumbnailName: 'ts-any-unknown-never.jpg',
+    thumbnailName: 'ts-any-unknown-never.png',
   },
   {
     title: 'Elasticsearch: Full-text search (전문검색)',
@@ -102,7 +102,7 @@ const posts: Post[] = [
     published: true,
     publishedAt: '2021-11-16',
     tags: ['elasticsearch', 'full-text search', 'searching engine', '엘라스틱서치', '전문검색'],
-    thumbnailName: 'elasticsearch-full-text-search.jpg',
+    thumbnailName: 'elasticsearch-full-text-search.png',
   },
   {
     title: 'Nx build system 맛보기',
@@ -112,7 +112,7 @@ const posts: Post[] = [
     published: true,
     publishedAt: '2022-02-12',
     tags: ['nx', 'build', 'build system', 'monorepo', '빌드', '빌드 시스템', '모노리포'],
-    thumbnailName: 'monorepo-with-nx.jpg',
+    thumbnailName: 'monorepo-with-nx.png',
   },
   {
     title: 'yarn berry로 구성하는 monorepo',
@@ -122,7 +122,7 @@ const posts: Post[] = [
     published: true,
     publishedAt: '2022-02-26',
     tags: ['yarn', 'yarn berry', 'berry', 'monorepo', 'workspace', 'workspaces', '모노리포', 'zero-install'],
-    thumbnailName: 'yarn-berry-monorepo.jpg',
+    thumbnailName: 'yarn-berry-monorepo.png',
     references: [
       {
         title: 'yarn workspaces',
@@ -138,7 +138,7 @@ const posts: Post[] = [
     published: true,
     publishedAt: '2022-02-27',
     tags: ['개발환경', 'eslint', 'plugin', 'extends', 'eslint plugin', 'eslint extends', 'lint'],
-    thumbnailName: 'eslint-plugin-and-extends.jpg',
+    thumbnailName: 'eslint-plugin-and-extends.png',
     references: [
       {
         title: 'eslint-plugin-react Github repository',
@@ -154,7 +154,7 @@ const posts: Post[] = [
     published: true,
     publishedAt: '2022-02-28',
     tags: ['CSS', 'focus', 'focus-within', 'focus-visible', 'safari', 'chrome', 'brower', '사파리', '크롬', '브라우저'],
-    thumbnailName: 'focus-on-button.jpg',
+    thumbnailName: 'focus-on-button.png',
     references: [
       {
         title: 'Clicking and focus - MDN Web Docs',
@@ -190,7 +190,7 @@ const posts: Post[] = [
     published: false,
     publishedAt: '2099-02-13',
     tags: ['svelte', 'frontend', 'get started'],
-    thumbnailName: 'get-started-svelte.jpg',
+    thumbnailName: 'get-started-svelte.png',
     references: [
       {
         title: 'Svelte',
