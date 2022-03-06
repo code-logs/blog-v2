@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import styles from './GoogleAdsenseBanner.module.scss'
 
 export interface GoogleAdsenseBannerProps {
   adClient: string
@@ -19,17 +18,15 @@ const GoogleAdsenseBanner = (props: GoogleAdsenseBannerProps) => {
   }, [])
 
   return (
-    <div className={styles.wrapper}>
-      <ins
-        className="adsbygoogle"
-        style={{ display: 'block' }}
-        data-ad-client={props.adClient}
-        data-ad-slot={props.adSlot}
-        data-ad-format="auto"
-        data-full-width-responsive="true"
-        onLoad={() => console.log('loaded')}
-      ></ins>
-    </div>
+    <ins
+      className="adsbygoogle"
+      style={{ display: 'block' }}
+      data-ad-client={props.adClient}
+      data-ad-slot={props.adSlot}
+      data-ad-format="auto"
+      data-full-width-responsive="true"
+      onLoad={() => console.log('loaded')}
+    ></ins>
   )
 }
 
