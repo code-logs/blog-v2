@@ -27,8 +27,8 @@ const MainApp = ({ Component, pageProps }: AppProps) => {
       </main>
 
       <aside>
-        <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.asideBannerID} position="aside" />
         <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="8825787758" />
+        <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.asideBannerID} position="aside" />
       </aside>
 
       <Footer author={blogConfig.author} />

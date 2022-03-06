@@ -91,9 +91,8 @@ const Tags: NextPage<{ tags: string[] }> = ({ tags }) => {
 
       <TagList indexGroups={indexGroups} tagsByIndexes={tagsByIndexes} />
 
-      <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
-
       <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5391522351" />
+      <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
     </section>
   )
 }
