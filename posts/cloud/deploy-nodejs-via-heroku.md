@@ -27,9 +27,9 @@
 
 [PaaS](https://en.wikipedia.org/wiki/Platform_as_a_service) 형태의 클라우드 서비스로 처음에는 `Rails` 앱의 배포 및 관리를 지원하는 플랫폼이였고 현재는 `Java`, `Node.js`, `Scala`, `Clojure`, `Python`, `PHP`, `Go`를 지원한다.
 
-`Heroku`는 `Heroku CLI`를 제공하며 이를 통해 애플리케이션의 배포 및 관리 등의 작업을 수행 할 수 있도록 돕고 `Github`와의 연동을 통해 저장소의 변경사항을 감지하고 자동배포 하는 등의 기능을 제공한다.
+`Heroku`는 `Heroku CLI`를 제공하며 이를 통해 애플리케이션의 배포 및 관리 등의 작업을 수행 할 수 있도록 돕고 `GitHub`와의 연동을 통해 저장소의 변경사항을 감지하고 자동배포 하는 등의 기능을 제공한다.
 
-`Heroku`를 이용해 `Node.js` 애플리케이션을 배포하고 `Github`와의 연동 설정을 통해 최신화된 소스 코드를 자동으로 배포 할 수 환경을 구성하는 과정을 기록한다.
+`Heroku`를 이용해 `Node.js` 애플리케이션을 배포하고 `GitHub`와의 연동 설정을 통해 최신화된 소스 코드를 자동으로 배포 할 수 있는 환경구성 과정을 기록한다.
 
 ---
 
@@ -84,7 +84,7 @@ $ git push heroku main
 
 > **애플리케이션 디펜던시 설정**
 >
-> `heroku`는 `package.json` 파일의 존재를 확인하고 Node.js 프로젝트임을 감지한 뒤 `package-lock.json` 파일을 통해 필요한 디펜던시를 확인하고 설치하게 된다. (yarn을 사용할 경우 yarn-lock.json 파일) 따라서 프로젝트의 디펜던시를 설치한 이후 생성되는 `package-lock.json` 파일을 커밋하는 것이 좋다.
+> `heroku`는 `package.json` 파일의 존재를 확인하고 Node.js 프로젝트임을 감지한 뒤 `package-lock.json` 파일을 통해 필요한 디펜던시를 확인하고 설치하게 된다. (yarn을 사용할 경우 yarn-lock.json 파일) 따라서 프로젝트의 디펜던시를 설치한 이후 생성되는 `package-lock.json` 또는 `yarn-lock.json` 파일을 커밋하는 것이 좋다.
 
 push 커맨드를 실행하면 소스코드를 업로드 하고 빌드와 배포를 자동으로 진행하게 된다.
 
@@ -100,7 +100,7 @@ $ heroku ps:scale
 
 `heroku`는 배포된 파일을 통해 해당 프로젝트가 어떤 언어의 프로젝트인지 판단한다. Node.js의 경우 `package.json` 파일로 Node.js 프로젝트임을 확인하고 `scripts` 프로퍼티를 통해 애플리케이션을 실행하기 위해 필요한 작업들은 진행한다.
 
-변경사항을 `heroku` 원격 저장소에 push 하면 로그를 출력하는데 이 로그를 통해 `heroku`가 어떤 작업들을 수행하는지 확인 할 수 있다.
+변경사항을 `heroku` [원격 저장소에 push](#배포하기---heroku-원격-저장소로-push) 하면 로그를 출력하는데 이 로그를 통해 `heroku`가 어떤 작업들을 수행하는지 확인 할 수 있다.
 
 간추려서 이야기 해보면 `node 설치` → `npm 또는 yarn 설치` → `dependency 설치` → `build script 실행` → `dev dependency 삭제` → `start script 실행`의 순서로 작업을 수행하게 된다.
 
@@ -114,10 +114,11 @@ $ heroku ps:scale
 
 > **devDependency prune**
 >
-> heroku는 배포 프로세스를 수행하고 가장 마지막 단계에서 devDependency를 삭제하는 절차를 포함하고 있다. 저장공간의 점유를 최소화 하기 위함이 아닐까 생각이 든다.
+> heroku는 배포 프로세스를 수행하고 가장 마지막 단계에서 devDependency를 삭제하는 절차를 포함하고 있다. (저장공간의 점유를 최소화 하기 위함이 아닐까 생각이 든다.)
 >
-> 사용자로서 주의할 점은 대부분의 경우 소스 코드를 빌드해 내는 과정에 devDependency를 사용하게 되는데 빌드 시점이 적절하지 않은 경우 devDependency가 이미 삭제된 이후 빌드를 시도 할 수 있으며 결과적으로 정상적으로 빌드를 끝 마칠 수 없다.
-> 이러한 경우 또는 일정 시점에 추가적인 Action을 수행 할 수 있도록 Heroku는 빌드 스탭에 따른 스크립트를 정의를 지원한다. - [참조](https://devcenter.heroku.com/articles/nodejs-support#heroku-specific-build-steps)
+> 사용자로서 주의할 점은 devDependency가 이미 삭제된 이후 devDependency에 의존적인 작업을 수행 할 경우가 있는데 (ex. data migration) 이 경우 해당 작업을 정상적으로 수행할 수 없다.
+>
+> Heroku는 이런 추가적인 작업을 특정 시점에 수행 할 수 있도록 빌드 스탭에 따른 스크립트 정의를 지원한다. - [참조](https://devcenter.heroku.com/articles/nodejs-support#heroku-specific-build-steps)
 
 `Procfile`은 애플리케이션 실행시 실행할 커맨드를 정의할 수 있는 파일이다. 프로젝트 root 디렉토리에 파일을 생성하고 `<process>: <command>`의 형태로 내용을 추가하면 `Heroku`는 이 파일을 기준으로 커맨드를 실행하게 된다.
 
@@ -131,11 +132,11 @@ web: npm start
 
 ## 자동배포 - GitHub로 간단하게
 
-Github 연동은 [heroku 사이트](https://heroku.com/)에 방문해서 아주 간단히 해결 할 수 있다.
+GitHub 연동은 [heroku 사이트](https://heroku.com/)에서 아주 간단히 설정 할 수 있다.
 
 애플리케이션이 정상적으로 생성 되었다면 heroku 사이트에 로그인한 뒤 생성한 애플리케이션 목록을 확인 할 수 있다.
 
-애플리케이션 목록을 클릭해 상세 설정으로 이동하고 `Deploy` 메뉴로 이동한다.
+애플리케이션 목록을 클릭해 상세 설정으로 이동 → `Deploy` 메뉴로 이동한다.
 `Deploy method` 중 GitHub을 선택하고 `인증` → `배포 대상 브랜치 선택`만 해주면 자동배포 설정이 완료된다.
 
 ---
@@ -151,9 +152,9 @@ web=1:Free
 
 `heroku ps:scale` 커맨드를 통해 확인한 web=1:Free는 `Dynos유형:Dynos수량:Dynos크기`의 조합이다.
 
-> `Dynos`
+> **Dynos**
 >
-> `Dynos`는 일반적으로 node 또는 container라고 부르는 실행환경을 의미한다
+> `Dynos`는 일반적으로 node, instance 또는 container라고 부르는 실행환경을 의미한다
 
 ### Scale up/down
 
@@ -173,15 +174,15 @@ Scale out/in은 Dynos 수량을 조절하는 것을 통해 가능하다.
 $ heroku ps:scale web=2
 ```
 
-`web` 유형의 dynos는 무료 서비스로 위 커맨드를 그대로 실행 할 경우 무료 서비스에 한해 스케일 아웃 할 수 없다는 에러 메시지가 출력된다.
+`web` 유형의 dynos는 무료 서비스로 위 커맨드를 그대로 실행 할 경우 무료 서비스에 한해 *스케일 아웃 할 수 없다*는 에러 메시지가 출력된다.
 
-> `Dynos types`
+> **Dynos types**
 >
 > Dynos는 `Web`, `Worker`, `One-off` 세가지 유형이 존재한다.
 > 배포하고자 하는 애플리케이션의 성격에 맞는 Dynos를 선택해야한다.
 > `Web`은 일반적인 Web application을, `Worker`는 Batch 성향의 백그라운드 프로세스를, `One-off`는 idle 상태를 유지하다 필요한 순간에만 active 되는 서비스를 배포하기에 적절한 유형이다 - [자세히 보기](https://devcenter.heroku.com/articles/dynos#dyno-configurations)
 >
-> `Dynos 크기`
+> **Dynos 크기**
 >
 > Dynos 크기는 쉽게 이야기해서 하드웨어 성능을 의미한다.
 > Heroku가 제공하는 Dynos 크기의 종류 및 각 크기별 spec은 [링크](https://devcenter.heroku.com/articles/dyno-types)를 통해 확인 할 수 있다.
@@ -226,7 +227,7 @@ $ heroku run bash
 
 ### 명령어와 로그 보기 - DEBUG=\*
 
-heroku 커맨드를 실행할 때 아래와 같이 `DEBUG=*` prefix를 주면 DEBUG 콘솔이 활성화 되어 문제가 발생 했을때 내용을 조금 더 상세히 파악 할 수 있다.
+heroku 커맨드를 실행할 때 아래와 같이 `DEBUG=*` prefix를 주면 DEBUG 콘솔이 활성화 되어 문제가 발생 했을때 어떤 프로세스에서 문제가 발생했는지 조금 더 상세히 파악 할 수 있다.
 
 ```bash
 $ DEBUG=* heroku local web
@@ -246,7 +247,7 @@ $ heroku run echo HelloWorld
 
 **Sleep 상태로 전환**
 
-30분 동안 트래픽이 발생하지 않을 경우 IDLE 상태로 전환되고, 다시 트래픽이 발생하면 약간의 delay를 두고 활성화 됨
+30분 동안 트래픽이 발생하지 않을 경우 IDLE 상태로 전환되고, 다시 트래픽이 발생하면 약간의 delay를 두고 활성화 됨 (노드가 잠시 IDLE 상태로 전환 되었다가 다시 올라오는 것이 아닌 노드 자체가 Reset 되는 것 처럼 보인다. 예를들어 `sqlite` 데이터베이스를 파일형태로 가지고 있었다면 데이터베이스 파일도 삭제된다.)
 
 **Dyno hour pool**
 
@@ -262,7 +263,8 @@ Free dyno usage for this app: 0h 0m (0%)
 
 ## 마치며
 
-블로그에서 사용할 [hit-counter](https://github.com/code-logs/hit-counter)를 개발해서 배포하려다가 예전에 해봤던 heroku를 통해 배포하기로 결정했고 그참에 다시금 heroku를 조금 더 상세히 확인하는 계기가 되었다.
+블로그에서 사용할 [hit-counter](https://github.com/code-logs/hit-counter)를 개발해서 배포하려다가 예전에 해봤던 heroku를 통해 배포하기로 결정했고 그참에 다시금 heroku를 조금 더 상세히 확인하는 계기가 되었다. ~~데이터베이스가 휘발되는 바람에 기껏 만들고 사용은 안하게 됐다~~
+
 이전에 사용경험이 그리 좋지 않았는데 아무래도 당시 내가 이해하기에는 조금 버거운 내용들이 있어서 그랬던게 아닐까 생각하게 된다.
 
 다시 사용해 본 heroku는 상당히 많은 부분이 자동화 되어 있고 정말 편하게 배포를 할 수 있다는 인상을 받았다 또 적재적소에 커스터마이징 할 수 있는 요소들을 제공해서 배포 과정에 고민하게 되는 많은 문제점들을 해결 해 줄 수 있으리라는 생각도 들었다.
