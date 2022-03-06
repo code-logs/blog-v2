@@ -113,6 +113,7 @@ main {
 aside {
   grid-area: aside;
   margin-top: var(--header-height);
+  margin-bottom: var(--footer-height);
   position: relative;
 
   > ins {
