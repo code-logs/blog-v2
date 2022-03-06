@@ -57,9 +57,8 @@ const Home: NextPage<{
         <TagIndexer tagsWithCount={props.tagsWithCount} limit={20} />
       </div>
 
-      <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
-
       <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5391522351" />
+      <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
     </>
   )
 }
