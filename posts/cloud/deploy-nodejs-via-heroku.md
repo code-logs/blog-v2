@@ -19,8 +19,6 @@
    1. [Heroku 무료요금 정책](#heroku-무료요금-정책)
 1. [마치며](#마치며)
 
----
-
 ## What is Heroku?
 
 `Heroku`는 2007년 6월 개발이 시작된 최초의 클라우드 플랫폼 중 하나다.
@@ -31,15 +29,11 @@
 
 `Heroku`를 이용해 `Node.js` 애플리케이션을 배포하고 `GitHub`와의 연동 설정을 통해 최신화된 소스 코드를 자동으로 배포 할 수 있는 환경구성 과정을 기록한다.
 
----
-
 ## Heroku CLI 설치하기
 
 `Heroku CLI`는 애플리케이션 배포 및 로그 확인 등 전체적인 애플리케이션 관리를 위해 사용된다.
 
 다음 [링크](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up)를 통해 설치 패키지를 다운받고 OS 환경에 맞는 설치를 진행한다.
-
----
 
 ## 배포의 시작 - Heroku create
 
@@ -63,8 +57,6 @@ $ heroku create ${APPLICATION_NAME} --region ${REGION}
 > 다른 클라우드 서비스와 마찬가지로 서버의 지리적 위치를 선택하는 옵션이다. 서비스가 주로 제공될 지역에서 부터 물리적으로 가까운 곳에 위치한 데이터센터를 선택하는 것이 더 좋은 네트워크 성능을 제공 받는데 도움이 된다.
 >
 > `heroku regions` 커맨드를 통해 사용 가능한 region 리스트를 확인 할 수 있으며, `Heroku`는 외부에 공개 할 용도의 `Common Spaces` 유형과 분리된 네트워크 환경을 갖는 `Private Spaces` 유형을 제공한다.
-
----
 
 ## 배포하기 - Heroku 원격 저장소로 Push
 
@@ -93,8 +85,6 @@ push 커맨드를 실행하면 소스코드를 업로드 하고 빌드와 배포
 ```bash
 $ heroku ps:scale
 ```
-
----
 
 ## 앱 실행을 위한 스크립트 정의 - Procfile
 
@@ -128,8 +118,6 @@ web: npm start
 
 그 밖의 다양한 커맨드를 설정 할 수 있으며 자세한 내용은 [가이드](https://devcenter.heroku.com/articles/procfile)를 참조
 
----
-
 ## 자동배포 - GitHub로 간단하게
 
 GitHub 연동은 [heroku 사이트](https://heroku.com/)에서 아주 간단히 설정 할 수 있다.
@@ -138,8 +126,6 @@ GitHub 연동은 [heroku 사이트](https://heroku.com/)에서 아주 간단히 
 
 애플리케이션 목록을 클릭해 상세 설정으로 이동 → `Deploy` 메뉴로 이동한다.
 `Deploy method` 중 GitHub을 선택하고 `인증` → `배포 대상 브랜치 선택`만 해주면 자동배포 설정이 완료된다.
-
----
 
 ## Scaling - Scale up/down & Scale out/in
 
@@ -186,8 +172,6 @@ $ heroku ps:scale web=2
 >
 > Dynos 크기는 쉽게 이야기해서 하드웨어 성능을 의미한다.
 > Heroku가 제공하는 Dynos 크기의 종류 및 각 크기별 spec은 [링크](https://devcenter.heroku.com/articles/dyno-types)를 통해 확인 할 수 있다.
-
----
 
 ## 그 밖의 내용
 
@@ -258,8 +242,6 @@ $ heroku ps -a ${APPLICATION_NAME}`
 Free dyno hours quota remaining this month: 1000h 0m (100%)
 Free dyno usage for this app: 0h 0m (0%)
 ```
-
----
 
 ## 마치며
 

@@ -1,17 +1,4 @@
-import { Post } from '../components/recent-posts/RecentPosts'
-
-enum Categories {
-  SEO = 'SEO',
-  Javascript = 'javascript',
-  CSS = 'CSS',
-  React = 'react',
-  UIandUX = 'UI and UX',
-  Typescript = 'typescript',
-  Elasticsearch = 'elasticsearch',
-  Infrastructure = 'infrastructure',
-  DevEnv = '개발환경',
-  Svelt = 'svelte',
-}
+import { Categories, Post } from '../components/recent-posts/RecentPosts'
 
 const posts: Post[] = [
   {
@@ -166,7 +153,7 @@ const posts: Post[] = [
     title: 'Heroku로 Node.js 애플리케이션 배포하기',
     fileName: 'deploy-nodejs-via-heroku.md',
     description: 'Heroku를 이용한 NodeJS  애플리케이션 배포하기',
-    category: 'cloud',
+    category: Categories.Cloud,
     published: true,
     publishedAt: '2022-03-04',
     tags: ['heroku', 'node.js', 'cloud', 'cloud service', 'paas', 'deploy', '배포'],
@@ -178,15 +165,31 @@ const posts: Post[] = [
       },
       {
         title: 'Wiki - PaaS',
-        url: 'https://en.wikipedia.org/wiki/Platform_as_a_service'
-      }
+        url: 'https://en.wikipedia.org/wiki/Platform_as_a_service',
+      },
+    ],
+  },
+  {
+    title: '브라우저 보안 정책 CHIPS - (feat. Chrome 쿠키 입력 불가)',
+    fileName: 'chips.md',
+    description: 'CHIPS - Cookies Having Independent Partitioned State\n (Chrome 98 버그를 찾아 헤매다 발견하게 된 브라우저의 Cookie 관리 정책)',
+    category: Categories.Security,
+    published: true,
+    publishedAt: '2022-03-06',
+    tags: ['CHIPS', 'cookie', 'security', 'browser', 'policy', 'security policy', 'chrome'],
+    thumbnailName: 'chips.png',
+    references: [
+      {
+        title: 'Chrome Platform Status',
+        url: 'https://chromestatus.com/feature/5179189105786880',
+      },
     ],
   },
   {
     title: "Svelte - Let's get started",
     fileName: 'get-started-svelte.md',
     description: 'Svelte 맛보기',
-    category: 'svelte',
+    category: Categories.Svelte,
     published: false,
     publishedAt: '2099-02-13',
     tags: ['svelte', 'frontend', 'get started'],
