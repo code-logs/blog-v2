@@ -1,4 +1,3 @@
-import styled from '@emotion/styled'
 import type { AppProps } from 'next/app'
 import 'normalize.css'
 import Footer from '../components/footer/Footer'

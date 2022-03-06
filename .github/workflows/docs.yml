@@ -15,6 +15,9 @@ jobs:
       - name: Yarn install
         run: yarn install
 
+      - name: Generate Latest Licenses
+        run: yarn run licenses
+
       - name: Build docs
         run: yarn docs
 
