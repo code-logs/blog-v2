@@ -1,10 +1,8 @@
 import type { AppProps } from 'next/app'
 import 'normalize.css'
 import Footer from '../components/footer/Footer'
-import GoogleAdsenseBanner from '../components/google-adsense/GoogleAdsenseBanner'
 import GTagScript from '../components/gtag-script/GTagScript'
 import Header from '../components/header/Header'
-import KakaoAdfitBanner from '../components/kakao-adfit/KakaoAdfitBanner'
 import KakaoAdfitScript from '../components/kakao-adfit/KakaoAdfitScript'
 import SWScript from '../components/sw-script/SWScript'
 import blogConfig from '../config/blog.config'
@@ -26,10 +24,7 @@ const MainApp = ({ Component, pageProps }: AppProps) => {
         <Component {...pageProps} />
       </main>
 
-      <aside>
-        <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="8825787758" />
-        <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.asideBannerID} position="aside" />
-      </aside>
+      <aside></aside>
 
       <Footer author={blogConfig.author} />
     </>
