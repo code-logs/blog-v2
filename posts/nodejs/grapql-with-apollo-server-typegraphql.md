@@ -71,7 +71,7 @@ User라는 명칭의 schema는 String 타입의 `name` 필드와 Int 타입의 `
 > `User` 유형의 schema는 데이터를 반환할 때 사용하는 형태다 (객체 타입)
 > `input` 유형의 schema는 클라이언트에서 서버로 데이터를 전달 할 때 사용하는 형태다
 
-> `GraphQL`의 schema 타입을 정의할 때 `javascript`의 원시 타입 (number, string, boolean 등)을 사용하는 것이 아닌 `GraphQL`의 자체 타입을 사용한다. - [참조](#https://graphql.org/learn/schema/)
+> `GraphQL`의 schema 타입을 정의할 때 `javascript`의 원시 타입 (number, string, boolean 등)을 사용하는 것이 아닌 `GraphQL`의 자체 타입을 사용한다. - [참조](https://graphql.org/learn/schema/)
 
 ### Schema - Query 정의하기
 
@@ -183,9 +183,9 @@ const resolvers = {
 
 const resolvers = {
 
-...
+  ...
 
-	Mutation: {
+  Mutation: {
     addUser: (_: unknown, { user }: { user: User }) => {
       const newUser = {
         ...user,
@@ -264,13 +264,15 @@ field resolver를 이용할 경우 resolver chain을 통해 해당 필드에 대
 
 ## TypeGraphQL
 
-GraphQL을 이용한 프로젝트를 구성하다 보면 type 정의, resolver 정의 그리고 entity, interface 등 상당히 많은 파일들을 생성해내야 한다. 프로젝트 구조가 복잡해지거니와 유사한 형태의 파일들을 반복적으로 작성해야하는 것은 번거로운 일이다.
+GraphQL을 이용한 프로젝트를 구성하다 보면 type 정의, resolver 정의 그리고 entity, interface 등 상당히 많은 파일들을 생성해내야 한다.
 
-TypeGraphQL은 이런 번거로움을 해결해 주기 위한 라이브러리로 class를 하나 정의하는 것을 통해 entity와 GraphQL type의 정의를 동시에 처리 할 수 있도록 도와준다.
+프로젝트 구조가 복잡해지거니와 유사한 형태의 파일들을 반복적으로 작성해야하는 것은 번거로운 일이다.
+
+TypeGraphQL은 이런 번거로움을 해결하기 위한 라이브러리로 class를 정의하는 것을 통해 entity와 GraphQL type의 정의를 동시에 처리 할 수 있도록 돕는다.
 
 ### 디펜던시 설치
 
-TypeGraphQL을 사용하기 위한 디펜던시를 설치한다.
+TypeGraphQL을 사용하기 위해 필요한 디펜던시를 설치한다.
 
 ```bash
 $ npm i graphql class-validator type-graphql
