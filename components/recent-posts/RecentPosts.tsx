@@ -18,7 +18,8 @@ export enum Categories {
   DevEnv = '개발환경',
   Cloud = 'cloud',
   Svelte = 'svelte',
-  Security = 'security'
+  Security = 'security',
+  NodeJS = 'nodejs'
 }
 
 export interface Post {

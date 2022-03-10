@@ -186,6 +186,34 @@ const posts: Post[] = [
     ],
   },
   {
+    title: 'Apollo Server + TypeGraphQL을 이용한 GraphQL API 서버 구성하기',
+    fileName: 'grapql-with-apollo-server-typegraphql.md',
+    description: 'Apollo Server와 TypeGraphQL을 사용한 Node.JS GraphQL API 서버 구성하기',
+    category: Categories.NodeJS,
+    published: true,
+    publishedAt: '2022-03-10',
+    tags: ['graphql', 'apollo', 'apollo-server', 'node.js', 'typescript', 'typegraphql', 'api', 'api server'],
+    thumbnailName: 'grapqhl-apollo-typegrapql.png',
+    references: [
+      {
+        title: 'Apollo Server',
+        url: 'https://www.apollographql.com',
+      },
+      {
+        title: 'TypeGraphQL',
+        url: 'https://typegraphql.com',
+      },
+      {
+        title: 'GraphQL',
+        url: 'https://graphql.org',
+      },
+      {
+        title: 'DataLoader - GitHub Repository',
+        url: 'https://github.com/graphql/dataloader',
+      },
+    ],
+  },
+  {
     title: "Svelte - Let's get started",
     fileName: 'get-started-svelte.md',
     description: 'Svelte 맛보기',
