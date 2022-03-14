@@ -16,6 +16,12 @@ import PostUtil from '../utils/PostUtil'
 import TitleUtil from '../utils/TitleUtil'
 import styles from './PostDetail.module.scss'
 
+export interface PostDetailPageProps {
+  post: Post
+  content: string
+  postsByCategory: Post[]
+}
+
 export async function getStaticPaths() {
   const posts = postsDatabase.find()
   const titles = posts.map((post) => post.title)
@@ -29,14 +35,15 @@ export async function getStaticPaths() {
 export async function getStaticProps(context: { params: { title: string } }) {
   const post = postsDatabase.findByTitle(context.params.title)!
   const content = MarkdownUtil.getMarkdownContent(PostUtil.getMarkdownFilePath(post))
+  const postsByCategory = postsDatabase.findByCategory(post.category).filter((foundPost) => foundPost.title !== post.title)
 
   return {
-    props: { post, content },
+    props: { post, content, postsByCategory },
   }
 }
 
-const PostDetail: NextPage<{ post: Post; content: string }> = (props: { post: Post; content: string }) => {
-  const publishedAt = useHumanReadableDate(new Date(props.post.publishedAt))
+const PostDetail: NextPage<PostDetailPageProps> = ({ post, content, postsByCategory }: PostDetailPageProps) => {
+  const publishedAt = useHumanReadableDate(new Date(post.publishedAt))
 
   useEffect(() => {
     hljs.highlightAll()
@@ -45,11 +52,11 @@ const PostDetail: NextPage<{ post: Post; content: string }> = (props: { post: Po
   return (
     <>
       <CommonMeta
-        title={TitleUtil.buildPageTitle(props.post.title)}
-        description={props.post.description}
-        url={`${blogConfig.baseURL}/${PostUtil.normalizeTitle(props.post.title)}`}
-        imageURL={PathUtil.buildImagePath(props.post.thumbnailName)}
-        keywords={[...props.post.tags, props.post.title, props.post.description, props.post.category]}
+        title={TitleUtil.buildPageTitle(post.title)}
+        description={post.description}
+        url={`${blogConfig.baseURL}/${PostUtil.normalizeTitle(post.title)}`}
+        imageURL={PathUtil.buildImagePath(post.thumbnailName)}
+        keywords={[...post.tags, post.title, post.description, post.category]}
       />
 
       <article className={styles.container}>
@@ -57,36 +64,36 @@ const PostDetail: NextPage<{ post: Post; content: string }> = (props: { post: Po
           <span>{publishedAt}</span>
         </p>
         <section className={styles.thumbnailWrapper}>
-          <img src={PathUtil.buildImagePath(props.post.thumbnailName)} alt={props.post.description} />
+          <img src={PathUtil.buildImagePath(post.thumbnailName)} alt={post.description} />
         </section>
 
         <section>
-          <h1>{props.post.title}</h1>
-          <p className={styles.description}>{props.post.description}</p>
+          <h1>{post.title}</h1>
+          <p className={styles.description}>{post.description}</p>
         </section>
 
-        <section dangerouslySetInnerHTML={{ __html: props.content }}></section>
+        <section dangerouslySetInnerHTML={{ __html: content }}></section>
       </article>
 
-      {props.post.series ? (
+      {post.series && (
         <section className={styles.relatedPosting}>
           <h2>연관 포스팅</h2>
-          <PostSeriesLink post={props.post} />
+          <PostSeriesLink post={post} />
         </section>
-      ) : (
-        <></>
       )}
 
-      <section className={styles.categoryGroup}>
-        <h2>카테고리 더보기</h2>
-        <CategoryPostGroup category={props.post.category} />
-      </section>
+      {!!postsByCategory.length && (
+        <section className={styles.categoryGroup}>
+          <h2>카테고리 더보기</h2>
+          <CategoryPostGroup posts={postsByCategory} />
+        </section>
+      )}
 
-      {props.post.references?.length && (
+      {!!post.references?.length && (
         <section className={styles.references}>
           <h2>참고</h2>
           <ul className={styles.references}>
-            {props.post.references.map((ref, idx) => (
+            {post.references.map((ref, idx) => (
               <li key={idx}>
                 <a href={ref.url} target="_blank" rel="noreferrer">
                   {ref.title}
