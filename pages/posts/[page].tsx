@@ -1,18 +1,17 @@
-import { useEffect, useState } from 'react'
-
-import CommonMeta from '../../components/common-meta/CommonMeta'
 import { NextPage } from 'next'
+import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
+import CommonMeta from '../../components/common-meta/CommonMeta'
+import GoogleAdsenseBanner from '../../components/google-adsense/GoogleAdsenseBanner'
 import Paginator from '../../components/paginator/Paginator'
-import PathUtil from '../../utils/PathUtil'
 import PostCard from '../../components/post-card/PostCard'
 import SearchInput from '../../components/search-input/SearchInput'
-import TitleUtil from '../../utils/TitleUtil'
 import blogConfig from '../../config/blog.config'
-import postsDatabase from '../../database/post-database'
-import { useRouter } from 'next/router'
-import KakaoAdfitBanner from '../../components/kakao-adfit/KakaoAdfitBanner'
-import GoogleAdsenseBanner from '../../components/google-adsense/GoogleAdsenseBanner'
 import { Post } from '../../config/posts.config'
+import postsDatabase from '../../database/post-database'
+import PathUtil from '../../utils/PathUtil'
+import TitleUtil from '../../utils/TitleUtil'
+
 
 export async function getStaticPaths() {
   const posts = postsDatabase.find()
@@ -97,7 +96,6 @@ const Posts: NextPage<{ page: number; lastPage: number; posts: Post[] }> = (prop
 
 
       <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5391522351" />
-      <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
 
       <Paginator page={page} lastPage={lastPage} query={query} baseURL={`${blogConfig.baseURL}/posts`} />
     </>

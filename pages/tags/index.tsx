@@ -1,7 +1,6 @@
 import { NextPage } from 'next'
 import CommonMeta from '../../components/common-meta/CommonMeta'
 import GoogleAdsenseBanner from '../../components/google-adsense/GoogleAdsenseBanner'
-import KakaoAdfitBanner from '../../components/kakao-adfit/KakaoAdfitBanner'
 import { TagWithCount } from '../../components/tag-indexer/TagIndexer'
 import TagList, { TagsByIndexes } from '../../components/tag-list/TagList'
 import TagNavigator from '../../components/tag-navigator/TagNavigator'
@@ -92,7 +91,6 @@ const Tags: NextPage<{ tags: string[] }> = ({ tags }) => {
       <TagList indexGroups={indexGroups} tagsByIndexes={tagsByIndexes} />
 
       <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5391522351" />
-      <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
     </section>
   )
 }
