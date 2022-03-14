@@ -1,9 +1,10 @@
 import hljs from 'highlight.js'
 import { NextPage } from 'next'
 import { useEffect } from 'react'
+import CategoryPostGroup from '../components/category-post-group/CategoryPostGroup'
 import CommonMeta from '../components/common-meta/CommonMeta'
 import GoogleAdsenseBanner from '../components/google-adsense/GoogleAdsenseBanner'
-import KakaoAdfitBanner from '../components/kakao-adfit/KakaoAdfitBanner'
+import PostSeriesLink from '../components/post-series-link/PostSeriesLink'
 import Utterances from '../components/utterrances/Utterrances'
 import blogConfig from '../config/blog.config'
 import { Post } from '../config/posts.config'
@@ -65,30 +66,43 @@ const PostDetail: NextPage<{ post: Post; content: string }> = (props: { post: Po
         </section>
 
         <section dangerouslySetInnerHTML={{ __html: props.content }}></section>
-
-        {props.post.references?.length && (
-          <section>
-            <h2>References</h2>
-            <ul className={styles.references}>
-              {props.post.references.map((ref, idx) => (
-                <li key={idx}>
-                  <a href={ref.url} target="_blank" rel="noreferrer">
-                    {ref.title}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
       </article>
 
+      {props.post.series ? (
+        <section className={styles.relatedPosting}>
+          <h2>연관 포스팅</h2>
+          <PostSeriesLink post={props.post} />
+        </section>
+      ) : (
+        <></>
+      )}
+
+      <section className={styles.categoryGroup}>
+        <h2>카테고리 더보기</h2>
+        <CategoryPostGroup category={props.post.category} />
+      </section>
+
+      {props.post.references?.length && (
+        <section className={styles.references}>
+          <h2>참고</h2>
+          <ul className={styles.references}>
+            {props.post.references.map((ref, idx) => (
+              <li key={idx}>
+                <a href={ref.url} target="_blank" rel="noreferrer">
+                  {ref.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       <section className={styles.utterances}>
-        <h2>Comments</h2>
+        <h2>댓글</h2>
         <Utterances repo={'code-logs/code-logs.github.io'} theme={'preferred-color-scheme'} issueTerm={'title'} issueLabel={'Comment'} />
       </section>
 
       <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5391522351" />
-      <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
     </>
   )
 }

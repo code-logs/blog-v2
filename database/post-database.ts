@@ -9,7 +9,7 @@ class PostDatabase extends Database<Post> {
   }
 
   findByTitle(title: string) {
-    return this.dataset.find((post) => PostUtil.normalizeTitle(post.title) === title)
+    return this.dataset.find((post) => PostUtil.normalizeTitle(post.title) === title || post.title === title)
   }
 
   hasNewByCategory(category: string) {

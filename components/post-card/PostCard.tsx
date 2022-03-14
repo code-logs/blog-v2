@@ -17,7 +17,7 @@ const PostCard = ({ titleLevel = 3, post }: PostCardProps) => {
 
   return (
     <article className={styles.card}>
-      <Link href={`${blogConfig.baseURL}/${PostUtil.normalizeTitle(post.title)}`}>
+      <Link href={PostUtil.buildLinkURLByTitle(post.title)}>
         <a className={styles.title}>
           {titleLevel === 1 && <h1>{post.title}</h1>}
           {titleLevel === 2 && <h2>{post.title}</h2>}
@@ -29,7 +29,7 @@ const PostCard = ({ titleLevel = 3, post }: PostCardProps) => {
 
       <span className={styles.publishedAt}>{publishedAt}</span>
 
-      <Link href={`${blogConfig.baseURL}/${PostUtil.normalizeTitle(post.title)}`}>
+      <Link href={PostUtil.buildLinkURLByTitle(post.title)}>
         <a className={styles.description}>
           <p>{post.description}</p>
         </a>
@@ -37,7 +37,7 @@ const PostCard = ({ titleLevel = 3, post }: PostCardProps) => {
 
       {post.thumbnailName && (
         <div className={styles.thumbnail}>
-          <Link href={`${blogConfig.baseURL}/${PostUtil.normalizeTitle(post.title)}`}>
+          <Link href={PostUtil.buildLinkURLByTitle(post.title)}>
             <a>
               <img className={'thumbnail'} src={PathUtil.buildImagePath(post.thumbnailName)} alt={post.description} />
             </a>
