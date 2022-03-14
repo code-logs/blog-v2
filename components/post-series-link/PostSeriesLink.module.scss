@@ -1,0 +1,21 @@
+.container {
+  padding-inline-start: 40px;
+
+  dt {
+    display: list-item;
+    list-style: disc;
+    color: var(--theme-font-color);
+    font-weight: bold;
+    margin: var(--narrow-spacing) 0;
+  }
+
+  h3 {
+    display: inline;
+    font-style: italic;
+  }
+
+  dd {
+    margin-inline-start: var(--common-spacing);
+    margin-bottom: var(--narrow-spacing);
+  }
+}

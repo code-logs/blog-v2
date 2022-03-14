@@ -114,12 +114,9 @@
   font-size: 1rem;
 }
 
-.references {
-  li {
-    list-style: disc;
-  }
-}
-
+.relatedPosting,
+.categoryGroup,
+.references,
 .utterances {
   h2 {
     margin-top: 40px;
@@ -127,5 +124,11 @@
     font-size: 1.5em;
     padding-bottom: var(--common-spacing);
     border-bottom: 1px solid var(--theme-light-color);
+  }
+}
+
+.references {
+  li {
+    list-style: disc;
   }
 }

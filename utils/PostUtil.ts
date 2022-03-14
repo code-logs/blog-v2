@@ -1,4 +1,5 @@
 import path from 'path'
+import blogConfig from '../config/blog.config'
 import { Post } from '../config/posts.config'
 
 class PostUtil {
@@ -8,6 +9,10 @@ class PostUtil {
 
   public static getMarkdownFilePath(post: Post) {
     return path.join('../posts', post.category, post.fileName)
+  }
+
+  public static buildLinkURLByTitle(title: string) {
+    return `${blogConfig.baseURL}/${this.normalizeTitle(title)}`
   }
 }
 

@@ -2,6 +2,21 @@ export interface PostRef {
   title: string
   url: string
 }
+export interface Post {
+  title: string
+  fileName: string
+  description: string
+  category: Categories
+  published: boolean
+  publishedAt: string
+  thumbnailName: string
+  tags: string[]
+  references?: PostRef[]
+  series?: {
+    prevPostTitle?: string
+    nextPostTitle?: string
+  }
+}
 
 export enum Categories {
   SEO = 'SEO',
@@ -17,18 +32,6 @@ export enum Categories {
   Svelte = 'svelte',
   Security = 'security',
   NodeJS = 'nodejs',
-}
-
-export interface Post {
-  title: string
-  fileName: string
-  description: string
-  category: Categories
-  published: boolean
-  publishedAt: string
-  thumbnailName: string
-  tags: string[]
-  references?: PostRef[]
 }
 
 const posts: Post[] = [
@@ -131,6 +134,10 @@ const posts: Post[] = [
     publishedAt: '2022-02-12',
     tags: ['nx', 'build', 'build system', 'monorepo', '빌드', '빌드 시스템', '모노리포'],
     thumbnailName: 'monorepo-with-nx.png',
+    series: {
+      prevPostTitle: 'Nx build system 맛보기',
+      nextPostTitle: 'yarn berry로 구성하는 monorepo',
+    },
   },
   {
     title: 'yarn berry로 구성하는 monorepo',
@@ -141,6 +148,9 @@ const posts: Post[] = [
     publishedAt: '2022-02-26',
     tags: ['yarn', 'yarn berry', 'berry', 'monorepo', 'workspace', 'workspaces', '모노리포', 'zero-install'],
     thumbnailName: 'yarn-berry-monorepo.png',
+    series: {
+      prevPostTitle: 'Nx build system 맛보기',
+    },
     references: [
       {
         title: 'yarn workspaces',
