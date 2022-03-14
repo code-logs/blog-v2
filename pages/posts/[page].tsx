@@ -4,7 +4,6 @@ import CommonMeta from '../../components/common-meta/CommonMeta'
 import { NextPage } from 'next'
 import Paginator from '../../components/paginator/Paginator'
 import PathUtil from '../../utils/PathUtil'
-import { Post } from '../../components/recent-posts/RecentPosts'
 import PostCard from '../../components/post-card/PostCard'
 import SearchInput from '../../components/search-input/SearchInput'
 import TitleUtil from '../../utils/TitleUtil'
@@ -13,6 +12,7 @@ import postsDatabase from '../../database/post-database'
 import { useRouter } from 'next/router'
 import KakaoAdfitBanner from '../../components/kakao-adfit/KakaoAdfitBanner'
 import GoogleAdsenseBanner from '../../components/google-adsense/GoogleAdsenseBanner'
+import { Post } from '../../config/posts.config'
 
 export async function getStaticPaths() {
   const posts = postsDatabase.find()
@@ -94,6 +94,7 @@ const Posts: NextPage<{ page: number; lastPage: number; posts: Post[] }> = (prop
       </form>
 
       {Boolean(posts?.length) && posts.map((post, idx) => <PostCard titleLevel={2} key={idx} post={post} />)}
+
 
       <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5391522351" />
       <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />

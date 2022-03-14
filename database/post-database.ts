@@ -1,20 +1,15 @@
 import Database from '.'
-import { Post } from '../components/recent-posts/RecentPosts'
 import PostUtil from '../utils/PostUtil'
-import posts from '../config/posts.config'
+import posts, { Post } from '../config/posts.config'
 
 class PostDatabase extends Database<Post> {
   constructor() {
     super(posts.filter((post) => post.published))
-    this.sort((a, b) =>
-      new Date(a.publishedAt) > new Date(b.publishedAt) ? -1 : 1
-    )
+    this.sort((a, b) => (new Date(a.publishedAt) > new Date(b.publishedAt) ? -1 : 1))
   }
 
   findByTitle(title: string) {
-    return this.dataset.find(
-      (post) => PostUtil.normalizeTitle(post.title) === title
-    )
+    return this.dataset.find((post) => PostUtil.normalizeTitle(post.title) === title)
   }
 
   hasNewByCategory(category: string) {
@@ -23,9 +18,7 @@ class PostDatabase extends Database<Post> {
         .filter((post) => post.category === category)
         .find((post) => {
           const publishedDate = new Date(post.publishedAt)
-          return (
-            publishedDate.setDate(publishedDate.getDate() + 7) >= Date.now()
-          )
+          return publishedDate.setDate(publishedDate.getDate() + 7) >= Date.now()
         })
     )
   }
@@ -39,18 +32,11 @@ class PostDatabase extends Database<Post> {
   }
 
   query(condition: string, limit?: number, skip: number = 0) {
-    const normalizedConditions = condition
-      .split(/\s/)
-      .map((cond) => cond.toLowerCase())
+    const normalizedConditions = condition.split(/\s/).map((cond) => cond.toLowerCase())
 
     const foundPosts = this.dataset.filter((post) => {
       return normalizedConditions.some((cond) => {
-        return (
-          post.title.indexOf(cond) >= 0 ||
-          post.description.indexOf(cond) >= 0 ||
-          post.category.indexOf(cond) >= 0 ||
-          post.tags.join('').indexOf(cond) >= 0
-        )
+        return post.title.indexOf(cond) >= 0 || post.description.indexOf(cond) >= 0 || post.category.indexOf(cond) >= 0 || post.tags.join('').indexOf(cond) >= 0
       })
     })
 

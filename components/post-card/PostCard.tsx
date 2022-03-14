@@ -1,11 +1,10 @@
 import Link from 'next/link'
 import blogConfig from '../../config/blog.config'
+import { Post } from '../../config/posts.config'
 import useHumanReadableDate from '../../hooks/useHumanReadableDate'
 import PathUtil from '../../utils/PathUtil'
 import PostUtil from '../../utils/PostUtil'
-import { Post } from '../recent-posts/RecentPosts'
 import Tags from '../tags/Tags'
-import ViewCounter from '../view-counter/ViewCounter'
 import styles from './PostCard.module.scss'
 
 export interface PostCardProps {
@@ -15,7 +14,7 @@ export interface PostCardProps {
 
 const PostCard = ({ titleLevel = 3, post }: PostCardProps) => {
   const publishedAt = useHumanReadableDate(new Date(post.publishedAt))
-  
+
   return (
     <article className={styles.card}>
       <Link href={`${blogConfig.baseURL}/${PostUtil.normalizeTitle(post.title)}`}>

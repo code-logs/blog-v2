@@ -1,6 +1,6 @@
+import { Post } from '../../config/posts.config'
 import useHitCount from '../../hooks/useHitCount'
 import PostUtil from '../../utils/PostUtil'
-import { Post } from '../recent-posts/RecentPosts'
 
 export interface ViewCounterProps {
   post: Post
