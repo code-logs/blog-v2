@@ -20,7 +20,7 @@
 
 .socialIcons {
   grid-area: socialIcons;
-  padding: var(--common-spacing);
+  padding: var(--wide-spacing);
   display: flex;
   gap: var(--common-spacing);
   margin: auto;
@@ -47,6 +47,10 @@
       font-size: 1.5em;
       text-align: left;
       margin: auto 0;
+      padding: var(--common-spacing);
+    }
+
+    .socialIcons {
       padding: var(--common-spacing);
     }
   }
