@@ -4,8 +4,8 @@ import GoogleAdsenseBanner from '../../../components/google-adsense/GoogleAdsens
 import KakaoAdfitBanner from '../../../components/kakao-adfit/KakaoAdfitBanner'
 import Paginator from '../../../components/paginator/Paginator'
 import PostCard from '../../../components/post-card/PostCard'
-import { Post } from '../../../components/recent-posts/RecentPosts'
 import blogConfig from '../../../config/blog.config'
+import { Post } from '../../../config/posts.config'
 import postsDatabase from '../../../database/post-database'
 import TitleUtil from '../../../utils/TitleUtil'
 

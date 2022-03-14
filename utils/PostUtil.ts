@@ -1,5 +1,5 @@
-import { Post } from '../components/recent-posts/RecentPosts'
 import path from 'path'
+import { Post } from '../config/posts.config'
 
 class PostUtil {
   public static normalizeTitle(title: string) {
