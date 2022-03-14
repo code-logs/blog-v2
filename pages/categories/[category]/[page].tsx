@@ -1,7 +1,6 @@
 import { NextPage } from 'next'
 import CommonMeta from '../../../components/common-meta/CommonMeta'
 import GoogleAdsenseBanner from '../../../components/google-adsense/GoogleAdsenseBanner'
-import KakaoAdfitBanner from '../../../components/kakao-adfit/KakaoAdfitBanner'
 import Paginator from '../../../components/paginator/Paginator'
 import PostCard from '../../../components/post-card/PostCard'
 import blogConfig from '../../../config/blog.config'
@@ -75,7 +74,6 @@ const Category: NextPage<{
       {Boolean(posts?.length) && posts.map((post, idx) => <PostCard titleLevel={2} key={idx} post={post} />)}
 
       <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5391522351" />
-      <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
 
       <Paginator page={page} lastPage={lastPage} baseURL={`${blogConfig.baseURL}/categories/${category}`} />
     </>

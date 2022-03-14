@@ -2,7 +2,6 @@ import type { NextPage } from 'next'
 import CategoryIndexer from '../components/category-indexer/CategoryIndexer'
 import CommonMeta from '../components/common-meta/CommonMeta'
 import GoogleAdsenseBanner from '../components/google-adsense/GoogleAdsenseBanner'
-import KakaoAdfitBanner from '../components/kakao-adfit/KakaoAdfitBanner'
 import RecentPosts, { Post } from '../components/recent-posts/RecentPosts'
 import TagIndexer, { TagWithCount } from '../components/tag-indexer/TagIndexer'
 import blogConfig from '../config/blog.config'
@@ -58,7 +57,6 @@ const Home: NextPage<{
       </div>
 
       <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5391522351" />
-      <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
     </>
   )
 }

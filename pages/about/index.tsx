@@ -1,6 +1,5 @@
 import CommonMeta from '../../components/common-meta/CommonMeta'
 import GoogleAdsenseBanner from '../../components/google-adsense/GoogleAdsenseBanner'
-import KakaoAdfitBanner from '../../components/kakao-adfit/KakaoAdfitBanner'
 import RaiseSection from '../../components/raise-section/RaiseSection'
 import blogConfig from '../../config/blog.config'
 import TitleUtil from '../../utils/TitleUtil'
@@ -46,7 +45,6 @@ const About = () => {
       </article>
 
       <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5391522351" />
-      <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.mainBannerID} position="main" />
     </>
   )
 }
