@@ -23,6 +23,10 @@ class PostDatabase extends Database<Post> {
     )
   }
 
+  count() {
+    return this.dataset.length
+  }
+
   countByCategory(category: string) {
     return this.dataset.filter((post) => post.category === category).length
   }

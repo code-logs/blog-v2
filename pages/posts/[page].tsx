@@ -11,6 +11,14 @@ import { Post } from '../../config/posts.config'
 import postsDatabase from '../../database/post-database'
 import PathUtil from '../../utils/PathUtil'
 import TitleUtil from '../../utils/TitleUtil'
+import styles from './Posts.module.scss'
+
+interface PostsProps {
+  page: number,
+  lastPage: number,
+  posts: Post[]
+  totalCount: number
+}
 
 
 export async function getStaticPaths() {
@@ -31,18 +39,20 @@ export async function getStaticProps(context: { params: { page: string } }) {
   const skip = (page - 1) * pageLimit
   const lastPage = Math.ceil(postsDatabase.find().length / pageLimit)
   const posts = postsDatabase.find(pageLimit, skip)
+  const totalCount = postsDatabase.count()
 
   return {
     props: {
       page,
       lastPage,
       posts,
+      totalCount
     },
   }
 }
 
-const Posts: NextPage<{ page: number; lastPage: number; posts: Post[] }> = (props) => {
-  const { page } = props
+const Posts: NextPage<PostsProps> = (props) => {
+  const { page, totalCount } = props
   const [lastPage, setLastPage] = useState(props.lastPage)
   const [posts, setPosts] = useState(props.posts)
   const [query, setQuery] = useState<string>()
@@ -73,7 +83,9 @@ const Posts: NextPage<{ page: number; lastPage: number; posts: Post[] }> = (prop
         imageURL={'/icons/icon-512x512.png'}
         keywords={posts.map((post) => [...post.tags, post.title, post.description]).flat()}
       />
-      <h1>Posts</h1>
+
+      <span className={styles.totalCount}>Total posts {totalCount}</span>
+      <h1>Posts </h1>
       <form
         onSubmit={(event) => {
           event.preventDefault()
