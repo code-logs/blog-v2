@@ -32,6 +32,7 @@ export enum Categories {
   Svelte = 'svelte',
   Security = 'security',
   NodeJS = 'nodejs',
+  ReactNative = 'react-native',
 }
 
 const posts: Post[] = [
@@ -251,6 +252,26 @@ const posts: Post[] = [
       {
         title: 'DataLoader - GitHub Repository',
         url: 'https://github.com/graphql/dataloader',
+      },
+    ],
+  },
+  {
+    title: 'React Native - 개발환경 구성하기',
+    fileName: 'react-native-dev-env.md',
+    description: 'Mac OS에서 iOS 애플리케이션 개발을 위한 React Native 개발환경 구성하기',
+    category: Categories.ReactNative,
+    published: true,
+    publishedAt: '2022-03-26',
+    tags: ['react native', 'RN', '리액트 네이티브', '개발환경', '개발환경 구성하기', 'cross platform', 'react native cli', 'macos', 'ios'],
+    thumbnailName: 'react-native-dev-env.png',
+    references: [
+      {
+        title: 'React Native',
+        url: 'https://reactnative.dev/docs/environment-setup',
+      },
+      {
+        title: 'NVM',
+        url: 'https://github.com/nvm-sh/nvm',
       },
     ],
   },
