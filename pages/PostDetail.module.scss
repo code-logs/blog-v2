@@ -16,7 +16,11 @@
   }
 }
 .container {
-  font-size: 1em;
+  font-size: 0.9em;
+
+  @media (max-width: 800px) {
+    font-size: 1em;
+  }
 
   ul,
   ol {
@@ -29,12 +33,13 @@
   }
 
   li {
-    list-style: auto;
+    list-style: inherit;
   }
 
   h1,
   h2,
-  h3 {
+  h3,
+  h4 {
     margin-top: 40px;
   }
 
@@ -47,7 +52,8 @@
   }
 
   h2,
-  h3 {
+  h3,
+  h4 {
     padding-bottom: var(--common-spacing);
     border-bottom: 1px solid var(--theme-light-color);
   }
