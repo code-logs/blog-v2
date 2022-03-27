@@ -1407,7 +1407,7 @@
         "licenseUrl": "https://github.com/isaacs/minimatch/raw/master/LICENSE",
         "parents": "code-logs"
     },
-    "minimist@1.2.5": {
+    "minimist@1.2.6": {
         "licenses": "MIT",
         "repository": "https://github.com/substack/minimist",
         "licenseUrl": "https://github.com/substack/minimist/raw/master/LICENSE",
