@@ -63,7 +63,7 @@ React Native 개발을 위해서는 v12 이상의 Node를 설치해야한다. - 
 
 ### Watchman 설치
 
-Facebook이 만든 Open source 툴로 파일시스템의 변경사항을 감지한다 (brew를 통해 설치 할 수 있다)
+Facebook이 만든 Open source 툴로 파일시스템의 변경사항을 감지한다, brew를 통해 설치 할 수 있다.
 
 ```sh
 $ brew install watchman
