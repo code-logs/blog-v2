@@ -8,9 +8,11 @@
    1. [Schema - Query 정의하기](#schema---query-정의하기)
    1. [Schema - Mutation 정의하기](#schema---mutation-정의하기)
    1. [Resolver - 실제 작업이 일어나는 곳](#resolver---실제-작업이-일어나는-곳)
+   1. [사전 작업 - Dummy data](#사전-작업---dummy-data)
    1. [Query 작성하기](#query-작성하기)
    1. [Mutation 작성하기](#mutation-작성하기)
    1. [Apollo Server 실행하기](#apollo-server-실행하기)
+   1. [GraphQL Query & Mutation](#graphql-query--mutation)
 1. [Field resolver를 이용한 테이블 Join](#field-resolver를-이용한-테이블-join)
 1. [TypeGraphQL](#typegraphql)
    1. [디펜던시 설치](#디펜던시-설치)
@@ -120,7 +122,7 @@ const typeDefs = gql`
 > Mutation 스키마의 파라미터로 사용되는 스키마는 반드시 `input` 타입 스키마를 사용하며
 > Query의 반환결과로 사용되는 스키마는 반드시 객체 타입의 스키마를 사용한다.
 
-> 두 스키마는 각각 `User` 와 `Boolean` 을 리턴 타입으로 갖고 있는데 GraphQL에서는 `void` 유형이 없는 것 또한 특징이다. `void` 를 사용해야 할 때 리턴 타입을 Boolean으로 선언한다.
+> 두 스키마는 각각 `User`와 `Boolean` 을 리턴 타입으로 갖고 있는데 GraphQL에서는 `void` 유형이 없는 것 또한 특징이다. `void` 를 사용해야 할 때 리턴 타입을 Boolean으로 선언한다.
 
 ### Resolver - 실제 작업이 일어나는 곳
 
@@ -130,18 +132,20 @@ const typeDefs = gql`
 
 이렇게 정의된 schema를 통해 클라이언트로 부터 데이터를 전달 받고 처리하는 것을 `resolver`라 한다.
 
+### 사전 작업 - Dummy Data
+
 우선 본격적으로 resolver를 정의하기 전에 테스트로 사용할 더미 데이터와 인터페이스를 만든다.
 
 ```typescript
-// resolvers.ts
+// dummy-data.ts
 
-interface User {
+export interface User {
   id: number
   name: string
   age: number
 }
 
-let dummyUsers = Array.from({ length: 20 }, (_, idx) => {
+export const dummyUsers = Array.from({ length: 20 }, (_, idx) => {
   return {
     id: idx + 1,
     name: `Sample User ${idx + 1}`,
@@ -154,32 +158,35 @@ let dummyUsers = Array.from({ length: 20 }, (_, idx) => {
 
 ### Query 작성하기
 
-`Query` 는 데이터 조회를 위한 `resolver` 에 해당한다. `name` 을 parameter로 전달 받아 동일한 `name` 을 가진 사용자를 반환하는 `user` resolver와 `user` 전체 리스트를 반환하는 `users` resolver를 작성한다.
+`Query`는 데이터 조회를 위한 `resolver`에 해당한다. `name`을 parameter로 전달 받아 동일한 `name`을 가진 사용자를 반환하는 `user` resolver와 `user` 전체 리스트를 반환하는 `users` resolver를 작성한다.
 
 ```typescript
 // resolvers.ts
+import { dummyUsers, User } from './dummy-data'
 
-...
+let users = [...dummyUsers]
 
 const resolvers = {
-	Query: {
-		user: (_: unknown, { name }: { name: string}) => {
-			return dummyUsers.find((user) => user.name === name)
-		},
+  Query: {
+    user: (_: unknown, { name }: { name: string }) => {
+      return users.find((user) => user.name === name)
+    },
 
-		users: () => {
-			return dummyUsers
-		}
-	}
+    users: () => {
+      return users
+    },
+  },
 }
 ```
 
 ### Mutation 작성하기
 
-`Mutation` 은 데이터의 변이가 일어나는 `resolver` 에 해당한다. `user` 객체를 parameter로 전달 받아 새로운 `user` 데이터를 생성하는 `addUser` resolver와 사용자이 `id` 를 전달받아 일치하는 사용자 데이터를 삭제하는 `deleteUser` resolver를 작성한다.
+`Mutation`은 데이터의 변이가 일어나는 `resolver`에 해당한다. `user` 객체를 parameter로 전달 받아 새로운 `user` 데이터를 생성하는 `addUser` resolver와 사용자의 `id` 를 전달받아 일치하는 사용자 데이터를 삭제하는 `deleteUser` resolver를 작성한다.
 
 ```typescript
 // resolvers.ts
+
+...
 
 const resolvers = {
 
@@ -189,13 +196,13 @@ const resolvers = {
     addUser: (_: unknown, { user }: { user: User }) => {
       const newUser = {
         ...user,
-        id: dummyUsers[dummyUsers.length - 1].id + 1,
+        id: users[users.length - 1].id + 1,
       }
-      dummyUsers.push(newUser)
+      users.push(newUser)
       return newUser
     },
     deleteUser: (_: unknown, { id }: { id: number }) => {
-      dummyUsers = dummyUsers.filter((user) => user.id !== id)
+      users = users.filter((user) => user.id !== id)
     },
   },
 }
@@ -232,23 +239,62 @@ server.listen(8080).then(() => {
 
 Apollo Server를 실행하면 `Apollo Studio` 를 통해 작성한 GraphQL 서버로 요청을 보낼 수 있다.
 
+> **GraphQL Queries And Mutations**
+>
+> GraphQL에 요청을 보내기 위해 사용하게 되는 Syntax는 _query_ 또는 *mutation*에 관심 있는 필드를 정의하는 것을 기본으로 한다.
+>
+> [이곳](https://graphql.org/learn/queries/) 에서 보다 자세한 내용을 확인 할 수 있다.
+
 ## Field resolver를 이용한 테이블 Join
 
 GraphQL은 반환하는 `Object type`의 모든 필드의 값이 `resolver` 에 의해 채워진다. 어떤 필드에 특정한 resolver가 정의되어 있지 않다면 일반적으로 `object.field` 와 같은 형태로 값을 채우게 된다. (default resolver)
 
 만약 특정 필드가 또 다른 테이블 (객체)을 통해 값이 결정 된다면 `field resolver` 를 정의하여 쉽게 값을 채울 수 있다.
 
-사용자가 `Company` 라는 테이블과 relation을 가지고 있다면 아래와 같이 field resolver를 정의 할 수 있다.
+사용자가 `Company`라는 테이블과 relation을 가지고 있다면 아래와 같이 field resolver를 정의 할 수 있다.
+
+```typescript
+// dummy-data.ts
+...
+
+export const dummyUsers = Array.from({ length: 20 }, (_, idx) => {
+  return {
+    id: idx + 1,
+    name: `Sample User ${idx + 1}`,
+    age: Math.floor(Math.random() * 20),
+    companyId: (idx % 3) + 1, // company id를 통해 company 객체를 참조한다.
+  }
+}) as User[]
+
+export interface Company {
+  id: number
+  name: string
+}
+
+export const dummyCompanies = Array.from({ length: 3 }, (_, idx) => {
+  return {
+    id: idx + 1,
+    name: `Sample Company ${idx + 1}`,
+  }
+}) as Company[]
+
+```
 
 ```typescript
 // resolvers.ts
+import { dummyUsers, User, dummyCompanies } from './dummy-data'
+
+...
+
+let companies = [...dummyCompanies]
+
 
 const resolvers = {
 	...
 
 	User: {
 		company: (parent: User) => {
-            return dummyCompanies.find((company) => company.id === parent.companyId)
+            return companies.find((company) => company.id === parent.companyId)
 		}
 	}
 }
@@ -275,12 +321,17 @@ TypeGraphQL은 이런 번거로움을 해결하기 위한 라이브러리로 cla
 TypeGraphQL을 사용하기 위해 필요한 디펜던시를 설치한다.
 
 ```bash
-$ npm i graphql class-validator type-graphql
+$ npm i graphql class-validator type-graphql reflect-metadata
 ```
+
+> 만약 디펜던시 설치중 에러가 발생한다면 type-graphql의 peer dependency인 graphql의 버전을 확인하고
+>
+> 필요한 경우 graphql을 삭제한 뒤 다시 설치한다
 
 ### tsconfig configuration
 
 ```json
+// tsconfig.json
 {
   "target": "es2018", // type-graphql이 es2018 spec에 의존하고 있다
   "emitDecoratorMetadata": true, // decorator를 사용하기 위해 true로 설정
@@ -315,23 +366,19 @@ export class User {
 resolver 또한 class 형식으로 정의 할 수 있다.
 
 ```typescript
+// resolvers/User.ts
+
 import { Arg, Query, Resolver } from 'type-graphql'
+import { dummyUsers } from '../dummy-data'
 import { User } from '../entities/User'
 
-let dummyUsers = Array.from({ length: 20 }, (_, idx) => {
-  return {
-    id: idx + 1,
-    name: `Sample User ${idx + 1}`,
-    age: Math.floor(Math.random() * 20),
-    companyId: (idx % 3) + 1,
-  }
-}) as User[]
+let users = [...dummyUsers]
 
 @Resolver()
 export class UserResolver {
   @Query((returns) => User)
   user(@Arg('name') name: string) {
-    const foundUser = dummyUsers.find((user) => user.name === name) || null
+    const foundUser = users.find((user) => user.name === name) || null
     if (!foundUser) throw new Error('No user found')
 
     return foundUser
@@ -339,7 +386,7 @@ export class UserResolver {
 
   @Query((returns) => [User])
   users() {
-    return dummyUsers
+    return users
   }
 }
 ```
@@ -348,7 +395,7 @@ export class UserResolver {
 
 ### Schema 생성하기
 
-이렇게 정의한 `resolver`를 통해 schema를 생성해야 한다. 생성된 schema는 Apollo Server를 실행할 때 전달되는 `config` 로 사용 된다.
+이렇게 정의한 `resolver`를 통해 schema를 생성해야 한다. 생성된 schema는 Apollo Server를 실행할 때 전달되는 `config` 로 사용된다.
 
 ```typescript
 // app.ts

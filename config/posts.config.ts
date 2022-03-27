@@ -253,6 +253,10 @@ const posts: Post[] = [
         title: 'DataLoader - GitHub Repository',
         url: 'https://github.com/graphql/dataloader',
       },
+      {
+        title: 'Sample Repository',
+        url: 'https://github.com/possible819/graphql-sample'
+      }
     ],
   },
   {
