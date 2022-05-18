@@ -485,7 +485,7 @@
         "licenseUrl": "https://github.com/kyldvs/ast-types-flow",
         "parents": "code-logs"
     },
-    "async@2.6.3": {
+    "async@2.6.4": {
         "licenses": "MIT",
         "repository": "https://github.com/caolan/async",
         "licenseUrl": "https://github.com/caolan/async/raw/master/LICENSE",
