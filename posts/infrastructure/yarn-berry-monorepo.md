@@ -147,6 +147,8 @@ yarn dlx @yarnpkg/sdks vscode
 
 > workspace의 typescript를 참조 할 수 없는 경우는 workspace root package.json이 typescript를 dependency로 가지고 있지 않을 경우이다.
 > `yarn add typescript` 를 통해 디펜던시를 설치하게 되면 정상적으로 버전 선택이 가능하다.
+>
+> 이렇게 @yarnpkg/sdks 설치 이후에 typescript를 설치 했다면 `yarn dlx @yarnpkg/sdks` 명령을 통해 extension을 다시 설치해 줘야 한다.
 
 `cmd + shift + p ⇒ select typescript version ⇒ use workspace version`
 
@@ -241,7 +243,7 @@ yarn plugin import plugin-workspace-tools
 yarn workspaces foreach run build
 ```
 
-> 그 밖의 커맨드로는 `focus` 도 있다 사용법 및 역할은 공식문서를 참조
+> 그 밖의 커맨드로는 `focus` 도 있다 사용법 및 역할은 [공식문서](https://github.com/yarnpkg/berry/blob/HEAD/packages/plugin-workspace-tools/README.md)를 참조
 
 ## 로컬 패키지 참조하기
 
