@@ -5,11 +5,10 @@ import blogConfig from '../../config/blog.config'
 import TitleUtil from '../../utils/TitleUtil'
 import styles from './About.module.scss'
 
-const About = () => {
-  const computeCareer = () => new Date().getFullYear() - 2015
-  const standardTimeout = 300
-  const ratio = 1.5
+const standardTimeout = 300
+const ratio = 1.5
 
+const About = () => {
   return (
     <>
       <CommonMeta
@@ -29,11 +28,6 @@ const About = () => {
           <p>잘못된 정보의 공유나 바르지 않은 개인의견에 대한 피드백은 주시면 감사히 수용합니다.</p>
           <br />
           <p>공개된 공간의 정보 공유를 통해 저와 참여자 분들의 긍정적인 발전을 기원합니다.</p>
-        </RaiseSection>
-
-        <RaiseSection timeout={standardTimeout * ratio * 2}>
-          <h2>I am...</h2>
-          <p>고양이를 좋아하는 {computeCareer()}년차 프론트엔드 개발자 입니다.</p>
         </RaiseSection>
 
         <RaiseSection timeout={standardTimeout * ratio * 3}>
