@@ -5,7 +5,7 @@
     "dev": "next dev",
     "build": "next build",
     "export": "npm run build && next export",
-    "docs": "npm run build && next export -o ./docs && touch ./docs/.nojekyll && next-sitemap",
+    "docs": "npm run build && next export -o ./docs && touch ./docs/.nojekyll && next-sitemap && prettier --write ./docs",
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
@@ -34,6 +34,7 @@
     "marked": "^4.0.12",
     "next-sitemap": "^2.4.5",
     "npm-license-crawler": "^0.2.1",
+    "prettier": "^2.7.1",
     "ts-node": "^10.5.0",
     "typescript": "4.5.5"
   }
