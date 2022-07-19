@@ -201,19 +201,6 @@
                   ],
                 }),
                 (0, o.jsxs)(c.Z, {
-                  timeout: 900,
-                  children: [
-                    (0, o.jsx)('h2', { children: 'I am...' }),
-                    (0, o.jsxs)('p', {
-                      children: [
-                        '\uace0\uc591\uc774\ub97c \uc88b\uc544\ud558\ub294 ',
-                        new Date().getFullYear() - 2015,
-                        '\ub144\ucc28 \ud504\ub860\ud2b8\uc5d4\ub4dc \uac1c\ubc1c\uc790 \uc785\ub2c8\ub2e4.',
-                      ],
-                    }),
-                  ],
-                }),
-                (0, o.jsxs)(c.Z, {
                   timeout: 1350,
                   children: [
                     (0, o.jsx)('h2', { children: 'Licenses' }),
