@@ -97,6 +97,7 @@
   grid-area: description;
 }
 .PostCard_description__53x7j > p {
+  white-space: pre-wrap;
   margin-top: 0;
   line-height: var(--wide-spacing);
   color: var(--theme-color);

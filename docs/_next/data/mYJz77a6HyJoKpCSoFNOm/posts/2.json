@@ -4,6 +4,19 @@
     "lastPage": 4,
     "posts": [
       {
+        "title": "Focus on Button - Safari VS Chrome",
+        "fileName": "focus-on-button-safari-vs-chrome.md",
+        "description": "Safari, Chrome 브라우저에 따라 달라지는 button의 focus 속성",
+        "category": "CSS",
+        "published": true,
+        "publishedAt": "2022-02-28",
+        "tags": ["CSS", "focus", "focus-within", "focus-visible", "safari", "chrome", "browser", "사파리", "크롬", "브라우저"],
+        "thumbnailName": "focus-on-button.png",
+        "references": [
+          { "title": "Clicking and focus - MDN Web Docs", "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#clicking_and_focus" }
+        ]
+      },
+      {
         "title": "ESLint - Plugin and Extends",
         "fileName": "eslint-plugin-and-extends.md",
         "description": "ESLint의 Plugin과 Extends의 차이는 무엇일까?",
@@ -48,19 +61,9 @@
         "publishedAt": "2021-11-16",
         "tags": ["elasticsearch", "full-text search", "searching engine", "엘라스틱서치", "전문검색"],
         "thumbnailName": "elasticsearch-full-text-search.png"
-      },
-      {
-        "title": "Any | Unknown | Never",
-        "fileName": "any-unknown-never.md",
-        "description": "TypeScript - Any | Unknown | Never",
-        "category": "typescript",
-        "published": true,
-        "publishedAt": "2021-11-15",
-        "tags": ["typescript", "any", "unknown", "never", "타입스크립트"],
-        "thumbnailName": "ts-any-unknown-never.png"
       }
     ],
-    "totalCount": 17
+    "totalCount": 18
   },
   "__N_SSG": true
 }

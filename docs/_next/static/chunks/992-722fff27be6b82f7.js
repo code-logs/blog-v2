@@ -9,15 +9,15 @@
         },
       })
       var r = n(5893),
-        i = n(9008),
-        a = n(8145),
-        o = n(7294),
+        a = n(9008),
+        o = n(8145),
+        i = n(7294),
         l = function () {
-          ;(0, o.useEffect)(function () {
+          ;(0, i.useEffect)(function () {
             if (document.head) {
               var e = document.createElement('script')
               ;(e.async = !0),
-                (e.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='.concat(a.Z.googleAdsense.adClient)),
+                (e.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='.concat(o.Z.googleAdsense.adClient)),
                 (e.crossOrigin = 'anonymous'),
                 document.head.appendChild(e)
             }
@@ -26,22 +26,22 @@
         s = function (e) {
           var t = e.title,
             n = e.description,
-            o = e.keywords,
+            i = e.keywords,
             s = e.url,
             c = e.imageURL,
             u = e.customMeta
           return (
             l(),
-            (0, r.jsxs)(i.default, {
+            (0, r.jsxs)(a.default, {
               children: [
                 (0, r.jsx)('link', { rel: 'canonical', href: s }),
-                (0, r.jsx)('link', { rel: 'apple-touch-icon', href: a.Z.appleTouchIconPath }),
+                (0, r.jsx)('link', { rel: 'apple-touch-icon', href: o.Z.appleTouchIconPath }),
                 (0, r.jsx)('link', { rel: 'manifest', href: '/manifest.json' }),
-                (0, r.jsx)('meta', { name: 'theme-color', content: a.Z.themeColor }, 'theme-color'),
+                (0, r.jsx)('meta', { name: 'theme-color', content: o.Z.themeColor }, 'theme-color'),
                 (0, r.jsx)('meta', { property: 'og:type', content: 'website' }, 'og:type'),
-                (0, r.jsx)('meta', { property: 'og:site_name', content: a.Z.title }, 'og:site_name'),
-                (0, r.jsx)('meta', { name: 'author', content: a.Z.author }, 'author'),
-                (null === o || void 0 === o ? void 0 : o.length) && (0, r.jsx)('meta', { name: 'keyword', content: o.join(', ') }, 'keyword'),
+                (0, r.jsx)('meta', { property: 'og:site_name', content: o.Z.title }, 'og:site_name'),
+                (0, r.jsx)('meta', { name: 'author', content: o.Z.author }, 'author'),
+                (null === i || void 0 === i ? void 0 : i.length) && (0, r.jsx)('meta', { name: 'keyword', content: i.join(', ') }, 'keyword'),
                 (0, r.jsx)('meta', { name: 'description', content: n }, 'description'),
                 (0, r.jsx)('meta', { property: 'og:description', content: n }, 'og:description'),
                 (0, r.jsx)('meta', { property: 'og:title', content: t }, 'og:title'),
@@ -56,10 +56,10 @@
     },
     1780: function (e, t, n) {
       var r = n(5893),
-        i = n(7294)
+        a = n(7294)
       t.Z = function (e) {
         return (
-          (0, i.useEffect)(function () {
+          (0, a.useEffect)(function () {
             ;(window.adsbygoogle = window.adsbygoogle || []), window.adsbygoogle.push({})
           }, []),
           (0, r.jsx)('ins', {
@@ -82,13 +82,13 @@
         for (var n = 0, r = new Array(t); n < t; n++) r[n] = e[n]
         return r
       }
-      function i(e, t) {
+      function a(e, t) {
         for (var n = 0; n < t.length; n++) {
           var r = t[n]
           ;(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
         }
       }
-      function a(e) {
+      function o(e) {
         return (
           (function (e) {
             if (Array.isArray(e)) return r(e)
@@ -116,7 +116,7 @@
           return b
         },
       })
-      var o,
+      var i,
         l = (function () {
           function e(t) {
             !(function (e, t) {
@@ -132,7 +132,7 @@
                 key: 'find',
                 value: function (e) {
                   var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0
-                  return void 0 !== e ? this.dataset.slice(t, t + e) : a(this.dataset)
+                  return void 0 !== e ? this.dataset.slice(t, t + e) : o(this.dataset)
                 },
               },
               {
@@ -150,8 +150,8 @@
                 },
               },
             ]),
-            n && i(t.prototype, n),
-            r && i(t, r),
+            n && a(t.prototype, n),
+            r && a(t, r),
             e
           )
         })(),
@@ -168,18 +168,18 @@
           (e.Infrastructure = 'infrastructure'),
           (e.DevEnv = '\uac1c\ubc1c\ud658\uacbd'),
           (e.Cloud = 'cloud'),
-          (e.Svelte = 'svelte'),
           (e.Security = 'security'),
           (e.NodeJS = 'nodejs'),
-          (e.ReactNative = 'react-native')
-      })(o || (o = {}))
+          (e.ReactNative = 'react-native'),
+          (e.RoadmapFrontend = 'roadmap-frontend')
+      })(i || (i = {}))
       var u = [
         {
           title: '\uac80\uc0c9 \uc5d4\uc9c4 \ucd5c\uc801\ud654\ub97c \uc704\ud55c \uc124\uc815',
           fileName: 'config-for-seo.md',
           description:
             '\uac80\uc0c9 \uc5d4\uc9c4 \ucd5c\uc801\ud654\ub97c \uc704\ud55c \uc124\uc815 (Title, Meta Tag, \uc808\ub300\uacbd\ub85c, robots.txt, sitemap.xml)',
-          category: o.SEO,
+          category: i.SEO,
           published: !0,
           publishedAt: '2021-10-10',
           tags: [
@@ -200,7 +200,7 @@
           title: 'Tagged Template Literal',
           fileName: 'tagged-template-literal.md',
           description: 'Javascript ES6 Tagged Template Literal',
-          category: o.Javascript,
+          category: i.Javascript,
           published: !0,
           publishedAt: '2021-10-11',
           tags: ['javascript', 'tagged template', 'tagged template literal', 'es6'],
@@ -211,7 +211,7 @@
           fileName: 'iterator-generator.md',
           description:
             'Javascript ES6 Iterator & Generator, \uc5f4\uac70\ud615, \uc81c\ub108\ub808\uc774\ud130 \ud568\uc218, generator function, yield, function*',
-          category: o.Javascript,
+          category: i.Javascript,
           published: !0,
           publishedAt: '2021-10-17',
           tags: ['javascript', 'iterator', 'iterable', 'generator', 'es6', 'function*', 'yield'],
@@ -221,7 +221,7 @@
           title: 'Proxy',
           fileName: 'proxy.md',
           description: 'Javascript ES6 Proxy, Proxy, Trap, \ud504\ub77d\uc2dc\ub97c \uc774\uc6a9\ud55c \uac1d\uccb4 \uc870\uc791\uc758 \uc81c\uc5b4',
-          category: o.Javascript,
+          category: i.Javascript,
           published: !0,
           publishedAt: '2021-10-25',
           tags: ['javascript', 'proxy', 'trap', 'es6', '\ud504\ub85d\uc2dc'],
@@ -231,7 +231,7 @@
           title: 'CSS Position',
           fileName: 'css-position.md',
           description: 'CSS Position (Static, Absolute, Fixed, Sticky)\uc5d0 \ub530\ub978 \uace0\uc815 \ud5e4\ub354 \uc2a4\ud0c0\uc77c',
-          category: o.CSS,
+          category: i.CSS,
           published: !0,
           publishedAt: '2021-10-26',
           tags: ['css', 'position', 'static', 'absolute', 'fixed', 'sticky', 'header', 'style', '\uc2a4\ud0c0\uc77c', '\ud3ec\uc9c0\uc158', '\ud5e4\ub354'],
@@ -241,7 +241,7 @@
           title: '\uace0\ucc28 \ucef4\ud37c\ub10c\ud2b8 (HOC: Higher Order Component)',
           fileName: 'hoc.md',
           description: 'React - \uace0\ucc28 \ucef4\ud37c\ub10c\ud2b8\ub97c \uc774\uc6a9\ud55c \ucef4\ud37c\ub10c\ud2b8\uc758 \uc7ac\uc0ac\uc6a9',
-          category: o.React,
+          category: i.React,
           published: !0,
           publishedAt: '2021-10-30',
           tags: ['hoc', 'higher order component', '\uace0\ucc28 \ucef4\ud37c\ub10c\ud2b8', 'react', '\ub9ac\uc561\ud2b8'],
@@ -252,7 +252,7 @@
           fileName: 'scroll-sequence-animation.md',
           description:
             'Apple \uc81c\ud488 \ud398\uc774\uc9c0 \uac19\uc740 \uc560\ub2c8\uba54\uc774\uc158\uc744 \uad6c\ud604\ud574\ubcf4\uc790 - Scroll sequence animation',
-          category: o.UIandUX,
+          category: i.UIandUX,
           published: !0,
           publishedAt: '2021-10-31',
           tags: ['scroll sequence', 'scroll sequence animation', 'ui', 'ux'],
@@ -262,7 +262,7 @@
           title: 'Any | Unknown | Never',
           fileName: 'any-unknown-never.md',
           description: 'TypeScript - Any | Unknown | Never',
-          category: o.Typescript,
+          category: i.Typescript,
           published: !0,
           publishedAt: '2021-11-15',
           tags: ['typescript', 'any', 'unknown', 'never', '\ud0c0\uc785\uc2a4\ud06c\ub9bd\ud2b8'],
@@ -272,7 +272,7 @@
           title: 'Elasticsearch: Full-text search (\uc804\ubb38\uac80\uc0c9)',
           fileName: 'full-text-search.md',
           description: 'Elasticsearch\ub97c \uc774\uc6a9\ud55c Full-text search',
-          category: o.Elasticsearch,
+          category: i.Elasticsearch,
           published: !0,
           publishedAt: '2021-11-16',
           tags: ['elasticsearch', 'full-text search', 'searching engine', '\uc5d8\ub77c\uc2a4\ud2f1\uc11c\uce58', '\uc804\ubb38\uac80\uc0c9'],
@@ -282,7 +282,7 @@
           title: 'Nx build system \ub9db\ubcf4\uae30',
           fileName: 'monorepo-with-nx.md',
           description: 'Nx build system\uc744 \uc774\uc6a9\ud55c Monorepo \uad6c\uc131\ud558\uae30',
-          category: o.Infrastructure,
+          category: i.Infrastructure,
           published: !0,
           publishedAt: '2022-02-12',
           tags: ['nx', 'build', 'build system', 'monorepo', '\ube4c\ub4dc', '\ube4c\ub4dc \uc2dc\uc2a4\ud15c', '\ubaa8\ub178\ub9ac\ud3ec'],
@@ -294,7 +294,7 @@
           fileName: 'yarn-berry-monorepo.md',
           description:
             'yarn berry\uc640 yarn workspaces\ub97c \uc774\uc6a9\ud574 monorepo \uad6c\uc131 - \ud658\uacbd \uc124\uc815, \uc0d8\ud50c \ud504\ub85c\uc81d\ud2b8',
-          category: o.Infrastructure,
+          category: i.Infrastructure,
           published: !0,
           publishedAt: '2022-02-26',
           tags: ['yarn', 'yarn berry', 'berry', 'monorepo', 'workspace', 'workspaces', '\ubaa8\ub178\ub9ac\ud3ec', 'zero-install'],
@@ -306,7 +306,7 @@
           title: 'ESLint - Plugin and Extends',
           fileName: 'eslint-plugin-and-extends.md',
           description: 'ESLint\uc758 Plugin\uacfc Extends\uc758 \ucc28\uc774\ub294 \ubb34\uc5c7\uc77c\uae4c?',
-          category: o.DevEnv,
+          category: i.DevEnv,
           published: !0,
           publishedAt: '2022-02-27',
           tags: ['\uac1c\ubc1c\ud658\uacbd', 'eslint', 'plugin', 'extends', 'eslint plugin', 'eslint extends', 'lint'],
@@ -319,7 +319,7 @@
           title: 'Focus on Button - Safari VS Chrome',
           fileName: 'focus-on-button-safari-vs-chrome.md',
           description: 'Safari, Chrome \ube0c\ub77c\uc6b0\uc800\uc5d0 \ub530\ub77c \ub2ec\ub77c\uc9c0\ub294 button\uc758 focus \uc18d\uc131',
-          category: o.CSS,
+          category: i.CSS,
           published: !0,
           publishedAt: '2022-02-28',
           tags: [
@@ -329,7 +329,7 @@
             'focus-visible',
             'safari',
             'chrome',
-            'brower',
+            'browser',
             '\uc0ac\ud30c\ub9ac',
             '\ud06c\ub86c',
             '\ube0c\ub77c\uc6b0\uc800',
@@ -343,7 +343,7 @@
           title: 'Heroku\ub85c Node.js \uc560\ud50c\ub9ac\ucf00\uc774\uc158 \ubc30\ud3ec\ud558\uae30',
           fileName: 'deploy-nodejs-via-heroku.md',
           description: 'Heroku\ub97c \uc774\uc6a9\ud55c NodeJS  \uc560\ud50c\ub9ac\ucf00\uc774\uc158 \ubc30\ud3ec\ud558\uae30',
-          category: o.Cloud,
+          category: i.Cloud,
           published: !0,
           publishedAt: '2022-03-04',
           tags: ['heroku', 'node.js', 'cloud', 'cloud service', 'paas', 'deploy', '\ubc30\ud3ec'],
@@ -357,8 +357,8 @@
           title: '\ube0c\ub77c\uc6b0\uc800 \ubcf4\uc548 \uc815\ucc45 CHIPS - (feat. Chrome \ucfe0\ud0a4 \uc785\ub825 \ubd88\uac00)',
           fileName: 'chips.md',
           description:
-            'CHIPS - Cookies Having Independent Partitioned State\n (Chrome 98 \ubc84\uadf8\ub97c \ucc3e\uc544 \ud5e4\ub9e4\ub2e4 \ubc1c\uacac\ud558\uac8c \ub41c \ube0c\ub77c\uc6b0\uc800\uc758 Cookie \uad00\ub9ac \uc815\ucc45)',
-          category: o.Security,
+            'CHIPS - Cookies Having Independent Partitioned State\n(Chrome 98 \ubc84\uadf8\ub97c \ucc3e\uc544 \ud5e4\ub9e4\ub2e4 \ubc1c\uacac\ud558\uac8c \ub41c \ube0c\ub77c\uc6b0\uc800\uc758 Cookie \uad00\ub9ac \uc815\ucc45)',
+          category: i.Security,
           published: !0,
           publishedAt: '2022-03-06',
           tags: ['CHIPS', 'cookie', 'security', 'browser', 'policy', 'security policy', 'chrome'],
@@ -367,13 +367,13 @@
         },
         {
           title: 'Apollo Server + TypeGraphQL\uc744 \uc774\uc6a9\ud55c GraphQL API \uc11c\ubc84 \uad6c\uc131\ud558\uae30',
-          fileName: 'grapql-with-apollo-server-typegraphql.md',
+          fileName: 'graphql-with-apollo-server-typegraphql.md',
           description: 'Apollo Server\uc640 TypeGraphQL\uc744 \uc0ac\uc6a9\ud55c Node.JS GraphQL API \uc11c\ubc84 \uad6c\uc131\ud558\uae30',
-          category: o.NodeJS,
+          category: i.NodeJS,
           published: !0,
           publishedAt: '2022-03-10',
           tags: ['graphql', 'apollo', 'apollo-server', 'node.js', 'typescript', 'typegraphql', 'api', 'api server'],
-          thumbnailName: 'grapqhl-apollo-typegrapql.png',
+          thumbnailName: 'graphql-apollo-typegraphql.png',
           references: [
             { title: 'Apollo Server', url: 'https://www.apollographql.com' },
             { title: 'TypeGraphQL', url: 'https://typegraphql.com' },
@@ -387,7 +387,7 @@
           fileName: 'react-native-dev-env.md',
           description:
             'Mac OS\uc5d0\uc11c iOS \uc560\ud50c\ub9ac\ucf00\uc774\uc158 \uac1c\ubc1c\uc744 \uc704\ud55c React Native \uac1c\ubc1c\ud658\uacbd \uad6c\uc131\ud558\uae30',
-          category: o.ReactNative,
+          category: i.ReactNative,
           published: !0,
           publishedAt: '2022-03-26',
           tags: [
@@ -408,18 +408,28 @@
           ],
         },
         {
-          title: "Svelte - Let's get started",
-          fileName: 'get-started-svelte.md',
-          description: 'Svelte \ub9db\ubcf4\uae30',
-          category: o.Svelte,
-          published: !1,
-          publishedAt: '2099-02-13',
-          tags: ['svelte', 'frontend', 'get started'],
-          thumbnailName: 'get-started-svelte.png',
-          references: [
-            { title: 'Svelte', url: 'https://svelte.dev/' },
-            { title: 'Naver', url: 'https://naver.com/' },
+          title: 'Internet - Roadmap.sh (frontend)',
+          fileName: 'internet.md',
+          description:
+            'Roadmap.sh frontend - Internet\nRoadmap.sh - frontend \ud559\uc2b5 \uc21c\uc11c\uc5d0 \ub530\ub77c \uc815\ub9ac\ud558\ub294 \ud3ec\uc2a4\ud305 1',
+          category: i.RoadmapFrontend,
+          published: !0,
+          publishedAt: '2022-07-20',
+          tags: [
+            'roadmap',
+            'roadmap.sh',
+            'frontend',
+            'internet',
+            'packet',
+            'routing',
+            'protocol',
+            '\uc778\ud130\ub137',
+            '\ud328\ud0b7',
+            '\ud504\ub85c\ud1a0\ucf5c',
+            '\ub77c\uc6b0\ud305',
           ],
+          thumbnailName: 'roadmap-frontend-internet.png',
+          references: [{ title: 'Roadmap.sh', url: 'https://roadmap.sh/frontend' }],
         },
       ]
       function p(e, t) {
@@ -474,8 +484,8 @@
           var n,
             r = d(e)
           if (t) {
-            var i = d(this).constructor
-            n = Reflect.construct(r, arguments, i)
+            var a = d(this).constructor
+            n = Reflect.construct(r, arguments, a)
           } else n = r.apply(this, arguments)
           return f(this, n)
         }
@@ -484,18 +494,18 @@
           !(function (e, t) {
             if ('function' !== typeof t && null !== t) throw new TypeError('Super expression must either be null or a function')
             ;(e.prototype = Object.create(t && t.prototype, { constructor: { value: e, writable: !0, configurable: !0 } })), t && h(e, t)
-          })(a, e)
+          })(o, e)
           var t,
             n,
             r,
-            i = g(a)
-          function a() {
+            a = g(o)
+          function o() {
             var e
             return (
               (function (e, t) {
                 if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
-              })(this, a),
-              (e = i.call(
+              })(this, o),
+              (e = a.call(
                 this,
                 u.filter(function (e) {
                   return e.published
@@ -507,7 +517,7 @@
             )
           }
           return (
-            (t = a),
+            (t = o),
             (n = [
               {
                 key: 'findByTitle',
@@ -561,12 +571,12 @@
                     r = e.split(/\s/).map(function (e) {
                       return e.toLowerCase()
                     }),
-                    i = this.dataset.filter(function (e) {
+                    a = this.dataset.filter(function (e) {
                       return r.some(function (t) {
                         return e.title.indexOf(t) >= 0 || e.description.indexOf(t) >= 0 || e.category.indexOf(t) >= 0 || e.tags.join('').indexOf(t) >= 0
                       })
                     })
-                  return void 0 !== t ? i.slice(n, n + t) : i
+                  return void 0 !== t ? a.slice(n, n + t) : a
                 },
               },
               {
@@ -590,7 +600,7 @@
             ]),
             n && p(t.prototype, n),
             r && p(t, r),
-            a
+            o
           )
         })(s),
         b = new y()
@@ -600,40 +610,40 @@
       t.Z = function (e) {
         var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : '.',
           n = (0, r.useState)(''),
-          i = n[0],
-          a = n[1]
+          a = n[0],
+          o = n[1]
         return (
           (0, r.useEffect)(
             function () {
               var n = String(e.getFullYear()).slice(2),
                 r = String(e.getMonth() + 1).padStart(2, '0'),
-                i = String(e.getDate()).padStart(2, '0')
-              a([n, r, i].join(t))
+                a = String(e.getDate()).padStart(2, '0')
+              o([n, r, a].join(t))
             },
             [e, t]
           ),
-          i
+          a
         )
       }
     },
     9443: function (e, t, n) {
       var r = n(8145)
-      function i(e, t) {
+      function a(e, t) {
         for (var n = 0; n < t.length; n++) {
           var r = t[n]
           ;(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
         }
       }
-      var a = (function () {
+      var o = (function () {
         function e() {
           !(function (e, t) {
             if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
           })(this, e)
         }
-        var t, n, a
+        var t, n, o
         return (
           (t = e),
-          (a = [
+          (o = [
             {
               key: 'absolutePath',
               value: function (e, t) {
@@ -647,18 +657,18 @@
               },
             },
           ]),
-          (n = null) && i(t.prototype, n),
-          a && i(t, a),
+          (n = null) && a(t.prototype, n),
+          o && a(t, o),
           e
         )
       })()
-      t.Z = a
+      t.Z = o
     },
     8286: function (e, t, n) {
       var r = n(1864),
-        i = n.n(r),
-        a = n(8145)
-      function o(e, t) {
+        a = n.n(r),
+        o = n(8145)
+      function i(e, t) {
         for (var n = 0; n < t.length; n++) {
           var r = t[n]
           ;(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
@@ -683,18 +693,18 @@
             {
               key: 'getMarkdownFilePath',
               value: function (e) {
-                return i().join('../posts', e.category, e.fileName)
+                return a().join('../posts', e.category, e.fileName)
               },
             },
             {
               key: 'buildLinkURLByTitle',
               value: function (e) {
-                return ''.concat(a.Z.baseURL, '/').concat(this.normalizeTitle(e))
+                return ''.concat(o.Z.baseURL, '/').concat(this.normalizeTitle(e))
               },
             },
           ]),
-          (n = null) && o(t.prototype, n),
-          r && o(t, r),
+          (n = null) && i(t.prototype, n),
+          r && i(t, r),
           e
         )
       })()
@@ -702,22 +712,22 @@
     },
     7427: function (e, t, n) {
       var r = n(8145)
-      function i(e, t) {
+      function a(e, t) {
         for (var n = 0; n < t.length; n++) {
           var r = t[n]
           ;(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
         }
       }
-      var a = (function () {
+      var o = (function () {
         function e() {
           !(function (e, t) {
             if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
           })(this, e)
         }
-        var t, n, a
+        var t, n, o
         return (
           (t = e),
-          (a = [
+          (o = [
             {
               key: 'buildPageTitle',
               value: function (e) {
@@ -725,12 +735,12 @@
               },
             },
           ]),
-          (n = null) && i(t.prototype, n),
-          a && i(t, a),
+          (n = null) && a(t.prototype, n),
+          o && a(t, o),
           e
         )
       })()
-      t.Z = a
+      t.Z = o
     },
   },
 ])
