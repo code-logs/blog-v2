@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import blogConfig from '../../config/blog.config'
 import { Post } from '../../config/posts.config'
 import useHumanReadableDate from '../../hooks/useHumanReadableDate'
 import PathUtil from '../../utils/PathUtil'

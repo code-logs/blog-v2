@@ -29,10 +29,10 @@ export enum Categories {
   Infrastructure = 'infrastructure',
   DevEnv = '개발환경',
   Cloud = 'cloud',
-  Svelte = 'svelte',
   Security = 'security',
   NodeJS = 'nodejs',
   ReactNative = 'react-native',
+  RoadmapFrontend = 'roadmap-frontend',
 }
 
 const posts: Post[] = [
@@ -182,7 +182,7 @@ const posts: Post[] = [
     category: Categories.CSS,
     published: true,
     publishedAt: '2022-02-28',
-    tags: ['CSS', 'focus', 'focus-within', 'focus-visible', 'safari', 'chrome', 'brower', '사파리', '크롬', '브라우저'],
+    tags: ['CSS', 'focus', 'focus-within', 'focus-visible', 'safari', 'chrome', 'browser', '사파리', '크롬', '브라우저'],
     thumbnailName: 'focus-on-button.png',
     references: [
       {
@@ -214,7 +214,7 @@ const posts: Post[] = [
   {
     title: '브라우저 보안 정책 CHIPS - (feat. Chrome 쿠키 입력 불가)',
     fileName: 'chips.md',
-    description: 'CHIPS - Cookies Having Independent Partitioned State\n (Chrome 98 버그를 찾아 헤매다 발견하게 된 브라우저의 Cookie 관리 정책)',
+    description: 'CHIPS - Cookies Having Independent Partitioned State\n(Chrome 98 버그를 찾아 헤매다 발견하게 된 브라우저의 Cookie 관리 정책)',
     category: Categories.Security,
     published: true,
     publishedAt: '2022-03-06',
@@ -229,13 +229,13 @@ const posts: Post[] = [
   },
   {
     title: 'Apollo Server + TypeGraphQL을 이용한 GraphQL API 서버 구성하기',
-    fileName: 'grapql-with-apollo-server-typegraphql.md',
+    fileName: 'graphql-with-apollo-server-typegraphql.md',
     description: 'Apollo Server와 TypeGraphQL을 사용한 Node.JS GraphQL API 서버 구성하기',
     category: Categories.NodeJS,
     published: true,
     publishedAt: '2022-03-10',
     tags: ['graphql', 'apollo', 'apollo-server', 'node.js', 'typescript', 'typegraphql', 'api', 'api server'],
-    thumbnailName: 'grapqhl-apollo-typegrapql.png',
+    thumbnailName: 'graphql-apollo-typegraphql.png',
     references: [
       {
         title: 'Apollo Server',
@@ -255,8 +255,8 @@ const posts: Post[] = [
       },
       {
         title: 'Sample Repository',
-        url: 'https://github.com/possible819/graphql-sample'
-      }
+        url: 'https://github.com/possible819/graphql-sample',
+      },
     ],
   },
   {
@@ -280,22 +280,18 @@ const posts: Post[] = [
     ],
   },
   {
-    title: "Svelte - Let's get started",
-    fileName: 'get-started-svelte.md',
-    description: 'Svelte 맛보기',
-    category: Categories.Svelte,
-    published: false,
-    publishedAt: '2099-02-13',
-    tags: ['svelte', 'frontend', 'get started'],
-    thumbnailName: 'get-started-svelte.png',
+    title: 'Internet - Roadmap.sh (frontend)',
+    fileName: 'internet.md',
+    description: 'Roadmap.sh frontend - Internet\nRoadmap.sh - frontend 학습 순서에 따라 정리하는 포스팅 1',
+    category: Categories.RoadmapFrontend,
+    published: true,
+    publishedAt: '2022-07-20',
+    tags: ['roadmap', 'roadmap.sh', 'frontend', 'internet', 'packet', 'routing', 'protocol', '인터넷', '패킷', '프로토콜', '라우팅'],
+    thumbnailName: 'roadmap-frontend-internet.png',
     references: [
       {
-        title: 'Svelte',
-        url: 'https://svelte.dev/',
-      },
-      {
-        title: 'Naver',
-        url: 'https://naver.com/',
+        title: 'Roadmap.sh',
+        url: 'https://roadmap.sh/frontend',
       },
     ],
   },
