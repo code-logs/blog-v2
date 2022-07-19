@@ -12,7 +12,6 @@
    1. [Query 작성하기](#query-작성하기)
    1. [Mutation 작성하기](#mutation-작성하기)
    1. [Apollo Server 실행하기](#apollo-server-실행하기)
-   1. [GraphQL Query & Mutation](#graphql-query--mutation)
 1. [Field resolver를 이용한 테이블 Join](#field-resolver를-이용한-테이블-join)
 1. [TypeGraphQL](#typegraphql)
    1. [디펜던시 설치](#디펜던시-설치)
