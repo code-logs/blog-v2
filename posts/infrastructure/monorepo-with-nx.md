@@ -27,7 +27,7 @@
 나에게 익숙한 `Monorepo` 구성은 `lerna`를 이용한 구성이였는데
 이번 포스팅에서는 `Monorepo` 구성뿐 아니라 프로젝트 빌드의 전반적인 프로세스를 돕는 `Nx` 빌드 시스템을 살펴본다.
 
-<div style=text-align:center><a href=https://nx.dev target=_blank>Nx 홈페이지 바로가기</a></div>
+<div style="text-align:center"><a href="https://nx.dev" target="_blank">Nx 홈페이지 바로가기</a></div>
 
 `Nx`는 `Nrwl (Narwhal Technologies Inc)`에 의해 만들어진 시스템이다.
 
