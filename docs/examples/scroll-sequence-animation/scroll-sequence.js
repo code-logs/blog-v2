@@ -18,8 +18,7 @@ const computeStartScrollY = () => {
 const initFirstFrame = () => {
   const image = new Image()
   image.src = imageSources[0]
-  image.onload = () =>
-    context.drawImage(image, 0, 0, canvas.width, canvas.height)
+  image.onload = () => context.drawImage(image, 0, 0, canvas.width, canvas.height)
 }
 
 const preloadImages = () => {

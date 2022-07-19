@@ -1,1 +1,17 @@
-.RaiseSection_section__FR7Qu{transform:translateY(20px);opacity:0;transition:all .5s ease-in}.RaiseSection_raise__5fbS6{transform:none;opacity:1}.About_about__Dxcfy section{margin-bottom:2em}.About_about__Dxcfy p{margin-left:var(--wide-spacing);color:var(--theme-color);font-style:italic}
+.RaiseSection_section__FR7Qu {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+.RaiseSection_raise__5fbS6 {
+  transform: none;
+  opacity: 1;
+}
+.About_about__Dxcfy section {
+  margin-bottom: 2em;
+}
+.About_about__Dxcfy p {
+  margin-left: var(--wide-spacing);
+  color: var(--theme-color);
+  font-style: italic;
+}
