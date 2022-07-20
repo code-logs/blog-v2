@@ -195,8 +195,10 @@
                     }),
                     (0, o.jsx)('br', {}),
                     (0, o.jsx)('p', {
-                      children:
-                        '\uacf5\uac1c\ub41c \uacf5\uac04\uc758 \uc815\ubcf4 \uacf5\uc720\ub97c \ud1b5\ud574 \uc800\uc640 \ucc38\uc5ec\uc790 \ubd84\ub4e4\uc758 \uae0d\uc815\uc801\uc778 \ubc1c\uc804\uc744 \uae30\uc6d0\ud569\ub2c8\ub2e4.',
+                      children: (0, o.jsx)('strong', {
+                        children:
+                          '\uc815\ubcf4 \uacf5\uc720\ub97c \ud1b5\ud574 \uc800\uc640 \ucc38\uc5ec\uc790 \ubd84\ub4e4\uc758 \uae0d\uc815\uc801\uc778 \ubc1c\uc804\uc744 \uae30\uc6d0\ud569\ub2c8\ub2e4.',
+                      }),
                     }),
                   ],
                 }),
