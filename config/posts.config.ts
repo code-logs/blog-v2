@@ -35,7 +35,7 @@ export enum Categories {
   RoadmapFrontend = 'roadmap-frontend',
 }
 
-const posts: Post[] = [
+export const posts: Post[] = [
   {
     title: '검색 엔진 최적화를 위한 설정',
     fileName: 'config-for-seo.md',
