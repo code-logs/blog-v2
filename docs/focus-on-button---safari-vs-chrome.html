@@ -12,7 +12,7 @@
     <meta name="author" content="Jay Lee" />
     <meta
       name="keyword"
-      content="CSS, focus, focus-within, focus-visible, safari, chrome, browser, 사파리, 크롬, 브라우저, Focus on Button - Safari VS Chrome, Safari, Chrome 브라우저에 따라 달라지는 button의 focus 속성, CSS"
+      content="CSS, focus-within, browser, 브라우저, focus-visible, focus, 크롬, chrome, 사파리, safari, Focus on Button - Safari VS Chrome, Safari, Chrome 브라우저에 따라 달라지는 button의 focus 속성, css"
     />
     <meta name="description" content="Safari, Chrome 브라우저에 따라 달라지는 button의 focus 속성" />
     <meta property="og:description" content="Safari, Chrome 브라우저에 따라 달라지는 button의 focus 속성" />
@@ -32,11 +32,11 @@
     <script src="/_next/static/chunks/main-a4d9e436b9a532ca.js" defer=""></script>
     <script src="/_next/static/chunks/pages/_app-302687a3b3726e89.js" defer=""></script>
     <script src="/_next/static/chunks/294-6603e2d70ff7953e.js" defer=""></script>
-    <script src="/_next/static/chunks/992-722fff27be6b82f7.js" defer=""></script>
+    <script src="/_next/static/chunks/992-1d3edcdfcd5da21f.js" defer=""></script>
     <script src="/_next/static/chunks/pages/%5Btitle%5D-80168ae5693cc526.js" defer=""></script>
-    <script src="/_next/static/TO27i-9twEO_UQI2ULWZw/_buildManifest.js" defer=""></script>
-    <script src="/_next/static/TO27i-9twEO_UQI2ULWZw/_ssgManifest.js" defer=""></script>
-    <script src="/_next/static/TO27i-9twEO_UQI2ULWZw/_middlewareManifest.js" defer=""></script>
+    <script src="/_next/static/cXHaIMLSN5JYgbZbYuFI-/_buildManifest.js" defer=""></script>
+    <script src="/_next/static/cXHaIMLSN5JYgbZbYuFI-/_ssgManifest.js" defer=""></script>
+    <script src="/_next/static/cXHaIMLSN5JYgbZbYuFI-/_middlewareManifest.js" defer=""></script>
   </head>
   <body>
     <div id="__next" data-reactroot="">
@@ -121,16 +121,6 @@
           <h2>카테고리 더보기</h2>
           <dl class="CategoryPostGroup_container__MDFUe"></dl>
         </section>
-        <section class="PostDetail_references__EU_hH">
-          <h2>참고</h2>
-          <ul class="PostDetail_references__EU_hH">
-            <li>
-              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#clicking_and_focus" target="_blank" rel="noreferrer"
-                >Clicking and focus - MDN Web Docs</a
-              >
-            </li>
-          </ul>
-        </section>
         <section class="PostDetail_utterances__jZeOm">
           <h2>댓글</h2>
           <div></div>
@@ -153,28 +143,25 @@
           "pageProps": {
             "post": {
               "title": "Focus on Button - Safari VS Chrome",
-              "fileName": "focus-on-button-safari-vs-chrome.md",
               "description": "Safari, Chrome 브라우저에 따라 달라지는 button의 focus 속성",
-              "category": "CSS",
+              "fileName": "focus-on-button-safari-vs-chrome.md",
+              "category": "css",
               "published": true,
               "publishedAt": "2022-02-28",
-              "tags": ["CSS", "focus", "focus-within", "focus-visible", "safari", "chrome", "browser", "사파리", "크롬", "브라우저"],
               "thumbnailName": "focus-on-button.png",
-              "references": [
-                { "title": "Clicking and focus - MDN Web Docs", "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#clicking_and_focus" }
-              ]
+              "tags": ["CSS", "focus-within", "browser", "브라우저", "focus-visible", "focus", "크롬", "chrome", "사파리", "safari"]
             },
             "content": "\u003cp\u003e\u003ccode\u003efocus\u003c/code\u003e 속성은 브라우저와 OS 환경에 따라 약간의 차이를 보이는데 정리하자면 다음과 같다.\u003c/p\u003e\n\u003cp\u003e\u003ca href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#clicking_and_focus\"\u003eClicking and focus - MDN Web Docs\u003c/a\u003e\u003c/p\u003e\n\u003cp\u003e표에서 보는바와 같이 \u003ccode\u003eSafari\u003c/code\u003e는 \u003ccode\u003e\u0026lt;button\u0026gt;\u003c/code\u003e, \u003ccode\u003e\u0026lt;input type=”button” /\u0026gt;\u003c/code\u003e, \u003ccode\u003e\u0026lt;input type=\u0026quot;submit\u0026quot; /\u0026gt;\u003c/code\u003e 의 \u003ccode\u003efocus\u003c/code\u003e 속성을 지원하지 않는다.\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-html\"\u003e\u0026lt;button id=\u0026quot;button\u0026quot;\u0026gt;Button\u0026lt;/button\u0026gt;\n\n\u0026lt;script\u0026gt;\n  const button = document.querySelector(\u0026#39;#button\u0026#39;)\n  button.addEventListener(\u0026#39;click\u0026#39;, () =\u0026gt; console.log(\u0026#39;Click on button\u0026#39;))\n  button.addEventListener(\u0026#39;focus\u0026#39;, () =\u0026gt; console.log(\u0026#39;Focus on button\u0026#39;))\n\u0026lt;/script\u0026gt;\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e위 \u003ccode\u003ehtml\u003c/code\u003e 을 통해 생성된 \u003ccode\u003e\u0026lt;button /\u0026gt;\u003c/code\u003e을 클릭하고 개발자 도구의 \u003ccode\u003econsole\u003c/code\u003e을 확인하면\u003c/p\u003e\n\u003cp\u003e\u003ccode\u003eChrome\u003c/code\u003e의 경우 - Focus on button 과 Click on button 을 번갈아 가며 출력하는 반면\u003c/p\u003e\n\u003cp\u003e\u003ccode\u003eSafari\u003c/code\u003e의 경우 - Click on button 만 출력하게 된다.\u003c/p\u003e\n\u003cp\u003e이러한 특성에 기인하여\n\u003ccode\u003efocus\u003c/code\u003e, \u003ccode\u003efocus-within\u003c/code\u003e , \u003ccode\u003efocus-visible\u003c/code\u003e 등의 의사 클래스를 통한 DOM 조작이 예상치 못한 방향으로 흘러 갈 수 있으니 주의해야 한다.\u003c/p\u003e\n",
             "postsByCategory": [
               {
                 "title": "CSS Position",
-                "fileName": "css-position.md",
                 "description": "CSS Position (Static, Absolute, Fixed, Sticky)에 따른 고정 헤더 스타일",
-                "category": "CSS",
+                "fileName": "css-position.md",
+                "category": "css",
                 "published": true,
                 "publishedAt": "2021-10-26",
-                "tags": ["css", "position", "static", "absolute", "fixed", "sticky", "header", "style", "스타일", "포지션", "헤더"],
-                "thumbnailName": "css-position.png"
+                "thumbnailName": "css-position.png",
+                "tags": ["css", "style", "header", "fixed", "포지션", "absolute", "static", "sticky", "스타일", "헤더"]
               }
             ]
           },
@@ -182,7 +169,7 @@
         },
         "page": "/[title]",
         "query": { "title": "focus-on-button---safari-vs-chrome" },
-        "buildId": "TO27i-9twEO_UQI2ULWZw",
+        "buildId": "cXHaIMLSN5JYgbZbYuFI-",
         "isFallback": false,
         "gsp": true,
         "scriptLoader": []

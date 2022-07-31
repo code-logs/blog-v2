@@ -1,0 +1,20 @@
+{
+  "pageProps": {
+    "page": 1,
+    "lastPage": 1,
+    "posts": [
+      {
+        "title": "검색 엔진 최적화를 위한 설정",
+        "description": "검색 엔진 최적화를 위한 설정 (Title, Meta Tag, 절대경로, robots.txt, sitemap.xml)",
+        "fileName": "config-for-seo.md",
+        "category": "seo",
+        "published": true,
+        "publishedAt": "2021-10-10",
+        "thumbnailName": "seo-thumbnail.jpg",
+        "tags": ["메타", "검색엔진", "SEO", "robots.txt", "sitemap.xml", "meta tag", "검색", "메타 태그", "검색엔진 최적화", "Search Engine Optimization"]
+      }
+    ],
+    "category": "seo"
+  },
+  "__N_SSG": true
+}
