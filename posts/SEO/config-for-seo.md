@@ -59,10 +59,7 @@ Meta tag는 사용목적에 따른 몇가지 표기법이 존재 하는데 본�
 - description - 문서의 전체적인 설명을 담고 있는 meta tag
 
   ```html
-  <meta
-    name="description"
-    content="현재 페이지를 설명 할 수 있는 내용을 적습니다."
-  />
+  <meta name="description" content="현재 페이지를 설명 할 수 있는 내용을 적습니다." />
   ```
 
 - keywords - 문서의 내용에서의 키워드들을 담고 있는 meta tag

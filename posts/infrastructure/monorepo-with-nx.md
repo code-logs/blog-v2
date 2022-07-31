@@ -34,6 +34,7 @@
 `Nrwl`은 Google의 Angular 팀 멤버에 의해 만들어진 법인으로 세계 여러 국가의 IT 컨설팅 외 다수의 작업을 하는 것으로 보인다. [Nrwl](https://nrwl.io/)
 
 ## Nx 프로젝트 구성하기
+
 ### 새로운 Workspace 생성
 
 아래의 커맨드를 통해 새로운 workspace를 생성한다
@@ -151,6 +152,7 @@ nx graph
 ```sh
 nx g @nrwl/js:library ${library name}
 ```
+
 > Typescript 기반의 라이브러리를 생성하는데 `@nrwl/js`라는 패키지를 설치하는 것은 nx의 generator가 기본적으로 ts를 사용하도록 설정되어 있기 때문이다.
 >
 > 실제 `@nrwl/js` 패키지는 타입스크립트 기반의 라이브러를 생성하는 것이 아닌 라이브러리 성향의 패키지 그 자체를 의미하며 `--js=false` 옵션이 default 값으로 설정되어 있다.
@@ -184,10 +186,12 @@ nx g @nrwl/js:library ${library name}
 ```sh
 nx g @nrwl/react:library
 ```
+
 타입스크립트 생성과 유사한 `linting`, `testing` 환경이 갖춰진 패키지를 생성해낸다.
 React Library도 기본적으로 타입스크립트 베이스로 생성되며 만약 자바스크립트 베이스의 React 라이브러리를 생성하고자 한다면 `--js=false` 옵션을 추가해야 한다.
 
 ## 마치며
+
 `nx`는 패키지를 개발과정의 `workflow`를 관리하는 툴에 가깝다. `lerna`와 유사한 기능을 제공할거라고 기대한 (물론 대부분의 기능을 nx도 제공하지만 module publishing이나 versioning은 lerna가 나에게는 더 수월하다는 생각이든다.) 것과는 약간 다른 성격을 가지고 있었다.
 
 다양한 코드베이스의 프로젝트들을 한군데에서 관리하고 일하는 것 자체의 효율을 높이기 위한 툴이라는 생각이 들었다 (프론트엔드 백엔드를 넘나드는 Scaffolding과 필요한 대부분의 툴이 inject 된 상태의 디렉토리 구조등)
