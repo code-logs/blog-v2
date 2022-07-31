@@ -75,22 +75,12 @@
 
       .boundary.begin {
         background: rgb(2, 0, 36);
-        background: linear-gradient(
-          180deg,
-          rgba(2, 0, 36, 1) 0%,
-          rgba(250, 32, 74, 1) 50%,
-          rgba(250, 32, 74, 1) 100%
-        );
+        background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(250, 32, 74, 1) 50%, rgba(250, 32, 74, 1) 100%);
       }
 
       .boundary.end {
         background: rgb(2, 0, 36);
-        background: linear-gradient(
-          180deg,
-          rgba(250, 32, 74, 1) 0%,
-          rgba(250, 32, 74, 1) 50%,
-          rgba(2, 0, 36, 1) 100%
-        );
+        background: linear-gradient(180deg, rgba(250, 32, 74, 1) 0%, rgba(250, 32, 74, 1) 50%, rgba(2, 0, 36, 1) 100%);
       }
 
       #wrapper {
@@ -274,8 +264,7 @@ const preloadImages = () => {
 const initFirstFrame = () => {
   const image = new Image()
   image.src = imageSources[0]
-  image.onload = () =>
-    context.drawImage(image, 0, 0, canvas.width, canvas.height)
+  image.onload = () => context.drawImage(image, 0, 0, canvas.width, canvas.height)
 }
 ```
 

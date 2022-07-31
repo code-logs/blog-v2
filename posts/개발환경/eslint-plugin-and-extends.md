@@ -55,7 +55,7 @@ plugin이 내장하고 있는 config를 사용하기 위해서는 sharable confi
 }
 ```
 
-> `eslint-plugin-react`가 제공하는 `recomended` config를 사용하는 예제로 prefix인  `eslint-plugin`은 생략 가능하다.
+> `eslint-plugin-react`가 제공하는 `recomended` config를 사용하는 예제로 prefix인 `eslint-plugin`은 생략 가능하다.
 
 > Plugin이 제공하는 config를 확인하기 위해선 해당 플러그인의 `root/index.js` 를 참고하면 된다. (일반적으로) index.js 에서 export 하는 Object에서 configs property를 통해 어떤 config가 제공되고 있는지 확인 할 수 있다.
 >
