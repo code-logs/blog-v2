@@ -1,68 +1,68 @@
 'use strict'
 ;(self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [992],
+  [377],
   {
     6166: function (e, t, n) {
       n.d(t, {
         Z: function () {
-          return s
+          return l
         },
       })
-      var r = n(5893),
-        o = n(9008),
-        a = n(8145),
+      var a = n(5893),
+        r = n(9008),
+        o = n(8145),
         i = n(7294),
-        l = function () {
+        s = function () {
           ;(0, i.useEffect)(function () {
             if (document.head) {
               var e = document.createElement('script')
               ;(e.async = !0),
-                (e.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='.concat(a.Z.googleAdsense.adClient)),
+                (e.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='.concat(o.Z.googleAdsense.adClient)),
                 (e.crossOrigin = 'anonymous'),
                 document.head.appendChild(e)
             }
           }, [])
         },
-        s = function (e) {
+        l = function (e) {
           var t = e.title,
             n = e.description,
             i = e.keywords,
-            s = e.url,
+            l = e.url,
             c = e.imageURL,
-            u = e.customMeta
+            p = e.customMeta
           return (
-            l(),
-            (0, r.jsxs)(o.default, {
+            s(),
+            (0, a.jsxs)(r.default, {
               children: [
-                (0, r.jsx)('link', { rel: 'canonical', href: s }),
-                (0, r.jsx)('link', { rel: 'apple-touch-icon', href: a.Z.appleTouchIconPath }),
-                (0, r.jsx)('link', { rel: 'manifest', href: '/manifest.json' }),
-                (0, r.jsx)('meta', { name: 'theme-color', content: a.Z.themeColor }, 'theme-color'),
-                (0, r.jsx)('meta', { property: 'og:type', content: 'website' }, 'og:type'),
-                (0, r.jsx)('meta', { property: 'og:site_name', content: a.Z.title }, 'og:site_name'),
-                (0, r.jsx)('meta', { name: 'author', content: a.Z.author }, 'author'),
-                (null === i || void 0 === i ? void 0 : i.length) && (0, r.jsx)('meta', { name: 'keyword', content: i.join(', ') }, 'keyword'),
-                (0, r.jsx)('meta', { name: 'description', content: n }, 'description'),
-                (0, r.jsx)('meta', { property: 'og:description', content: n }, 'og:description'),
-                (0, r.jsx)('meta', { property: 'og:title', content: t }, 'og:title'),
-                (0, r.jsx)('meta', { property: 'og:url', content: s }, 'og:url'),
-                (0, r.jsx)('meta', { property: 'og:image', content: c }, 'og:image'),
-                u && u,
-                (0, r.jsx)('title', { children: t }),
+                (0, a.jsx)('link', { rel: 'canonical', href: l }),
+                (0, a.jsx)('link', { rel: 'apple-touch-icon', href: o.Z.appleTouchIconPath }),
+                (0, a.jsx)('link', { rel: 'manifest', href: '/manifest.json' }),
+                (0, a.jsx)('meta', { name: 'theme-color', content: o.Z.themeColor }, 'theme-color'),
+                (0, a.jsx)('meta', { property: 'og:type', content: 'website' }, 'og:type'),
+                (0, a.jsx)('meta', { property: 'og:site_name', content: o.Z.title }, 'og:site_name'),
+                (0, a.jsx)('meta', { name: 'author', content: o.Z.author }, 'author'),
+                (null === i || void 0 === i ? void 0 : i.length) && (0, a.jsx)('meta', { name: 'keyword', content: i.join(', ') }, 'keyword'),
+                (0, a.jsx)('meta', { name: 'description', content: n }, 'description'),
+                (0, a.jsx)('meta', { property: 'og:description', content: n }, 'og:description'),
+                (0, a.jsx)('meta', { property: 'og:title', content: t }, 'og:title'),
+                (0, a.jsx)('meta', { property: 'og:url', content: l }, 'og:url'),
+                (0, a.jsx)('meta', { property: 'og:image', content: c }, 'og:image'),
+                p && p,
+                (0, a.jsx)('title', { children: t }),
               ],
             })
           )
         }
     },
     1780: function (e, t, n) {
-      var r = n(5893),
-        o = n(7294)
+      var a = n(5893),
+        r = n(7294)
       t.Z = function (e) {
         return (
-          (0, o.useEffect)(function () {
+          (0, r.useEffect)(function () {
             ;(window.adsbygoogle = window.adsbygoogle || []), window.adsbygoogle.push({})
           }, []),
-          (0, r.jsx)('ins', {
+          (0, a.jsx)('ins', {
             className: 'adsbygoogle',
             style: { display: 'block' },
             'data-ad-client': e.adClient,
@@ -76,106 +76,34 @@
         )
       }
     },
-    2698: function (e, t, n) {
-      function r(e, t) {
-        ;(null == t || t > e.length) && (t = e.length)
-        for (var n = 0, r = new Array(t); n < t; n++) r[n] = e[n]
-        return r
-      }
-      function o(e, t) {
-        for (var n = 0; n < t.length; n++) {
-          var r = t[n]
-          ;(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
-        }
-      }
-      function a(e) {
-        return (
-          (function (e) {
-            if (Array.isArray(e)) return r(e)
-          })(e) ||
-          (function (e) {
-            if (('undefined' !== typeof Symbol && null != e[Symbol.iterator]) || null != e['@@iterator']) return Array.from(e)
-          })(e) ||
-          (function (e, t) {
-            if (!e) return
-            if ('string' === typeof e) return r(e, t)
-            var n = Object.prototype.toString.call(e).slice(8, -1)
-            'Object' === n && e.constructor && (n = e.constructor.name)
-            if ('Map' === n || 'Set' === n) return Array.from(n)
-            if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return r(e, t)
-          })(e) ||
-          (function () {
-            throw new TypeError(
-              'Invalid attempt to spread non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
-            )
-          })()
-        )
-      }
-      n.d(t, {
-        Z: function () {
-          return v
-        },
-      })
-      var i,
-        l = (function () {
-          function e(t) {
-            !(function (e, t) {
-              if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
-            })(this, e),
-              (this.dataset = t)
-          }
-          var t, n, r
-          return (
-            (t = e),
-            (n = [
-              {
-                key: 'find',
-                value: function (e) {
-                  var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0
-                  return void 0 !== e ? this.dataset.slice(t, t + e) : a(this.dataset)
-                },
-              },
-              {
-                key: 'count',
-                value: function (e, t) {
-                  return this.dataset.filter(function (n) {
-                    return n[e] === t
-                  }).length
-                },
-              },
-              {
-                key: 'sort',
-                value: function (e) {
-                  return this.dataset.sort(e), this
-                },
-              },
-            ]),
-            n && o(t.prototype, n),
-            r && o(t, r),
-            e
-          )
-        })(),
-        s = l,
-        c = n(8286)
-      function u(e, t, n) {
+    5500: function (e, t, n) {
+      function a(e, t, n) {
         return t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n), e
       }
-      u((i = {}), 'web-component', 'Web Component'),
-        u(i, 'roadmap-frontend', 'Roadmap Frontend'),
-        u(i, 'react-native', 'React Native'),
-        u(i, 'nodejs', 'NodeJS'),
-        u(i, 'security', 'Security'),
-        u(i, 'cloud', 'Cloud'),
-        u(i, 'css', 'CSS'),
-        u(i, '\uac1c\ubc1c\ud658\uacbd', '\uac1c\ubc1c\ud658\uacbd'),
-        u(i, 'infrastructure', 'Infrastructure'),
-        u(i, 'elasticsearch', 'ElasticSearch'),
-        u(i, 'typescript', 'TypeScript'),
-        u(i, 'ui-and-ux', 'UI and UX'),
-        u(i, 'react', 'React'),
-        u(i, 'javascript', 'javascript'),
-        u(i, 'seo', 'SEO')
-      var p = [
+      var r
+      n.d(t, {
+        aA: function () {
+          return o
+        },
+      })
+      var o =
+        (a((r = {}), 'web-component', 'Web Component'),
+        a(r, 'roadmap-frontend', 'Roadmap Frontend'),
+        a(r, 'react-native', 'React Native'),
+        a(r, 'nodejs', 'NodeJS'),
+        a(r, 'security', 'Security'),
+        a(r, 'cloud', 'Cloud'),
+        a(r, 'css', 'CSS'),
+        a(r, '\uac1c\ubc1c\ud658\uacbd', '\uac1c\ubc1c\ud658\uacbd'),
+        a(r, 'infrastructure', 'Infrastructure'),
+        a(r, 'elasticsearch', 'ElasticSearch'),
+        a(r, 'typescript', 'TypeScript'),
+        a(r, 'ui-and-ux', 'UI and UX'),
+        a(r, 'react', 'React'),
+        a(r, 'javascript', 'javascript'),
+        a(r, 'seo', 'SEO'),
+        r)
+      t.ZP = [
         {
           title: 'Web component - custom element',
           description: '\uc6f9 \ucef4\ud3ec\ub10c\ud2b8\ub85c \ub9cc\ub4dc\ub294 \ub098\ub9cc\uc758 custom element',
@@ -449,222 +377,50 @@
           ],
         },
       ]
-      function d(e, t) {
-        for (var n = 0; n < t.length; n++) {
-          var r = t[n]
-          ;(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
-        }
-      }
-      function f(e) {
-        return (
-          (f = Object.setPrototypeOf
-            ? Object.getPrototypeOf
-            : function (e) {
-                return e.__proto__ || Object.getPrototypeOf(e)
-              }),
-          f(e)
-        )
-      }
-      function m(e, t) {
-        return !t || ('object' !== g(t) && 'function' !== typeof t)
-          ? (function (e) {
-              if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called")
-              return e
-            })(e)
-          : t
-      }
-      function h(e, t) {
-        return (
-          (h =
-            Object.setPrototypeOf ||
-            function (e, t) {
-              return (e.__proto__ = t), e
-            }),
-          h(e, t)
-        )
-      }
-      var g = function (e) {
-        return e && 'undefined' !== typeof Symbol && e.constructor === Symbol ? 'symbol' : typeof e
-      }
-      function y(e) {
-        var t = (function () {
-          if ('undefined' === typeof Reflect || !Reflect.construct) return !1
-          if (Reflect.construct.sham) return !1
-          if ('function' === typeof Proxy) return !0
-          try {
-            return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0
-          } catch (e) {
-            return !1
-          }
-        })()
-        return function () {
-          var n,
-            r = f(e)
-          if (t) {
-            var o = f(this).constructor
-            n = Reflect.construct(r, arguments, o)
-          } else n = r.apply(this, arguments)
-          return m(this, n)
-        }
-      }
-      var b = (function (e) {
-          !(function (e, t) {
-            if ('function' !== typeof t && null !== t) throw new TypeError('Super expression must either be null or a function')
-            ;(e.prototype = Object.create(t && t.prototype, { constructor: { value: e, writable: !0, configurable: !0 } })), t && h(e, t)
-          })(a, e)
-          var t,
-            n,
-            r,
-            o = y(a)
-          function a() {
-            var e
-            return (
-              (function (e, t) {
-                if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
-              })(this, a),
-              (e = o.call(
-                this,
-                p.filter(function (e) {
-                  return e.published
-                })
-              )).sort(function (e, t) {
-                return new Date(e.publishedAt) > new Date(t.publishedAt) ? -1 : 1
-              }),
-              e
-            )
-          }
-          return (
-            (t = a),
-            (n = [
-              {
-                key: 'findByTitle',
-                value: function (e) {
-                  return this.dataset.find(function (t) {
-                    return c.Z.normalizeTitle(t.title) === e || t.title === e
-                  })
-                },
-              },
-              {
-                key: 'hasNewByCategory',
-                value: function (e) {
-                  return Boolean(
-                    this.dataset
-                      .filter(function (t) {
-                        return t.category === e
-                      })
-                      .find(function (e) {
-                        var t = new Date(e.publishedAt)
-                        return t.setDate(t.getDate() + 7) >= Date.now()
-                      })
-                  )
-                },
-              },
-              {
-                key: 'count',
-                value: function () {
-                  return this.dataset.length
-                },
-              },
-              {
-                key: 'countByCategory',
-                value: function (e) {
-                  return this.dataset.filter(function (t) {
-                    return t.category === e
-                  }).length
-                },
-              },
-              {
-                key: 'countByTag',
-                value: function (e) {
-                  return this.dataset.filter(function (t) {
-                    return t.tags.includes(e)
-                  }).length
-                },
-              },
-              {
-                key: 'query',
-                value: function (e, t) {
-                  var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-                    r = e.split(/\s/).map(function (e) {
-                      return e.toLowerCase()
-                    }),
-                    o = this.dataset.filter(function (e) {
-                      return r.some(function (t) {
-                        return e.title.indexOf(t) >= 0 || e.description.indexOf(t) >= 0 || e.category.indexOf(t) >= 0 || e.tags.join('').indexOf(t) >= 0
-                      })
-                    })
-                  return void 0 !== t ? o.slice(n, n + t) : o
-                },
-              },
-              {
-                key: 'findByCategory',
-                value: function (e, t) {
-                  var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-                    r = this.dataset.filter(function (t) {
-                      return t.category === e
-                    })
-                  return void 0 !== t ? r.slice(n, n + t) : r
-                },
-              },
-              {
-                key: 'findByNormalizedTitle',
-                value: function (e) {
-                  return this.dataset.find(function (t) {
-                    return c.Z.normalizeTitle(t.title) === e
-                  })
-                },
-              },
-            ]),
-            n && d(t.prototype, n),
-            r && d(t, r),
-            a
-          )
-        })(s),
-        v = new b()
     },
     4111: function (e, t, n) {
-      var r = n(7294)
+      var a = n(7294)
       t.Z = function (e) {
         var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : '.',
-          n = (0, r.useState)(''),
-          o = n[0],
-          a = n[1]
+          n = (0, a.useState)(''),
+          r = n[0],
+          o = n[1]
         return (
-          (0, r.useEffect)(
+          (0, a.useEffect)(
             function () {
               var n = String(e.getFullYear()).slice(2),
-                r = String(e.getMonth() + 1).padStart(2, '0'),
-                o = String(e.getDate()).padStart(2, '0')
-              a([n, r, o].join(t))
+                a = String(e.getMonth() + 1).padStart(2, '0'),
+                r = String(e.getDate()).padStart(2, '0')
+              o([n, a, r].join(t))
             },
             [e, t]
           ),
-          o
+          r
         )
       }
     },
     9443: function (e, t, n) {
-      var r = n(8145)
-      function o(e, t) {
+      var a = n(8145)
+      function r(e, t) {
         for (var n = 0; n < t.length; n++) {
-          var r = t[n]
-          ;(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+          var a = t[n]
+          ;(a.enumerable = a.enumerable || !1), (a.configurable = !0), 'value' in a && (a.writable = !0), Object.defineProperty(e, a.key, a)
         }
       }
-      var a = (function () {
+      var o = (function () {
         function e() {
           !(function (e, t) {
             if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
           })(this, e)
         }
-        var t, n, a
+        var t, n, o
         return (
           (t = e),
-          (a = [
+          (o = [
             {
               key: 'absolutePath',
               value: function (e, t) {
-                return (e = e.replace(/^\//, '')), [t || r.Z.baseURL, e].join('/')
+                return (e = e.replace(/^\//, '')), [t || a.Z.baseURL, e].join('/')
               },
             },
             {
@@ -674,68 +430,24 @@
               },
             },
           ]),
-          (n = null) && o(t.prototype, n),
-          a && o(t, a),
+          (n = null) && r(t.prototype, n),
+          o && r(t, o),
           e
         )
       })()
-      t.Z = a
+      t.Z = o
     },
     8286: function (e, t, n) {
-      var r = n(1864),
-        o = n.n(r),
-        a = n(8145)
+      var a = n(1864),
+        r = n.n(a),
+        o = n(8145)
       function i(e, t) {
         for (var n = 0; n < t.length; n++) {
-          var r = t[n]
-          ;(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+          var a = t[n]
+          ;(a.enumerable = a.enumerable || !1), (a.configurable = !0), 'value' in a && (a.writable = !0), Object.defineProperty(e, a.key, a)
         }
       }
-      var l = (function () {
-        function e() {
-          !(function (e, t) {
-            if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
-          })(this, e)
-        }
-        var t, n, r
-        return (
-          (t = e),
-          (r = [
-            {
-              key: 'normalizeTitle',
-              value: function (e) {
-                return e.replace(/\s/g, '-').toLowerCase()
-              },
-            },
-            {
-              key: 'getMarkdownFilePath',
-              value: function (e) {
-                return o().join('../posts', e.category, e.fileName)
-              },
-            },
-            {
-              key: 'buildLinkURLByTitle',
-              value: function (e) {
-                return ''.concat(a.Z.baseURL, '/').concat(this.normalizeTitle(e))
-              },
-            },
-          ]),
-          (n = null) && i(t.prototype, n),
-          r && i(t, r),
-          e
-        )
-      })()
-      t.Z = l
-    },
-    7427: function (e, t, n) {
-      var r = n(8145)
-      function o(e, t) {
-        for (var n = 0; n < t.length; n++) {
-          var r = t[n]
-          ;(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
-        }
-      }
-      var a = (function () {
+      var s = (function () {
         function e() {
           !(function (e, t) {
             if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
@@ -746,18 +458,62 @@
           (t = e),
           (a = [
             {
-              key: 'buildPageTitle',
+              key: 'normalizeTitle',
               value: function (e) {
-                return ''.concat(e, ' | ').concat(r.Z.title)
+                return e.replace(/\s/g, '-').toLowerCase()
+              },
+            },
+            {
+              key: 'getMarkdownFilePath',
+              value: function (e) {
+                return r().join('../posts', e.category, e.fileName)
+              },
+            },
+            {
+              key: 'buildLinkURLByTitle',
+              value: function (e) {
+                return ''.concat(o.Z.baseURL, '/').concat(this.normalizeTitle(e))
               },
             },
           ]),
-          (n = null) && o(t.prototype, n),
-          a && o(t, a),
+          (n = null) && i(t.prototype, n),
+          a && i(t, a),
           e
         )
       })()
-      t.Z = a
+      t.Z = s
+    },
+    7427: function (e, t, n) {
+      var a = n(8145)
+      function r(e, t) {
+        for (var n = 0; n < t.length; n++) {
+          var a = t[n]
+          ;(a.enumerable = a.enumerable || !1), (a.configurable = !0), 'value' in a && (a.writable = !0), Object.defineProperty(e, a.key, a)
+        }
+      }
+      var o = (function () {
+        function e() {
+          !(function (e, t) {
+            if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
+          })(this, e)
+        }
+        var t, n, o
+        return (
+          (t = e),
+          (o = [
+            {
+              key: 'buildPageTitle',
+              value: function (e) {
+                return ''.concat(e, ' | ').concat(a.Z.title)
+              },
+            },
+          ]),
+          (n = null) && r(t.prototype, n),
+          o && r(t, o),
+          e
+        )
+      })()
+      t.Z = o
     },
   },
 ])
