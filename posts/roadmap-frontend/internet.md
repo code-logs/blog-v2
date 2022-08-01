@@ -13,8 +13,6 @@
    1. [Transmission Control Protocol (TCP)](#transmission-control-protocol-tcp)
    1. [Internet Protocol (IP)](#internet-protocol-ip)
 
-
-
 ## Internet
 
 ### 인터넷의 기본 Parts
@@ -49,7 +47,6 @@
 > **Packet Trailer**
 >
 > 네트워크 유형에 따라 내용이 달라질 수 있다. 일반적으로 수신자에게 패킷의 종료를 알리기 위한 몇 비트의 정보와 모든 패킷이 정상적으로 수신 됐즌지 컴퓨터로 하여금 판단 할 수 있도록 돕는 CRC (Cyclic Redundancy Check)를 포함하고 있다.
-
 
 ## 프로토콜 스택과 패킷
 

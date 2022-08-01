@@ -95,9 +95,7 @@ const withCounter = (WrappedComponent) => (props) => {
     setCount(count + 1)
   }
 
-  return (
-    <WrappedComponent increaseCount={increaseCount} count={count} {...props} />
-  )
+  return <WrappedComponent increaseCount={increaseCount} count={count} {...props} />
 }
 
 export default withCounter
@@ -107,18 +105,14 @@ export default withCounter
 
 ```javascript
 // ClickCounterButton.jsx
-const ClickCounterButton = (props) => (
-  <button onClick={props.increaseCount}>Click count: {props.count}</button>
-)
+const ClickCounterButton = (props) => <button onClick={props.increaseCount}>Click count: {props.count}</button>
 
 export default withCounter(ClickCounterButton)
 ```
 
 ```javascript
 // DblClickCounterButton.jsx
-const DblClickCounterButton = (props) => (
-  <button onDblClick={increaseCount}>Double click count: {props.count}</button>
-)
+const DblClickCounterButton = (props) => <button onDblClick={increaseCount}>Double click count: {props.count}</button>
 
 export default withCounter(DblClickCounterButton)
 ```
@@ -162,9 +156,7 @@ const withCounter = (WrappedComponent) => (props) => {
     setCount(count + 1)
   }
 
-  return (
-    <WrappedComponent increaseCount={increaseCount} count={count} {...props} />
-  )
+  return <WrappedComponent increaseCount={increaseCount} count={count} {...props} />
 }
 
 export default withCounter

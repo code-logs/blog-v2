@@ -269,13 +269,7 @@ console.log((await response.json()).items) // (5) [{…}, {…}, {…}, {…}, 
 만약 조작하고자하는 도큐먼트가 모두 하나의 index에 속해 있다면 아래와 같이 index를 명시한 상태로 호출 할 수 있다.
 
 ```javascript
-const commands = [
-  { index: { _id: 1 } },
-  { name: 'Jay', age: 20 },
-  { index: { _id: 2 } },
-  { name: 'Lee', age: 21 },
-  { delete: { _id: 2 } },
-]
+const commands = [{ index: { _id: 1 } }, { name: 'Jay', age: 20 }, { index: { _id: 2 } }, { name: 'Lee', age: 21 }, { delete: { _id: 2 } }]
 const response = await fetch('http://localhost:9200/user/_bulk', {
   method: 'post',
   headers: { ['Content-type']: 'application/json' },

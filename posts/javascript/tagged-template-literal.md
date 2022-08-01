@@ -124,9 +124,7 @@ function makeItDelicious(texts, ...values) {
 const kimchiStew = '김치찌개'
 const stirFriedPork = '제육볶음'
 
-console.log(
-  makeItDelicious`제가 좋아하는 음식은 ${kimchiStew}와 ${stirFriedPork} 입니다.`
-)
+console.log(makeItDelicious`제가 좋아하는 음식은 ${kimchiStew}와 ${stirFriedPork} 입니다.`)
 ```
 
 > ReactJS의 주요한 기능중 하나는 Virtual DOM이다. Virtual DOM은 화면에 그려지지는 않지만 화면상에 존재하는 것과 동일한 구조의 가상 돔을 메모리상에 구성하고 화면이 다시 렌더링 되기 전에 새롭게 그려질 돔과 가상 돔을 비교하여 변화가 발생한 부분만 다시 그려 낼 수 있도록 돕기 위한 것이다.

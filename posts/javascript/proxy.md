@@ -41,9 +41,7 @@ const handler = {
 }
 
 const proxy = new Proxy(target, handler)
-console.log(
-  proxy.name
-) /* 타겟 오브젝트에 해당 프로퍼티 (name)가 존재하지 않습니다. */
+console.log(proxy.name) /* 타겟 오브젝트에 해당 프로퍼티 (name)가 존재하지 않습니다. */
 ```
 
 `Proxy` 객체는 두개의 파라미터를 인자로 받는다. 첫번째는 `Proxy`를 적용할 대상 객체이고 두번째는 대상 객체를 조작할 때 호출될 핸들러 객체이다.
@@ -129,8 +127,7 @@ const profile = validatorProxy(
   {},
   {
     age(age) {
-      if (typeof age !== 'number')
-        throw new Error('나이는 반드시 숫자 유형이여야 합니다.')
+      if (typeof age !== 'number') throw new Error('나이는 반드시 숫자 유형이여야 합니다.')
       if (age < 0) throw new Error('나이는 0 보다 작을 수 없습니다.')
     },
   }
@@ -184,10 +181,7 @@ sleepTimestamp(3)
 const strictConstructor = (target, paramCount) => {
   const handler = {
     construct(target, args) {
-      if (args.length < paramCount)
-        throw new Error(
-          '생성자 호출을 위해 필요한 모든 파라미터를 전달 받지 못했습니다.'
-        )
+      if (args.length < paramCount) throw new Error('생성자 호출을 위해 필요한 모든 파라미터를 전달 받지 못했습니다.')
       return new target(...args)
     },
   }
