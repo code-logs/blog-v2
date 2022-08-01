@@ -1,0 +1,73 @@
+{
+  "pageProps": {
+    "page": 2,
+    "lastPage": 4,
+    "posts": [
+      {
+        "title": "Heroku로 Node.js 애플리케이션 배포하기",
+        "description": "Heroku를 이용한 NodeJS  애플리케이션 배포하기",
+        "fileName": "deploy-nodejs-via-heroku.md",
+        "category": "cloud",
+        "published": true,
+        "publishedAt": "2022-03-04",
+        "thumbnailName": "deploy-node-js-via-heroku.png",
+        "tags": ["node.js", "cloud service", "deploy", "cloud", "paas", "배포", "heroku"],
+        "references": [
+          { "title": "Wiki - PaaS", "url": "https://en.wikipedia.org/wiki/Platform_as_a_service" },
+          { "title": "Heroku Dev Center", "url": "https://devcenter.heroku.com/" }
+        ]
+      },
+      {
+        "title": "Focus on Button - Safari VS Chrome",
+        "description": "Safari, Chrome 브라우저에 따라 달라지는 button의 focus 속성",
+        "fileName": "focus-on-button-safari-vs-chrome.md",
+        "category": "css",
+        "published": true,
+        "publishedAt": "2022-02-28",
+        "thumbnailName": "focus-on-button.png",
+        "tags": ["chrome", "크롬", "focus-visible", "safari", "focus-within", "사파리", "browser", "focus", "CSS", "브라우저"],
+        "references": [
+          { "title": "Clicking and focus - MDN Web Docs", "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#clicking_and_focus" }
+        ]
+      },
+      {
+        "title": "ESLint - Plugin and Extends",
+        "description": "ESLint의 Plugin과 Extends의 차이는 무엇일까?",
+        "fileName": "eslint-plugin-and-extends.md",
+        "category": "개발환경",
+        "published": true,
+        "publishedAt": "2022-02-27",
+        "thumbnailName": "eslint-plugin-and-extends.png",
+        "tags": ["eslint extends", "eslint plugin", "개발환경", "eslint", "plugin", "lint", "extends"],
+        "references": [
+          { "title": "eslint-plugin-react Github repository", "url": "https://github.com/yannickcr/eslint-plugin-react/blob/master/index.js#L118-L179" }
+        ]
+      },
+      {
+        "title": "yarn berry로 구성하는 monorepo",
+        "description": "yarn berry와 yarn workspaces를 이용해 monorepo 구성 - 환경 설정, 샘플 프로젝트",
+        "fileName": "yarn-berry-monorepo.md",
+        "category": "infrastructure",
+        "published": true,
+        "publishedAt": "2022-02-26",
+        "thumbnailName": "yarn-berry-monorepo.png",
+        "tags": ["yarn berry", "zero-install", "workspaces", "monorepo", "berry", "yarn", "모노리포", "workspace"],
+        "references": [{ "title": "yarn workspaces", "url": "https://yarnpkg.com/features/workspaces" }],
+        "series": { "prevPostTitle": "Nx build system 맛보기" }
+      },
+      {
+        "title": "Nx build system 맛보기",
+        "description": "Nx build system을 이용한 Monorepo 구성하기",
+        "fileName": "monorepo-with-nx.md",
+        "category": "infrastructure",
+        "published": true,
+        "publishedAt": "2022-02-12",
+        "thumbnailName": "monorepo-with-nx.png",
+        "tags": ["빌드 시스템", "build", "빌드", "모노리포", "nx", "build system", "monorepo"],
+        "series": { "prevPostTitle": "Nx build system 맛보기", "nextPostTitle": "yarn berry로 구성하는 monorepo" }
+      }
+    ],
+    "totalCount": 19
+  },
+  "__N_SSG": true
+}
