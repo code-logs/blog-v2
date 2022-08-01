@@ -4,7 +4,7 @@ import GoogleAdsenseBanner from '../../../components/google-adsense/GoogleAdsens
 import Paginator from '../../../components/paginator/Paginator'
 import PostCard from '../../../components/post-card/PostCard'
 import blogConfig from '../../../config/blog.config'
-import { Post } from '../../../config/posts.config'
+import { Post, CATEGORIES } from '../../../config/posts.config'
 import postsDatabase from '../../../database/post-database'
 import TitleUtil from '../../../utils/TitleUtil'
 
@@ -69,7 +69,7 @@ const Category: NextPage<{
         keywords={posts.map((post) => [...post.tags, post.title, post.category, post.description]).flat()}
       />
 
-      <h1>{category}</h1>
+      <h1>{(CATEGORIES as any)[category]}</h1>
 
       {Boolean(posts?.length) && posts.map((post, idx) => <PostCard titleLevel={2} key={idx} post={post} />)}
 
