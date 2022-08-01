@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import blogConfig from '../../config/blog.config'
+import { CATEGORIES } from '../../config/posts.config'
 import postsDatabase from '../../database/post-database'
 import styles from './CategoryIndexer.module.scss'
 
@@ -17,7 +18,7 @@ const CategoryIndexer = (props: CategoryIndexerProps) => {
             <Link href={`${blogConfig.baseURL}/categories/${encodeURI(category)}/1`}>
               <a>
                 {postsDatabase.hasNewByCategory(category) && <span className={styles.newTag}>New</span>}
-                <span className={styles.category}>{category}</span>
+                <span className={styles.category}>{(CATEGORIES as any)[category]}</span>
                 <span className={styles.count}>
                   <span>{postsDatabase.countByCategory(category)}</span>
                 </span>

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Post } from '../../config/posts.config'
+import { CATEGORIES, Post } from '../../config/posts.config'
 import useHumanReadableDate from '../../hooks/useHumanReadableDate'
 import PathUtil from '../../utils/PathUtil'
 import PostUtil from '../../utils/PostUtil'
@@ -24,7 +24,7 @@ const PostCard = ({ titleLevel = 3, post }: PostCardProps) => {
         </a>
       </Link>
 
-      <span className={styles.category}>{post.category}</span>
+      <span className={styles.category}>{(CATEGORIES as any)[post.category]}</span>
 
       <span className={styles.publishedAt}>{publishedAt}</span>
 
