@@ -1,0 +1,21 @@
+{
+  "pageProps": {
+    "page": 1,
+    "lastPage": 1,
+    "posts": [
+      {
+        "title": "How does internet work? - Roadmap.sh",
+        "description": "How does internet work? - Roadmap.sh\nRoadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 1",
+        "fileName": "internet.md",
+        "category": "roadmap-frontend",
+        "published": true,
+        "publishedAt": "2022-07-20",
+        "thumbnailName": "roadmap-frontend-internet.png",
+        "tags": ["frontend", "internet", "packet", "protocol", "roadmap", "roadmap.sh", "routing", "라우팅", "인터넷", "패킷", "프로토콜"],
+        "references": [{ "title": "Roadmap.sh", "url": "https://roadmap.sh/frontend" }]
+      }
+    ],
+    "category": "roadmap-frontend"
+  },
+  "__N_SSG": true
+}
