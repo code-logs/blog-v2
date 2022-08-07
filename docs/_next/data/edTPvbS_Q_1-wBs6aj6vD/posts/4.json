@@ -4,6 +4,16 @@
     "lastPage": 4,
     "posts": [
       {
+        "title": "CSS Position",
+        "description": "CSS Position (Static, Absolute, Fixed, Sticky)에 따른 고정 헤더 스타일",
+        "fileName": "css-position.md",
+        "category": "css",
+        "published": true,
+        "publishedAt": "2021-10-26",
+        "thumbnailName": "css-position.png",
+        "tags": ["absolute", "css", "fixed", "header", "position", "static", "sticky", "style", "스타일", "포지션", "헤더"]
+      },
+      {
         "title": "Proxy",
         "description": "Javascript ES6 Proxy, Proxy, Trap, 프락시를 이용한 객체 조작의 제어",
         "fileName": "proxy.md",
@@ -44,7 +54,7 @@
         "tags": ["SEO", "Search Engine Optimization", "meta tag", "robots.txt", "sitemap.xml", "검색", "검색엔진", "검색엔진 최적화", "메타", "메타 태그"]
       }
     ],
-    "totalCount": 19
+    "totalCount": 20
   },
   "__N_SSG": true
 }
