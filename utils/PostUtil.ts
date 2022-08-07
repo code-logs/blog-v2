@@ -12,7 +12,7 @@ class PostUtil {
   }
 
   public static buildLinkURLByTitle(title: string) {
-    return `${blogConfig.baseURL}/${this.normalizeTitle(title)}`
+    return `${blogConfig.baseURL}/${encodeURIComponent(this.normalizeTitle(title))}`
   }
 }
 

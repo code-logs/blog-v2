@@ -4,6 +4,17 @@
     "lastPage": 4,
     "posts": [
       {
+        "title": "Nx build system 맛보기",
+        "description": "Nx build system을 이용한 Monorepo 구성하기",
+        "fileName": "monorepo-with-nx.md",
+        "category": "infrastructure",
+        "published": true,
+        "publishedAt": "2022-02-12",
+        "thumbnailName": "monorepo-with-nx.png",
+        "tags": ["build", "build system", "monorepo", "nx", "모노리포", "빌드", "빌드 시스템"],
+        "series": { "prevPostTitle": "Nx build system 맛보기", "nextPostTitle": "yarn berry로 구성하는 monorepo" }
+      },
+      {
         "title": "Elasticsearch: Full-text search (전문검색)",
         "description": "Elasticsearch를 이용한 Full-text search",
         "fileName": "full-text-search.md",
@@ -42,19 +53,9 @@
         "publishedAt": "2021-10-30",
         "thumbnailName": "hoc.png",
         "tags": ["higher order component", "hoc", "react", "고차 컴퍼넌트", "리액트"]
-      },
-      {
-        "title": "CSS Position",
-        "description": "CSS Position (Static, Absolute, Fixed, Sticky)에 따른 고정 헤더 스타일",
-        "fileName": "css-position.md",
-        "category": "css",
-        "published": true,
-        "publishedAt": "2021-10-26",
-        "thumbnailName": "css-position.png",
-        "tags": ["absolute", "css", "fixed", "header", "position", "static", "sticky", "style", "스타일", "포지션", "헤더"]
       }
     ],
-    "totalCount": 19
+    "totalCount": 20
   },
   "__N_SSG": true
 }

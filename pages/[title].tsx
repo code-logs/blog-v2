@@ -95,7 +95,7 @@ const PostDetail: NextPage<PostDetailPageProps> = ({ post, content, postsByCateg
           <ul className={styles.references}>
             {post.references.map((ref, idx) => (
               <li key={idx}>
-                <a href={ref.url} target="_blank" rel="noreferrer">
+                <a href={encodeURIComponent(ref.url)} target="_blank" rel="noreferrer">
                   {ref.title}
                 </a>
               </li>
