@@ -292,14 +292,18 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 1`,
     category: 'roadmap-frontend',
     published: true,
     publishedAt: `2022-07-20`,
-    thumbnailName: `roadmap-frontend-internet.png`,
-    tags: [`frontend`, `internet`, `packet`, `protocol`, `roadmap`, `roadmap.sh`, `routing`, `라우팅`, `인터넷`, `패킷`, `프로토콜`],
+    thumbnailName: `5e6bc461ba3d54cc6ec0f75c9333845b`,
+    tags: [`frontend`, `internet`, `packet`, `protocol`, `roadmap.sh`, `routing`, `라우팅`, `패킷`, `프로토콜`],
     references: [
       {
         title: `Roadmap.sh`,
         url: `https://roadmap.sh/frontend`,
       },
     ],
+
+    series: {
+      nextPostTitle: `HTTP - Roadmap.sh`,
+    },
   },
   {
     title: `Web component - custom element`,
@@ -324,6 +328,31 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 1`,
         url: `https://web.dev/custom-elements-v1/#custom-element-reactions`,
       },
     ],
+  },
+  {
+    title: `HTTP - Roadmap.sh`,
+    description: `HTTP - Roadmap.sh
+Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 2`,
+    fileName: 'roadmap-frontend-http---roadmap.sh.md',
+    category: 'roadmap-frontend',
+    published: true,
+    publishedAt: `2022-08-08`,
+    thumbnailName: `0484e0ea37a2f4d031579ac7d479f8f7`,
+    tags: [`http`, `roadmap`, `인터넷`],
+    references: [
+      {
+        title: `Cloudflare - HTTP`,
+        url: `https://www.cloudflare.com/en-gb/learning/ddos/glossary/hypertext-transfer-protocol-http/`,
+      },
+      {
+        title: `Roadmap.sh`,
+        url: `https://roadmap.sh`,
+      },
+    ],
+
+    series: {
+      prevPostTitle: `How does internet work? - Roadmap.sh`,
+    },
   },
 ]
 
