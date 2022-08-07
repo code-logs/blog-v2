@@ -476,7 +476,7 @@
             {
               key: 'buildLinkURLByTitle',
               value: function (e) {
-                return ''.concat(r.Z.baseURL, '/').concat(this.normalizeTitle(e))
+                return ''.concat(r.Z.baseURL, '/').concat(encodeURIComponent(this.normalizeTitle(e)))
               },
             },
           ]),

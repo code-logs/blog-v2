@@ -513,7 +513,8 @@
                       (0, r.jsx)('ul', {
                         className: A().references,
                         children: n.references.map(function (e, t) {
-                          return (0, r.jsx)('li', { children: (0, r.jsx)('a', { href: e.url, target: '_blank', rel: 'noreferrer', children: e.title }) }, t)
+                          return (0,
+                          r.jsx)('li', { children: (0, r.jsx)('a', { href: encodeURIComponent(e.url), target: '_blank', rel: 'noreferrer', children: e.title }) }, t)
                         }),
                       }),
                     ],
