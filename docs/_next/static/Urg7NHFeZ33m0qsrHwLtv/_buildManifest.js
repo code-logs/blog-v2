@@ -9,8 +9,8 @@
     '/licenses': ['static/css/6eff21aad43a8d4e.css', 'static/chunks/pages/licenses-24c8ee29a1c55808.js'],
     '/posts/[page]': [s, 'static/css/257bb9ee60cca3a9.css', 'static/chunks/pages/posts/[page]-0758f2be93961132.js'],
     '/tags': ['static/css/e5b33050e36e7e83.css', 'static/chunks/pages/tags-0cbf96fb41fed1c8.js'],
-    '/[title]': ['static/chunks/294-6603e2d70ff7953e.js', s, 'static/css/b5e8827db00c1c2b.css', 'static/chunks/pages/[title]-532e7c145885340c.js'],
+    '/[title]': ['static/chunks/294-6603e2d70ff7953e.js', s, 'static/css/b5e8827db00c1c2b.css', 'static/chunks/pages/[title]-637c57b2312d7084.js'],
     sortedPages: ['/', '/404', '/_app', '/_error', '/about', '/categories/[category]/[page]', '/licenses', '/posts/[page]', '/tags', '/[title]'],
   }
-})('static/chunks/377-cd79335743aada92.js')),
+})('static/chunks/377-87f4fed0a3cc9878.js')),
   self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
