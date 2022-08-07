@@ -338,7 +338,7 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 2`,
     published: true,
     publishedAt: `2022-08-08`,
     thumbnailName: `0484e0ea37a2f4d031579ac7d479f8f7`,
-    tags: [`http`, `roadmap`, `인터넷`],
+    tags: [`http`, `internet`, `protocol`, `roadmap`, `roadmap.sh`, `인터넷`],
     references: [
       {
         title: `Cloudflare - HTTP`,
