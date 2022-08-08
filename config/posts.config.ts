@@ -386,7 +386,7 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 3
     published: true,
     publishedAt: `2022-08-08`,
     thumbnailName: `9579caef343bd3ac65b89ea5b798eb66`,
-    tags: [`https`, `internet`, `protocol`, `roadmap`, `roadmap.sh`, `프로토콜`],
+    tags: [`https`, `internet`, `protocol`, `roadmap`, `roadmap.sh`, `인터넷`, `프로토콜`],
     references: [
       {
         title: `roadmap.sh`,
