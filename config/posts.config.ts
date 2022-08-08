@@ -293,7 +293,7 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 1`,
     published: true,
     publishedAt: `2022-07-20`,
     thumbnailName: `5e6bc461ba3d54cc6ec0f75c9333845b`,
-    tags: [`frontend`, `packet`, `routing`, `라우팅`, `패킷`],
+    tags: [`internet`, `network`, `packet`, `routing`, `네트워크`, `라우팅`, `인터넷`, `패킷`],
     references: [
       {
         title: `roadmap.sh`,
@@ -330,32 +330,6 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 1`,
     ],
   },
   {
-    title: `HTTP - Roadmap.sh`,
-    description: `HTTP - Roadmap.sh
-Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 2`,
-    fileName: 'roadmap-frontend-http---roadmap.sh.md',
-    category: 'roadmap-frontend',
-    published: true,
-    publishedAt: `2022-08-08`,
-    thumbnailName: `0484e0ea37a2f4d031579ac7d479f8f7`,
-    tags: [`http`, `internet`, `protocol`, `roadmap.sh`, `인터넷`],
-    references: [
-      {
-        title: `Cloudflare - HTTP`,
-        url: `https://www.cloudflare.com/en-gb/learning/ddos/glossary/hypertext-transfer-protocol-http/`,
-      },
-      {
-        title: `Roadmap.sh`,
-        url: `https://roadmap.sh`,
-      },
-    ],
-
-    series: {
-      prevPostTitle: `How does internet work - Roadmap.sh`,
-      nextPostTitle: `How HTTPS works - Roadmap.sh`,
-    },
-  },
-  {
     title: `How HTTPS works - Roadmap.sh`,
     description: `How HTTPS works? - Roadmap.sh
 Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 3
@@ -375,6 +349,32 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 3
 
     series: {
       prevPostTitle: `HTTP - Roadmap.sh`,
+    },
+  },
+  {
+    title: `HTTP - Roadmap.sh`,
+    description: `HTTP - Roadmap.sh
+Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 2`,
+    fileName: 'roadmap-frontend-http---roadmap.sh.md',
+    category: 'roadmap-frontend',
+    published: true,
+    publishedAt: `2022-08-08`,
+    thumbnailName: `0484e0ea37a2f4d031579ac7d479f8f7`,
+    tags: [`http`, `internet`, `protocol`, `roadmap`, `roadmap.sh`, `인터넷`],
+    references: [
+      {
+        title: `Cloudflare - HTTP`,
+        url: `https://www.cloudflare.com/en-gb/learning/ddos/glossary/hypertext-transfer-protocol-http/`,
+      },
+      {
+        title: `Roadmap.sh`,
+        url: `https://roadmap.sh`,
+      },
+    ],
+
+    series: {
+      prevPostTitle: `How does internet work - Roadmap.sh`,
+      nextPostTitle: `How HTTPS works - Roadmap.sh`,
     },
   },
 ]
