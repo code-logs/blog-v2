@@ -41,11 +41,11 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 2"
     <script src="/_next/static/chunks/main-a4d9e436b9a532ca.js" defer=""></script>
     <script src="/_next/static/chunks/pages/_app-302687a3b3726e89.js" defer=""></script>
     <script src="/_next/static/chunks/294-6603e2d70ff7953e.js" defer=""></script>
-    <script src="/_next/static/chunks/377-5c5f642f8587e79b.js" defer=""></script>
+    <script src="/_next/static/chunks/377-ddc9fc246567cb1a.js" defer=""></script>
     <script src="/_next/static/chunks/pages/%5Btitle%5D-637c57b2312d7084.js" defer=""></script>
-    <script src="/_next/static/gfestbEQ5nydkl5EfEOgA/_buildManifest.js" defer=""></script>
-    <script src="/_next/static/gfestbEQ5nydkl5EfEOgA/_ssgManifest.js" defer=""></script>
-    <script src="/_next/static/gfestbEQ5nydkl5EfEOgA/_middlewareManifest.js" defer=""></script>
+    <script src="/_next/static/qD8qSAO77fQuPfQHiTlkN/_buildManifest.js" defer=""></script>
+    <script src="/_next/static/qD8qSAO77fQuPfQHiTlkN/_ssgManifest.js" defer=""></script>
+    <script src="/_next/static/qD8qSAO77fQuPfQHiTlkN/_middlewareManifest.js" defer=""></script>
   </head>
   <body>
     <div id="__next" data-reactroot="">
@@ -194,10 +194,10 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 2"
         <section class="PostDetail_relatedPosting__VlXXV">
           <h2>연관 포스팅</h2>
           <dl class="PostSeriesLink_container__jtRUh">
-            <a href="https://code-logs.github.io/how-does-internet-work%3F---roadmap.sh"
+            <a href="https://code-logs.github.io/how-does-internet-work---roadmap.sh"
               ><dt>
                 <span>이전글 - </span>
-                <h3>How does internet work? - Roadmap.sh</h3>
+                <h3>How does internet work - Roadmap.sh</h3>
               </dt>
               <dd>How does internet work? - Roadmap.sh Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 1</dd></a
             >
@@ -254,12 +254,12 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 2"
                 { "title": "Cloudflare - HTTP", "url": "https://www.cloudflare.com/en-gb/learning/ddos/glossary/hypertext-transfer-protocol-http/" },
                 { "title": "Roadmap.sh", "url": "https://roadmap.sh" }
               ],
-              "series": { "prevPostTitle": "How does internet work? - Roadmap.sh" }
+              "series": { "prevPostTitle": "How does internet work - Roadmap.sh" }
             },
             "content": "\u003ch2 id=\"table-of-contents\"\u003eTable of contents\u003c/h2\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"#http%EB%8A%94-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80\"\u003eHTTP는 무엇인가?\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#http-request\"\u003eHTTP Request\u003c/a\u003e\u003col\u003e\n\u003cli\u003e\u003ca href=\"#http-method%EB%8A%94-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80\"\u003eHTTP method는 무엇인가?\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#http-%EC%9A%94%EC%B2%AD-headers%EB%8A%94-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80\"\u003eHTTP 요청 headers는 무엇인가?\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#http-%EC%9A%94%EC%B2%AD-body%EB%8A%94-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80\"\u003eHTTP 요청 body는 무엇인가?\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#http-response\"\u003eHTTP Response\u003c/a\u003e\u003col\u003e\n\u003cli\u003e\u003ca href=\"#http-status-code%EB%8A%94-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80\"\u003eHTTP status code는 무엇인가?\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#http-%EC%9D%91%EB%8B%B5-headers%EB%8A%94-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80\"\u003eHTTP 응답 headers는 무엇인가?\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#http-%EC%9D%91%EB%8B%B5-body%EB%8A%94-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80\"\u003eHTTP 응답 body는 무엇인가?\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch2 id=\"http는-무엇인가\"\u003eHTTP는 무엇인가?\u003c/h2\u003e\n\u003cp\u003e\u003ccode\u003eHTTP (Hypertext Transfer Protocol)\u003c/code\u003e는 \u003ccode\u003eWorld Wide Web\u003c/code\u003e의 근간이며 하이퍼텍스트 링크를 사용하는 웹페이지를 불러오는데 사용된다.\nHTTP는 application layer의 프로토콜로 네트워크로 연결된 장치간의 정보 교환을 위해 디자인 되었으며 네트워크 프로토콜 스택의 최상단에서 운영된다.\n일반적인 HTTP의 흐름은 클라이언트 머신이 서버로 요청을 보내고 서버는 응답을 반환하는 형태로 이루어진다.\u003c/p\u003e\n\u003ch2 id=\"http-request\"\u003eHTTP Request\u003c/h2\u003e\n\u003cp\u003eHTTP 리퀘스트는 웹브라우저와 같은 인터넷 커뮤니케이션 플랫폼에 의해 웹사이트에 로드하고자 하는 정보를 요청하는 것이다.\n각 HTTP 요청은 다양한 형태의 정보가 연속적으로 인코딩된 형태로 인터넷을 통해 운반된다. 일반적인 HTTP 요청은 아래의 항목을 포함하고 있다.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eHTTP 버전\u003c/li\u003e\n\u003cli\u003eURL\u003c/li\u003e\n\u003cli\u003eHTTP method\u003c/li\u003e\n\u003cli\u003eHTTP 요청 헤더\u003c/li\u003e\n\u003cli\u003eHTTP body - optional\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"http-method는-무엇인가\"\u003eHTTP method는 무엇인가?\u003c/h3\u003e\n\u003cp\u003eHTTP 메서드는 HTTP 요청에 의해 요청을 받은 서버로 부터 기대하는 일련의 동작을 지시하는 동사로 일컬어지곤 한다. 예를들어 자주 사용되는 두가지 메서드 \u003ccode\u003eGET\u003c/code\u003e과 \u003ccode\u003ePOST\u003c/code\u003e, \u003ccode\u003eGET\u003c/code\u003e 요청은 응답으로 어떤 정보를 얻는 것을 기대한다. 반면 \u003ccode\u003ePOST\u003c/code\u003e 요청은 일반적으로 클라이언트가 웹서버로 어떤 정보를 전송하는 것을 의미한다.\u003c/p\u003e\n\u003ch3 id=\"http-요청-headers는-무엇인가\"\u003eHTTP 요청 headers는 무엇인가?\u003c/h3\u003e\n\u003cp\u003eHTTP 헤더는 키-밸류 쌍의 텍스트 정보를 포함하며, 모든 HTTP 요청은 HTTP 헤더를 가지고 있다. 헤더는 사용자가 사용하는 브라우저가 무엇인지, 어떤 데이터가 요청 되었는지와 같은 요청에 대한 핵심 정보를 포함한다.\u003c/p\u003e\n\u003ch3 id=\"http-요청-body는-무엇인가\"\u003eHTTP 요청 body는 무엇인가?\u003c/h3\u003e\n\u003cp\u003e리퀘스트 바디는 요청이 전송하는 정보의 \u003ccode\u003e몸체\u003c/code\u003e를 의미한다. HTTP 요청의 body는 사용자 이름, 비밀번호 또는 웹페이지의 폼을 통해 전송되는 데이터와 같이 웹서버로 전송될 데이터를 포함하고 있다.\u003c/p\u003e\n\u003ch2 id=\"http-response\"\u003eHTTP Response\u003c/h2\u003e\n\u003cp\u003eHTTP 응답은 웹클라이언트가 (대체로 브라우저) HTTP 요청을 통해 서버로 부터 돌려 받은 응답을 의미한다.\n일반적으로 HTTP 응답은 아래와 같이 구성된다.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eHTTP status code\u003c/li\u003e\n\u003cli\u003eHTTP 응답 헤더\u003c/li\u003e\n\u003cli\u003eHTTP body - optional\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"http-status-code는-무엇인가\"\u003eHTTP status code는 무엇인가?\u003c/h3\u003e\n\u003cp\u003eHTTP status code는 3자리 숫자로 HTTP 요청의 성공 여부를 가르키기 위해 사용된다. status code는 아래의 다섯가지 유형으로 나눌 수 있다.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e1xx Information\u003c/li\u003e\n\u003cli\u003e2xx Success\u003c/li\u003e\n\u003cli\u003e3xx Redirection\u003c/li\u003e\n\u003cli\u003e4xx Client Error\u003c/li\u003e\n\u003cli\u003e5xx Server Error\u003c/li\u003e\n\u003c/ul\u003e\n\u003cblockquote\u003e\n\u003cp\u003e\u003ccode\u003exx\u003c/code\u003e는 00 부터 99까지의 범위를 갖고 있다.\u003c/p\u003e\n\u003c/blockquote\u003e\n\u003ch3 id=\"http-응답-headers는-무엇인가\"\u003eHTTP 응답 headers는 무엇인가?\u003c/h3\u003e\n\u003cp\u003eHTTP 요청과 유사하게 HTTP 응답 또한 응답 데이터와 관련된 주요한 정보를 전달하기 위해 존재한다.\u003c/p\u003e\n\u003ch3 id=\"http-응답-body는-무엇인가\"\u003eHTTP 응답 body는 무엇인가?\u003c/h3\u003e\n\u003cp\u003e성공적으로 클라이언트에 도달한 \u003ccode\u003eGET\u003c/code\u003e 요청에 대한 응답은 일반적으로 요청한 데이터가 response body에 포함된다. 대부분의 웹 요청은 브라우저에 의해 웹 페이지로 번역될 HTML 데이터를 포함하고 있다.\u003c/p\u003e\n",
             "postsByCategory": [
               {
-                "title": "How does internet work? - Roadmap.sh",
+                "title": "How does internet work - Roadmap.sh",
                 "description": "How does internet work? - Roadmap.sh\nRoadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 1",
                 "fileName": "internet.md",
                 "category": "roadmap-frontend",
@@ -276,7 +276,7 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 2"
         },
         "page": "/[title]",
         "query": { "title": "http---roadmap.sh" },
-        "buildId": "gfestbEQ5nydkl5EfEOgA",
+        "buildId": "qD8qSAO77fQuPfQHiTlkN",
         "isFallback": false,
         "gsp": true,
         "scriptLoader": []

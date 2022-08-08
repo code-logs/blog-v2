@@ -338,7 +338,7 @@
           ],
         },
         {
-          title: 'How does internet work? - Roadmap.sh',
+          title: 'How does internet work - Roadmap.sh',
           description:
             'How does internet work? - Roadmap.sh\nRoadmap.sh frontend \ud559\uc2b5 \uc21c\uc11c\uc5d0 \ub530\ub77c \uc815\ub9ac\ud558\ub294 \ud3ec\uc2a4\ud305 1',
           fileName: 'internet.md',
@@ -378,7 +378,7 @@
             { title: 'Cloudflare - HTTP', url: 'https://www.cloudflare.com/en-gb/learning/ddos/glossary/hypertext-transfer-protocol-http/' },
             { title: 'Roadmap.sh', url: 'https://roadmap.sh' },
           ],
-          series: { prevPostTitle: 'How does internet work? - Roadmap.sh' },
+          series: { prevPostTitle: 'How does internet work - Roadmap.sh' },
         },
       ]
     },

@@ -14,7 +14,7 @@
           { "title": "Cloudflare - HTTP", "url": "https://www.cloudflare.com/en-gb/learning/ddos/glossary/hypertext-transfer-protocol-http/" },
           { "title": "Roadmap.sh", "url": "https://roadmap.sh" }
         ],
-        "series": { "prevPostTitle": "How does internet work? - Roadmap.sh" }
+        "series": { "prevPostTitle": "How does internet work - Roadmap.sh" }
       },
       {
         "title": "Web component - custom element",
@@ -32,7 +32,7 @@
         ]
       },
       {
-        "title": "How does internet work? - Roadmap.sh",
+        "title": "How does internet work - Roadmap.sh",
         "description": "How does internet work? - Roadmap.sh\nRoadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 1",
         "fileName": "internet.md",
         "category": "roadmap-frontend",
