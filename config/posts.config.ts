@@ -285,8 +285,8 @@ export const posts: Post[] = [
     ],
   },
   {
-    title: `How does internet work? - Roadmap.sh`,
-    description: `How does internet work? - Roadmap.sh
+    title: `How does internet work - Roadmap.sh`,
+    description: `How does internet work - Roadmap.sh
 Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 1`,
     fileName: 'internet.md',
     category: 'roadmap-frontend',
@@ -296,7 +296,7 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 1`,
     tags: [`frontend`, `packet`, `routing`, `라우팅`, `패킷`],
     references: [
       {
-        title: `Roadmap.sh`,
+        title: `roadmap.sh`,
         url: `https://roadmap.sh/frontend`,
       },
     ],
@@ -351,7 +351,7 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 2`,
     ],
 
     series: {
-      prevPostTitle: `How does internet work? - Roadmap.sh`,
+      prevPostTitle: `How does internet work - Roadmap.sh`,
       nextPostTitle: `How HTTPS works - Roadmap.sh`,
     },
   },
