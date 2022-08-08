@@ -8,8 +8,8 @@
           return l
         },
       })
-      var n = a(5893),
-        o = a(9008),
+      var o = a(5893),
+        n = a(9008),
         r = a(8145),
         i = a(7294),
         s = function () {
@@ -32,37 +32,37 @@
             p = e.customMeta
           return (
             s(),
-            (0, n.jsxs)(o.default, {
+            (0, o.jsxs)(n.default, {
               children: [
-                (0, n.jsx)('link', { rel: 'canonical', href: l }),
-                (0, n.jsx)('link', { rel: 'apple-touch-icon', href: r.Z.appleTouchIconPath }),
-                (0, n.jsx)('link', { rel: 'manifest', href: '/manifest.json' }),
-                (0, n.jsx)('meta', { name: 'theme-color', content: r.Z.themeColor }, 'theme-color'),
-                (0, n.jsx)('meta', { property: 'og:type', content: 'website' }, 'og:type'),
-                (0, n.jsx)('meta', { property: 'og:site_name', content: r.Z.title }, 'og:site_name'),
-                (0, n.jsx)('meta', { name: 'author', content: r.Z.author }, 'author'),
-                (null === i || void 0 === i ? void 0 : i.length) && (0, n.jsx)('meta', { name: 'keyword', content: i.join(', ') }, 'keyword'),
-                (0, n.jsx)('meta', { name: 'description', content: a }, 'description'),
-                (0, n.jsx)('meta', { property: 'og:description', content: a }, 'og:description'),
-                (0, n.jsx)('meta', { property: 'og:title', content: t }, 'og:title'),
-                (0, n.jsx)('meta', { property: 'og:url', content: l }, 'og:url'),
-                (0, n.jsx)('meta', { property: 'og:image', content: c }, 'og:image'),
+                (0, o.jsx)('link', { rel: 'canonical', href: l }),
+                (0, o.jsx)('link', { rel: 'apple-touch-icon', href: r.Z.appleTouchIconPath }),
+                (0, o.jsx)('link', { rel: 'manifest', href: '/manifest.json' }),
+                (0, o.jsx)('meta', { name: 'theme-color', content: r.Z.themeColor }, 'theme-color'),
+                (0, o.jsx)('meta', { property: 'og:type', content: 'website' }, 'og:type'),
+                (0, o.jsx)('meta', { property: 'og:site_name', content: r.Z.title }, 'og:site_name'),
+                (0, o.jsx)('meta', { name: 'author', content: r.Z.author }, 'author'),
+                (null === i || void 0 === i ? void 0 : i.length) && (0, o.jsx)('meta', { name: 'keyword', content: i.join(', ') }, 'keyword'),
+                (0, o.jsx)('meta', { name: 'description', content: a }, 'description'),
+                (0, o.jsx)('meta', { property: 'og:description', content: a }, 'og:description'),
+                (0, o.jsx)('meta', { property: 'og:title', content: t }, 'og:title'),
+                (0, o.jsx)('meta', { property: 'og:url', content: l }, 'og:url'),
+                (0, o.jsx)('meta', { property: 'og:image', content: c }, 'og:image'),
                 p && p,
-                (0, n.jsx)('title', { children: t }),
+                (0, o.jsx)('title', { children: t }),
               ],
             })
           )
         }
     },
     1780: function (e, t, a) {
-      var n = a(5893),
-        o = a(7294)
+      var o = a(5893),
+        n = a(7294)
       t.Z = function (e) {
         return (
-          (0, o.useEffect)(function () {
+          (0, n.useEffect)(function () {
             ;(window.adsbygoogle = window.adsbygoogle || []), window.adsbygoogle.push({})
           }, []),
-          (0, n.jsx)('ins', {
+          (0, o.jsx)('ins', {
             className: 'adsbygoogle',
             style: { display: 'block' },
             'data-ad-client': e.adClient,
@@ -77,32 +77,32 @@
       }
     },
     5500: function (e, t, a) {
-      function n(e, t, a) {
+      function o(e, t, a) {
         return t in e ? Object.defineProperty(e, t, { value: a, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = a), e
       }
-      var o
+      var n
       a.d(t, {
         aA: function () {
           return r
         },
       })
       var r =
-        (n((o = {}), 'cloud', 'cloud'),
-        n(o, 'css', 'css'),
-        n(o, 'elasticsearch', 'elasticsearch'),
-        n(o, 'infrastructure', 'infrastructure'),
-        n(o, 'javascript', 'javascript'),
-        n(o, 'nodejs', 'nodejs'),
-        n(o, 'react', 'react'),
-        n(o, 'react-native', 'react native'),
-        n(o, 'roadmap-frontend', 'roadmap frontend'),
-        n(o, 'security', 'security'),
-        n(o, 'seo', 'seo'),
-        n(o, 'typescript', 'typescript'),
-        n(o, 'ui-and-ux', 'ui and ux'),
-        n(o, 'web-component', 'web component'),
-        n(o, '\uac1c\ubc1c\ud658\uacbd', '\uac1c\ubc1c\ud658\uacbd'),
-        o)
+        (o((n = {}), 'cloud', 'cloud'),
+        o(n, 'css', 'css'),
+        o(n, 'elasticsearch', 'elasticsearch'),
+        o(n, 'infrastructure', 'infrastructure'),
+        o(n, 'javascript', 'javascript'),
+        o(n, 'nodejs', 'nodejs'),
+        o(n, 'react', 'react'),
+        o(n, 'react-native', 'react native'),
+        o(n, 'roadmap-frontend', 'roadmap frontend'),
+        o(n, 'security', 'security'),
+        o(n, 'seo', 'seo'),
+        o(n, 'typescript', 'typescript'),
+        o(n, 'ui-and-ux', 'ui and ux'),
+        o(n, 'web-component', 'web component'),
+        o(n, '\uac1c\ubc1c\ud658\uacbd', '\uac1c\ubc1c\ud658\uacbd'),
+        n)
       t.ZP = [
         {
           title: '\uac80\uc0c9 \uc5d4\uc9c4 \ucd5c\uc801\ud654\ub97c \uc704\ud55c \uc124\uc815',
@@ -340,14 +340,14 @@
         {
           title: 'How does internet work - Roadmap.sh',
           description:
-            'How does internet work? - Roadmap.sh\nRoadmap.sh frontend \ud559\uc2b5 \uc21c\uc11c\uc5d0 \ub530\ub77c \uc815\ub9ac\ud558\ub294 \ud3ec\uc2a4\ud305 1',
+            'How does internet work - Roadmap.sh\nRoadmap.sh frontend \ud559\uc2b5 \uc21c\uc11c\uc5d0 \ub530\ub77c \uc815\ub9ac\ud558\ub294 \ud3ec\uc2a4\ud305 1',
           fileName: 'internet.md',
           category: 'roadmap-frontend',
           published: !0,
           publishedAt: '2022-07-20',
           thumbnailName: '5e6bc461ba3d54cc6ec0f75c9333845b',
-          tags: ['frontend', 'internet', 'packet', 'protocol', 'roadmap.sh', 'routing', '\ub77c\uc6b0\ud305', '\ud328\ud0b7', '\ud504\ub85c\ud1a0\ucf5c'],
-          references: [{ title: 'Roadmap.sh', url: 'https://roadmap.sh/frontend' }],
+          tags: ['internet', 'network', 'packet', 'routing', '\ub124\ud2b8\uc6cc\ud06c', '\ub77c\uc6b0\ud305', '\uc778\ud130\ub137', '\ud328\ud0b7'],
+          references: [{ title: 'roadmap.sh', url: 'https://roadmap.sh/frontend' }],
           series: { nextPostTitle: 'HTTP - Roadmap.sh' },
         },
         {
@@ -366,6 +366,19 @@
           ],
         },
         {
+          title: 'How HTTPS works - Roadmap.sh',
+          description:
+            'How HTTPS works? - Roadmap.sh\nRoadmap.sh frontend \ud559\uc2b5 \uc21c\uc11c\uc5d0 \ub530\ub77c \uc815\ub9ac\ud558\ub294 \ud3ec\uc2a4\ud305 3\n',
+          fileName: 'roadmap-frontend-how-https-works---roadmap.sh.md',
+          category: 'roadmap-frontend',
+          published: !0,
+          publishedAt: '2022-08-08',
+          thumbnailName: '9579caef343bd3ac65b89ea5b798eb66',
+          tags: ['https', 'internet', 'protocol', 'roadmap', 'roadmap.sh', '\ud504\ub85c\ud1a0\ucf5c'],
+          references: [{ title: 'roadmap.sh', url: 'https://roadmap.sh/frontend' }],
+          series: { prevPostTitle: 'HTTP - Roadmap.sh' },
+        },
+        {
           title: 'HTTP - Roadmap.sh',
           description: 'HTTP - Roadmap.sh\nRoadmap.sh frontend \ud559\uc2b5 \uc21c\uc11c\uc5d0 \ub530\ub77c \uc815\ub9ac\ud558\ub294 \ud3ec\uc2a4\ud305 2',
           fileName: 'roadmap-frontend-http---roadmap.sh.md',
@@ -378,37 +391,37 @@
             { title: 'Cloudflare - HTTP', url: 'https://www.cloudflare.com/en-gb/learning/ddos/glossary/hypertext-transfer-protocol-http/' },
             { title: 'Roadmap.sh', url: 'https://roadmap.sh' },
           ],
-          series: { prevPostTitle: 'How does internet work - Roadmap.sh' },
+          series: { prevPostTitle: 'How does internet work - Roadmap.sh', nextPostTitle: 'How HTTPS works - Roadmap.sh' },
         },
       ]
     },
     4111: function (e, t, a) {
-      var n = a(7294)
+      var o = a(7294)
       t.Z = function (e) {
         var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : '.',
-          a = (0, n.useState)(''),
-          o = a[0],
+          a = (0, o.useState)(''),
+          n = a[0],
           r = a[1]
         return (
-          (0, n.useEffect)(
+          (0, o.useEffect)(
             function () {
               var a = String(e.getFullYear()).slice(2),
-                n = String(e.getMonth() + 1).padStart(2, '0'),
-                o = String(e.getDate()).padStart(2, '0')
-              r([a, n, o].join(t))
+                o = String(e.getMonth() + 1).padStart(2, '0'),
+                n = String(e.getDate()).padStart(2, '0')
+              r([a, o, n].join(t))
             },
             [e, t]
           ),
-          o
+          n
         )
       }
     },
     9443: function (e, t, a) {
-      var n = a(8145)
-      function o(e, t) {
+      var o = a(8145)
+      function n(e, t) {
         for (var a = 0; a < t.length; a++) {
-          var n = t[a]
-          ;(n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n)
+          var o = t[a]
+          ;(o.enumerable = o.enumerable || !1), (o.configurable = !0), 'value' in o && (o.writable = !0), Object.defineProperty(e, o.key, o)
         }
       }
       var r = (function () {
@@ -424,7 +437,7 @@
             {
               key: 'absolutePath',
               value: function (e, t) {
-                return (e = e.replace(/^\//, '')), [t || n.Z.baseURL, e].join('/')
+                return (e = e.replace(/^\//, '')), [t || o.Z.baseURL, e].join('/')
               },
             },
             {
@@ -434,21 +447,21 @@
               },
             },
           ]),
-          (a = null) && o(t.prototype, a),
-          r && o(t, r),
+          (a = null) && n(t.prototype, a),
+          r && n(t, r),
           e
         )
       })()
       t.Z = r
     },
     8286: function (e, t, a) {
-      var n = a(1864),
-        o = a.n(n),
+      var o = a(1864),
+        n = a.n(o),
         r = a(8145)
       function i(e, t) {
         for (var a = 0; a < t.length; a++) {
-          var n = t[a]
-          ;(n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n)
+          var o = t[a]
+          ;(o.enumerable = o.enumerable || !1), (o.configurable = !0), 'value' in o && (o.writable = !0), Object.defineProperty(e, o.key, o)
         }
       }
       var s = (function () {
@@ -457,10 +470,10 @@
             if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
           })(this, e)
         }
-        var t, a, n
+        var t, a, o
         return (
           (t = e),
-          (n = [
+          (o = [
             {
               key: 'normalizeTitle',
               value: function (e) {
@@ -470,7 +483,7 @@
             {
               key: 'getMarkdownFilePath',
               value: function (e) {
-                return o().join('../posts', e.category, e.fileName)
+                return n().join('../posts', e.category, e.fileName)
               },
             },
             {
@@ -481,18 +494,18 @@
             },
           ]),
           (a = null) && i(t.prototype, a),
-          n && i(t, n),
+          o && i(t, o),
           e
         )
       })()
       t.Z = s
     },
     7427: function (e, t, a) {
-      var n = a(8145)
-      function o(e, t) {
+      var o = a(8145)
+      function n(e, t) {
         for (var a = 0; a < t.length; a++) {
-          var n = t[a]
-          ;(n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n)
+          var o = t[a]
+          ;(o.enumerable = o.enumerable || !1), (o.configurable = !0), 'value' in o && (o.writable = !0), Object.defineProperty(e, o.key, o)
         }
       }
       var r = (function () {
@@ -508,12 +521,12 @@
             {
               key: 'buildPageTitle',
               value: function (e) {
-                return ''.concat(e, ' | ').concat(n.Z.title)
+                return ''.concat(e, ' | ').concat(o.Z.title)
               },
             },
           ]),
-          (a = null) && o(t.prototype, a),
-          r && o(t, r),
+          (a = null) && n(t.prototype, a),
+          r && n(t, r),
           e
         )
       })()

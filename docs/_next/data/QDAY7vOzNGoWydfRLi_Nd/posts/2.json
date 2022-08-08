@@ -1,8 +1,25 @@
 {
   "pageProps": {
     "page": 2,
-    "lastPage": 4,
+    "lastPage": 5,
     "posts": [
+      {
+        "title": "Apollo Server + TypeGraphQL을 이용한 GraphQL API 서버 구성하기",
+        "description": "Apollo Server와 TypeGraphQL을 사용한 Node.JS GraphQL API 서버 구성하기",
+        "fileName": "graphql-with-apollo-server-typegraphql.md",
+        "category": "nodejs",
+        "published": true,
+        "publishedAt": "2022-03-10",
+        "thumbnailName": "graphql-apollo-typegraphql.png",
+        "tags": ["api", "api server", "apollo", "apollo-server", "graphql", "node.js", "typegraphql", "typescript"],
+        "references": [
+          { "title": "Apollo Server", "url": "https://www.apollographql.com" },
+          { "title": "DataLoader - GitHub Repository", "url": "https://github.com/graphql/dataloader" },
+          { "title": "GraphQL", "url": "https://graphql.org" },
+          { "title": "Sample Repository", "url": "https://github.com/possible819/graphql-sample" },
+          { "title": "TypeGraphQL", "url": "https://typegraphql.com" }
+        ]
+      },
       {
         "title": "브라우저 보안 정책 CHIPS - (feat. Chrome 쿠키 입력 불가)",
         "description": "CHIPS - Cookies Having Independent Partitioned State\n(Chrome 98 버그를 찾아 헤매다 발견하게 된 브라우저의 Cookie 관리 정책)",
@@ -53,21 +70,9 @@
         "references": [
           { "title": "eslint-plugin-react Github repository", "url": "https://github.com/yannickcr/eslint-plugin-react/blob/master/index.js#L118-L179" }
         ]
-      },
-      {
-        "title": "yarn berry로 구성하는 monorepo",
-        "description": "yarn berry와 yarn workspaces를 이용해 monorepo 구성 - 환경 설정, 샘플 프로젝트",
-        "fileName": "yarn-berry-monorepo.md",
-        "category": "infrastructure",
-        "published": true,
-        "publishedAt": "2022-02-26",
-        "thumbnailName": "yarn-berry-monorepo.png",
-        "tags": ["berry", "monorepo", "workspace", "workspaces", "yarn", "yarn berry", "zero-install", "모노리포"],
-        "references": [{ "title": "yarn workspaces", "url": "https://yarnpkg.com/features/workspaces" }],
-        "series": { "prevPostTitle": "Nx build system 맛보기" }
       }
     ],
-    "totalCount": 20
+    "totalCount": 21
   },
   "__N_SSG": true
 }

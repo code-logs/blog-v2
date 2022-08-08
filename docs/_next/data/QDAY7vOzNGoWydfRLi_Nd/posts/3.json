@@ -1,8 +1,20 @@
 {
   "pageProps": {
     "page": 3,
-    "lastPage": 4,
+    "lastPage": 5,
     "posts": [
+      {
+        "title": "yarn berry로 구성하는 monorepo",
+        "description": "yarn berry와 yarn workspaces를 이용해 monorepo 구성 - 환경 설정, 샘플 프로젝트",
+        "fileName": "yarn-berry-monorepo.md",
+        "category": "infrastructure",
+        "published": true,
+        "publishedAt": "2022-02-26",
+        "thumbnailName": "yarn-berry-monorepo.png",
+        "tags": ["berry", "monorepo", "workspace", "workspaces", "yarn", "yarn berry", "zero-install", "모노리포"],
+        "references": [{ "title": "yarn workspaces", "url": "https://yarnpkg.com/features/workspaces" }],
+        "series": { "prevPostTitle": "Nx build system 맛보기" }
+      },
       {
         "title": "Nx build system 맛보기",
         "description": "Nx build system을 이용한 Monorepo 구성하기",
@@ -43,19 +55,9 @@
         "publishedAt": "2021-10-31",
         "thumbnailName": "scroll-sequence.png",
         "tags": ["scroll sequence", "scroll sequence animation", "ui", "ux"]
-      },
-      {
-        "title": "고차 컴퍼넌트 (HOC: Higher Order Component)",
-        "description": "React - 고차 컴퍼넌트를 이용한 컴퍼넌트의 재사용",
-        "fileName": "hoc.md",
-        "category": "react",
-        "published": true,
-        "publishedAt": "2021-10-30",
-        "thumbnailName": "hoc.png",
-        "tags": ["higher order component", "hoc", "react", "고차 컴퍼넌트", "리액트"]
       }
     ],
-    "totalCount": 20
+    "totalCount": 21
   },
   "__N_SSG": true
 }
