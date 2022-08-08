@@ -1,7 +1,7 @@
 {
   "pageProps": {
     "page": 1,
-    "lastPage": 1,
+    "lastPage": 5,
     "posts": [
       {
         "title": "HTTP - Roadmap.sh",
@@ -19,6 +19,18 @@
         "series": { "prevPostTitle": "How does internet work - Roadmap.sh", "nextPostTitle": "How HTTPS works - Roadmap.sh" }
       },
       {
+        "title": "How HTTPS works - Roadmap.sh",
+        "description": "How HTTPS works? - Roadmap.sh\nRoadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 3\n",
+        "fileName": "roadmap-frontend-how-https-works---roadmap.sh.md",
+        "category": "roadmap-frontend",
+        "published": true,
+        "publishedAt": "2022-08-08",
+        "thumbnailName": "9579caef343bd3ac65b89ea5b798eb66",
+        "tags": ["https", "internet", "protocol", "roadmap", "roadmap.sh", "인터넷", "프로토콜"],
+        "references": [{ "title": "roadmap.sh", "url": "https://roadmap.sh/frontend" }],
+        "series": { "prevPostTitle": "HTTP - Roadmap.sh", "nextPostTitle": "The differences between HTTPS, SSL and TLS - Roadmap.sh" }
+      },
+      {
         "title": "The differences between HTTPS, SSL and TLS - Roadmap.sh",
         "description": "The differences between HTTPS, SSL and TLS - Roadmap.sh\nRoadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 4",
         "fileName": "roadmap-frontend-the-differences-between-https,-ssl-and-tls---roadmap.sh.md",
@@ -31,16 +43,19 @@
         "series": { "prevPostTitle": "How HTTPS works - Roadmap.sh" }
       },
       {
-        "title": "How HTTPS works - Roadmap.sh",
-        "description": "How HTTPS works? - Roadmap.sh\nRoadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 3\n",
-        "fileName": "roadmap-frontend-how-https-works---roadmap.sh.md",
-        "category": "roadmap-frontend",
+        "title": "Web component - custom element",
+        "description": "웹 컴포넌트로 만드는 나만의 custom element",
+        "fileName": "web-component-web-component---custom-element.md",
+        "category": "web-component",
         "published": true,
-        "publishedAt": "2022-08-08",
-        "thumbnailName": "9579caef343bd3ac65b89ea5b798eb66",
-        "tags": ["https", "internet", "protocol", "roadmap", "roadmap.sh", "인터넷", "프로토콜"],
-        "references": [{ "title": "roadmap.sh", "url": "https://roadmap.sh/frontend" }],
-        "series": { "prevPostTitle": "HTTP - Roadmap.sh", "nextPostTitle": "The differences between HTTPS, SSL and TLS - Roadmap.sh" }
+        "publishedAt": "2022-07-31",
+        "thumbnailName": "e0e40e28cf11f896033c8650f19188b7",
+        "tags": ["custom element", "web component", "웹 컴포넌트", "커스텀 엘리먼트"],
+        "references": [
+          { "title": "Custom element naming convention", "url": "https://html.spec.whatwg.org/#valid-custom-element-name" },
+          { "title": "WebComponent org", "url": "https://www.webcomponents.org/" },
+          { "title": "https://web.dev/custom-elements-v1/#custom-element-reactions", "url": "https://web.dev/custom-elements-v1/#custom-element-reactions" }
+        ]
       },
       {
         "title": "How does internet work - Roadmap.sh",
@@ -55,7 +70,7 @@
         "series": { "nextPostTitle": "HTTP - Roadmap.sh" }
       }
     ],
-    "category": "roadmap-frontend"
+    "totalCount": 22
   },
   "__N_SSG": true
 }

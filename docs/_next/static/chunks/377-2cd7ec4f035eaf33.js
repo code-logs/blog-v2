@@ -381,19 +381,6 @@
           series: { prevPostTitle: 'How does internet work - Roadmap.sh', nextPostTitle: 'How HTTPS works - Roadmap.sh' },
         },
         {
-          title: 'The differences between HTTPS, SSL and TLS - Roadmap.sh',
-          description:
-            'The differences between HTTPS, SSL and TLS - Roadmap.sh\nRoadmap.sh frontend \ud559\uc2b5 \uc21c\uc11c\uc5d0 \ub530\ub77c \uc815\ub9ac\ud558\ub294 \ud3ec\uc2a4\ud305 4',
-          fileName: 'roadmap-frontend-the-differences-between-https,-ssl-and-tls---roadmap.sh.md',
-          category: 'roadmap-frontend',
-          published: !0,
-          publishedAt: '2022-08-08',
-          thumbnailName: '87b69aaa3237b93f7f1fffe7796d0535',
-          tags: ['internet', 'protocol', 'roadmap', 'roadmap.sh', 'security', '\uc778\ud130\ub137', '\ud504\ub85c\ud1a0\ucf5c'],
-          references: [{ title: 'roadmap.sh', url: 'https://roadmap.sh/frontend' }],
-          series: { prevPostTitle: 'How HTTPS works - Roadmap.sh' },
-        },
-        {
           title: 'How HTTPS works - Roadmap.sh',
           description:
             'How HTTPS works? - Roadmap.sh\nRoadmap.sh frontend \ud559\uc2b5 \uc21c\uc11c\uc5d0 \ub530\ub77c \uc815\ub9ac\ud558\ub294 \ud3ec\uc2a4\ud305 3\n',
@@ -405,6 +392,19 @@
           tags: ['https', 'internet', 'protocol', 'roadmap', 'roadmap.sh', '\uc778\ud130\ub137', '\ud504\ub85c\ud1a0\ucf5c'],
           references: [{ title: 'roadmap.sh', url: 'https://roadmap.sh/frontend' }],
           series: { prevPostTitle: 'HTTP - Roadmap.sh', nextPostTitle: 'The differences between HTTPS, SSL and TLS - Roadmap.sh' },
+        },
+        {
+          title: 'The differences between HTTPS, SSL and TLS - Roadmap.sh',
+          description:
+            'The differences between HTTPS, SSL and TLS - Roadmap.sh\nRoadmap.sh frontend \ud559\uc2b5 \uc21c\uc11c\uc5d0 \ub530\ub77c \uc815\ub9ac\ud558\ub294 \ud3ec\uc2a4\ud305 4',
+          fileName: 'roadmap-frontend-the-differences-between-https,-ssl-and-tls---roadmap.sh.md',
+          category: 'roadmap-frontend',
+          published: !0,
+          publishedAt: '2022-08-08',
+          thumbnailName: '87b69aaa3237b93f7f1fffe7796d0535',
+          tags: ['internet', 'protocol', 'roadmap', 'roadmap.sh', 'security', '\uc778\ud130\ub137', '\ud504\ub85c\ud1a0\ucf5c'],
+          references: [{ title: 'roadmap.sh', url: 'https://roadmap.sh/frontend' }],
+          series: { prevPostTitle: 'How HTTPS works - Roadmap.sh' },
         },
       ]
     },

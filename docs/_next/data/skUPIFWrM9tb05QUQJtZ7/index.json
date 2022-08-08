@@ -17,18 +17,6 @@
         "series": { "prevPostTitle": "How does internet work - Roadmap.sh", "nextPostTitle": "How HTTPS works - Roadmap.sh" }
       },
       {
-        "title": "The differences between HTTPS, SSL and TLS - Roadmap.sh",
-        "description": "The differences between HTTPS, SSL and TLS - Roadmap.sh\nRoadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 4",
-        "fileName": "roadmap-frontend-the-differences-between-https,-ssl-and-tls---roadmap.sh.md",
-        "category": "roadmap-frontend",
-        "published": true,
-        "publishedAt": "2022-08-08",
-        "thumbnailName": "87b69aaa3237b93f7f1fffe7796d0535",
-        "tags": ["internet", "protocol", "roadmap", "roadmap.sh", "security", "인터넷", "프로토콜"],
-        "references": [{ "title": "roadmap.sh", "url": "https://roadmap.sh/frontend" }],
-        "series": { "prevPostTitle": "How HTTPS works - Roadmap.sh" }
-      },
-      {
         "title": "How HTTPS works - Roadmap.sh",
         "description": "How HTTPS works? - Roadmap.sh\nRoadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 3\n",
         "fileName": "roadmap-frontend-how-https-works---roadmap.sh.md",
@@ -39,6 +27,18 @@
         "tags": ["https", "internet", "protocol", "roadmap", "roadmap.sh", "인터넷", "프로토콜"],
         "references": [{ "title": "roadmap.sh", "url": "https://roadmap.sh/frontend" }],
         "series": { "prevPostTitle": "HTTP - Roadmap.sh", "nextPostTitle": "The differences between HTTPS, SSL and TLS - Roadmap.sh" }
+      },
+      {
+        "title": "The differences between HTTPS, SSL and TLS - Roadmap.sh",
+        "description": "The differences between HTTPS, SSL and TLS - Roadmap.sh\nRoadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 4",
+        "fileName": "roadmap-frontend-the-differences-between-https,-ssl-and-tls---roadmap.sh.md",
+        "category": "roadmap-frontend",
+        "published": true,
+        "publishedAt": "2022-08-08",
+        "thumbnailName": "87b69aaa3237b93f7f1fffe7796d0535",
+        "tags": ["internet", "protocol", "roadmap", "roadmap.sh", "security", "인터넷", "프로토콜"],
+        "references": [{ "title": "roadmap.sh", "url": "https://roadmap.sh/frontend" }],
+        "series": { "prevPostTitle": "How HTTPS works - Roadmap.sh" }
       },
       {
         "title": "Web component - custom element",
@@ -93,8 +93,8 @@
       { "tag": "roadmap.sh", "count": 3 },
       { "tag": "es6", "count": 3 },
       { "tag": "javascript", "count": 3 },
-      { "tag": "security", "count": 2 },
       { "tag": "프로토콜", "count": 2 },
+      { "tag": "security", "count": 2 },
       { "tag": "개발환경", "count": 2 },
       { "tag": "node.js", "count": 2 },
       { "tag": "typescript", "count": 2 },
