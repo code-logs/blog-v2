@@ -1,3 +1,5 @@
+> 본 포스팅 시리즈는 [roadmap.sh](https://roadmap.sh/frontend)의 학습 순서에 따라 정리한 글 입니다.
+
 ## Table of contents
 
 1. [HTTP는 무엇인가?](#http는-무엇인가)
