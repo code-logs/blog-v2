@@ -293,7 +293,7 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 1`,
     published: true,
     publishedAt: `2022-07-20`,
     thumbnailName: `5e6bc461ba3d54cc6ec0f75c9333845b`,
-    tags: [`network`, `packet`, `routing`, `네트워크`, `라우팅`, `패킷`],
+    tags: [`internet`, `network`, `packet`, `routing`, `네트워크`, `라우팅`, `인터넷`, `패킷`],
     references: [
       {
         title: `roadmap.sh`,
