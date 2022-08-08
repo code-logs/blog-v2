@@ -224,7 +224,7 @@ export const posts: Post[] = [
     published: true,
     publishedAt: `2022-03-06`,
     thumbnailName: `chips.png`,
-    tags: [`CHIPS`, `browser`, `chrome`, `cookie`, `policy`, `security policy`],
+    tags: [`CHIPS`, `browser`, `chrome`, `cookie`, `policy`, `security`],
     references: [
       {
         title: `Chrome Platform Status`,
