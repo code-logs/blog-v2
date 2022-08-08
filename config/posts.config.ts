@@ -285,7 +285,7 @@ export const posts: Post[] = [
     ],
   },
   {
-    title: `How does internet work - Roadmap.sh`,
+    title: `How does internet work? - Roadmap.sh`,
     description: `How does internet work? - Roadmap.sh
 Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 1`,
     fileName: 'internet.md',
@@ -351,7 +351,7 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 2`,
     ],
 
     series: {
-      prevPostTitle: `How does internet work - Roadmap.sh`,
+      prevPostTitle: `How does internet work? - Roadmap.sh`,
     },
   },
 ]
