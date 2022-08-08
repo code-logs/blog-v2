@@ -4,6 +4,16 @@
     "lastPage": 5,
     "posts": [
       {
+        "title": "Scroll sequence animation",
+        "description": "Apple 제품 페이지 같은 애니메이션을 구현해보자 - Scroll sequence animation",
+        "fileName": "scroll-sequence-animation.md",
+        "category": "ui-and-ux",
+        "published": true,
+        "publishedAt": "2021-10-31",
+        "thumbnailName": "scroll-sequence.png",
+        "tags": ["scroll sequence", "scroll sequence animation", "ui", "ux"]
+      },
+      {
         "title": "고차 컴퍼넌트 (HOC: Higher Order Component)",
         "description": "React - 고차 컴퍼넌트를 이용한 컴퍼넌트의 재사용",
         "fileName": "hoc.md",
@@ -42,19 +52,9 @@
         "publishedAt": "2021-10-17",
         "thumbnailName": "iterator-generator.png",
         "tags": ["es6", "function*", "generator", "iterable", "iterator", "javascript", "yield"]
-      },
-      {
-        "title": "Tagged Template Literal",
-        "description": "Javascript ES6 Tagged Template Literal",
-        "fileName": "tagged-template-literal.md",
-        "category": "javascript",
-        "published": true,
-        "publishedAt": "2021-10-11",
-        "thumbnailName": "tagged-template-literal.png",
-        "tags": ["es6", "javascript", "tagged template", "tagged template literal"]
       }
     ],
-    "totalCount": 21
+    "totalCount": 22
   },
   "__N_SSG": true
 }

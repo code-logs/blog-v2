@@ -11,7 +11,7 @@
         "published": true,
         "publishedAt": "2022-03-06",
         "thumbnailName": "chips.png",
-        "tags": ["CHIPS", "browser", "chrome", "cookie", "policy", "security", "security policy"],
+        "tags": ["CHIPS", "browser", "chrome", "cookie", "policy", "security"],
         "references": [{ "title": "Chrome Platform Status", "url": "https://chromestatus.com/feature/5179189105786880" }]
       }
     ],

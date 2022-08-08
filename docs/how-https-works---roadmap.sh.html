@@ -12,7 +12,7 @@
     <meta name="author" content="Jay Lee" />
     <meta
       name="keyword"
-      content="https, internet, protocol, roadmap, roadmap.sh, 프로토콜, How HTTPS works - Roadmap.sh, How HTTPS works? - Roadmap.sh
+      content="https, internet, protocol, roadmap, roadmap.sh, 인터넷, 프로토콜, How HTTPS works - Roadmap.sh, How HTTPS works? - Roadmap.sh
 Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 3
 , roadmap-frontend"
     />
@@ -44,11 +44,11 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 3
     <script src="/_next/static/chunks/main-a4d9e436b9a532ca.js" defer=""></script>
     <script src="/_next/static/chunks/pages/_app-302687a3b3726e89.js" defer=""></script>
     <script src="/_next/static/chunks/294-6603e2d70ff7953e.js" defer=""></script>
-    <script src="/_next/static/chunks/377-4e10e187c9e31bb8.js" defer=""></script>
+    <script src="/_next/static/chunks/377-bcd12e5f5670edaa.js" defer=""></script>
     <script src="/_next/static/chunks/pages/%5Btitle%5D-637c57b2312d7084.js" defer=""></script>
-    <script src="/_next/static/QDAY7vOzNGoWydfRLi_Nd/_buildManifest.js" defer=""></script>
-    <script src="/_next/static/QDAY7vOzNGoWydfRLi_Nd/_ssgManifest.js" defer=""></script>
-    <script src="/_next/static/QDAY7vOzNGoWydfRLi_Nd/_middlewareManifest.js" defer=""></script>
+    <script src="/_next/static/mGKmApaunwm6G6tWfKdom/_buildManifest.js" defer=""></script>
+    <script src="/_next/static/mGKmApaunwm6G6tWfKdom/_ssgManifest.js" defer=""></script>
+    <script src="/_next/static/mGKmApaunwm6G6tWfKdom/_middlewareManifest.js" defer=""></script>
   </head>
   <body>
     <div id="__next" data-reactroot="">
@@ -232,6 +232,12 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 3
                 <h3>HTTP - Roadmap.sh</h3>
               </dt>
               <dd>HTTP - Roadmap.sh Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 2</dd></a
+            ><a href="https://code-logs.github.io/the-differences-between-https%2C-ssl-and-tls---roadmap.sh"
+              ><dt>
+                <span>다음글 - </span>
+                <h3>The differences between HTTPS, SSL and TLS - Roadmap.sh</h3>
+              </dt>
+              <dd>The differences between HTTPS, SSL and TLS - Roadmap.sh Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 4</dd></a
             >
           </dl>
         </section>
@@ -273,9 +279,9 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 3
               "published": true,
               "publishedAt": "2022-08-08",
               "thumbnailName": "9579caef343bd3ac65b89ea5b798eb66",
-              "tags": ["https", "internet", "protocol", "roadmap", "roadmap.sh", "프로토콜"],
+              "tags": ["https", "internet", "protocol", "roadmap", "roadmap.sh", "인터넷", "프로토콜"],
               "references": [{ "title": "roadmap.sh", "url": "https://roadmap.sh/frontend" }],
-              "series": { "prevPostTitle": "HTTP - Roadmap.sh" }
+              "series": { "prevPostTitle": "HTTP - Roadmap.sh", "nextPostTitle": "The differences between HTTPS, SSL and TLS - Roadmap.sh" }
             },
             "content": "\u003cblockquote\u003e\n\u003cp\u003e본 포스팅 시리즈는 \u003ca href=\"https://roadmap.sh/frontend\"\u003eroadmap.sh\u003c/a\u003e의 학습 순서에 따라 정리한 글 입니다.\u003c/p\u003e\n\u003c/blockquote\u003e\n\u003ch2 id=\"table-of-contents\"\u003eTable of contents\u003c/h2\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"#https%EA%B0%80-%ED%95%84%EC%9A%94%ED%95%9C-%EC%9D%B4%EC%9C%A0\"\u003eHTTPS가 필요한 이유?\u003c/a\u003e\u003col\u003e\n\u003cli\u003e\u003ca href=\"#%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4-%EB%B3%B4%ED%98%B8\"\u003e개인정보 보호\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AC%B4%EA%B2%B0%EC%84%B1\"\u003e데이터 무결성\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#%EC%8B%A0%EC%9B%90%EC%A6%9D%EB%AA%85\"\u003e신원증명\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#https%EC%9D%98-%EB%8F%99%EC%9E%91-%EC%9B%90%EB%A6%AC\"\u003eHTTPS의 동작 원리\u003c/a\u003e\u003col\u003e\n\u003cli\u003e\u003ca href=\"#%EB%8C%80%EC%B9%AD%ED%82%A4-symmetric-%EC%95%94%ED%98%B8%ED%99%94-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98\"\u003e대칭키 (symmetric) 암호화 알고리즘\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#%EB%B9%84%EB%8C%80%EC%B9%AD%ED%82%A4-asymmetric-%EC%95%94%ED%98%B8%ED%99%94-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98\"\u003e비대칭키 (asymmetric) 암호화 알고리즘\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#the-handshake\"\u003eThe Handshake\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#client-hello\"\u003eClient Hello\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#server-hello\"\u003eServer Hello\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#server-key-exchange\"\u003eServer key exchange\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#client-key-exchange\"\u003eClient key exchange\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#change-cipher-spec--finished\"\u003eChange Cipher spec / Finished\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch2 id=\"https가-필요한-이유\"\u003eHTTPS가 필요한 이유?\u003c/h2\u003e\n\u003col\u003e\n\u003cli\u003e개인정보 보호\u003c/li\u003e\n\u003cli\u003e데이터 무결성\u003c/li\u003e\n\u003cli\u003e신원증명\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch3 id=\"개인정보-보호\"\u003e개인정보 보호\u003c/h3\u003e\n\u003cp\u003e\u003ccode\u003eHTTP\u003c/code\u003e 프로토콜은 네트워크를 통해 전송되는 데이터 패킷을 암호화 하지 않는다 그로인해 \u003ca href=\"https://www.wireshark.org/\"\u003e\u003ccode\u003eWireshark\u003c/code\u003e\u003c/a\u003e와 같은 패킷 분석 툴을 통해 \u003ccode\u003e클라이언트 - 서버\u003c/code\u003e간 전송되는 데이터가 외부로 유출 될 수 있다.\n반면에 \u003ccode\u003eHTTPS\u003c/code\u003e를 통해 전송되는 패킷은 암호화를 통해 패킷에 포함된 데이터를 암호화 하기 때문에 패킷이 중간에 외부로 유출 되더라도 원문의 내용을 확인 할 수 없다.\u003c/p\u003e\n\u003ch3 id=\"데이터-무결성\"\u003e데이터 무결성\u003c/h3\u003e\n\u003cp\u003e\u003ccode\u003eHTTP\u003c/code\u003e 프로토콜을 통해 전송되는 데이터 패킷은 중간에 패킷에 대한 변형을 가 할 수 있는 위험 \u003ccode\u003e(man-in-the-middle attack)\u003c/code\u003e에 노출되어 있다. 이는 네트워크간 전송/수신하는 데이터의 무결성을 헤치게 된다.\n반면 \u003ccode\u003eHTTPS\u003c/code\u003e를 통해 전달되는 패킷은 중간자에 의해 패킷의 내용이 조작되지 않도록 보호한다.\u003c/p\u003e\n\u003ch3 id=\"신원증명\"\u003e신원증명\u003c/h3\u003e\n\u003cp\u003e\u003ccode\u003eHTTPS\u003c/code\u003e 프로토콜을 사용하는 웹사이트는 인증된 기관으로 부터 발급 받은 \u003ccode\u003ecertification\u003c/code\u003e을 가지고 있다. 방문자는 \u003ccode\u003ecertification\u003c/code\u003e의 존재 여부를 통해 신뢰할 수 있는 사이트인지 여부를 검증 할 수 있다.\u003c/p\u003e\n\u003ch2 id=\"https의-동작-원리\"\u003eHTTPS의 동작 원리\u003c/h2\u003e\n\u003ch3 id=\"대칭키-symmetric-암호화-알고리즘\"\u003e대칭키 (symmetric) 암호화 알고리즘\u003c/h3\u003e\n\u003cp\u003e대칭키 암호화 알고리즘은 하나의 키를 통해 암호화/복호화가 모두 가능한 알고리즘이다.\u003c/p\u003e\n\u003ch3 id=\"비대칭키-asymmetric-암호화-알고리즘\"\u003e비대칭키 (asymmetric) 암호화 알고리즘\u003c/h3\u003e\n\u003cp\u003e비대칭키 암호화 알고리즘은 공개키와 비공개키, 두개의 키로 구성된다.\n공개키는 암호화를 하는데 사용되며 비공개키를 통해서만 공개키로 암호화된 데이터를 복호화 할 수 있다.\u003c/p\u003e\n\u003ch3 id=\"the-handshake\"\u003eThe Handshake\u003c/h3\u003e\n\u003cp\u003e\u003ccode\u003e3 way handshake\u003c/code\u003e는 \u003ccode\u003eSYN (client)\u003c/code\u003e → \u003ccode\u003eSYN ACK (server)\u003c/code\u003e → \u003ccode\u003eACK (client)\u003c/code\u003e 의 순으로 진행되는 TCP 연결 생성을 위한 핸드쉐이크이다.\u003c/p\u003e\n\u003cblockquote\u003e\n\u003cp\u003eSYN\nsynchronize sequence numbers\nACK\nAcknowledgement\u003c/p\u003e\n\u003c/blockquote\u003e\n\u003cp\u003eTCP 연결을 위한 \u003ccode\u003e3 way handshake\u003c/code\u003e가 정상적으로 완료되면 \u003ccode\u003eHTTPS\u003c/code\u003e 통신을 위한 \u003ccode\u003eSSL Handshake (TLS Handshake)\u003c/code\u003e를 수행한다.\u003c/p\u003e\n\u003cp\u003e\u003ccode\u003eSSL Handshake\u003c/code\u003e는 아래의 순서로 진행된다.\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003eClient Hello\u003c/li\u003e\n\u003cli\u003eServer Hello\u003col\u003e\n\u003cli\u003eServer key exchange\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003eClient key exchange\u003c/li\u003e\n\u003cli\u003eChange Cipher spec / Finished\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch3 id=\"client-hello\"\u003eClient Hello\u003c/h3\u003e\n\u003cp\u003e클라이언트는 서버로 사용가능한 암호와 알고리즘 (\u003ccode\u003ecipher suite\u003c/code\u003e) 과 \u003ccode\u003eSSL/TLS\u003c/code\u003e 버전을 서버로 전송한다.\u003c/p\u003e\n\u003ch3 id=\"server-hello\"\u003eServer Hello\u003c/h3\u003e\n\u003cp\u003e서버는 전달 받은 \u003ccode\u003ecipher suite\u003c/code\u003e 중 사용할 알고리즘 (서버의 선호에 따라 결정됨)과 인증서를 전송한다. 이때 인증서에 \u003ccode\u003e서버의 공개키\u003c/code\u003e가 포함될 수 있다.\u003c/p\u003e\n\u003ch3 id=\"server-key-exchange\"\u003eServer key exchange\u003c/h3\u003e\n\u003cp\u003e\u003ccode\u003eServer Hello\u003c/code\u003e 단계에서 클라이언트로 전달되는 인증서에 서버의 공개키가 포함되지 않을 경우 \u003ccode\u003eServer key exchange\u003c/code\u003e 과정을 거치며 서버가 클라이언트로 공개키를 전송한다. 인증서에 서버의 공개키가 포함되어 있는 경우 이 과정은 생략될 수 있다.\u003c/p\u003e\n\u003ch3 id=\"client-key-exchange\"\u003eClient key exchange\u003c/h3\u003e\n\u003cp\u003e클라이언트의 대칭키를 \u003ccode\u003e서버로 부터 제공 받은 공개키로 암호화\u003c/code\u003e한 뒤 서버로 전송한다.\u003c/p\u003e\n\u003ch3 id=\"change-cipher-spec--finished\"\u003eChange Cipher spec / Finished\u003c/h3\u003e\n\u003cp\u003e서버는 자신이 가지고 있는 비공개키 (비대칭키)를 통해 클라이언트로 부터 전달 받은 암호화된 클라이언트의 공개키를 복호화 한다. 이를 통해 클라이언트와 서버는 동일한 대칭키를 가질 수 있게되며 이 대칭키를 통해 데이터를 암호화/복호화 하여 전송/수신한다.\u003c/p\u003e\n",
             "postsByCategory": [
@@ -295,6 +301,18 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 3
                 "series": { "prevPostTitle": "How does internet work - Roadmap.sh", "nextPostTitle": "How HTTPS works - Roadmap.sh" }
               },
               {
+                "title": "The differences between HTTPS, SSL and TLS - Roadmap.sh",
+                "description": "The differences between HTTPS, SSL and TLS - Roadmap.sh\nRoadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 4",
+                "fileName": "roadmap-frontend-the-differences-between-https,-ssl-and-tls---roadmap.sh.md",
+                "category": "roadmap-frontend",
+                "published": true,
+                "publishedAt": "2022-08-08",
+                "thumbnailName": "87b69aaa3237b93f7f1fffe7796d0535",
+                "tags": ["internet", "protocol", "roadmap", "roadmap.sh", "security", "인터넷", "프로토콜"],
+                "references": [{ "title": "roadmap.sh", "url": "https://roadmap.sh/frontend" }],
+                "series": { "prevPostTitle": "How HTTPS works - Roadmap.sh" }
+              },
+              {
                 "title": "How does internet work - Roadmap.sh",
                 "description": "How does internet work - Roadmap.sh\nRoadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 1",
                 "fileName": "internet.md",
@@ -312,7 +330,7 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 3
         },
         "page": "/[title]",
         "query": { "title": "how-https-works---roadmap.sh" },
-        "buildId": "QDAY7vOzNGoWydfRLi_Nd",
+        "buildId": "mGKmApaunwm6G6tWfKdom",
         "isFallback": false,
         "gsp": true,
         "scriptLoader": []
