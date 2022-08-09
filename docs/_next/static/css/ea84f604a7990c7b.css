@@ -177,12 +177,16 @@ template {
   border-bottom: 1px solid var(--theme-light-color);
   background-color: var(--theme-header-bg-color, #fff);
 }
+.Header_homeButton__OETHl {
+  display: flex;
+}
 .Header_title__GPS8b {
   grid-area: title;
   font-weight: 700;
   font-size: 2em;
   text-align: center;
-  letter-spacing: -1px;
+  margin: auto;
+  color: var(--theme-font-color);
 }
 .Header_socialIcons__CBf_s {
   grid-area: socialIcons;
@@ -231,7 +235,7 @@ template {
   --theme-blue: #0366d6;
   --theme-tag-bg-color: #000;
   --common-shadow: 2px 2px 2px var(--theme-color);
-  --theme-font-color: #000;
+  --theme-font-color: #202145;
   --theme-anchor-color: var(--theme-blue);
   --code-bg-color: #212836;
   --header-height: 140px;
@@ -248,7 +252,7 @@ template {
     --theme-invisible-color: #444;
     --theme-tag-bg-color: #444;
     --theme-font-color: #fff;
-    --theme-anchor-color: #fff;
+    --theme-anchor-color: #c6c6c6;
   }
 }
 body,
@@ -345,6 +349,12 @@ footer {
   aside {
     display: none;
   }
+}
+.clickable {
+  transition: transform 0.2s ease-in-out 0s;
+}
+.clickable:active {
+  transform: scale(1.1);
 }
 pre code.hljs {
   display: block;

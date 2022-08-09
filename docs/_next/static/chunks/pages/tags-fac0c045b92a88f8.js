@@ -13,14 +13,14 @@
       'use strict'
       e.d(n, {
         Z: function () {
-          return c
+          return s
         },
       })
       var o = e(5893),
         r = e(9008),
         a = e(8145),
         i = e(7294),
-        s = function () {
+        c = function () {
           ;(0, i.useEffect)(function () {
             if (document.head) {
               var t = document.createElement('script')
@@ -31,18 +31,18 @@
             }
           }, [])
         },
-        c = function (t) {
+        s = function (t) {
           var n = t.title,
             e = t.description,
             i = t.keywords,
-            c = t.url,
+            s = t.url,
             u = t.imageURL,
             l = t.customMeta
           return (
-            s(),
+            c(),
             (0, o.jsxs)(r.default, {
               children: [
-                (0, o.jsx)('link', { rel: 'canonical', href: c }),
+                (0, o.jsx)('link', { rel: 'canonical', href: s }),
                 (0, o.jsx)('link', { rel: 'apple-touch-icon', href: a.Z.appleTouchIconPath }),
                 (0, o.jsx)('link', { rel: 'manifest', href: '/manifest.json' }),
                 (0, o.jsx)('meta', { name: 'theme-color', content: a.Z.themeColor }, 'theme-color'),
@@ -53,7 +53,7 @@
                 (0, o.jsx)('meta', { name: 'description', content: e }, 'description'),
                 (0, o.jsx)('meta', { property: 'og:description', content: e }, 'og:description'),
                 (0, o.jsx)('meta', { property: 'og:title', content: n }, 'og:title'),
-                (0, o.jsx)('meta', { property: 'og:url', content: c }, 'og:url'),
+                (0, o.jsx)('meta', { property: 'og:url', content: s }, 'og:url'),
                 (0, o.jsx)('meta', { property: 'og:image', content: u }, 'og:image'),
                 l && l,
                 (0, o.jsx)('title', { children: n }),
@@ -89,25 +89,26 @@
       'use strict'
       e.d(n, {
         Z: function () {
-          return d
+          return l
         },
       })
       var o = e(5893),
         r = e(1664),
-        a = e(8145),
-        i = e(2002),
-        s = e.n(i),
+        a = e(2002),
+        i = e.n(a),
         c = function (t) {
           return (0, o.jsx)(r.default, {
-            href: ''.concat(a.Z.baseURL, '/posts/1?query=').concat(encodeURI(t.tag)),
-            children: (0, o.jsx)('a', { children: (0, o.jsxs)('span', { className: s().tag, children: [t.tag, ' ', t.count && t.count] }) }),
+            href: '/posts/1?query='.concat(encodeURIComponent(t.tag)),
+            children: (0, o.jsx)('a', {
+              children: (0, o.jsxs)('span', { className: 'clickable '.concat(i().tag), children: [t.tag, ' ', t.count && t.count] }),
+            }),
           })
         },
-        u = e(8193),
-        l = e.n(u),
-        d = function (t) {
+        s = e(8193),
+        u = e.n(s),
+        l = function (t) {
           return (0, o.jsx)('ul', {
-            className: l().tags,
+            className: u().tags,
             children: t.tags.map(function (t, n) {
               return (0, o.jsx)('li', { children: 'string' === typeof t ? (0, o.jsx)(c, { tag: t }) : (0, o.jsx)(c, { tag: t.tag, count: t.count }) }, n)
             }),
@@ -147,11 +148,11 @@
         r = e(6166),
         a = e(1780),
         i = e(7594),
-        s = e(6545),
-        c = e.n(s),
+        c = e(6545),
+        s = e.n(c),
         u = function (t) {
           return (0, o.jsx)('ol', {
-            className: c().container,
+            className: s().container,
             children: t.indexGroups.map(function (n, e) {
               return (0, o.jsx)(
                 'ol',
@@ -210,26 +211,26 @@
               })
               return e >= 0 ? t[e].count++ : t.push({ tag: n, count: 1 }), t
             }, []),
-            s = e.flat(),
-            c = s.reduce(function (t, n) {
+            c = e.flat(),
+            s = c.reduce(function (t, n) {
               return (t[n] = []), t
             }, {})
           i.forEach(function (t) {
-            for (var n = t.tag.toUpperCase().charCodeAt(0), e = 0; e < s.length; e++) {
-              var o = s[e],
-                r = s[e + 1],
+            for (var n = t.tag.toUpperCase().charCodeAt(0), e = 0; e < c.length; e++) {
+              var o = c[e],
+                r = c[e + 1],
                 a = o.toUpperCase().charCodeAt(0),
                 i = void 0
               if ((r && (i = r.toUpperCase().charCodeAt(0)), void 0 !== i)) {
                 if (n >= a && n < i) {
-                  c[o].push(t)
+                  s[o].push(t)
                   break
                 }
-              } else c[o].push(t)
+              } else s[o].push(t)
             }
           })
-          var l = s.reduce(function (t, n) {
-            return c[n].length && t.push(n), t
+          var l = c.reduce(function (t, n) {
+            return s[n].length && t.push(n), t
           }, [])
           return (0, o.jsxs)('section', {
             children: [
@@ -241,7 +242,7 @@
               }),
               (0, o.jsx)(p.Z, { level: 1, title: 'Tags', count: n.length }),
               (0, o.jsx)(g, { activatedIndexes: l, indexGroups: e }),
-              (0, o.jsx)(u, { indexGroups: e, tagsByIndexes: c }),
+              (0, o.jsx)(u, { indexGroups: e, tagsByIndexes: s }),
               (0, o.jsx)(a.Z, { adClient: h.Z.googleAdsense.adClient, adSlot: '5391522351' }),
             ],
           })

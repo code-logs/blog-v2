@@ -140,7 +140,7 @@
           u = e.post,
           h = (0, a.Z)(new Date(u.publishedAt))
         return (0, n.jsxs)('article', {
-          className: f().card,
+          className: 'clickable '.concat(f().card),
           children: [
             (0, n.jsx)(i.default, {
               href: s.Z.buildLinkURLByTitle(u.title),
@@ -178,27 +178,28 @@
       'use strict'
       r.d(t, {
         Z: function () {
-          return f
+          return u
         },
       })
       var n = r(5893),
         i = r(1664),
-        o = r(8145),
-        a = r(2002),
-        c = r.n(a),
-        s = function (e) {
+        o = r(2002),
+        a = r.n(o),
+        c = function (e) {
           return (0, n.jsx)(i.default, {
-            href: ''.concat(o.Z.baseURL, '/posts/1?query=').concat(encodeURI(e.tag)),
-            children: (0, n.jsx)('a', { children: (0, n.jsxs)('span', { className: c().tag, children: [e.tag, ' ', e.count && e.count] }) }),
+            href: '/posts/1?query='.concat(encodeURIComponent(e.tag)),
+            children: (0, n.jsx)('a', {
+              children: (0, n.jsxs)('span', { className: 'clickable '.concat(a().tag), children: [e.tag, ' ', e.count && e.count] }),
+            }),
           })
         },
-        l = r(8193),
-        u = r.n(l),
-        f = function (e) {
+        s = r(8193),
+        l = r.n(s),
+        u = function (e) {
           return (0, n.jsx)('ul', {
-            className: u().tags,
+            className: l().tags,
             children: e.tags.map(function (e, t) {
-              return (0, n.jsx)('li', { children: 'string' === typeof e ? (0, n.jsx)(s, { tag: e }) : (0, n.jsx)(s, { tag: e.tag, count: e.count }) }, t)
+              return (0, n.jsx)('li', { children: 'string' === typeof e ? (0, n.jsx)(c, { tag: e }) : (0, n.jsx)(c, { tag: e.tag, count: e.count }) }, t)
             }),
           })
         }
@@ -208,7 +209,7 @@
       r.r(t),
         r.d(t, {
           __N_SSG: function () {
-            return d
+            return p
           },
         })
       var n = r(5893),
@@ -218,27 +219,29 @@
         c = r(7221),
         s = r(8145),
         l = r(5500),
-        u = r(7427)
-      function f(e, t) {
+        u = r(7427),
+        f = r(5866),
+        h = r.n(f)
+      function d(e, t) {
         ;(null == t || t > e.length) && (t = e.length)
         for (var r = 0, n = new Array(t); r < t; r++) n[r] = e[r]
         return n
       }
-      function h(e) {
+      function g(e) {
         return (
           (function (e) {
-            if (Array.isArray(e)) return f(e)
+            if (Array.isArray(e)) return d(e)
           })(e) ||
           (function (e) {
             if (('undefined' !== typeof Symbol && null != e[Symbol.iterator]) || null != e['@@iterator']) return Array.from(e)
           })(e) ||
           (function (e, t) {
             if (!e) return
-            if ('string' === typeof e) return f(e, t)
+            if ('string' === typeof e) return d(e, t)
             var r = Object.prototype.toString.call(e).slice(8, -1)
             'Object' === r && e.constructor && (r = e.constructor.name)
             if ('Map' === r || 'Set' === r) return Array.from(r)
-            if ('Arguments' === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)) return f(e, t)
+            if ('Arguments' === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)) return d(e, t)
           })(e) ||
           (function () {
             throw new TypeError(
@@ -247,7 +250,7 @@
           })()
         )
       }
-      var d = !0
+      var p = !0
       t.default = function (e) {
         var t = e.page,
           r = e.lastPage,
@@ -257,16 +260,16 @@
           children: [
             (0, n.jsx)(i.Z, {
               title: u.Z.buildPageTitle(d),
-              description: ''.concat(d, ' ').concat(t, ' \ud398\uc774\uc9c0'),
-              url: ''.concat(s.Z.baseURL, '/categories/').concat(d, '/').concat(t, '}'),
+              description: 'Code Logs | \uce74\ud14c\uace0\ub9ac\ubcc4 \ud3ec\uc2a4\ud305 | '.concat(d, ' ').concat(t, ' \ud398\uc774\uc9c0'),
+              url: 'categories/'.concat(d, '/').concat(t, '}'),
               imageURL: '/icons/icon-512x512.png',
               keywords: f
                 .map(function (e) {
-                  return h(e.tags).concat([e.title, e.category, e.description])
+                  return g(e.tags).concat([e.title, e.category, e.description])
                 })
                 .flat(),
             }),
-            (0, n.jsx)('h1', { children: l.aA[d] }),
+            (0, n.jsx)('h1', { className: h().title, children: l.aA[d] }),
             Boolean(null === f || void 0 === f ? void 0 : f.length) &&
               f.map(function (e, t) {
                 return (0, n.jsx)(c.Z, { titleLevel: 2, post: e }, t)
@@ -296,6 +299,9 @@
     },
     8193: function (e) {
       e.exports = { tags: 'Tags_tags__mhykw' }
+    },
+    5866: function (e) {
+      e.exports = { title: 'Categories_title__UTw08' }
     },
     1864: function (e, t, r) {
       var n = r(3454)

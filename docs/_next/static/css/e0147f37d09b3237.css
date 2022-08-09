@@ -1,38 +1,33 @@
-.CategoryIndexer_container__SsHDd ul {
-  margin: 0;
-  padding: 0;
-}
-.CategoryIndexer_container__SsHDd li > a {
-  display: flex;
-  grid-gap: var(--narrow-spacing);
-  gap: var(--narrow-spacing);
-  border-bottom: 1px solid var(--theme-light-color);
-  padding: var(--narrow-spacing);
-}
-.CategoryIndexer_category__oIIbg {
-  flex: 1 1;
-  margin: auto 0;
-}
-.CategoryIndexer_newTag__Lgzq_ {
-  background-color: #fd454a;
-  padding: var(--narrow-spacing) var(--narrow-spacing);
-  border-radius: 50px;
-  color: #fff;
-  font-weight: 600;
-  font-style: italic;
-  font-size: 0.7em;
-  margin: auto 0;
-}
-.CategoryIndexer_count__QQ7wP {
-  border-radius: 50px;
-  background-color: var(--theme-color);
-  color: #fff;
-  width: 25px;
-  height: 25px;
+.Paginator_container__Jyd6p {
   display: grid;
+  padding: var(--wide-spacing);
+  border-top: 1px solid var(--theme-light-color);
 }
-.CategoryIndexer_count__QQ7wP > span {
+.Paginator_container__Jyd6p ul {
   margin: auto;
+  padding: 0;
+  display: inline-flex;
+  grid-gap: var(--wide-spacing);
+  gap: var(--wide-spacing);
+}
+.Paginator_container__Jyd6p svg {
+  margin: auto;
+  font-size: 1.5em;
+  color: var(--theme-color);
+}
+.Paginator_container__Jyd6p li {
+  margin: auto;
+  display: inline-grid;
+}
+.Paginator_container__Jyd6p li > a {
+  display: inline-grid;
+  color: var(--theme-color);
+}
+.Paginator_container__Jyd6p li .Paginator_currentPage__uykCS {
+  background-color: var(--theme-blue);
+  padding: var(--narrow-spacing) var(--common-spacing);
+  border-radius: 4px;
+  color: #fff;
 }
 .Tag_tag__tXphA {
   display: block;
@@ -120,25 +115,6 @@
 .PostCard_tags__H0ViL {
   grid-area: tags;
 }
-.TitleWithCount_postCount__E9bRh {
-  color: var(--theme-color);
-  font-weight: 500;
-}
-.TagIndexer_seeMore__s6M9v {
-  float: right;
-}
-.TagIndexer_container__jyFkf {
-  padding: var(--common-spacing);
-}
-.Home_index__AH1Ds {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding-bottom: var(--wide-spacing);
-}
-@media (max-width: 800px) {
-  .Home_index__AH1Ds {
-    grid-template-columns: 1fr;
-    grid-gap: var(--common-spacing);
-    gap: var(--common-spacing);
-  }
+.Categories_title__UTw08 {
+  text-transform: capitalize;
 }

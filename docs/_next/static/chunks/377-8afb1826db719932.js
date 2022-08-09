@@ -469,15 +469,14 @@
     },
     8286: function (e, t, a) {
       var n = a(1864),
-        o = a.n(n),
-        r = a(8145)
-      function i(e, t) {
+        o = a.n(n)
+      function r(e, t) {
         for (var a = 0; a < t.length; a++) {
           var n = t[a]
           ;(n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n)
         }
       }
-      var s = (function () {
+      var i = (function () {
         function e() {
           !(function (e, t) {
             if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
@@ -502,16 +501,16 @@
             {
               key: 'buildLinkURLByTitle',
               value: function (e) {
-                return ''.concat(r.Z.baseURL, '/').concat(encodeURIComponent(this.normalizeTitle(e)))
+                return '/'.concat(encodeURIComponent(this.normalizeTitle(e)))
               },
             },
           ]),
-          (a = null) && i(t.prototype, a),
-          n && i(t, n),
+          (a = null) && r(t.prototype, a),
+          n && r(t, n),
           e
         )
       })()
-      t.Z = s
+      t.Z = i
     },
     7427: function (e, t, a) {
       var n = a(8145)

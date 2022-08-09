@@ -327,23 +327,23 @@
             ),
             (0, r.jsxs)(r.Fragment, {
               children: [
-                (0, r.jsx)('dl', {
+                (0, r.jsx)('ul', {
                   className: l().container,
                   children: i.map(function (e) {
                     return (0,
-                    r.jsxs)('a', { href: s.Z.buildLinkURLByTitle(e.title), children: [(0, r.jsx)('dt', { children: (0, r.jsx)('h3', { children: e.title }) }), (0, r.jsx)('dd', { children: e.description })] }, e.fileName)
+                    r.jsxs)('li', { children: [(0, r.jsx)('h3', { children: e.title }), (0, r.jsx)('a', { href: s.Z.buildLinkURLByTitle(e.title), children: e.description })] }, e.fileName)
                   }),
                 }),
-                !!f.length &&
+                Boolean(f.length) &&
                   (0, r.jsxs)('details', {
                     className: l().details,
                     children: [
                       (0, r.jsx)('summary', { children: '\ub354\ubcf4\uae30' }),
-                      (0, r.jsx)('dl', {
+                      (0, r.jsx)('ul', {
                         className: l().container,
                         children: t.map(function (e) {
                           return (0,
-                          r.jsxs)('a', { href: s.Z.buildLinkURLByTitle(e.title), children: [(0, r.jsx)('dt', { children: (0, r.jsx)('h3', { children: e.title }) }), (0, r.jsx)('dd', { children: e.description })] }, e.fileName)
+                          r.jsxs)('li', { children: [(0, r.jsx)('h3', { children: e.title }), (0, r.jsx)('a', { href: s.Z.buildLinkURLByTitle(e.title), children: e.description })] }, e.fileName)
                         }),
                       }),
                     ],
@@ -365,17 +365,15 @@
             a,
             l,
             c = e.post
-          return (0, r.jsxs)('dl', {
+          return (0, r.jsxs)('ol', {
             className: m().container,
             children: [
               (null === (t = c.series) || void 0 === t ? void 0 : t.prevPostTitle) &&
-                (0, r.jsxs)('a', {
-                  href: s.Z.buildLinkURLByTitle(c.series.prevPostTitle),
+                (0, r.jsxs)('li', {
                   children: [
-                    (0, r.jsxs)('dt', {
-                      children: [(0, r.jsx)('span', { children: '\uc774\uc804\uae00 - ' }), (0, r.jsx)('h3', { children: c.series.prevPostTitle })],
-                    }),
-                    (0, r.jsx)('dd', {
+                    (0, r.jsxs)('h3', { children: [(0, r.jsx)('span', { children: '\uc774\uc804\uae00 - ' }), c.series.prevPostTitle] }),
+                    (0, r.jsx)('a', {
+                      href: s.Z.buildLinkURLByTitle(c.series.prevPostTitle),
                       children:
                         (null === (i = p.Z.findByTitle(null === (n = c.series) || void 0 === n ? void 0 : n.prevPostTitle)) || void 0 === i
                           ? void 0
@@ -384,13 +382,11 @@
                   ],
                 }),
               (null === (o = c.series) || void 0 === o ? void 0 : o.nextPostTitle) &&
-                (0, r.jsxs)('a', {
-                  href: s.Z.buildLinkURLByTitle(c.series.nextPostTitle),
+                (0, r.jsxs)('li', {
                   children: [
-                    (0, r.jsxs)('dt', {
-                      children: [(0, r.jsx)('span', { children: '\ub2e4\uc74c\uae00 - ' }), (0, r.jsx)('h3', { children: c.series.nextPostTitle })],
-                    }),
-                    (0, r.jsx)('dd', {
+                    (0, r.jsxs)('h3', { children: [(0, r.jsx)('span', { children: '\ub2e4\uc74c\uae00 - ' }), c.series.nextPostTitle] }),
+                    (0, r.jsx)('a', {
+                      href: s.Z.buildLinkURLByTitle(c.series.nextPostTitle),
                       children:
                         (null === (l = p.Z.findByTitle(null === (a = c.series) || void 0 === a ? void 0 : a.nextPostTitle)) || void 0 === l
                           ? void 0
@@ -533,7 +529,7 @@
         }
     },
     6778: function (e) {
-      e.exports = { container: 'CategoryPostGroup_container__MDFUe', details: 'CategoryPostGroup_details__S_rtz' }
+      e.exports = { container: 'CategoryPostGroup_container__MDFUe' }
     },
     5114: function (e) {
       e.exports = { container: 'PostSeriesLink_container__jtRUh' }
