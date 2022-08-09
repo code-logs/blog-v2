@@ -9,27 +9,27 @@ export interface PostSeriesLinkProps {
 
 const PostSeriesLink = ({ post }: PostSeriesLinkProps) => {
   return (
-    <dl className={styles.container}>
+    <ol className={styles.container}>
       {post.series?.prevPostTitle && (
-        <a href={PostUtil.buildLinkURLByTitle(post.series.prevPostTitle)}>
-          <dt>
+        <li>
+          <h3>
             <span>이전글 - </span>
-            <h3>{post.series.prevPostTitle}</h3>
-          </dt>
-          <dd>{postsDatabase.findByTitle(post.series?.prevPostTitle)?.description || ''}</dd>
-        </a>
+            {post.series.prevPostTitle}
+          </h3>
+          <a href={PostUtil.buildLinkURLByTitle(post.series.prevPostTitle)}>{postsDatabase.findByTitle(post.series?.prevPostTitle)?.description || ''}</a>
+        </li>
       )}
 
       {post.series?.nextPostTitle && (
-        <a href={PostUtil.buildLinkURLByTitle(post.series.nextPostTitle)}>
-          <dt>
+        <li>
+          <h3>
             <span>다음글 - </span>
-            <h3>{post.series.nextPostTitle}</h3>
-          </dt>
-          <dd>{postsDatabase.findByTitle(post.series?.nextPostTitle)?.description || ''}</dd>
-        </a>
+            {post.series.nextPostTitle}
+          </h3>
+          <a href={PostUtil.buildLinkURLByTitle(post.series.nextPostTitle)}>{postsDatabase.findByTitle(post.series?.nextPostTitle)?.description || ''}</a>
+        </li>
       )}
-    </dl>
+    </ol>
   )
 }
 

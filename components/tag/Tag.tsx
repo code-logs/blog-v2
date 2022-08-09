@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import blogConfig from '../../config/blog.config'
 import styles from './Tag.module.scss'
 
 export interface TagProps {
@@ -8,9 +7,9 @@ export interface TagProps {
 }
 
 const Tag = (props: TagProps) => (
-  <Link href={`${blogConfig.baseURL}/posts/1?query=${encodeURI(props.tag)}`}>
+  <Link href={`/posts/1?query=${encodeURIComponent(props.tag)}`}>
     <a>
-      <span className={styles.tag}>
+      <span className={`clickable ${styles.tag}`}>
         {props.tag} {props.count && props.count}
       </span>
     </a>

@@ -19,8 +19,8 @@ const NavBar = (props: NavBarProps) => {
     <nav className={styles.navBar}>
       <ul>
         {menus.map(({ display, route }, idx) => (
-          <li key={idx}>
-            <MarkedAnchor href={route} display={display} matched={router.pathname.split('/')[1] === new URL(route!).pathname.split('/')[1]} />
+          <li className="clickable" key={idx}>
+            <MarkedAnchor href={route} display={display} matched={router.pathname.split('/')[1] === route.split('/')[1]} />
           </li>
         ))}
       </ul>

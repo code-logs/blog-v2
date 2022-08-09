@@ -10,12 +10,17 @@
   background-color: var(--theme-header-bg-color, white);
 }
 
+.homeButton {
+  display: flex;
+}
+
 .title {
   grid-area: title;
   font-weight: bold;
   font-size: 2em;
   text-align: center;
-  letter-spacing: -1px;
+  margin: auto;
+  color: var(--theme-font-color);
 }
 
 .socialIcons {

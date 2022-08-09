@@ -19,7 +19,7 @@
 
   --common-shadow: 2px 2px 2px var(--theme-color);
 
-  --theme-font-color: #000;
+  --theme-font-color: #202145;
   --theme-anchor-color: var(--theme-blue);
 
   --code-bg-color: #212836;
@@ -42,7 +42,7 @@
     --theme-tag-bg-color: #444;
 
     --theme-font-color: #fff;
-    --theme-anchor-color: #fff;
+    --theme-anchor-color: #c6c6c6;
   }
 }
 
@@ -153,5 +153,13 @@ footer {
 
   aside {
     display: none;
+  }
+}
+
+.clickable {
+  transition: transform 0.2s ease-in-out 0s;
+
+  &:active {
+    transform: scale(1.1);
   }
 }

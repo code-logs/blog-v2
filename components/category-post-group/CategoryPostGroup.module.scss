@@ -1,25 +1,13 @@
 .container {
-  padding-inline-start: 40px;
-
-  dt {
-    display: list-item;
+  padding-inline-start: 20px;
+  
+  li {
     list-style: disc;
-    color: var(--theme-font-color);
-    font-weight: bold;
-    margin: var(--narrow-spacing) 0;
+    margin-bottom: 20px;
   }
 
   h3 {
-    display: inline;
     font-style: italic;
+    margin: 5px 0;
   }
-
-  dd {
-    margin-inline-start: var(--common-spacing);
-    margin-bottom: var(--narrow-spacing);
-  }
-}
-
-.details {
-  padding-inline-start: var(--wide-spacing);
 }

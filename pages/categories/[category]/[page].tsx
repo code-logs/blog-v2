@@ -7,6 +7,7 @@ import blogConfig from '../../../config/blog.config'
 import { Post, CATEGORIES } from '../../../config/posts.config'
 import postsDatabase from '../../../database/post-database'
 import TitleUtil from '../../../utils/TitleUtil'
+import styles from '../../Categories.module.scss'
 
 export async function getStaticPaths() {
   const posts = postsDatabase.find()
@@ -25,7 +26,7 @@ export async function getStaticPaths() {
       .fill('')
       .map((_, idx) => idx + 1)
       .forEach((page) => {
-        paths.push(`/categories/${encodeURI(category)}/${page}`)
+        paths.push(`/categories/${encodeURIComponent(category)}/${page}`)
       })
   })
 
@@ -63,13 +64,13 @@ const Category: NextPage<{
     <>
       <CommonMeta
         title={TitleUtil.buildPageTitle(category)}
-        description={`${category} ${page} 페이지`}
-        url={`${blogConfig.baseURL}/categories/${category}/${page}}`}
+        description={`Code Logs | 카테고리별 포스팅 | ${category} ${page} 페이지`}
+        url={`categories/${category}/${page}}`}
         imageURL={'/icons/icon-512x512.png'}
         keywords={posts.map((post) => [...post.tags, post.title, post.category, post.description]).flat()}
       />
 
-      <h1>{(CATEGORIES as any)[category]}</h1>
+      <h1 className={styles.title}>{(CATEGORIES as any)[category]}</h1>
 
       {Boolean(posts?.length) && posts.map((post, idx) => <PostCard titleLevel={2} key={idx} post={post} />)}
 

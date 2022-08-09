@@ -65,7 +65,7 @@ const Posts: NextPage<PostsProps> = (props) => {
       const searchParams = new URLSearchParams(url.search)
       const query = searchParams.get('query')
       if (query) {
-        setQuery(encodeURI(query))
+        setQuery(encodeURIComponent(query))
         const pageLimit = blogConfig.pageLimit
         const skip = (page - 1) * pageLimit
         setPosts(postsDatabase.query(query, pageLimit, skip))
@@ -96,7 +96,7 @@ const Posts: NextPage<PostsProps> = (props) => {
 
           const url = new URL(location.href)
           url.pathname = '/posts/1'
-          url.search = `query=${encodeURI(query.toString())}`
+          url.search = `query=${encodeURIComponent(query.toString())}`
 
           location.href = url.href
         }}

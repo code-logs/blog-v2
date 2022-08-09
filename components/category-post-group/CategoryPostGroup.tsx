@@ -20,30 +20,26 @@ const CategoryPostGroup = ({ posts }: CategoryPostGroupProps) => {
 
   return (
     <>
-      <dl className={styles.container}>
+      <ul className={styles.container}>
         {recentPosts.map((post) => (
-          <a key={post.fileName} href={PostUtil.buildLinkURLByTitle(post.title)}>
-            <dt>
-              <h3>{post.title}</h3>
-            </dt>
-            <dd>{post.description}</dd>
-          </a>
+          <li key={post.fileName}>
+            <h3>{post.title}</h3>
+            <a href={PostUtil.buildLinkURLByTitle(post.title)}>{post.description}</a>
+          </li>
         ))}
-      </dl>
+      </ul>
 
-      {!!remainPosts.length && (
+      {Boolean(remainPosts.length) && (
         <details className={styles.details}>
           <summary>더보기</summary>
-          <dl className={styles.container}>
+          <ul className={styles.container}>
             {posts.map((post) => (
-              <a key={post.fileName} href={PostUtil.buildLinkURLByTitle(post.title)}>
-                <dt>
-                  <h3>{post.title}</h3>
-                </dt>
-                <dd>{post.description}</dd>
-              </a>
+              <li key={post.fileName}>
+                <h3>{post.title}</h3>
+                <a href={PostUtil.buildLinkURLByTitle(post.title)}>{post.description}</a>
+              </li>
             ))}
-          </dl>
+          </ul>
         </details>
       )}
     </>

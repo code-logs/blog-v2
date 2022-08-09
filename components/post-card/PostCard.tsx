@@ -15,7 +15,7 @@ const PostCard = ({ titleLevel = 3, post }: PostCardProps) => {
   const publishedAt = useHumanReadableDate(new Date(post.publishedAt))
 
   return (
-    <article className={styles.card}>
+    <article className={`clickable ${styles.card}`}>
       <Link href={PostUtil.buildLinkURLByTitle(post.title)}>
         <a className={styles.title}>
           {titleLevel === 1 && <h1>{post.title}</h1>}

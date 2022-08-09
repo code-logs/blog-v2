@@ -1,5 +1,4 @@
 import path from 'path'
-import blogConfig from '../config/blog.config'
 import { Post } from '../config/posts.config'
 
 class PostUtil {
@@ -12,7 +11,7 @@ class PostUtil {
   }
 
   public static buildLinkURLByTitle(title: string) {
-    return `${blogConfig.baseURL}/${encodeURIComponent(this.normalizeTitle(title))}`
+    return `/${encodeURIComponent(this.normalizeTitle(title))}`
   }
 }
 
