@@ -2,10 +2,14 @@ import Database from '.'
 import PostUtil from '../utils/PostUtil'
 import posts, { Post } from '../config/posts.config'
 
-class PostDatabase extends Database<Post> {
+class PostDatabase extends Database<Post & { order: number }> {
   constructor() {
-    super(posts.filter((post) => post.published))
-    this.sort((a, b) => (new Date(a.publishedAt) > new Date(b.publishedAt) ? -1 : 1))
+    super(posts.filter((post) => post.published).map((post, index) => ({ ...post, order: index })))
+    this.sort((postA, postB) => {
+      if (postA.publishedAt > postB.publishedAt) return -1
+      if (postA.publishedAt < postB.publishedAt) return 1
+      return postB.order - postA.order
+    })
   }
 
   findByTitle(title: string) {
