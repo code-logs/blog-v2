@@ -1,0 +1,84 @@
+{
+  "pageProps": {
+    "page": 2,
+    "lastPage": 5,
+    "posts": [
+      {
+        "title": "React Native - 개발환경 구성하기",
+        "description": "Mac OS에서 iOS 애플리케이션 개발을 위한 React Native 개발환경 구성하기",
+        "fileName": "react-native-dev-env.md",
+        "category": "react-native",
+        "published": true,
+        "publishedAt": "2022-03-26",
+        "thumbnailName": "react-native-dev-env.png",
+        "tags": ["RN", "cross platform", "ios", "macos", "react native", "react native cli", "개발환경", "개발환경 구성하기", "리액트 네이티브"],
+        "references": [
+          { "title": "NVM", "url": "https://github.com/nvm-sh/nvm" },
+          { "title": "React Native", "url": "https://reactnative.dev/docs/environment-setup" }
+        ],
+        "order": 16
+      },
+      {
+        "title": "Apollo Server + TypeGraphQL을 이용한 GraphQL API 서버 구성하기",
+        "description": "Apollo Server와 TypeGraphQL을 사용한 Node.JS GraphQL API 서버 구성하기",
+        "fileName": "graphql-with-apollo-server-typegraphql.md",
+        "category": "nodejs",
+        "published": true,
+        "publishedAt": "2022-03-10",
+        "thumbnailName": "graphql-apollo-typegraphql.png",
+        "tags": ["api", "api server", "apollo", "apollo-server", "graphql", "node.js", "typegraphql", "typescript"],
+        "references": [
+          { "title": "Apollo Server", "url": "https://www.apollographql.com" },
+          { "title": "DataLoader - GitHub Repository", "url": "https://github.com/graphql/dataloader" },
+          { "title": "GraphQL", "url": "https://graphql.org" },
+          { "title": "Sample Repository", "url": "https://github.com/possible819/graphql-sample" },
+          { "title": "TypeGraphQL", "url": "https://typegraphql.com" }
+        ],
+        "order": 15
+      },
+      {
+        "title": "브라우저 보안 정책 CHIPS - (feat. Chrome 쿠키 입력 불가)",
+        "description": "CHIPS - Cookies Having Independent Partitioned State\n(Chrome 98 버그를 찾아 헤매다 발견하게 된 브라우저의 Cookie 관리 정책)",
+        "fileName": "chips.md",
+        "category": "security",
+        "published": true,
+        "publishedAt": "2022-03-06",
+        "thumbnailName": "chips.png",
+        "tags": ["CHIPS", "browser", "chrome", "cookie", "policy", "security"],
+        "references": [{ "title": "Chrome Platform Status", "url": "https://chromestatus.com/feature/5179189105786880" }],
+        "order": 14
+      },
+      {
+        "title": "Heroku로 Node.js 애플리케이션 배포하기",
+        "description": "Heroku를 이용한 NodeJS  애플리케이션 배포하기",
+        "fileName": "deploy-nodejs-via-heroku.md",
+        "category": "cloud",
+        "published": true,
+        "publishedAt": "2022-03-04",
+        "thumbnailName": "deploy-node-js-via-heroku.png",
+        "tags": ["cloud", "cloud service", "deploy", "heroku", "node.js", "paas", "배포"],
+        "references": [
+          { "title": "Heroku Dev Center", "url": "https://devcenter.heroku.com/" },
+          { "title": "Wiki - PaaS", "url": "https://en.wikipedia.org/wiki/Platform_as_a_service" }
+        ],
+        "order": 13
+      },
+      {
+        "title": "Focus on Button - Safari VS Chrome",
+        "description": "Safari, Chrome 브라우저에 따라 달라지는 button의 focus 속성",
+        "fileName": "focus-on-button-safari-vs-chrome.md",
+        "category": "css",
+        "published": true,
+        "publishedAt": "2022-02-28",
+        "thumbnailName": "focus-on-button.png",
+        "tags": ["CSS", "browser", "chrome", "focus", "focus-visible", "focus-within", "safari", "브라우저", "사파리", "크롬"],
+        "references": [
+          { "title": "Clicking and focus - MDN Web Docs", "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#clicking_and_focus" }
+        ],
+        "order": 12
+      }
+    ],
+    "totalCount": 22
+  },
+  "__N_SSG": true
+}
