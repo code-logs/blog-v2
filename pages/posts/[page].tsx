@@ -7,6 +7,7 @@ import Paginator from '../../components/paginator/Paginator'
 import PostCard from '../../components/post-card/PostCard'
 import SearchInput from '../../components/search-input/SearchInput'
 import blogConfig from '../../config/blog.config'
+import { META_CONTENTS } from '../../config/meta-contents'
 import { Post } from '../../config/posts.config'
 import postsDatabase from '../../database/post-database'
 import PathUtil from '../../utils/PathUtil'
@@ -77,8 +78,8 @@ const Posts: NextPage<PostsProps> = (props) => {
   return (
     <>
       <CommonMeta
-        title={TitleUtil.buildPageTitle('Posts')}
-        description={`포스팅 목록 - ${page} 페이지`}
+        title={TitleUtil.buildPageTitle(META_CONTENTS.POSTS.TITLE)}
+        description={META_CONTENTS.POSTS.DESCRIPTION(page)}
         url={`${blogConfig.baseURL}/posts/${page}`}
         imageURL={'/icons/icon-512x512.png'}
         keywords={posts.map((post) => [...post.tags, post.title, post.description]).flat()}

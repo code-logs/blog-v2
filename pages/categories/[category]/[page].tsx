@@ -4,6 +4,7 @@ import GoogleAdsenseBanner from '../../../components/google-adsense/GoogleAdsens
 import Paginator from '../../../components/paginator/Paginator'
 import PostCard from '../../../components/post-card/PostCard'
 import blogConfig from '../../../config/blog.config'
+import { META_CONTENTS } from '../../../config/meta-contents'
 import { Post, CATEGORIES } from '../../../config/posts.config'
 import postsDatabase from '../../../database/post-database'
 import TitleUtil from '../../../utils/TitleUtil'
@@ -63,8 +64,8 @@ const Category: NextPage<{
   return (
     <>
       <CommonMeta
-        title={TitleUtil.buildPageTitle(category)}
-        description={`Code Logs | 카테고리별 포스팅 | ${category} ${page} 페이지`}
+        title={TitleUtil.buildPageTitle(META_CONTENTS.CATEGORIES.TITLE(category))}
+        description={META_CONTENTS.CATEGORIES.DESCRIPTION(category, page)}
         url={`categories/${category}/${page}}`}
         imageURL={'/icons/icon-512x512.png'}
         keywords={posts.map((post) => [...post.tags, post.title, post.category, post.description]).flat()}

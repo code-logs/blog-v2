@@ -5,6 +5,7 @@ import GoogleAdsenseBanner from '../components/google-adsense/GoogleAdsenseBanne
 import RecentPosts from '../components/recent-posts/RecentPosts'
 import TagIndexer, { TagWithCount } from '../components/tag-indexer/TagIndexer'
 import blogConfig from '../config/blog.config'
+import { META_CONTENTS } from '../config/meta-contents'
 import { Post } from '../config/posts.config'
 import postsDatabase from '../database/post-database'
 import TitleUtil from '../utils/TitleUtil'
@@ -40,9 +41,9 @@ const Home: NextPage<{
   return (
     <>
       <CommonMeta
-        title={TitleUtil.buildPageTitle('Home')}
-        description={'Code Logs에 오신 것을 환영 합니다.'}
-        keywords={['Code Logs', 'Web', 'Development', 'Web development']}
+        title={TitleUtil.buildPageTitle(META_CONTENTS.MAIN.TITLE)}
+        description={META_CONTENTS.MAIN.DESCRIPTION}
+        keywords={props.categories}
         url={blogConfig.baseURL}
         imageURL={'/icons/icon-512x512.png'}
       />

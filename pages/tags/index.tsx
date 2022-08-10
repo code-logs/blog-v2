@@ -6,6 +6,7 @@ import TagList, { TagsByIndexes } from '../../components/tag-list/TagList'
 import TagNavigator from '../../components/tag-navigator/TagNavigator'
 import TitleWithCount from '../../components/title-with-count/TitleWithCount'
 import blogConfig from '../../config/blog.config'
+import { META_CONTENTS } from '../../config/meta-contents'
 import postsDatabase from '../../database/post-database'
 import TitleUtil from '../../utils/TitleUtil'
 
@@ -78,8 +79,8 @@ const Tags: NextPage<{ tags: string[] }> = ({ tags }) => {
   return (
     <section>
       <CommonMeta
-        title={TitleUtil.buildPageTitle('Tags 목록')}
-        description={'Tag를 기준으로 포스팅을 색인합니다.'}
+        title={TitleUtil.buildPageTitle(META_CONTENTS.TAGS.TITLE)}
+        description={META_CONTENTS.TAGS.DESCRIPTION}
         url={`${blogConfig.baseURL}/tags`}
         imageURL={'/icons/icon-512x512.png'}
       />
