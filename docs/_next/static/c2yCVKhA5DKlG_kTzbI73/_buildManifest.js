@@ -12,5 +12,5 @@
     '/[title]': ['static/chunks/294-6603e2d70ff7953e.js', s, 'static/css/3c9e20b63631ec28.css', 'static/chunks/pages/[title]-d714cccbc118c440.js'],
     sortedPages: ['/', '/404', '/_app', '/_error', '/about', '/categories/[category]/[page]', '/licenses', '/posts/[page]', '/tags', '/[title]'],
   }
-})('static/chunks/377-8afb1826db719932.js')),
+})('static/chunks/377-a4dc3045dce65eb4.js')),
   self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()

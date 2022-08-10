@@ -8,8 +8,8 @@
           return l
         },
       })
-      var n = a(5893),
-        o = a(9008),
+      var o = a(5893),
+        n = a(9008),
         r = a(8145),
         i = a(7294),
         s = function () {
@@ -32,37 +32,37 @@
             p = e.customMeta
           return (
             s(),
-            (0, n.jsxs)(o.default, {
+            (0, o.jsxs)(n.default, {
               children: [
-                (0, n.jsx)('link', { rel: 'canonical', href: l }),
-                (0, n.jsx)('link', { rel: 'apple-touch-icon', href: r.Z.appleTouchIconPath }),
-                (0, n.jsx)('link', { rel: 'manifest', href: '/manifest.json' }),
-                (0, n.jsx)('meta', { name: 'theme-color', content: r.Z.themeColor }, 'theme-color'),
-                (0, n.jsx)('meta', { property: 'og:type', content: 'website' }, 'og:type'),
-                (0, n.jsx)('meta', { property: 'og:site_name', content: r.Z.title }, 'og:site_name'),
-                (0, n.jsx)('meta', { name: 'author', content: r.Z.author }, 'author'),
-                (null === i || void 0 === i ? void 0 : i.length) && (0, n.jsx)('meta', { name: 'keyword', content: i.join(', ') }, 'keyword'),
-                (0, n.jsx)('meta', { name: 'description', content: a }, 'description'),
-                (0, n.jsx)('meta', { property: 'og:description', content: a }, 'og:description'),
-                (0, n.jsx)('meta', { property: 'og:title', content: t }, 'og:title'),
-                (0, n.jsx)('meta', { property: 'og:url', content: l }, 'og:url'),
-                (0, n.jsx)('meta', { property: 'og:image', content: c }, 'og:image'),
+                (0, o.jsx)('link', { rel: 'canonical', href: l }),
+                (0, o.jsx)('link', { rel: 'apple-touch-icon', href: r.Z.appleTouchIconPath }),
+                (0, o.jsx)('link', { rel: 'manifest', href: '/manifest.json' }),
+                (0, o.jsx)('meta', { name: 'theme-color', content: r.Z.themeColor }, 'theme-color'),
+                (0, o.jsx)('meta', { property: 'og:type', content: 'website' }, 'og:type'),
+                (0, o.jsx)('meta', { property: 'og:site_name', content: r.Z.title }, 'og:site_name'),
+                (0, o.jsx)('meta', { name: 'author', content: r.Z.author }, 'author'),
+                (null === i || void 0 === i ? void 0 : i.length) && (0, o.jsx)('meta', { name: 'keyword', content: i.join(', ') }, 'keyword'),
+                (0, o.jsx)('meta', { name: 'description', content: a }, 'description'),
+                (0, o.jsx)('meta', { property: 'og:description', content: a }, 'og:description'),
+                (0, o.jsx)('meta', { property: 'og:title', content: t }, 'og:title'),
+                (0, o.jsx)('meta', { property: 'og:url', content: l }, 'og:url'),
+                (0, o.jsx)('meta', { property: 'og:image', content: c }, 'og:image'),
                 p && p,
-                (0, n.jsx)('title', { children: t }),
+                (0, o.jsx)('title', { children: t }),
               ],
             })
           )
         }
     },
     1780: function (e, t, a) {
-      var n = a(5893),
-        o = a(7294)
+      var o = a(5893),
+        n = a(7294)
       t.Z = function (e) {
         return (
-          (0, o.useEffect)(function () {
+          (0, n.useEffect)(function () {
             ;(window.adsbygoogle = window.adsbygoogle || []), window.adsbygoogle.push({})
           }, []),
-          (0, n.jsx)('ins', {
+          (0, o.jsx)('ins', {
             className: 'adsbygoogle',
             style: { display: 'block' },
             'data-ad-client': e.adClient,
@@ -77,32 +77,32 @@
       }
     },
     5500: function (e, t, a) {
-      function n(e, t, a) {
+      function o(e, t, a) {
         return t in e ? Object.defineProperty(e, t, { value: a, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = a), e
       }
-      var o
+      var n
       a.d(t, {
         aA: function () {
           return r
         },
       })
       var r =
-        (n((o = {}), 'cloud', 'cloud'),
-        n(o, 'css', 'css'),
-        n(o, 'elasticsearch', 'elasticsearch'),
-        n(o, 'infrastructure', 'infrastructure'),
-        n(o, 'javascript', 'javascript'),
-        n(o, 'nodejs', 'nodejs'),
-        n(o, 'react', 'react'),
-        n(o, 'react-native', 'react native'),
-        n(o, 'roadmap-frontend', 'roadmap frontend'),
-        n(o, 'security', 'security'),
-        n(o, 'seo', 'seo'),
-        n(o, 'typescript', 'typescript'),
-        n(o, 'ui-and-ux', 'ui and ux'),
-        n(o, 'web-component', 'web component'),
-        n(o, '\uac1c\ubc1c\ud658\uacbd', '\uac1c\ubc1c\ud658\uacbd'),
-        o)
+        (o((n = {}), 'cloud', 'cloud'),
+        o(n, 'css', 'css'),
+        o(n, 'elasticsearch', 'elasticsearch'),
+        o(n, 'infrastructure', 'infrastructure'),
+        o(n, 'javascript', 'javascript'),
+        o(n, 'nodejs', 'nodejs'),
+        o(n, 'react', 'react'),
+        o(n, 'react-native', 'react native'),
+        o(n, 'roadmap-frontend', 'roadmap frontend'),
+        o(n, 'security', 'security'),
+        o(n, 'seo', 'seo'),
+        o(n, 'typescript', 'typescript'),
+        o(n, 'ui-and-ux', 'ui and ux'),
+        o(n, 'web-component', 'web component'),
+        o(n, '\uac1c\ubc1c\ud658\uacbd', '\uac1c\ubc1c\ud658\uacbd'),
+        n)
       t.ZP = [
         {
           title: '\uac80\uc0c9 \uc5d4\uc9c4 \ucd5c\uc801\ud654\ub97c \uc704\ud55c \uc124\uc815',
@@ -358,12 +358,13 @@
           published: !0,
           publishedAt: '2022-07-31',
           thumbnailName: 'e0e40e28cf11f896033c8650f19188b7',
-          tags: ['custom element', 'web component', '\uc6f9 \ucef4\ud3ec\ub10c\ud2b8', '\ucee4\uc2a4\ud140 \uc5d8\ub9ac\uba3c\ud2b8'],
+          tags: [],
           references: [
             { title: 'Custom element naming convention', url: 'https://html.spec.whatwg.org/#valid-custom-element-name' },
             { title: 'WebComponent org', url: 'https://www.webcomponents.org/' },
             { title: 'https://web.dev/custom-elements-v1/#custom-element-reactions', url: 'https://web.dev/custom-elements-v1/#custom-element-reactions' },
           ],
+          series: { nextPostTitle: 'Web component - Shadow DOM' },
         },
         {
           title: 'HTTP - Roadmap.sh',
@@ -406,35 +407,64 @@
           references: [{ title: 'roadmap.sh', url: 'https://roadmap.sh/frontend' }],
           series: { prevPostTitle: 'How HTTPS works - Roadmap.sh' },
         },
+        {
+          title: 'Web component - Shadow DOM',
+          description:
+            'Web component\uc758 \ud575\uc2ec\uc778 encapsulation\uc740 \uc5b4\ub5bb\uac8c \uc774\ub8e8\uc5b4\uc9c8\uae4c?\nShadow DOM\uc758 \uc774\ud574',
+          fileName: 'web-component-web-component---shadow-dom.md',
+          category: 'web-component',
+          published: !0,
+          publishedAt: '2022-08-10',
+          thumbnailName: 'ab751eb302db9d348765b3134068a6aa',
+          tags: [
+            'Shadow DOM',
+            'custom element',
+            'encapsulation',
+            'shadow',
+            'shadow tree',
+            'web component',
+            '\uc250\ub3c4\uc6b0',
+            '\uc250\ub3c4\uc6b0 \ub3d4',
+            '\uc250\ub3c4\uc6b0 \ud2b8\ub9ac',
+            '\uc6f9 \ucef4\ud3ec\ub10c\ud2b8',
+            '\uc740\ub2c9\ud654',
+            '\ucee4\uc2a4\ud140 \uc5d8\ub9ac\uba3c\ud2b8',
+          ],
+          references: [
+            { title: 'MDN - Composed', url: 'https://developer.mozilla.org/en-US/docs/Web/API/Event/composed' },
+            { title: 'MDN - Using shadow DOM', url: 'https://developer.mozilla.org/ko/docs/Web/Web_Components/Using_shadow_DOM' },
+          ],
+          series: { prevPostTitle: 'Web component - custom element' },
+        },
       ]
     },
     4111: function (e, t, a) {
-      var n = a(7294)
+      var o = a(7294)
       t.Z = function (e) {
         var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : '.',
-          a = (0, n.useState)(''),
-          o = a[0],
+          a = (0, o.useState)(''),
+          n = a[0],
           r = a[1]
         return (
-          (0, n.useEffect)(
+          (0, o.useEffect)(
             function () {
               var a = String(e.getFullYear()).slice(2),
-                n = String(e.getMonth() + 1).padStart(2, '0'),
-                o = String(e.getDate()).padStart(2, '0')
-              r([a, n, o].join(t))
+                o = String(e.getMonth() + 1).padStart(2, '0'),
+                n = String(e.getDate()).padStart(2, '0')
+              r([a, o, n].join(t))
             },
             [e, t]
           ),
-          o
+          n
         )
       }
     },
     9443: function (e, t, a) {
-      var n = a(8145)
-      function o(e, t) {
+      var o = a(8145)
+      function n(e, t) {
         for (var a = 0; a < t.length; a++) {
-          var n = t[a]
-          ;(n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n)
+          var o = t[a]
+          ;(o.enumerable = o.enumerable || !1), (o.configurable = !0), 'value' in o && (o.writable = !0), Object.defineProperty(e, o.key, o)
         }
       }
       var r = (function () {
@@ -450,7 +480,7 @@
             {
               key: 'absolutePath',
               value: function (e, t) {
-                return (e = e.replace(/^\//, '')), [t || n.Z.baseURL, e].join('/')
+                return (e = e.replace(/^\//, '')), [t || o.Z.baseURL, e].join('/')
               },
             },
             {
@@ -460,20 +490,20 @@
               },
             },
           ]),
-          (a = null) && o(t.prototype, a),
-          r && o(t, r),
+          (a = null) && n(t.prototype, a),
+          r && n(t, r),
           e
         )
       })()
       t.Z = r
     },
     8286: function (e, t, a) {
-      var n = a(1864),
-        o = a.n(n)
+      var o = a(1864),
+        n = a.n(o)
       function r(e, t) {
         for (var a = 0; a < t.length; a++) {
-          var n = t[a]
-          ;(n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n)
+          var o = t[a]
+          ;(o.enumerable = o.enumerable || !1), (o.configurable = !0), 'value' in o && (o.writable = !0), Object.defineProperty(e, o.key, o)
         }
       }
       var i = (function () {
@@ -482,10 +512,10 @@
             if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
           })(this, e)
         }
-        var t, a, n
+        var t, a, o
         return (
           (t = e),
-          (n = [
+          (o = [
             {
               key: 'normalizeTitle',
               value: function (e) {
@@ -495,7 +525,7 @@
             {
               key: 'getMarkdownFilePath',
               value: function (e) {
-                return o().join('../posts', e.category, e.fileName)
+                return n().join('../posts', e.category, e.fileName)
               },
             },
             {
@@ -506,18 +536,18 @@
             },
           ]),
           (a = null) && r(t.prototype, a),
-          n && r(t, n),
+          o && r(t, o),
           e
         )
       })()
       t.Z = i
     },
     7427: function (e, t, a) {
-      var n = a(8145)
-      function o(e, t) {
+      var o = a(8145)
+      function n(e, t) {
         for (var a = 0; a < t.length; a++) {
-          var n = t[a]
-          ;(n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n)
+          var o = t[a]
+          ;(o.enumerable = o.enumerable || !1), (o.configurable = !0), 'value' in o && (o.writable = !0), Object.defineProperty(e, o.key, o)
         }
       }
       var r = (function () {
@@ -533,12 +563,12 @@
             {
               key: 'buildPageTitle',
               value: function (e) {
-                return ''.concat(e, ' | ').concat(n.Z.title)
+                return ''.concat(e, ' | ').concat(o.Z.title)
               },
             },
           ]),
-          (a = null) && o(t.prototype, a),
-          r && o(t, r),
+          (a = null) && n(t.prototype, a),
+          r && n(t, r),
           e
         )
       })()

@@ -12,7 +12,8 @@
     <meta name="author" content="Jay Lee" />
     <meta
       name="keyword"
-      content="custom element, web component, 웹 컴포넌트, 커스텀 엘리먼트, Web component - custom element, web-component, 웹 컴포넌트로 만드는 나만의 custom element"
+      content="Shadow DOM, custom element, encapsulation, shadow, shadow tree, web component, 쉐도우, 쉐도우 돔, 쉐도우 트리, 웹 컴포넌트, 은닉화, 커스텀 엘리먼트, Web component - Shadow DOM, web-component, Web component의 핵심인 encapsulation은 어떻게 이루어질까?
+Shadow DOM의 이해, Web component - custom element, web-component, 웹 컴포넌트로 만드는 나만의 custom element"
     />
     <meta name="description" content="Code Logs | 카테고리별 포스팅 | web-component 1 페이지" />
     <meta property="og:description" content="Code Logs | 카테고리별 포스팅 | web-component 1 페이지" />
@@ -31,11 +32,11 @@
     <script src="/_next/static/chunks/framework-5f4595e5518b5600.js" defer=""></script>
     <script src="/_next/static/chunks/main-a4d9e436b9a532ca.js" defer=""></script>
     <script src="/_next/static/chunks/pages/_app-7c87b8027fce9280.js" defer=""></script>
-    <script src="/_next/static/chunks/377-8afb1826db719932.js" defer=""></script>
+    <script src="/_next/static/chunks/377-a4dc3045dce65eb4.js" defer=""></script>
     <script src="/_next/static/chunks/pages/categories/%5Bcategory%5D/%5Bpage%5D-b1e2a8449a129e16.js" defer=""></script>
-    <script src="/_next/static/_yA1VPfxlhWcnYpfblPYF/_buildManifest.js" defer=""></script>
-    <script src="/_next/static/_yA1VPfxlhWcnYpfblPYF/_ssgManifest.js" defer=""></script>
-    <script src="/_next/static/_yA1VPfxlhWcnYpfblPYF/_middlewareManifest.js" defer=""></script>
+    <script src="/_next/static/c2yCVKhA5DKlG_kTzbI73/_buildManifest.js" defer=""></script>
+    <script src="/_next/static/c2yCVKhA5DKlG_kTzbI73/_ssgManifest.js" defer=""></script>
+    <script src="/_next/static/c2yCVKhA5DKlG_kTzbI73/_middlewareManifest.js" defer=""></script>
   </head>
   <body>
     <div id="__next" data-reactroot="">
@@ -85,19 +86,45 @@
       <main>
         <h1 class="Categories_title__UTw08">web component</h1>
         <article class="clickable PostCard_card__RhSh8">
-          <a class="PostCard_title__sytFV" href="/web-component---custom-element"><h2>Web component - custom element</h2></a
+          <a class="PostCard_title__sytFV" href="/web-component---shadow-dom"><h2>Web component - Shadow DOM</h2></a
           ><span class="PostCard_category__maLVP">web component</span><span class="PostCard_publishedAt__jx58S"></span
-          ><a class="PostCard_description__53x7j" href="/web-component---custom-element"><p>웹 컴포넌트로 만드는 나만의 custom element</p></a>
+          ><a class="PostCard_description__53x7j" href="/web-component---shadow-dom"
+            ><p>Web component의 핵심인 encapsulation은 어떻게 이루어질까? Shadow DOM의 이해</p></a
+          >
           <div class="PostCard_thumbnail__RluzR">
-            <a href="/web-component---custom-element"
-              ><img class="thumbnail" src="/assets/images/e0e40e28cf11f896033c8650f19188b7" alt="웹 컴포넌트로 만드는 나만의 custom element"
+            <a href="/web-component---shadow-dom"
+              ><img
+                class="thumbnail"
+                src="/assets/images/ab751eb302db9d348765b3134068a6aa"
+                alt="Web component의 핵심인 encapsulation은 어떻게 이루어질까?
+Shadow DOM의 이해"
             /></a>
           </div>
           <section class="PostCard_tags__H0ViL">
             <ul class="Tags_tags__mhykw">
               <li>
+                <a href="/posts/1?query=Shadow%20DOM"
+                  ><span class="clickable Tag_tag__tXphA">Shadow DOM<!-- --> </span></a
+                >
+              </li>
+              <li>
                 <a href="/posts/1?query=custom%20element"
                   ><span class="clickable Tag_tag__tXphA">custom element<!-- --> </span></a
+                >
+              </li>
+              <li>
+                <a href="/posts/1?query=encapsulation"
+                  ><span class="clickable Tag_tag__tXphA">encapsulation<!-- --> </span></a
+                >
+              </li>
+              <li>
+                <a href="/posts/1?query=shadow"
+                  ><span class="clickable Tag_tag__tXphA">shadow<!-- --> </span></a
+                >
+              </li>
+              <li>
+                <a href="/posts/1?query=shadow%20tree"
+                  ><span class="clickable Tag_tag__tXphA">shadow tree<!-- --> </span></a
                 >
               </li>
               <li>
@@ -106,8 +133,28 @@
                 >
               </li>
               <li>
+                <a href="/posts/1?query=%EC%89%90%EB%8F%84%EC%9A%B0"
+                  ><span class="clickable Tag_tag__tXphA">쉐도우<!-- --> </span></a
+                >
+              </li>
+              <li>
+                <a href="/posts/1?query=%EC%89%90%EB%8F%84%EC%9A%B0%20%EB%8F%94"
+                  ><span class="clickable Tag_tag__tXphA">쉐도우 돔<!-- --> </span></a
+                >
+              </li>
+              <li>
+                <a href="/posts/1?query=%EC%89%90%EB%8F%84%EC%9A%B0%20%ED%8A%B8%EB%A6%AC"
+                  ><span class="clickable Tag_tag__tXphA">쉐도우 트리<!-- --> </span></a
+                >
+              </li>
+              <li>
                 <a href="/posts/1?query=%EC%9B%B9%20%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8"
                   ><span class="clickable Tag_tag__tXphA">웹 컴포넌트<!-- --> </span></a
+                >
+              </li>
+              <li>
+                <a href="/posts/1?query=%EC%9D%80%EB%8B%89%ED%99%94"
+                  ><span class="clickable Tag_tag__tXphA">은닉화<!-- --> </span></a
                 >
               </li>
               <li>
@@ -117,6 +164,17 @@
               </li>
             </ul>
           </section>
+        </article>
+        <article class="clickable PostCard_card__RhSh8">
+          <a class="PostCard_title__sytFV" href="/web-component---custom-element"><h2>Web component - custom element</h2></a
+          ><span class="PostCard_category__maLVP">web component</span><span class="PostCard_publishedAt__jx58S"></span
+          ><a class="PostCard_description__53x7j" href="/web-component---custom-element"><p>웹 컴포넌트로 만드는 나만의 custom element</p></a>
+          <div class="PostCard_thumbnail__RluzR">
+            <a href="/web-component---custom-element"
+              ><img class="thumbnail" src="/assets/images/e0e40e28cf11f896033c8650f19188b7" alt="웹 컴포넌트로 만드는 나만의 custom element"
+            /></a>
+          </div>
+          <section class="PostCard_tags__H0ViL"><ul class="Tags_tags__mhykw"></ul></section>
         </article>
         <ins
           class="adsbygoogle"
@@ -139,6 +197,35 @@
             "lastPage": 1,
             "posts": [
               {
+                "title": "Web component - Shadow DOM",
+                "description": "Web component의 핵심인 encapsulation은 어떻게 이루어질까?\nShadow DOM의 이해",
+                "fileName": "web-component-web-component---shadow-dom.md",
+                "category": "web-component",
+                "published": true,
+                "publishedAt": "2022-08-10",
+                "thumbnailName": "ab751eb302db9d348765b3134068a6aa",
+                "tags": [
+                  "Shadow DOM",
+                  "custom element",
+                  "encapsulation",
+                  "shadow",
+                  "shadow tree",
+                  "web component",
+                  "쉐도우",
+                  "쉐도우 돔",
+                  "쉐도우 트리",
+                  "웹 컴포넌트",
+                  "은닉화",
+                  "커스텀 엘리먼트"
+                ],
+                "references": [
+                  { "title": "MDN - Composed", "url": "https://developer.mozilla.org/en-US/docs/Web/API/Event/composed" },
+                  { "title": "MDN - Using shadow DOM", "url": "https://developer.mozilla.org/ko/docs/Web/Web_Components/Using_shadow_DOM" }
+                ],
+                "series": { "prevPostTitle": "Web component - custom element" },
+                "order": 22
+              },
+              {
                 "title": "Web component - custom element",
                 "description": "웹 컴포넌트로 만드는 나만의 custom element",
                 "fileName": "web-component-web-component---custom-element.md",
@@ -146,7 +233,7 @@
                 "published": true,
                 "publishedAt": "2022-07-31",
                 "thumbnailName": "e0e40e28cf11f896033c8650f19188b7",
-                "tags": ["custom element", "web component", "웹 컴포넌트", "커스텀 엘리먼트"],
+                "tags": [],
                 "references": [
                   { "title": "Custom element naming convention", "url": "https://html.spec.whatwg.org/#valid-custom-element-name" },
                   { "title": "WebComponent org", "url": "https://www.webcomponents.org/" },
@@ -155,6 +242,7 @@
                     "url": "https://web.dev/custom-elements-v1/#custom-element-reactions"
                   }
                 ],
+                "series": { "nextPostTitle": "Web component - Shadow DOM" },
                 "order": 18
               }
             ],
@@ -164,7 +252,7 @@
         },
         "page": "/categories/[category]/[page]",
         "query": { "category": "web-component", "page": "1" },
-        "buildId": "_yA1VPfxlhWcnYpfblPYF",
+        "buildId": "c2yCVKhA5DKlG_kTzbI73",
         "isFallback": false,
         "gsp": true,
         "scriptLoader": []

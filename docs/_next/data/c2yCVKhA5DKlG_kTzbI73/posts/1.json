@@ -4,6 +4,35 @@
     "lastPage": 5,
     "posts": [
       {
+        "title": "Web component - Shadow DOM",
+        "description": "Web component의 핵심인 encapsulation은 어떻게 이루어질까?\nShadow DOM의 이해",
+        "fileName": "web-component-web-component---shadow-dom.md",
+        "category": "web-component",
+        "published": true,
+        "publishedAt": "2022-08-10",
+        "thumbnailName": "ab751eb302db9d348765b3134068a6aa",
+        "tags": [
+          "Shadow DOM",
+          "custom element",
+          "encapsulation",
+          "shadow",
+          "shadow tree",
+          "web component",
+          "쉐도우",
+          "쉐도우 돔",
+          "쉐도우 트리",
+          "웹 컴포넌트",
+          "은닉화",
+          "커스텀 엘리먼트"
+        ],
+        "references": [
+          { "title": "MDN - Composed", "url": "https://developer.mozilla.org/en-US/docs/Web/API/Event/composed" },
+          { "title": "MDN - Using shadow DOM", "url": "https://developer.mozilla.org/ko/docs/Web/Web_Components/Using_shadow_DOM" }
+        ],
+        "series": { "prevPostTitle": "Web component - custom element" },
+        "order": 22
+      },
+      {
         "title": "The differences between HTTPS, SSL and TLS - Roadmap.sh",
         "description": "The differences between HTTPS, SSL and TLS - Roadmap.sh\nRoadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 4",
         "fileName": "roadmap-frontend-the-differences-between-https,-ssl-and-tls---roadmap.sh.md",
@@ -53,29 +82,17 @@
         "published": true,
         "publishedAt": "2022-07-31",
         "thumbnailName": "e0e40e28cf11f896033c8650f19188b7",
-        "tags": ["custom element", "web component", "웹 컴포넌트", "커스텀 엘리먼트"],
+        "tags": [],
         "references": [
           { "title": "Custom element naming convention", "url": "https://html.spec.whatwg.org/#valid-custom-element-name" },
           { "title": "WebComponent org", "url": "https://www.webcomponents.org/" },
           { "title": "https://web.dev/custom-elements-v1/#custom-element-reactions", "url": "https://web.dev/custom-elements-v1/#custom-element-reactions" }
         ],
+        "series": { "nextPostTitle": "Web component - Shadow DOM" },
         "order": 18
-      },
-      {
-        "title": "How does internet work - Roadmap.sh",
-        "description": "How does internet work - Roadmap.sh\nRoadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 1",
-        "fileName": "internet.md",
-        "category": "roadmap-frontend",
-        "published": true,
-        "publishedAt": "2022-07-20",
-        "thumbnailName": "5e6bc461ba3d54cc6ec0f75c9333845b",
-        "tags": ["internet", "network", "packet", "routing", "네트워크", "라우팅", "인터넷", "패킷"],
-        "references": [{ "title": "roadmap.sh", "url": "https://roadmap.sh/frontend" }],
-        "series": { "nextPostTitle": "HTTP - Roadmap.sh" },
-        "order": 17
       }
     ],
-    "totalCount": 22
+    "totalCount": 23
   },
   "__N_SSG": true
 }
