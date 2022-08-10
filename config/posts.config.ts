@@ -313,7 +313,7 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 1`,
     published: true,
     publishedAt: `2022-07-31`,
     thumbnailName: `e0e40e28cf11f896033c8650f19188b7`,
-    tags: [`custom element`, `web component`, `웹 컴포넌트`, `커스텀 엘리먼트`],
+    tags: [],
     references: [
       {
         title: `Custom element naming convention`,
@@ -328,6 +328,10 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 1`,
         url: `https://web.dev/custom-elements-v1/#custom-element-reactions`,
       },
     ],
+
+    series: {
+      nextPostTitle: `Web component - Shadow DOM`,
+    },
   },
   {
     title: `HTTP - Roadmap.sh`,
@@ -397,6 +401,44 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 4`,
 
     series: {
       prevPostTitle: `How HTTPS works - Roadmap.sh`,
+    },
+  },
+  {
+    title: `Web component - Shadow DOM`,
+    description: `Web component의 핵심인 encapsulation은 어떻게 이루어질까?
+Shadow DOM의 이해`,
+    fileName: 'web-component-web-component---shadow-dom.md',
+    category: 'web-component',
+    published: true,
+    publishedAt: `2022-08-10`,
+    thumbnailName: `ab751eb302db9d348765b3134068a6aa`,
+    tags: [
+      `Shadow DOM`,
+      `custom element`,
+      `encapsulation`,
+      `shadow`,
+      `shadow tree`,
+      `web component`,
+      `쉐도우`,
+      `쉐도우 돔`,
+      `쉐도우 트리`,
+      `웹 컴포넌트`,
+      `은닉화`,
+      `커스텀 엘리먼트`,
+    ],
+    references: [
+      {
+        title: `MDN - Composed`,
+        url: `https://developer.mozilla.org/en-US/docs/Web/API/Event/composed`,
+      },
+      {
+        title: `MDN - Using shadow DOM`,
+        url: `https://developer.mozilla.org/ko/docs/Web/Web_Components/Using_shadow_DOM`,
+      },
+    ],
+
+    series: {
+      prevPostTitle: `Web component - custom element`,
     },
   },
 ]
