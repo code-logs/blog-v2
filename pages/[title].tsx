@@ -7,6 +7,7 @@ import GoogleAdsenseBanner from '../components/google-adsense/GoogleAdsenseBanne
 import PostSeriesLink from '../components/post-series-link/PostSeriesLink'
 import Utterances from '../components/utterrances/Utterrances'
 import blogConfig from '../config/blog.config'
+import { META_CONTENTS } from '../config/meta-contents'
 import { Post } from '../config/posts.config'
 import postsDatabase from '../database/post-database'
 import useHumanReadableDate from '../hooks/useHumanReadableDate'
@@ -52,8 +53,8 @@ const PostDetail: NextPage<PostDetailPageProps> = ({ post, content, postsByCateg
   return (
     <>
       <CommonMeta
-        title={TitleUtil.buildPageTitle(post.title)}
-        description={post.description}
+        title={TitleUtil.buildPageTitle(META_CONTENTS.POST.TITLE(post.title))}
+        description={META_CONTENTS.POST.DESCRIPTION(post.title, post.description, post.category, post.tags)}
         url={`${blogConfig.baseURL}/${PostUtil.normalizeTitle(post.title)}`}
         imageURL={PathUtil.buildImagePath(post.thumbnailName)}
         keywords={[...post.tags, post.title, post.description, post.category]}

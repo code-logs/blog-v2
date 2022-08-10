@@ -2,6 +2,7 @@ import CommonMeta from '../../components/common-meta/CommonMeta'
 import GoogleAdsenseBanner from '../../components/google-adsense/GoogleAdsenseBanner'
 import RaiseSection from '../../components/raise-section/RaiseSection'
 import blogConfig from '../../config/blog.config'
+import { META_CONTENTS } from '../../config/meta-contents'
 import TitleUtil from '../../utils/TitleUtil'
 import styles from './About.module.scss'
 
@@ -12,8 +13,8 @@ const About = () => {
   return (
     <>
       <CommonMeta
-        title={TitleUtil.buildPageTitle('About')}
-        description={'Code Logs에 대하여'}
+        title={TitleUtil.buildPageTitle(META_CONTENTS.ABOUT.TITLE)}
+        description={META_CONTENTS.ABOUT.DESCRIPTION}
         url={`${blogConfig.baseURL}/about`}
         imageURL={'/icons/icon-512x512.png'}
       />

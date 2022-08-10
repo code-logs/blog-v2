@@ -1,14 +1,15 @@
 import CommonMeta from '../components/common-meta/CommonMeta'
 import GoogleAdsenseBanner from '../components/google-adsense/GoogleAdsenseBanner'
 import blogConfig from '../config/blog.config'
+import { META_CONTENTS } from '../config/meta-contents'
 import TitleUtil from '../utils/TitleUtil'
 
 const NotFound = () => {
   return (
     <>
       <CommonMeta
-        title={TitleUtil.buildPageTitle('Page Not Found')}
-        description={'404 Page Not Found. Please move to right URL'}
+        title={TitleUtil.buildPageTitle(META_CONTENTS.NOT_FOUND.TITLE)}
+        description={META_CONTENTS.NOT_FOUND.DESCRIPTION}
         url={blogConfig.baseURL}
         imageURL={'/icons/icon-512x512.png'}
       />
