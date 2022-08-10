@@ -397,10 +397,10 @@
       n.r(t),
         n.d(t, {
           __N_SSG: function () {
-            return w
+            return C
           },
           default: function () {
-            return C
+            return A
           },
         })
       var r = n(5893),
@@ -465,24 +465,25 @@
           )
         },
         x = n(8145),
-        b = n(7427),
-        j = n(3447),
-        _ = n.n(j),
-        w = !0,
-        C = function (e) {
+        b = n(6678),
+        j = n(7427),
+        _ = n(3447),
+        w = n.n(_),
+        C = !0,
+        A = function (e) {
           return (0, r.jsxs)(r.Fragment, {
             children: [
               (0, r.jsx)(l.Z, {
-                title: b.Z.buildPageTitle('Home'),
-                description: 'Code Logs\uc5d0 \uc624\uc2e0 \uac83\uc744 \ud658\uc601 \ud569\ub2c8\ub2e4.',
-                keywords: ['Code Logs', 'Web', 'Development', 'Web development'],
+                title: j.Z.buildPageTitle(b.z.MAIN.TITLE),
+                description: b.z.MAIN.DESCRIPTION,
+                keywords: e.categories,
                 url: x.Z.baseURL,
                 imageURL: '/icons/icon-512x512.png',
               }),
               (0, r.jsx)('h1', { children: 'Home' }),
               (0, r.jsx)(g, { posts: e.recentPosts }),
               (0, r.jsxs)('div', {
-                className: _().index,
+                className: w().index,
                 children: [(0, r.jsx)(u, { categories: e.categories }), (0, r.jsx)(m, { tagsWithCount: e.tagsWithCount, limit: 20 })],
               }),
               (0, r.jsx)(f.Z, { adClient: x.Z.googleAdsense.adClient, adSlot: '5391522351' }),
@@ -861,7 +862,7 @@
     },
   },
   function (e) {
-    e.O(0, [377, 774, 888, 179], function () {
+    e.O(0, [435, 774, 888, 179], function () {
       return (t = 5301), e((e.s = t))
       var t
     })

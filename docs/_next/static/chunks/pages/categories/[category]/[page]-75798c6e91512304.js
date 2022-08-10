@@ -209,7 +209,7 @@
       r.r(t),
         r.d(t, {
           __N_SSG: function () {
-            return p
+            return v
           },
         })
       var n = r(5893),
@@ -218,30 +218,31 @@
         a = r(9337),
         c = r(7221),
         s = r(8145),
-        l = r(5500),
-        u = r(7427),
-        f = r(5866),
-        h = r.n(f)
-      function d(e, t) {
+        l = r(6678),
+        u = r(5500),
+        f = r(7427),
+        h = r(5866),
+        d = r.n(h)
+      function g(e, t) {
         ;(null == t || t > e.length) && (t = e.length)
         for (var r = 0, n = new Array(t); r < t; r++) n[r] = e[r]
         return n
       }
-      function g(e) {
+      function p(e) {
         return (
           (function (e) {
-            if (Array.isArray(e)) return d(e)
+            if (Array.isArray(e)) return g(e)
           })(e) ||
           (function (e) {
             if (('undefined' !== typeof Symbol && null != e[Symbol.iterator]) || null != e['@@iterator']) return Array.from(e)
           })(e) ||
           (function (e, t) {
             if (!e) return
-            if ('string' === typeof e) return d(e, t)
+            if ('string' === typeof e) return g(e, t)
             var r = Object.prototype.toString.call(e).slice(8, -1)
             'Object' === r && e.constructor && (r = e.constructor.name)
             if ('Map' === r || 'Set' === r) return Array.from(r)
-            if ('Arguments' === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)) return d(e, t)
+            if ('Arguments' === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)) return g(e, t)
           })(e) ||
           (function () {
             throw new TypeError(
@@ -250,32 +251,32 @@
           })()
         )
       }
-      var p = !0
+      var v = !0
       t.default = function (e) {
         var t = e.page,
           r = e.lastPage,
-          f = e.posts,
-          d = e.category
+          h = e.posts,
+          g = e.category
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsx)(i.Z, {
-              title: u.Z.buildPageTitle(d),
-              description: 'Code Logs | \uce74\ud14c\uace0\ub9ac\ubcc4 \ud3ec\uc2a4\ud305 | '.concat(d, ' ').concat(t, ' \ud398\uc774\uc9c0'),
-              url: 'categories/'.concat(d, '/').concat(t, '}'),
+              title: f.Z.buildPageTitle(l.z.CATEGORIES.TITLE(g)),
+              description: l.z.CATEGORIES.DESCRIPTION(g, t),
+              url: 'categories/'.concat(g, '/').concat(t, '}'),
               imageURL: '/icons/icon-512x512.png',
-              keywords: f
+              keywords: h
                 .map(function (e) {
-                  return g(e.tags).concat([e.title, e.category, e.description])
+                  return p(e.tags).concat([e.title, e.category, e.description])
                 })
                 .flat(),
             }),
-            (0, n.jsx)('h1', { className: h().title, children: l.aA[d] }),
-            Boolean(null === f || void 0 === f ? void 0 : f.length) &&
-              f.map(function (e, t) {
+            (0, n.jsx)('h1', { className: d().title, children: u.aA[g] }),
+            Boolean(null === h || void 0 === h ? void 0 : h.length) &&
+              h.map(function (e, t) {
                 return (0, n.jsx)(c.Z, { titleLevel: 2, post: e }, t)
               }),
             (0, n.jsx)(o.Z, { adClient: s.Z.googleAdsense.adClient, adSlot: '5391522351' }),
-            (0, n.jsx)(a.Z, { page: t, lastPage: r, baseURL: ''.concat(s.Z.baseURL, '/categories/').concat(d) }),
+            (0, n.jsx)(a.Z, { page: t, lastPage: r, baseURL: ''.concat(s.Z.baseURL, '/categories/').concat(g) }),
           ],
         })
       }
@@ -640,7 +641,7 @@
     },
   },
   function (e) {
-    e.O(0, [377, 774, 888, 179], function () {
+    e.O(0, [435, 774, 888, 179], function () {
       return (t = 2214), e((e.s = t))
       var t
     })

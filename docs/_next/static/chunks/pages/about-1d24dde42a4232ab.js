@@ -18,14 +18,14 @@
       })
       var o = n(5893),
         r = n(9008),
-        i = n(8145),
-        c = n(7294),
+        c = n(8145),
+        i = n(7294),
         a = function () {
-          ;(0, c.useEffect)(function () {
+          ;(0, i.useEffect)(function () {
             if (document.head) {
               var e = document.createElement('script')
               ;(e.async = !0),
-                (e.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='.concat(i.Z.googleAdsense.adClient)),
+                (e.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='.concat(c.Z.googleAdsense.adClient)),
                 (e.crossOrigin = 'anonymous'),
                 document.head.appendChild(e)
             }
@@ -34,28 +34,28 @@
         s = function (e) {
           var t = e.title,
             n = e.description,
-            c = e.keywords,
+            i = e.keywords,
             s = e.url,
-            l = e.imageURL,
-            u = e.customMeta
+            u = e.imageURL,
+            l = e.customMeta
           return (
             a(),
             (0, o.jsxs)(r.default, {
               children: [
                 (0, o.jsx)('link', { rel: 'canonical', href: s }),
-                (0, o.jsx)('link', { rel: 'apple-touch-icon', href: i.Z.appleTouchIconPath }),
+                (0, o.jsx)('link', { rel: 'apple-touch-icon', href: c.Z.appleTouchIconPath }),
                 (0, o.jsx)('link', { rel: 'manifest', href: '/manifest.json' }),
-                (0, o.jsx)('meta', { name: 'theme-color', content: i.Z.themeColor }, 'theme-color'),
+                (0, o.jsx)('meta', { name: 'theme-color', content: c.Z.themeColor }, 'theme-color'),
                 (0, o.jsx)('meta', { property: 'og:type', content: 'website' }, 'og:type'),
-                (0, o.jsx)('meta', { property: 'og:site_name', content: i.Z.title }, 'og:site_name'),
-                (0, o.jsx)('meta', { name: 'author', content: i.Z.author }, 'author'),
-                (null === c || void 0 === c ? void 0 : c.length) && (0, o.jsx)('meta', { name: 'keyword', content: c.join(', ') }, 'keyword'),
+                (0, o.jsx)('meta', { property: 'og:site_name', content: c.Z.title }, 'og:site_name'),
+                (0, o.jsx)('meta', { name: 'author', content: c.Z.author }, 'author'),
+                (null === i || void 0 === i ? void 0 : i.length) && (0, o.jsx)('meta', { name: 'keyword', content: i.join(', ') }, 'keyword'),
                 (0, o.jsx)('meta', { name: 'description', content: n }, 'description'),
                 (0, o.jsx)('meta', { property: 'og:description', content: n }, 'og:description'),
                 (0, o.jsx)('meta', { property: 'og:title', content: t }, 'og:title'),
                 (0, o.jsx)('meta', { property: 'og:url', content: s }, 'og:url'),
-                (0, o.jsx)('meta', { property: 'og:image', content: l }, 'og:image'),
-                u && u,
+                (0, o.jsx)('meta', { property: 'og:image', content: u }, 'og:image'),
+                l && l,
                 (0, o.jsx)('title', { children: t }),
               ],
             })
@@ -89,8 +89,8 @@
       'use strict'
       var o = n(5893),
         r = n(7294),
-        i = n(9401),
-        c = n.n(i)
+        c = n(9401),
+        i = n.n(c)
       function a(e, t, n) {
         return t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n), e
       }
@@ -103,30 +103,30 @@
             var n,
               o,
               r = {},
-              i = Object.keys(e)
-            for (o = 0; o < i.length; o++) (n = i[o]), t.indexOf(n) >= 0 || (r[n] = e[n])
+              c = Object.keys(e)
+            for (o = 0; o < c.length; o++) (n = c[o]), t.indexOf(n) >= 0 || (r[n] = e[n])
             return r
           })(e, t)
         if (Object.getOwnPropertySymbols) {
-          var i = Object.getOwnPropertySymbols(e)
-          for (o = 0; o < i.length; o++) (n = i[o]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]))
+          var c = Object.getOwnPropertySymbols(e)
+          for (o = 0; o < c.length; o++) (n = c[o]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]))
         }
         return r
       }
       t.Z = function (e) {
         var t = e.timeout,
           n = void 0 === t ? 500 : t,
-          i = e.children,
-          l = s(e, ['timeout', 'children']),
-          u = (0, r.useRef)(null),
+          c = e.children,
+          u = s(e, ['timeout', 'children']),
+          l = (0, r.useRef)(null),
           d = (0, r.useState)(!1),
           f = d[0],
-          p = d[1]
+          g = d[1]
         return (
           (0, r.useEffect)(
             function () {
               setTimeout(function () {
-                p(Boolean(u.current))
+                g(Boolean(l.current))
               }, n)
             },
             [n]
@@ -148,9 +148,60 @@
                   })
               }
               return e
-            })({ ref: u, className: ''.concat(c().section, ' ').concat(f && c().raise) }, l, { children: i })
+            })({ ref: l, className: ''.concat(i().section, ' ').concat(f && i().raise) }, u, { children: c })
           )
         )
+      }
+    },
+    6678: function (e, t, n) {
+      'use strict'
+      n.d(t, {
+        z: function () {
+          return o
+        },
+      })
+      var o = {
+        MAIN: {
+          TITLE: 'Home',
+          DESCRIPTION:
+            'Code Logs\uc5d0 \uc624\uc2e0 \uac83\uc744 \ud658\uc601 \ud569\ub2c8\ub2e4 - \uc6f9\uac1c\ubc1c\uacfc \uad00\ub828\ub41c \uc815\ubcf4\ub97c \uae30\ub85d\ud558\uace0 \uacf5\uc720\ud558\ub294 \uac1c\uc778\uacf5\uac04 \uc785\ub2c8\ub2e4.',
+        },
+        POSTS: {
+          TITLE: 'Posts',
+          DESCRIPTION: function (e) {
+            return 'Code Logs | \ud3ec\uc2a4\ud305 \ubaa9\ub85d '.concat(e, ' \ud398\uc774\uc9c0')
+          },
+        },
+        POST: {
+          TITLE: function (e) {
+            return e
+          },
+          DESCRIPTION: function (e, t, n, o) {
+            return 'Code Logs '.concat(e, ' - ').concat(t, ' | ').concat(n, ', ').concat(o.join(', '))
+          },
+        },
+        CATEGORIES: {
+          TITLE: function (e) {
+            return e
+          },
+          DESCRIPTION: function (e, t) {
+            return 'Code Logs | '.concat(e, ' \uc5f0\uad00 \ud3ec\uc2a4\ud305 \ubaa9\ub85d ').concat(t, ' \ud398\uc774\uc9c0')
+          },
+        },
+        TAGS: {
+          TITLE: 'Tags \ubaa9\ub85d',
+          DESCRIPTION: 'Code Logs | Tag\ub97c \uae30\uc900\uc73c\ub85c \ud3ec\uc2a4\ud305\uc744 \uc0c9\uc778\ud569\ub2c8\ub2e4.',
+        },
+        ABOUT: {
+          TITLE: 'About',
+          DESCRIPTION:
+            'Code Logs | \uc6f9\uac1c\ubc1c\uacfc \uad00\ub828\ub41c \uc815\ubcf4\ub97c \uae30\ub85d\ud558\uace0 \uacf5\uc720\ud558\ub294 \uac1c\uc778\uacf5\uac04 \uc785\ub2c8\ub2e4.',
+        },
+        NOT_FOUND: {
+          TITLE: '\ud398\uc774\uc9c0\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc74c',
+          DESCRIPTION:
+            'Code Logs | \ud398\uc774\uc9c0\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4! \uc785\ub825\ud558\uc2e0 URL\uc744 \ud655\uc778\ud574 \uc8fc\uc138\uc694.',
+        },
       }
     },
     4178: function (e, t, n) {
@@ -158,26 +209,27 @@
       n.r(t)
       var o = n(5893),
         r = n(6166),
-        i = n(1780),
-        c = n(1985),
+        c = n(1780),
+        i = n(1985),
         a = n(8145),
-        s = n(7427),
+        s = n(6678),
+        u = n(7427),
         l = n(9564),
-        u = n.n(l)
+        d = n.n(l)
       t.default = function () {
         return (0, o.jsxs)(o.Fragment, {
           children: [
             (0, o.jsx)(r.Z, {
-              title: s.Z.buildPageTitle('About'),
-              description: 'Code Logs\uc5d0 \ub300\ud558\uc5ec',
+              title: u.Z.buildPageTitle(s.z.ABOUT.TITLE),
+              description: s.z.ABOUT.DESCRIPTION,
               url: ''.concat(a.Z.baseURL, '/about'),
               imageURL: '/icons/icon-512x512.png',
             }),
             (0, o.jsxs)('article', {
-              className: u().about,
+              className: d().about,
               children: [
                 (0, o.jsx)('h1', { children: 'About' }),
-                (0, o.jsxs)(c.Z, {
+                (0, o.jsxs)(i.Z, {
                   timeout: 300,
                   children: [
                     (0, o.jsx)('h2', { children: 'Here is...' }),
@@ -202,7 +254,7 @@
                     }),
                   ],
                 }),
-                (0, o.jsxs)(c.Z, {
+                (0, o.jsxs)(i.Z, {
                   timeout: 1350,
                   children: [
                     (0, o.jsx)('h2', { children: 'Licenses' }),
@@ -211,7 +263,7 @@
                 }),
               ],
             }),
-            (0, o.jsx)(i.Z, { adClient: a.Z.googleAdsense.adClient, adSlot: '5391522351' }),
+            (0, o.jsx)(c.Z, { adClient: a.Z.googleAdsense.adClient, adSlot: '5391522351' }),
           ],
         })
       }
@@ -225,16 +277,16 @@
           ;(o.enumerable = o.enumerable || !1), (o.configurable = !0), 'value' in o && (o.writable = !0), Object.defineProperty(e, o.key, o)
         }
       }
-      var i = (function () {
+      var c = (function () {
         function e() {
           !(function (e, t) {
             if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
           })(this, e)
         }
-        var t, n, i
+        var t, n, c
         return (
           (t = e),
-          (i = [
+          (c = [
             {
               key: 'buildPageTitle',
               value: function (e) {
@@ -243,11 +295,11 @@
             },
           ]),
           (n = null) && r(t.prototype, n),
-          i && r(t, i),
+          c && r(t, c),
           e
         )
       })()
-      t.Z = i
+      t.Z = c
     },
     9401: function (e) {
       e.exports = { section: 'RaiseSection_section__FR7Qu', raise: 'RaiseSection_raise__5fbS6' }

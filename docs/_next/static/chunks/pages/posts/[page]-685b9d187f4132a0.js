@@ -485,10 +485,10 @@
       n.r(e),
         n.d(e, {
           __N_SSG: function () {
-            return A
+            return C
           },
           default: function () {
-            return C
+            return S
           },
         })
       var r = n(5893),
@@ -532,31 +532,32 @@
           })
         },
         y = n(8145),
-        v = n(7192),
-        m = n(9443),
-        b = n(7427),
-        x = n(7498),
-        j = n.n(x)
-      function _(t, e) {
+        v = n(6678),
+        m = n(7192),
+        b = n(9443),
+        x = n(7427),
+        j = n(7498),
+        _ = n.n(j)
+      function w(t, e) {
         ;(null == e || e > t.length) && (e = t.length)
         for (var n = 0, r = new Array(e); n < e; n++) r[n] = t[n]
         return r
       }
-      function w(t) {
+      function A(t) {
         return (
           (function (t) {
-            if (Array.isArray(t)) return _(t)
+            if (Array.isArray(t)) return w(t)
           })(t) ||
           (function (t) {
             if (('undefined' !== typeof Symbol && null != t[Symbol.iterator]) || null != t['@@iterator']) return Array.from(t)
           })(t) ||
           (function (t, e) {
             if (!t) return
-            if ('string' === typeof t) return _(t, e)
+            if ('string' === typeof t) return w(t, e)
             var n = Object.prototype.toString.call(t).slice(8, -1)
             'Object' === n && t.constructor && (n = t.constructor.name)
             if ('Map' === n || 'Set' === n) return Array.from(n)
-            if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _(t, e)
+            if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return w(t, e)
           })(t) ||
           (function () {
             throw new TypeError(
@@ -565,8 +566,8 @@
           })()
         )
       }
-      var A = !0,
-        C = function (t) {
+      var C = !0,
+        S = function (t) {
           var e = t.page,
             n = t.totalCount,
             s = (0, i.useState)(t.lastPage),
@@ -574,22 +575,22 @@
             h = s[1],
             d = (0, i.useState)(t.posts),
             p = d[0],
-            x = d[1],
-            _ = (0, i.useState)(),
-            A = _[0],
-            C = _[1],
+            j = d[1],
+            w = (0, i.useState)(),
+            C = w[0],
+            S = w[1],
             O = (0, o.useRouter)()
           return (
             (0, i.useEffect)(
               function () {
-                var t = new URL(m.Z.absolutePath(O.asPath))
+                var t = new URL(b.Z.absolutePath(O.asPath))
                 if (t.search) {
                   var n = new URLSearchParams(t.search).get('query')
                   if (n) {
-                    C(encodeURIComponent(n))
+                    S(encodeURIComponent(n))
                     var r = y.Z.pageLimit,
                       o = (e - 1) * r
-                    x(v.Z.query(n, r, o)), h(Math.ceil(v.Z.query(n).length / r))
+                    j(m.Z.query(n, r, o)), h(Math.ceil(m.Z.query(n).length / r))
                   }
                 }
               },
@@ -598,17 +599,17 @@
             (0, r.jsxs)(r.Fragment, {
               children: [
                 (0, r.jsx)(a.Z, {
-                  title: b.Z.buildPageTitle('Posts'),
-                  description: '\ud3ec\uc2a4\ud305 \ubaa9\ub85d - '.concat(e, ' \ud398\uc774\uc9c0'),
+                  title: x.Z.buildPageTitle(v.z.POSTS.TITLE),
+                  description: v.z.POSTS.DESCRIPTION(e),
                   url: ''.concat(y.Z.baseURL, '/posts/').concat(e),
                   imageURL: '/icons/icon-512x512.png',
                   keywords: p
                     .map(function (t) {
-                      return w(t.tags).concat([t.title, t.description])
+                      return A(t.tags).concat([t.title, t.description])
                     })
                     .flat(),
                 }),
-                (0, r.jsxs)('span', { className: j().totalCount, children: ['Total posts ', n] }),
+                (0, r.jsxs)('span', { className: _().totalCount, children: ['Total posts ', n] }),
                 (0, r.jsx)('h1', { children: 'Posts ' }),
                 (0, r.jsx)('form', {
                   onSubmit: function (t) {
@@ -627,7 +628,7 @@
                     return (0, r.jsx)(l.Z, { titleLevel: 2, post: t }, e)
                   }),
                 (0, r.jsx)(c.Z, { adClient: y.Z.googleAdsense.adClient, adSlot: '5391522351' }),
-                (0, r.jsx)(u.Z, { page: e, lastPage: f, query: A, baseURL: ''.concat(y.Z.baseURL, '/posts') }),
+                (0, r.jsx)(u.Z, { page: e, lastPage: f, query: C, baseURL: ''.concat(y.Z.baseURL, '/posts') }),
               ],
             })
           )
@@ -1001,7 +1002,7 @@
     },
   },
   function (t) {
-    t.O(0, [377, 774, 888, 179], function () {
+    t.O(0, [435, 774, 888, 179], function () {
       return (e = 122), t((t.s = e))
       var e
     })
