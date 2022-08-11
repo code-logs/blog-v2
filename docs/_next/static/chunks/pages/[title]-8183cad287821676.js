@@ -374,7 +374,7 @@
           )
         },
         d = n(6166),
-        h = n(1780),
+        h = n(3447),
         p = n(7192),
         y = n(5114),
         m = n.n(y),
@@ -451,8 +451,8 @@
         P = n(4111),
         w = n(9443),
         O = n(7427),
-        A = n(3494),
-        T = n.n(A)
+        T = n(3494),
+        A = n.n(T)
       function S(e, t) {
         ;(null == t || t > e.length) && (t = e.length)
         for (var n = 0, r = new Array(t); n < t; n++) r[n] = e[n]
@@ -502,36 +502,37 @@
                   keywords: N(n.tags).concat([n.title, n.description, n.category]),
                 }),
                 (0, r.jsxs)('article', {
-                  className: T().container,
+                  className: A().container,
                   children: [
-                    (0, r.jsx)('p', { className: T().publishedAt, children: (0, r.jsx)('span', { children: c }) }),
+                    (0, r.jsx)('p', { className: A().publishedAt, children: (0, r.jsx)('span', { children: c }) }),
                     (0, r.jsx)('section', {
-                      className: T().thumbnailWrapper,
+                      className: A().thumbnailWrapper,
                       children: (0, r.jsx)('img', { src: w.Z.buildImagePath(n.thumbnailName), alt: n.description }),
                     }),
                     (0, r.jsxs)('section', {
-                      children: [(0, r.jsx)('h1', { children: n.title }), (0, r.jsx)('p', { className: T().description, children: n.description })],
+                      children: [(0, r.jsx)('h1', { children: n.title }), (0, r.jsx)('p', { className: A().description, children: n.description })],
                     }),
                     (0, r.jsx)('section', { dangerouslySetInnerHTML: { __html: a } }),
                   ],
                 }),
+                (0, r.jsx)(h.Z, {}),
                 n.series &&
                   (0, r.jsxs)('section', {
-                    className: T().relatedPosting,
+                    className: A().relatedPosting,
                     children: [(0, r.jsx)('h2', { children: '\uc5f0\uad00 \ud3ec\uc2a4\ud305' }), (0, r.jsx)(b, { post: n })],
                   }),
                 !!l.length &&
                   (0, r.jsxs)('section', {
-                    className: T().categoryGroup,
+                    className: A().categoryGroup,
                     children: [(0, r.jsx)('h2', { children: '\uce74\ud14c\uace0\ub9ac \ub354\ubcf4\uae30' }), (0, r.jsx)(f, { posts: l })],
                   }),
                 !!(null === (t = n.references) || void 0 === t ? void 0 : t.length) &&
                   (0, r.jsxs)('section', {
-                    className: T().references,
+                    className: A().references,
                     children: [
                       (0, r.jsx)('h2', { children: '\ucc38\uace0' }),
                       (0, r.jsx)('ul', {
-                        className: T().references,
+                        className: A().references,
                         children: n.references.map(function (e, t) {
                           return (0,
                           r.jsx)('li', { children: (0, r.jsx)('a', { href: encodeURIComponent(e.url), target: '_blank', rel: 'noreferrer', children: e.title }) }, t)
@@ -540,13 +541,12 @@
                     ],
                   }),
                 (0, r.jsxs)('section', {
-                  className: T().utterances,
+                  className: A().utterances,
                   children: [
                     (0, r.jsx)('h2', { children: '\ub313\uae00' }),
                     (0, r.jsx)(j, { repo: 'code-logs/code-logs.github.io', theme: 'preferred-color-scheme', issueTerm: 'title', issueLabel: 'Comment' }),
                   ],
                 }),
-                (0, r.jsx)(h.Z, { adClient: _.Z.googleAdsense.adClient, adSlot: '5391522351' }),
               ],
             })
           )
@@ -575,7 +575,7 @@
     },
   },
   function (e) {
-    e.O(0, [294, 435, 774, 888, 179], function () {
+    e.O(0, [294, 439, 774, 888, 179], function () {
       return (t = 3201), e((e.s = t))
       var t
     })

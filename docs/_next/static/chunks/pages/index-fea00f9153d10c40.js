@@ -424,7 +424,7 @@
           })
         },
         l = n(6166),
-        f = n(1780),
+        f = n(3447),
         h = n(7221),
         d = n(5505),
         g = function (e) {
@@ -467,7 +467,7 @@
         x = n(8145),
         b = n(6678),
         j = n(7427),
-        _ = n(3447),
+        _ = n(858),
         w = n.n(_),
         C = !0,
         A = function (e) {
@@ -486,7 +486,7 @@
                 className: w().index,
                 children: [(0, r.jsx)(u, { categories: e.categories }), (0, r.jsx)(m, { tagsWithCount: e.tagsWithCount, limit: 20 })],
               }),
-              (0, r.jsx)(f.Z, { adClient: x.Z.googleAdsense.adClient, adSlot: '5391522351' }),
+              (0, r.jsx)(f.Z, {}),
             ],
           })
         }
@@ -522,7 +522,7 @@
     7260: function (e) {
       e.exports = { postCount: 'TitleWithCount_postCount__E9bRh' }
     },
-    3447: function (e) {
+    858: function (e) {
       e.exports = { index: 'Home_index__AH1Ds' }
     },
     1864: function (e, t, n) {
@@ -862,7 +862,7 @@
     },
   },
   function (e) {
-    e.O(0, [435, 774, 888, 179], function () {
+    e.O(0, [439, 774, 888, 179], function () {
       return (t = 5301), e((e.s = t))
       var t
     })

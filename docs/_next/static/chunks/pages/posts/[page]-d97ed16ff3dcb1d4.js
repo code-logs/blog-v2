@@ -488,14 +488,14 @@
             return C
           },
           default: function () {
-            return S
+            return O
           },
         })
       var r = n(5893),
         o = n(1163),
         i = n(7294),
         a = n(6166),
-        c = n(1780),
+        c = n(3447),
         u = n(9337),
         l = n(7221),
         s = (0, n(7026).Z)(
@@ -567,7 +567,7 @@
         )
       }
       var C = !0,
-        S = function (t) {
+        O = function (t) {
           var e = t.page,
             n = t.totalCount,
             s = (0, i.useState)(t.lastPage),
@@ -578,23 +578,23 @@
             j = d[1],
             w = (0, i.useState)(),
             C = w[0],
-            S = w[1],
-            O = (0, o.useRouter)()
+            O = w[1],
+            S = (0, o.useRouter)()
           return (
             (0, i.useEffect)(
               function () {
-                var t = new URL(b.Z.absolutePath(O.asPath))
+                var t = new URL(b.Z.absolutePath(S.asPath))
                 if (t.search) {
                   var n = new URLSearchParams(t.search).get('query')
                   if (n) {
-                    S(encodeURIComponent(n))
+                    O(encodeURIComponent(n))
                     var r = y.Z.pageLimit,
                       o = (e - 1) * r
                     j(m.Z.query(n, r, o)), h(Math.ceil(m.Z.query(n).length / r))
                   }
                 }
               },
-              [e, O.asPath]
+              [e, S.asPath]
             ),
             (0, r.jsxs)(r.Fragment, {
               children: [
@@ -627,7 +627,7 @@
                   p.map(function (t, e) {
                     return (0, r.jsx)(l.Z, { titleLevel: 2, post: t }, e)
                   }),
-                (0, r.jsx)(c.Z, { adClient: y.Z.googleAdsense.adClient, adSlot: '5391522351' }),
+                (0, r.jsx)(c.Z, {}),
                 (0, r.jsx)(u.Z, { page: e, lastPage: f, query: C, baseURL: ''.concat(y.Z.baseURL, '/posts') }),
               ],
             })
@@ -1002,7 +1002,7 @@
     },
   },
   function (t) {
-    t.O(0, [435, 774, 888, 179], function () {
+    t.O(0, [439, 774, 888, 179], function () {
       return (e = 122), t((t.s = e))
       var e
     })

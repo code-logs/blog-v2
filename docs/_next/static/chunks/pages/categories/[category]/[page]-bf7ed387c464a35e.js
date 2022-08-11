@@ -214,7 +214,7 @@
         })
       var n = r(5893),
         i = r(6166),
-        o = r(1780),
+        o = r(3447),
         a = r(9337),
         c = r(7221),
         s = r(8145),
@@ -275,7 +275,7 @@
               h.map(function (e, t) {
                 return (0, n.jsx)(c.Z, { titleLevel: 2, post: e }, t)
               }),
-            (0, n.jsx)(o.Z, { adClient: s.Z.googleAdsense.adClient, adSlot: '5391522351' }),
+            (0, n.jsx)(o.Z, {}),
             (0, n.jsx)(a.Z, { page: t, lastPage: r, baseURL: ''.concat(s.Z.baseURL, '/categories/').concat(g) }),
           ],
         })
@@ -641,7 +641,7 @@
     },
   },
   function (e) {
-    e.O(0, [435, 774, 888, 179], function () {
+    e.O(0, [439, 774, 888, 179], function () {
       return (t = 2214), e((e.s = t))
       var t
     })

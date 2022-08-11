@@ -1,6 +1,6 @@
 'use strict'
 ;(self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [435],
+  [439],
   {
     6166: function (e, t, o) {
       o.d(t, {
@@ -8,8 +8,8 @@
           return l
         },
       })
-      var a = o(5893),
-        n = o(9008),
+      var n = o(5893),
+        a = o(9008),
         r = o(8145),
         i = o(7294),
         s = function () {
@@ -32,57 +32,72 @@
             p = e.customMeta
           return (
             s(),
-            (0, a.jsxs)(n.default, {
+            (0, n.jsxs)(a.default, {
               children: [
-                (0, a.jsx)('link', { rel: 'canonical', href: l }),
-                (0, a.jsx)('link', { rel: 'apple-touch-icon', href: r.Z.appleTouchIconPath }),
-                (0, a.jsx)('link', { rel: 'manifest', href: '/manifest.json' }),
-                (0, a.jsx)('meta', { name: 'theme-color', content: r.Z.themeColor }, 'theme-color'),
-                (0, a.jsx)('meta', { property: 'og:type', content: 'website' }, 'og:type'),
-                (0, a.jsx)('meta', { property: 'og:site_name', content: r.Z.title }, 'og:site_name'),
-                (0, a.jsx)('meta', { name: 'author', content: r.Z.author }, 'author'),
-                (null === i || void 0 === i ? void 0 : i.length) && (0, a.jsx)('meta', { name: 'keyword', content: i.join(', ') }, 'keyword'),
-                (0, a.jsx)('meta', { name: 'description', content: o }, 'description'),
-                (0, a.jsx)('meta', { property: 'og:description', content: o }, 'og:description'),
-                (0, a.jsx)('meta', { property: 'og:title', content: t }, 'og:title'),
-                (0, a.jsx)('meta', { property: 'og:url', content: l }, 'og:url'),
-                (0, a.jsx)('meta', { property: 'og:image', content: c }, 'og:image'),
+                (0, n.jsx)('link', { rel: 'canonical', href: l }),
+                (0, n.jsx)('link', { rel: 'apple-touch-icon', href: r.Z.appleTouchIconPath }),
+                (0, n.jsx)('link', { rel: 'manifest', href: '/manifest.json' }),
+                (0, n.jsx)('meta', { name: 'theme-color', content: r.Z.themeColor }, 'theme-color'),
+                (0, n.jsx)('meta', { property: 'og:type', content: 'website' }, 'og:type'),
+                (0, n.jsx)('meta', { property: 'og:site_name', content: r.Z.title }, 'og:site_name'),
+                (0, n.jsx)('meta', { name: 'author', content: r.Z.author }, 'author'),
+                (null === i || void 0 === i ? void 0 : i.length) && (0, n.jsx)('meta', { name: 'keyword', content: i.join(', ') }, 'keyword'),
+                (0, n.jsx)('meta', { name: 'description', content: o }, 'description'),
+                (0, n.jsx)('meta', { property: 'og:description', content: o }, 'og:description'),
+                (0, n.jsx)('meta', { property: 'og:title', content: t }, 'og:title'),
+                (0, n.jsx)('meta', { property: 'og:url', content: l }, 'og:url'),
+                (0, n.jsx)('meta', { property: 'og:image', content: c }, 'og:image'),
                 p && p,
-                (0, a.jsx)('title', { children: t }),
+                (0, n.jsx)('title', { children: t }),
               ],
             })
           )
         }
     },
-    1780: function (e, t, o) {
-      var a = o(5893),
-        n = o(7294)
-      t.Z = function (e) {
-        return (
-          (0, n.useEffect)(function () {
-            ;(window.adsbygoogle = window.adsbygoogle || []), window.adsbygoogle.push({})
-          }, []),
-          (0, a.jsx)('ins', {
-            className: 'adsbygoogle',
-            style: { display: 'block' },
-            'data-ad-client': e.adClient,
-            'data-ad-slot': e.adSlot,
-            'data-ad-format': 'auto',
-            'data-full-width-responsive': 'true',
-            onLoad: function () {
-              return console.log('loaded')
-            },
+    3447: function (e, t, o) {
+      o.d(t, {
+        Z: function () {
+          return l
+        },
+      })
+      var n = o(5893),
+        a = o(8145),
+        r = o(7294),
+        i = function (e) {
+          return (
+            (0, r.useEffect)(function () {
+              ;(window.adsbygoogle = window.adsbygoogle || []), window.adsbygoogle.push({})
+            }, []),
+            (0, n.jsx)('ins', {
+              className: 'adsbygoogle',
+              style: { display: 'block' },
+              'data-ad-client': e.adClient,
+              'data-ad-slot': e.adSlot,
+              'data-ad-format': 'auto',
+              'data-full-width-responsive': 'true',
+              onLoad: function () {
+                return console.log('loaded')
+              },
+            })
+          )
+        },
+        s = o(3589),
+        l = function () {
+          return (0, n.jsxs)('section', {
+            children: [
+              (0, n.jsx)(i, { adClient: a.Z.googleAdsense.adClient, adSlot: '5391522351' }),
+              (0, n.jsx)(s.Z, { adfitUnitID: a.Z.kakaoAdfitUnitIDs.mainBannerID, position: 'main' }),
+            ],
           })
-        )
-      }
+        }
     },
     6678: function (e, t, o) {
       o.d(t, {
         z: function () {
-          return a
+          return n
         },
       })
-      var a = {
+      var n = {
         MAIN: {
           TITLE: 'Home',
           DESCRIPTION:
@@ -98,8 +113,8 @@
           TITLE: function (e) {
             return e
           },
-          DESCRIPTION: function (e, t, o, a) {
-            return 'Code Logs '.concat(e, ' - ').concat(t, ' | ').concat(o, ', ').concat(a.join(', '))
+          DESCRIPTION: function (e, t, o, n) {
+            return 'Code Logs '.concat(e, ' - ').concat(t, ' | ').concat(o, ', ').concat(n.join(', '))
           },
         },
         CATEGORIES: {
@@ -127,32 +142,32 @@
       }
     },
     5500: function (e, t, o) {
-      function a(e, t, o) {
+      function n(e, t, o) {
         return t in e ? Object.defineProperty(e, t, { value: o, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = o), e
       }
-      var n
+      var a
       o.d(t, {
         aA: function () {
           return r
         },
       })
       var r =
-        (a((n = {}), 'cloud', 'cloud'),
-        a(n, 'css', 'css'),
-        a(n, 'elasticsearch', 'elasticsearch'),
-        a(n, 'infrastructure', 'infrastructure'),
-        a(n, 'javascript', 'javascript'),
-        a(n, 'nodejs', 'nodejs'),
-        a(n, 'react', 'react'),
-        a(n, 'react-native', 'react native'),
-        a(n, 'roadmap-frontend', 'roadmap frontend'),
-        a(n, 'security', 'security'),
-        a(n, 'seo', 'seo'),
-        a(n, 'typescript', 'typescript'),
-        a(n, 'ui-and-ux', 'ui and ux'),
-        a(n, 'web-component', 'web component'),
-        a(n, '\uac1c\ubc1c\ud658\uacbd', '\uac1c\ubc1c\ud658\uacbd'),
-        n)
+        (n((a = {}), 'cloud', 'cloud'),
+        n(a, 'css', 'css'),
+        n(a, 'elasticsearch', 'elasticsearch'),
+        n(a, 'infrastructure', 'infrastructure'),
+        n(a, 'javascript', 'javascript'),
+        n(a, 'nodejs', 'nodejs'),
+        n(a, 'react', 'react'),
+        n(a, 'react-native', 'react native'),
+        n(a, 'roadmap-frontend', 'roadmap frontend'),
+        n(a, 'security', 'security'),
+        n(a, 'seo', 'seo'),
+        n(a, 'typescript', 'typescript'),
+        n(a, 'ui-and-ux', 'ui and ux'),
+        n(a, 'web-component', 'web component'),
+        n(a, '\uac1c\ubc1c\ud658\uacbd', '\uac1c\ubc1c\ud658\uacbd'),
+        a)
       t.ZP = [
         {
           title: '\uac80\uc0c9 \uc5d4\uc9c4 \ucd5c\uc801\ud654\ub97c \uc704\ud55c \uc124\uc815',
@@ -489,32 +504,32 @@
       ]
     },
     4111: function (e, t, o) {
-      var a = o(7294)
+      var n = o(7294)
       t.Z = function (e) {
         var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : '.',
-          o = (0, a.useState)(''),
-          n = o[0],
+          o = (0, n.useState)(''),
+          a = o[0],
           r = o[1]
         return (
-          (0, a.useEffect)(
+          (0, n.useEffect)(
             function () {
               var o = String(e.getFullYear()).slice(2),
-                a = String(e.getMonth() + 1).padStart(2, '0'),
-                n = String(e.getDate()).padStart(2, '0')
-              r([o, a, n].join(t))
+                n = String(e.getMonth() + 1).padStart(2, '0'),
+                a = String(e.getDate()).padStart(2, '0')
+              r([o, n, a].join(t))
             },
             [e, t]
           ),
-          n
+          a
         )
       }
     },
     9443: function (e, t, o) {
-      var a = o(8145)
-      function n(e, t) {
+      var n = o(8145)
+      function a(e, t) {
         for (var o = 0; o < t.length; o++) {
-          var a = t[o]
-          ;(a.enumerable = a.enumerable || !1), (a.configurable = !0), 'value' in a && (a.writable = !0), Object.defineProperty(e, a.key, a)
+          var n = t[o]
+          ;(n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n)
         }
       }
       var r = (function () {
@@ -530,7 +545,7 @@
             {
               key: 'absolutePath',
               value: function (e, t) {
-                return (e = e.replace(/^\//, '')), [t || a.Z.baseURL, e].join('/')
+                return (e = e.replace(/^\//, '')), [t || n.Z.baseURL, e].join('/')
               },
             },
             {
@@ -540,20 +555,20 @@
               },
             },
           ]),
-          (o = null) && n(t.prototype, o),
-          r && n(t, r),
+          (o = null) && a(t.prototype, o),
+          r && a(t, r),
           e
         )
       })()
       t.Z = r
     },
     8286: function (e, t, o) {
-      var a = o(1864),
-        n = o.n(a)
+      var n = o(1864),
+        a = o.n(n)
       function r(e, t) {
         for (var o = 0; o < t.length; o++) {
-          var a = t[o]
-          ;(a.enumerable = a.enumerable || !1), (a.configurable = !0), 'value' in a && (a.writable = !0), Object.defineProperty(e, a.key, a)
+          var n = t[o]
+          ;(n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n)
         }
       }
       var i = (function () {
@@ -562,10 +577,10 @@
             if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
           })(this, e)
         }
-        var t, o, a
+        var t, o, n
         return (
           (t = e),
-          (a = [
+          (n = [
             {
               key: 'normalizeTitle',
               value: function (e) {
@@ -575,7 +590,7 @@
             {
               key: 'getMarkdownFilePath',
               value: function (e) {
-                return n().join('../posts', e.category, e.fileName)
+                return a().join('../posts', e.category, e.fileName)
               },
             },
             {
@@ -586,18 +601,18 @@
             },
           ]),
           (o = null) && r(t.prototype, o),
-          a && r(t, a),
+          n && r(t, n),
           e
         )
       })()
       t.Z = i
     },
     7427: function (e, t, o) {
-      var a = o(8145)
-      function n(e, t) {
+      var n = o(8145)
+      function a(e, t) {
         for (var o = 0; o < t.length; o++) {
-          var a = t[o]
-          ;(a.enumerable = a.enumerable || !1), (a.configurable = !0), 'value' in a && (a.writable = !0), Object.defineProperty(e, a.key, a)
+          var n = t[o]
+          ;(n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n)
         }
       }
       var r = (function () {
@@ -613,12 +628,12 @@
             {
               key: 'buildPageTitle',
               value: function (e) {
-                return ''.concat(e, ' | ').concat(a.Z.title)
+                return ''.concat(e, ' | ').concat(n.Z.title)
               },
             },
           ]),
-          (o = null) && n(t.prototype, o),
-          r && n(t, r),
+          (o = null) && a(t.prototype, o),
+          r && a(t, r),
           e
         )
       })()

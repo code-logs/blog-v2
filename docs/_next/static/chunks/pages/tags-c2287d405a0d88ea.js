@@ -19,9 +19,9 @@
       var o = e(5893),
         r = e(9008),
         a = e(8145),
-        c = e(7294),
-        i = function () {
-          ;(0, c.useEffect)(function () {
+        i = e(7294),
+        c = function () {
+          ;(0, i.useEffect)(function () {
             if (document.head) {
               var n = document.createElement('script')
               ;(n.async = !0),
@@ -34,12 +34,12 @@
         s = function (n) {
           var t = n.title,
             e = n.description,
-            c = n.keywords,
+            i = n.keywords,
             s = n.url,
             u = n.imageURL,
             l = n.customMeta
           return (
-            i(),
+            c(),
             (0, o.jsxs)(r.default, {
               children: [
                 (0, o.jsx)('link', { rel: 'canonical', href: s }),
@@ -49,7 +49,7 @@
                 (0, o.jsx)('meta', { property: 'og:type', content: 'website' }, 'og:type'),
                 (0, o.jsx)('meta', { property: 'og:site_name', content: a.Z.title }, 'og:site_name'),
                 (0, o.jsx)('meta', { name: 'author', content: a.Z.author }, 'author'),
-                (null === c || void 0 === c ? void 0 : c.length) && (0, o.jsx)('meta', { name: 'keyword', content: c.join(', ') }, 'keyword'),
+                (null === i || void 0 === i ? void 0 : i.length) && (0, o.jsx)('meta', { name: 'keyword', content: i.join(', ') }, 'keyword'),
                 (0, o.jsx)('meta', { name: 'description', content: e }, 'description'),
                 (0, o.jsx)('meta', { property: 'og:description', content: e }, 'og:description'),
                 (0, o.jsx)('meta', { property: 'og:title', content: t }, 'og:title'),
@@ -62,28 +62,43 @@
           )
         }
     },
-    1780: function (n, t, e) {
+    3447: function (n, t, e) {
       'use strict'
+      e.d(t, {
+        Z: function () {
+          return s
+        },
+      })
       var o = e(5893),
-        r = e(7294)
-      t.Z = function (n) {
-        return (
-          (0, r.useEffect)(function () {
-            ;(window.adsbygoogle = window.adsbygoogle || []), window.adsbygoogle.push({})
-          }, []),
-          (0, o.jsx)('ins', {
-            className: 'adsbygoogle',
-            style: { display: 'block' },
-            'data-ad-client': n.adClient,
-            'data-ad-slot': n.adSlot,
-            'data-ad-format': 'auto',
-            'data-full-width-responsive': 'true',
-            onLoad: function () {
-              return console.log('loaded')
-            },
+        r = e(8145),
+        a = e(7294),
+        i = function (n) {
+          return (
+            (0, a.useEffect)(function () {
+              ;(window.adsbygoogle = window.adsbygoogle || []), window.adsbygoogle.push({})
+            }, []),
+            (0, o.jsx)('ins', {
+              className: 'adsbygoogle',
+              style: { display: 'block' },
+              'data-ad-client': n.adClient,
+              'data-ad-slot': n.adSlot,
+              'data-ad-format': 'auto',
+              'data-full-width-responsive': 'true',
+              onLoad: function () {
+                return console.log('loaded')
+              },
+            })
+          )
+        },
+        c = e(3589),
+        s = function () {
+          return (0, o.jsxs)('section', {
+            children: [
+              (0, o.jsx)(i, { adClient: r.Z.googleAdsense.adClient, adSlot: '5391522351' }),
+              (0, o.jsx)(c.Z, { adfitUnitID: r.Z.kakaoAdfitUnitIDs.mainBannerID, position: 'main' }),
+            ],
           })
-        )
-      }
+        }
     },
     7594: function (n, t, e) {
       'use strict'
@@ -95,12 +110,12 @@
       var o = e(5893),
         r = e(1664),
         a = e(2002),
-        c = e.n(a),
-        i = function (n) {
+        i = e.n(a),
+        c = function (n) {
           return (0, o.jsx)(r.default, {
             href: '/posts/1?query='.concat(encodeURIComponent(n.tag)),
             children: (0, o.jsx)('a', {
-              children: (0, o.jsxs)('span', { className: 'clickable '.concat(c().tag), children: [n.tag, ' ', n.count && n.count] }),
+              children: (0, o.jsxs)('span', { className: 'clickable '.concat(i().tag), children: [n.tag, ' ', n.count && n.count] }),
             }),
           })
         },
@@ -110,7 +125,7 @@
           return (0, o.jsx)('ul', {
             className: u().tags,
             children: n.tags.map(function (n, t) {
-              return (0, o.jsx)('li', { children: 'string' === typeof n ? (0, o.jsx)(i, { tag: n }) : (0, o.jsx)(i, { tag: n.tag, count: n.count }) }, t)
+              return (0, o.jsx)('li', { children: 'string' === typeof n ? (0, o.jsx)(c, { tag: n }) : (0, o.jsx)(c, { tag: n.tag, count: n.count }) }, t)
             }),
           })
         }
@@ -197,10 +212,10 @@
         })
       var o = e(5893),
         r = e(6166),
-        a = e(1780),
-        c = e(7594),
-        i = e(6545),
-        s = e.n(i),
+        a = e(3447),
+        i = e(7594),
+        c = e(6545),
+        s = e.n(c),
         u = function (n) {
           return (0, o.jsx)('ol', {
             className: s().container,
@@ -213,7 +228,7 @@
                       return n.tagsByIndexes[t].length
                     })
                     .map(function (t, e) {
-                      return (0, o.jsxs)('li', { children: [(0, o.jsx)('h2', { id: t, children: t }), (0, o.jsx)(c.Z, { tags: n.tagsByIndexes[t] })] }, e)
+                      return (0, o.jsxs)('li', { children: [(0, o.jsx)('h2', { id: t, children: t }), (0, o.jsx)(i.Z, { tags: n.tagsByIndexes[t] })] }, e)
                     }),
                 },
                 e
@@ -257,31 +272,31 @@
                   return String.fromCharCode(t + 65)
                 }),
             ],
-            c = t.reduce(function (n, t) {
+            i = t.reduce(function (n, t) {
               var e = n.findIndex(function (n) {
                 return n.tag === t
               })
               return e >= 0 ? n[e].count++ : n.push({ tag: t, count: 1 }), n
             }, []),
-            i = e.flat(),
-            s = i.reduce(function (n, t) {
+            c = e.flat(),
+            s = c.reduce(function (n, t) {
               return (n[t] = []), n
             }, {})
-          c.forEach(function (n) {
-            for (var t = n.tag.toUpperCase().charCodeAt(0), e = 0; e < i.length; e++) {
-              var o = i[e],
-                r = i[e + 1],
+          i.forEach(function (n) {
+            for (var t = n.tag.toUpperCase().charCodeAt(0), e = 0; e < c.length; e++) {
+              var o = c[e],
+                r = c[e + 1],
                 a = o.toUpperCase().charCodeAt(0),
-                c = void 0
-              if ((r && (c = r.toUpperCase().charCodeAt(0)), void 0 !== c)) {
-                if (t >= a && t < c) {
+                i = void 0
+              if ((r && (i = r.toUpperCase().charCodeAt(0)), void 0 !== i)) {
+                if (t >= a && t < i) {
                   s[o].push(n)
                   break
                 }
               } else s[o].push(n)
             }
           })
-          var l = i.reduce(function (n, t) {
+          var l = c.reduce(function (n, t) {
             return s[t].length && n.push(t), n
           }, [])
           return (0, o.jsxs)('section', {
@@ -295,7 +310,7 @@
               (0, o.jsx)(p.Z, { level: 1, title: 'Tags', count: t.length }),
               (0, o.jsx)(g, { activatedIndexes: l, indexGroups: e }),
               (0, o.jsx)(u, { indexGroups: e, tagsByIndexes: s }),
-              (0, o.jsx)(a.Z, { adClient: h.Z.googleAdsense.adClient, adSlot: '5391522351' }),
+              (0, o.jsx)(a.Z, {}),
             ],
           })
         }
