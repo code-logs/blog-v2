@@ -1,4 +1,6 @@
 import GoogleAdsenseBanner from '../../components/google-adsense/GoogleAdsenseBanner'
+import KakaoAdfitBanner from '../../components/kakao-adfit/KakaoAdfitBanner'
+import MainAdsBanner from '../../components/main-ads-banner/MainAdsBanner'
 import RaiseSection from '../../components/raise-section/RaiseSection'
 import blogConfig from '../../config/blog.config'
 import licenses from '../../public/licenses.json'
@@ -28,7 +30,7 @@ const Licenses = () => {
         })}
       </RaiseSection>
 
-      <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5391522351" />
+      <MainAdsBanner />
     </>
   )
 }

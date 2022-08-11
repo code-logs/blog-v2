@@ -117,6 +117,9 @@ aside {
   margin-top: var(--header-height);
   margin-bottom: var(--footer-height);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 
   > ins {
     position: relative;

@@ -1,5 +1,5 @@
 import CommonMeta from '../components/common-meta/CommonMeta'
-import GoogleAdsenseBanner from '../components/google-adsense/GoogleAdsenseBanner'
+import MainAdsBanner from '../components/main-ads-banner/MainAdsBanner'
 import blogConfig from '../config/blog.config'
 import { META_CONTENTS } from '../config/meta-contents'
 import TitleUtil from '../utils/TitleUtil'
@@ -15,9 +15,9 @@ const NotFound = () => {
       />
       <section>
         <h1>Page Not Found</h1>
-
-        <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5391522351" />
       </section>
+      
+      <MainAdsBanner />
     </>
   )
 }

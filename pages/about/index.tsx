@@ -1,5 +1,5 @@
 import CommonMeta from '../../components/common-meta/CommonMeta'
-import GoogleAdsenseBanner from '../../components/google-adsense/GoogleAdsenseBanner'
+import MainAdsBanner from '../../components/main-ads-banner/MainAdsBanner'
 import RaiseSection from '../../components/raise-section/RaiseSection'
 import blogConfig from '../../config/blog.config'
 import { META_CONTENTS } from '../../config/meta-contents'
@@ -39,7 +39,7 @@ const About = () => {
         </RaiseSection>
       </article>
 
-      <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5391522351" />
+      <MainAdsBanner />
     </>
   )
 }

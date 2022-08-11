@@ -3,7 +3,7 @@ import { NextPage } from 'next'
 import { useEffect } from 'react'
 import CategoryPostGroup from '../components/category-post-group/CategoryPostGroup'
 import CommonMeta from '../components/common-meta/CommonMeta'
-import GoogleAdsenseBanner from '../components/google-adsense/GoogleAdsenseBanner'
+import MainAdsBanner from '../components/main-ads-banner/MainAdsBanner'
 import PostSeriesLink from '../components/post-series-link/PostSeriesLink'
 import Utterances from '../components/utterrances/Utterrances'
 import blogConfig from '../config/blog.config'
@@ -76,6 +76,8 @@ const PostDetail: NextPage<PostDetailPageProps> = ({ post, content, postsByCateg
         <section dangerouslySetInnerHTML={{ __html: content }}></section>
       </article>
 
+      <MainAdsBanner />
+
       {post.series && (
         <section className={styles.relatedPosting}>
           <h2>연관 포스팅</h2>
@@ -109,8 +111,6 @@ const PostDetail: NextPage<PostDetailPageProps> = ({ post, content, postsByCateg
         <h2>댓글</h2>
         <Utterances repo={'code-logs/code-logs.github.io'} theme={'preferred-color-scheme'} issueTerm={'title'} issueLabel={'Comment'} />
       </section>
-
-      <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5391522351" />
     </>
   )
 }

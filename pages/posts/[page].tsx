@@ -2,7 +2,7 @@ import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import CommonMeta from '../../components/common-meta/CommonMeta'
-import GoogleAdsenseBanner from '../../components/google-adsense/GoogleAdsenseBanner'
+import MainAdsBanner from '../../components/main-ads-banner/MainAdsBanner'
 import Paginator from '../../components/paginator/Paginator'
 import PostCard from '../../components/post-card/PostCard'
 import SearchInput from '../../components/search-input/SearchInput'
@@ -15,12 +15,11 @@ import TitleUtil from '../../utils/TitleUtil'
 import styles from './Posts.module.scss'
 
 interface PostsProps {
-  page: number,
-  lastPage: number,
+  page: number
+  lastPage: number
   posts: Post[]
   totalCount: number
 }
-
 
 export async function getStaticPaths() {
   const posts = postsDatabase.find()
@@ -47,7 +46,7 @@ export async function getStaticProps(context: { params: { page: string } }) {
       page,
       lastPage,
       posts,
-      totalCount
+      totalCount,
     },
   }
 }
@@ -107,8 +106,7 @@ const Posts: NextPage<PostsProps> = (props) => {
 
       {Boolean(posts?.length) && posts.map((post, idx) => <PostCard titleLevel={2} key={idx} post={post} />)}
 
-
-      <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5391522351" />
+      <MainAdsBanner />
 
       <Paginator page={page} lastPage={lastPage} query={query} baseURL={`${blogConfig.baseURL}/posts`} />
     </>

@@ -1,11 +1,11 @@
 import { NextPage } from 'next'
 import CommonMeta from '../../../components/common-meta/CommonMeta'
-import GoogleAdsenseBanner from '../../../components/google-adsense/GoogleAdsenseBanner'
+import MainAdsBanner from '../../../components/main-ads-banner/MainAdsBanner'
 import Paginator from '../../../components/paginator/Paginator'
 import PostCard from '../../../components/post-card/PostCard'
 import blogConfig from '../../../config/blog.config'
 import { META_CONTENTS } from '../../../config/meta-contents'
-import { Post, CATEGORIES } from '../../../config/posts.config'
+import { CATEGORIES, Post } from '../../../config/posts.config'
 import postsDatabase from '../../../database/post-database'
 import TitleUtil from '../../../utils/TitleUtil'
 import styles from '../../Categories.module.scss'
@@ -75,7 +75,7 @@ const Category: NextPage<{
 
       {Boolean(posts?.length) && posts.map((post, idx) => <PostCard titleLevel={2} key={idx} post={post} />)}
 
-      <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.adClient} adSlot="5391522351" />
+      <MainAdsBanner />
 
       <Paginator page={page} lastPage={lastPage} baseURL={`${blogConfig.baseURL}/categories/${category}`} />
     </>

@@ -8,7 +8,8 @@ interface BlogConfig {
   appleTouchIconPath: string
   kakaoAdfitUnitIDs: {
     mainBannerID: string
-    asideBannerID: string
+    asideBannerID1: string
+    asideBannerID2: string
   },
   googleAdsense: {
     adClient: string
@@ -25,7 +26,8 @@ const blogConfig: BlogConfig = {
   appleTouchIconPath: '/icons/icon-192x-192.png',
   kakaoAdfitUnitIDs: {
     mainBannerID: 'DAN-77VcMo8qRv55JIat',
-    asideBannerID: 'DAN-sspT2WysGuBsayRb',
+    asideBannerID1: 'DAN-sspT2WysGuBsayRb',
+    asideBannerID2: 'DAN-36TKfTwSMmZWVg3r'
   },
   googleAdsense: {
     adClient: 'ca-pub-7134579063537339'
