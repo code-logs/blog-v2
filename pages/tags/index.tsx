@@ -1,6 +1,6 @@
 import { NextPage } from 'next'
 import CommonMeta from '../../components/common-meta/CommonMeta'
-import MainAdsBanner from '../../components/main-ads-banner/MainAdsBanner'
+import MainAdsBanner from '../../components/ads-banner/MainAdsBanner'
 import { TagWithCount } from '../../components/tag-indexer/TagIndexer'
 import TagList, { TagsByIndexes } from '../../components/tag-list/TagList'
 import TagNavigator from '../../components/tag-navigator/TagNavigator'

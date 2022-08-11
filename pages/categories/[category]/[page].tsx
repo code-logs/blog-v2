@@ -1,6 +1,6 @@
 import { NextPage } from 'next'
 import CommonMeta from '../../../components/common-meta/CommonMeta'
-import MainAdsBanner from '../../../components/main-ads-banner/MainAdsBanner'
+import MainAdsBanner from '../../../components/ads-banner/MainAdsBanner'
 import Paginator from '../../../components/paginator/Paginator'
 import PostCard from '../../../components/post-card/PostCard'
 import blogConfig from '../../../config/blog.config'
