@@ -2241,7 +2241,7 @@
       ;(window.__NEXT_P = window.__NEXT_P || []).push([
         '/_app',
         function () {
-          return r(8182)
+          return r(1216)
         },
       ])
     },
@@ -2276,7 +2276,7 @@
         themeColor: '#fff',
         appleTouchIconPath: '/icons/icon-192x-192.png',
         kakaoAdfitUnitIDs: { mainBannerID: 'DAN-77VcMo8qRv55JIat', asideBannerID1: 'DAN-sspT2WysGuBsayRb', asideBannerID2: 'DAN-36TKfTwSMmZWVg3r' },
-        googleAdsense: { mainBannerAdClient: 'ca-pub-7134579063537339', asideBannerAdClient: 'ca-pub-7134579063537339' },
+        googleAdsense: { adClient: 'ca-pub-7134579063537339', mainBannerAdSlot: '5391522351', asideBannerAdSlot: '8825787758' },
       }
     },
     8418: function (e, t, r) {
@@ -2554,30 +2554,42 @@
       var c = new Map(),
         l = []
     },
-    8182: function (e, t, r) {
+    1216: function (e, t, r) {
       'use strict'
       r.r(t),
         r.d(t, {
           default: function () {
-            return $
+            return M
           },
         })
       var n = r(5893),
-        o = (r(5112), r(1962)),
-        a = r.n(o),
-        i = function (e) {
+        o = (r(5112), r(8145)),
+        a = r(1780),
+        i = r(5360),
+        s = r.n(i),
+        c = function () {
+          return (0, n.jsxs)('section', {
+            className: s().container,
+            children: [
+              (0, n.jsx)(a.Z, { adClient: o.Z.googleAdsense.adClient, adSlot: o.Z.googleAdsense.asideBannerAdSlot }),
+              (0, n.jsx)(a.Z, { adClient: o.Z.googleAdsense.adClient, adSlot: o.Z.googleAdsense.asideBannerAdSlot }),
+            ],
+          })
+        },
+        l = r(1962),
+        u = r.n(l),
+        f = function (e) {
           return (0, n.jsx)('footer', {
-            className: a().footer,
+            className: u().footer,
             children: (0, n.jsx)('p', { children: e.message ? e.message : '\u24d2 2021. '.concat(e.author, '  all rights reserved.') }),
           })
         },
-        s = r(1780),
-        c = r(4298),
-        l = function (e) {
+        p = r(4298),
+        d = function (e) {
           return (0, n.jsxs)(n.Fragment, {
             children: [
-              (0, n.jsx)(c.default, { src: 'https://www.googletagmanager.com/gtag/js?id='.concat(e.gaID), strategy: 'lazyOnload' }),
-              (0, n.jsx)(c.default, {
+              (0, n.jsx)(p.default, { src: 'https://www.googletagmanager.com/gtag/js?id='.concat(e.gaID), strategy: 'lazyOnload' }),
+              (0, n.jsx)(p.default, {
                 id: 'gtag-script',
                 children:
                   "\n          // Load Gtag script\n          window.dataLayer = window.dataLayer || [];\n          function gtag(){dataLayer.push(arguments);}\n          gtag('js', new Date());\n\n          gtag('config', '".concat(
@@ -2588,60 +2600,60 @@
             ],
           })
         },
-        u = r(1163),
-        f = r(1664),
-        p = r(2954),
-        d = r.n(p),
-        h = function (e) {
-          return (0, n.jsx)(f.default, {
+        h = r(1163),
+        m = r(1664),
+        g = r(2954),
+        y = r.n(g),
+        b = function (e) {
+          return (0, n.jsx)(m.default, {
             href: e.href,
-            children: (0, n.jsx)('a', { className: e.matched ? ''.concat(d().matched, ' ').concat(d().anchor) : d().anchor, children: e.display }),
+            children: (0, n.jsx)('a', { className: e.matched ? ''.concat(y().matched, ' ').concat(y().anchor) : y().anchor, children: e.display }),
           })
         },
-        m = r(3702),
-        g = r.n(m),
-        y = function (e) {
+        v = r(3702),
+        x = r.n(v),
+        k = function (e) {
           var t = e.menus,
-            r = (0, u.useRouter)()
+            r = (0, h.useRouter)()
           return (0, n.jsx)('nav', {
-            className: g().navBar,
+            className: x().navBar,
             children: (0, n.jsx)('ul', {
               children: t.map(function (e, t) {
                 var o = e.display,
                   a = e.route
                 return (0,
-                n.jsx)('li', { className: 'clickable', children: (0, n.jsx)(h, { href: a, display: o, matched: r.pathname.split('/')[1] === a.split('/')[1] }) }, t)
+                n.jsx)('li', { className: 'clickable', children: (0, n.jsx)(b, { href: a, display: o, matched: r.pathname.split('/')[1] === a.split('/')[1] }) }, t)
               }),
             }),
           })
         },
-        b = r(663),
-        v = r.n(b),
-        x = function (e) {
+        w = r(663),
+        A = r.n(w),
+        S = function (e) {
           var t = e.title,
             r = e.menus,
             o = e.socialIcons
           return (0, n.jsxs)('header', {
-            className: v().header,
+            className: A().header,
             children: [
-              (0, n.jsx)('span', { className: v().title, children: t }),
+              (0, n.jsx)('span', { className: A().title, children: t }),
               (0, n.jsx)('ul', {
-                className: v().socialIcons,
+                className: A().socialIcons,
                 children: o.map(function (e, t) {
                   return (0,
                   n.jsx)('li', { children: (0, n.jsx)('a', { href: e.href, target: '_blank', rel: 'noreferrer', 'aria-label': e.label, children: e.icon }) }, t)
                 }),
               }),
-              (0, n.jsx)(y, { menus: r }),
+              (0, n.jsx)(k, { menus: r }),
             ],
           })
         },
-        k = function () {
-          return (0, n.jsx)(c.default, { async: !0, src: '//t1.daumcdn.net/kas/static/ba.min.js' })
+        O = function () {
+          return (0, n.jsx)(p.default, { async: !0, src: '//t1.daumcdn.net/kas/static/ba.min.js' })
         },
-        w = function (e) {
+        j = function (e) {
           var t = e.serviceWorkerPath || '/service-worker.js'
-          return (0, n.jsx)(c.default, {
+          return (0, n.jsx)(p.default, {
             id: 'service-worker-script',
             strategy: 'lazyOnload',
             children: "// Load service-worker\n        if ('serviceWorker' in navigator) {\n            navigator.serviceWorker.register('".concat(
@@ -2650,14 +2662,13 @@
             ),
           })
         },
-        A = r(8145),
-        S = { id: 'G-1V105VZWBB' },
-        O = [
+        C = { id: 'G-1V105VZWBB' },
+        _ = [
           { display: 'Home', route: '/' },
           { display: 'Posts', route: '/posts/1' },
           { display: 'About', route: '/about' },
         ],
-        j =
+        P =
           (r(7294),
           (0, r(7026).Z)(
             (0, n.jsx)('path', {
@@ -2665,12 +2676,12 @@
             }),
             'GitHub'
           )),
-        C = [{ href: 'https://github.com/possible819', icon: (0, n.jsx)(j, {}), label: 'My Github' }]
+        $ = [{ href: 'https://github.com/possible819', icon: (0, n.jsx)(P, {}), label: 'My Github' }]
       r(4831), r(4881)
-      function _(e, t, r) {
+      function R(e, t, r) {
         return t in e ? Object.defineProperty(e, t, { value: r, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = r), e
       }
-      function P(e) {
+      function T(e) {
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r)
@@ -2681,32 +2692,29 @@
               })
             )),
             n.forEach(function (t) {
-              _(e, t, r[t])
+              R(e, t, r[t])
             })
         }
         return e
       }
-      var $ = function (e) {
+      var M = function (e) {
         var t = e.Component,
           r = e.pageProps
         return (0, n.jsxs)(n.Fragment, {
           children: [
-            (0, n.jsx)(l, { gaID: S.id }),
-            (0, n.jsx)(k, {}),
-            (0, n.jsx)(w, {}),
-            (0, n.jsx)(x, { title: A.Z.title, socialIcons: C, menus: O }),
-            (0, n.jsx)('main', { children: (0, n.jsx)(t, P({}, r)) }),
-            (0, n.jsxs)('aside', {
-              children: [
-                (0, n.jsx)(s.Z, { adClient: A.Z.googleAdsense.mainBannerAdClient, adSlot: '8825787758' }),
-                (0, n.jsx)(s.Z, { adClient: A.Z.googleAdsense.mainBannerAdClient, adSlot: '8825787758' }),
-                (0, n.jsx)(s.Z, { adClient: A.Z.googleAdsense.mainBannerAdClient, adSlot: '8825787758' }),
-              ],
-            }),
-            (0, n.jsx)(i, { author: A.Z.author }),
+            (0, n.jsx)(d, { gaID: C.id }),
+            (0, n.jsx)(O, {}),
+            (0, n.jsx)(j, {}),
+            (0, n.jsx)(S, { title: o.Z.title, socialIcons: $, menus: _ }),
+            (0, n.jsx)('main', { children: (0, n.jsx)(t, T({}, r)) }),
+            (0, n.jsx)('aside', { children: (0, n.jsx)(c, {}) }),
+            (0, n.jsx)(f, { author: o.Z.author }),
           ],
         })
       }
+    },
+    5360: function (e) {
+      e.exports = { container: 'AsideAdsBanner_container__gqKsN' }
     },
     1962: function (e) {
       e.exports = { footer: 'Footer_footer__GLL0J' }

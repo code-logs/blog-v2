@@ -1,23 +1,31 @@
 'use strict'
 ;(self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [137],
+  [117],
   {
-    6166: function (e, t, n) {
-      n.d(t, {
+    4786: function (e, t, o) {
+      var n = o(5893),
+        a = o(8145),
+        r = o(1780)
+      t.Z = function () {
+        return (0, n.jsx)('section', { children: (0, n.jsx)(r.Z, { adClient: a.Z.googleAdsense.adClient, adSlot: a.Z.googleAdsense.mainBannerAdSlot }) })
+      }
+    },
+    6166: function (e, t, o) {
+      o.d(t, {
         Z: function () {
           return l
         },
       })
-      var o = n(5893),
-        a = n(9008),
-        r = n(8145),
-        i = n(7294),
+      var n = o(5893),
+        a = o(9008),
+        r = o(8145),
+        i = o(7294),
         s = function () {
           ;(0, i.useEffect)(function () {
             if (document.head) {
               var e = document.createElement('script')
               ;(e.async = !0),
-                (e.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='.concat(r.Z.googleAdsense.mainBannerAdClient)),
+                (e.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='.concat(r.Z.googleAdsense.mainBannerAdSlot)),
                 (e.crossOrigin = 'anonymous'),
                 document.head.appendChild(e)
             }
@@ -25,50 +33,42 @@
         },
         l = function (e) {
           var t = e.title,
-            n = e.description,
+            o = e.description,
             i = e.keywords,
             l = e.url,
             c = e.imageURL,
             p = e.customMeta
           return (
             s(),
-            (0, o.jsxs)(a.default, {
+            (0, n.jsxs)(a.default, {
               children: [
-                (0, o.jsx)('link', { rel: 'canonical', href: l }),
-                (0, o.jsx)('link', { rel: 'apple-touch-icon', href: r.Z.appleTouchIconPath }),
-                (0, o.jsx)('link', { rel: 'manifest', href: '/manifest.json' }),
-                (0, o.jsx)('meta', { name: 'theme-color', content: r.Z.themeColor }, 'theme-color'),
-                (0, o.jsx)('meta', { property: 'og:type', content: 'website' }, 'og:type'),
-                (0, o.jsx)('meta', { property: 'og:site_name', content: r.Z.title }, 'og:site_name'),
-                (0, o.jsx)('meta', { name: 'author', content: r.Z.author }, 'author'),
-                (null === i || void 0 === i ? void 0 : i.length) && (0, o.jsx)('meta', { name: 'keyword', content: i.join(', ') }, 'keyword'),
-                (0, o.jsx)('meta', { name: 'description', content: n }, 'description'),
-                (0, o.jsx)('meta', { property: 'og:description', content: n }, 'og:description'),
-                (0, o.jsx)('meta', { property: 'og:title', content: t }, 'og:title'),
-                (0, o.jsx)('meta', { property: 'og:url', content: l }, 'og:url'),
-                (0, o.jsx)('meta', { property: 'og:image', content: c }, 'og:image'),
+                (0, n.jsx)('link', { rel: 'canonical', href: l }),
+                (0, n.jsx)('link', { rel: 'apple-touch-icon', href: r.Z.appleTouchIconPath }),
+                (0, n.jsx)('link', { rel: 'manifest', href: '/manifest.json' }),
+                (0, n.jsx)('meta', { name: 'theme-color', content: r.Z.themeColor }, 'theme-color'),
+                (0, n.jsx)('meta', { property: 'og:type', content: 'website' }, 'og:type'),
+                (0, n.jsx)('meta', { property: 'og:site_name', content: r.Z.title }, 'og:site_name'),
+                (0, n.jsx)('meta', { name: 'author', content: r.Z.author }, 'author'),
+                (null === i || void 0 === i ? void 0 : i.length) && (0, n.jsx)('meta', { name: 'keyword', content: i.join(', ') }, 'keyword'),
+                (0, n.jsx)('meta', { name: 'description', content: o }, 'description'),
+                (0, n.jsx)('meta', { property: 'og:description', content: o }, 'og:description'),
+                (0, n.jsx)('meta', { property: 'og:title', content: t }, 'og:title'),
+                (0, n.jsx)('meta', { property: 'og:url', content: l }, 'og:url'),
+                (0, n.jsx)('meta', { property: 'og:image', content: c }, 'og:image'),
                 p && p,
-                (0, o.jsx)('title', { children: t }),
+                (0, n.jsx)('title', { children: t }),
               ],
             })
           )
         }
     },
-    2429: function (e, t, n) {
-      var o = n(5893),
-        a = n(8145),
-        r = n(1780)
-      t.Z = function () {
-        return (0, o.jsx)('section', { children: (0, o.jsx)(r.Z, { adClient: a.Z.googleAdsense.mainBannerAdClient, adSlot: '5391522351' }) })
-      }
-    },
-    6678: function (e, t, n) {
-      n.d(t, {
+    6678: function (e, t, o) {
+      o.d(t, {
         z: function () {
-          return o
+          return n
         },
       })
-      var o = {
+      var n = {
         MAIN: {
           TITLE: 'Home',
           DESCRIPTION:
@@ -84,8 +84,8 @@
           TITLE: function (e) {
             return e
           },
-          DESCRIPTION: function (e, t, n, o) {
-            return 'Code Logs '.concat(e, ' - ').concat(t, ' | ').concat(n, ', ').concat(o.join(', '))
+          DESCRIPTION: function (e, t, o, n) {
+            return 'Code Logs '.concat(e, ' - ').concat(t, ' | ').concat(o, ', ').concat(n.join(', '))
           },
         },
         CATEGORIES: {
@@ -112,32 +112,32 @@
         },
       }
     },
-    5500: function (e, t, n) {
-      function o(e, t, n) {
-        return t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n), e
+    5500: function (e, t, o) {
+      function n(e, t, o) {
+        return t in e ? Object.defineProperty(e, t, { value: o, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = o), e
       }
       var a
-      n.d(t, {
+      o.d(t, {
         aA: function () {
           return r
         },
       })
       var r =
-        (o((a = {}), 'cloud', 'cloud'),
-        o(a, 'css', 'css'),
-        o(a, 'elasticsearch', 'elasticsearch'),
-        o(a, 'infrastructure', 'infrastructure'),
-        o(a, 'javascript', 'javascript'),
-        o(a, 'nodejs', 'nodejs'),
-        o(a, 'react', 'react'),
-        o(a, 'react-native', 'react native'),
-        o(a, 'roadmap-frontend', 'roadmap frontend'),
-        o(a, 'security', 'security'),
-        o(a, 'seo', 'seo'),
-        o(a, 'typescript', 'typescript'),
-        o(a, 'ui-and-ux', 'ui and ux'),
-        o(a, 'web-component', 'web component'),
-        o(a, '\uac1c\ubc1c\ud658\uacbd', '\uac1c\ubc1c\ud658\uacbd'),
+        (n((a = {}), 'cloud', 'cloud'),
+        n(a, 'css', 'css'),
+        n(a, 'elasticsearch', 'elasticsearch'),
+        n(a, 'infrastructure', 'infrastructure'),
+        n(a, 'javascript', 'javascript'),
+        n(a, 'nodejs', 'nodejs'),
+        n(a, 'react', 'react'),
+        n(a, 'react-native', 'react native'),
+        n(a, 'roadmap-frontend', 'roadmap frontend'),
+        n(a, 'security', 'security'),
+        n(a, 'seo', 'seo'),
+        n(a, 'typescript', 'typescript'),
+        n(a, 'ui-and-ux', 'ui and ux'),
+        n(a, 'web-component', 'web component'),
+        n(a, '\uac1c\ubc1c\ud658\uacbd', '\uac1c\ubc1c\ud658\uacbd'),
         a)
       t.ZP = [
         {
@@ -474,20 +474,20 @@
         },
       ]
     },
-    4111: function (e, t, n) {
-      var o = n(7294)
+    4111: function (e, t, o) {
+      var n = o(7294)
       t.Z = function (e) {
         var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : '.',
-          n = (0, o.useState)(''),
-          a = n[0],
-          r = n[1]
+          o = (0, n.useState)(''),
+          a = o[0],
+          r = o[1]
         return (
-          (0, o.useEffect)(
+          (0, n.useEffect)(
             function () {
-              var n = String(e.getFullYear()).slice(2),
-                o = String(e.getMonth() + 1).padStart(2, '0'),
+              var o = String(e.getFullYear()).slice(2),
+                n = String(e.getMonth() + 1).padStart(2, '0'),
                 a = String(e.getDate()).padStart(2, '0')
-              r([n, o, a].join(t))
+              r([o, n, a].join(t))
             },
             [e, t]
           ),
@@ -495,12 +495,12 @@
         )
       }
     },
-    9443: function (e, t, n) {
-      var o = n(8145)
+    9443: function (e, t, o) {
+      var n = o(8145)
       function a(e, t) {
-        for (var n = 0; n < t.length; n++) {
-          var o = t[n]
-          ;(o.enumerable = o.enumerable || !1), (o.configurable = !0), 'value' in o && (o.writable = !0), Object.defineProperty(e, o.key, o)
+        for (var o = 0; o < t.length; o++) {
+          var n = t[o]
+          ;(n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n)
         }
       }
       var r = (function () {
@@ -509,14 +509,14 @@
             if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
           })(this, e)
         }
-        var t, n, r
+        var t, o, r
         return (
           (t = e),
           (r = [
             {
               key: 'absolutePath',
               value: function (e, t) {
-                return (e = e.replace(/^\//, '')), [t || o.Z.baseURL, e].join('/')
+                return (e = e.replace(/^\//, '')), [t || n.Z.baseURL, e].join('/')
               },
             },
             {
@@ -526,20 +526,20 @@
               },
             },
           ]),
-          (n = null) && a(t.prototype, n),
+          (o = null) && a(t.prototype, o),
           r && a(t, r),
           e
         )
       })()
       t.Z = r
     },
-    8286: function (e, t, n) {
-      var o = n(1864),
-        a = n.n(o)
+    8286: function (e, t, o) {
+      var n = o(1864),
+        a = o.n(n)
       function r(e, t) {
-        for (var n = 0; n < t.length; n++) {
-          var o = t[n]
-          ;(o.enumerable = o.enumerable || !1), (o.configurable = !0), 'value' in o && (o.writable = !0), Object.defineProperty(e, o.key, o)
+        for (var o = 0; o < t.length; o++) {
+          var n = t[o]
+          ;(n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n)
         }
       }
       var i = (function () {
@@ -548,10 +548,10 @@
             if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
           })(this, e)
         }
-        var t, n, o
+        var t, o, n
         return (
           (t = e),
-          (o = [
+          (n = [
             {
               key: 'normalizeTitle',
               value: function (e) {
@@ -571,19 +571,19 @@
               },
             },
           ]),
-          (n = null) && r(t.prototype, n),
-          o && r(t, o),
+          (o = null) && r(t.prototype, o),
+          n && r(t, n),
           e
         )
       })()
       t.Z = i
     },
-    7427: function (e, t, n) {
-      var o = n(8145)
+    7427: function (e, t, o) {
+      var n = o(8145)
       function a(e, t) {
-        for (var n = 0; n < t.length; n++) {
-          var o = t[n]
-          ;(o.enumerable = o.enumerable || !1), (o.configurable = !0), 'value' in o && (o.writable = !0), Object.defineProperty(e, o.key, o)
+        for (var o = 0; o < t.length; o++) {
+          var n = t[o]
+          ;(n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n)
         }
       }
       var r = (function () {
@@ -592,18 +592,18 @@
             if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
           })(this, e)
         }
-        var t, n, r
+        var t, o, r
         return (
           (t = e),
           (r = [
             {
               key: 'buildPageTitle',
               value: function (e) {
-                return ''.concat(e, ' | ').concat(o.Z.title)
+                return ''.concat(e, ' | ').concat(n.Z.title)
               },
             },
           ]),
-          (n = null) && a(t.prototype, n),
+          (o = null) && a(t.prototype, o),
           r && a(t, r),
           e
         )
