@@ -16,6 +16,12 @@ interface BlogConfig {
     mainBannerAdSlot: string
     asideBannerAdSlot: string
   }
+  googleAnalytics: {
+    id: string
+  },
+  naverAnalytics: {
+    id: string
+  }
 }
 
 const blogConfig: BlogConfig = {
@@ -36,6 +42,12 @@ const blogConfig: BlogConfig = {
     mainBannerAdSlot: '5391522351',
     asideBannerAdSlot: '8825787758',
   },
+  googleAnalytics: {
+    id: process.env.NEXT_PUBLIC_GA_ID || ''
+  },
+  naverAnalytics: {
+    id: process.env.NEXT_PUBLIC_NAVER_ANALYTICS_ID || ''
+  }
 }
 
 export default blogConfig
