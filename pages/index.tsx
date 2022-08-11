@@ -14,7 +14,7 @@ import styles from './Home.module.scss'
 export async function getStaticProps() {
   const posts = postsDatabase.find()
 
-  const recentPosts = postsDatabase.find(5)
+  const recentPosts = postsDatabase.find(blogConfig.recentPostsLimit)
   const categories = Array.from(new Set(posts.map((post) => post.category))).sort()
 
   const tags = Array.from(new Set(posts.map((post) => post.tags).flat()))

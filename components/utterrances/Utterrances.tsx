@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import styles from './Utterrances.module.scss'
 
 type UtterancesIssueTerms = 'pathname' | 'url' | 'title' | 'og:title'
 
@@ -41,7 +42,7 @@ const Utterances = (props: UtterancesProps): JSX.Element => {
     containerRef.current.append(utterrances)
   }, [issueLabel, issueTerm, repo, theme])
 
-  return <div ref={containerRef}></div>
+  return <div className={styles.utteranceContainer} ref={containerRef}></div>
 }
 
 export default Utterances
