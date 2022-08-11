@@ -18,14 +18,14 @@
       })
       var o = e(5893),
         r = e(9008),
-        a = e(8145),
-        c = e(7294),
+        c = e(8145),
+        a = e(7294),
         i = function () {
-          ;(0, c.useEffect)(function () {
+          ;(0, a.useEffect)(function () {
             if (document.head) {
               var n = document.createElement('script')
               ;(n.async = !0),
-                (n.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='.concat(a.Z.googleAdsense.adClient)),
+                (n.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='.concat(c.Z.googleAdsense.mainBannerAdClient)),
                 (n.crossOrigin = 'anonymous'),
                 document.head.appendChild(n)
             }
@@ -34,7 +34,7 @@
         s = function (n) {
           var t = n.title,
             e = n.description,
-            c = n.keywords,
+            a = n.keywords,
             s = n.url,
             u = n.imageURL,
             l = n.customMeta
@@ -43,13 +43,13 @@
             (0, o.jsxs)(r.default, {
               children: [
                 (0, o.jsx)('link', { rel: 'canonical', href: s }),
-                (0, o.jsx)('link', { rel: 'apple-touch-icon', href: a.Z.appleTouchIconPath }),
+                (0, o.jsx)('link', { rel: 'apple-touch-icon', href: c.Z.appleTouchIconPath }),
                 (0, o.jsx)('link', { rel: 'manifest', href: '/manifest.json' }),
-                (0, o.jsx)('meta', { name: 'theme-color', content: a.Z.themeColor }, 'theme-color'),
+                (0, o.jsx)('meta', { name: 'theme-color', content: c.Z.themeColor }, 'theme-color'),
                 (0, o.jsx)('meta', { property: 'og:type', content: 'website' }, 'og:type'),
-                (0, o.jsx)('meta', { property: 'og:site_name', content: a.Z.title }, 'og:site_name'),
-                (0, o.jsx)('meta', { name: 'author', content: a.Z.author }, 'author'),
-                (null === c || void 0 === c ? void 0 : c.length) && (0, o.jsx)('meta', { name: 'keyword', content: c.join(', ') }, 'keyword'),
+                (0, o.jsx)('meta', { property: 'og:site_name', content: c.Z.title }, 'og:site_name'),
+                (0, o.jsx)('meta', { name: 'author', content: c.Z.author }, 'author'),
+                (null === a || void 0 === a ? void 0 : a.length) && (0, o.jsx)('meta', { name: 'keyword', content: a.join(', ') }, 'keyword'),
                 (0, o.jsx)('meta', { name: 'description', content: e }, 'description'),
                 (0, o.jsx)('meta', { property: 'og:description', content: e }, 'og:description'),
                 (0, o.jsx)('meta', { property: 'og:title', content: t }, 'og:title'),
@@ -62,37 +62,14 @@
           )
         }
     },
-    3447: function (n, t, e) {
+    2429: function (n, t, e) {
       'use strict'
-      e.d(t, {
-        Z: function () {
-          return i
-        },
-      })
       var o = e(5893),
         r = e(8145),
-        a = e(7294),
-        c = function (n) {
-          return (
-            (0, a.useEffect)(function () {
-              ;(window.adsbygoogle = window.adsbygoogle || []), window.adsbygoogle.push({})
-            }, []),
-            (0, o.jsx)('ins', {
-              className: 'adsbygoogle',
-              style: { display: 'block' },
-              'data-ad-client': n.adClient,
-              'data-ad-slot': n.adSlot,
-              'data-ad-format': 'auto',
-              'data-full-width-responsive': 'true',
-              onLoad: function () {
-                return console.log('loaded')
-              },
-            })
-          )
-        },
-        i = function () {
-          return (0, o.jsx)('section', { children: (0, o.jsx)(c, { adClient: r.Z.googleAdsense.adClient, adSlot: '5391522351' }) })
-        }
+        c = e(1780)
+      t.Z = function () {
+        return (0, o.jsx)('section', { children: (0, o.jsx)(c.Z, { adClient: r.Z.googleAdsense.mainBannerAdClient, adSlot: '5391522351' }) })
+      }
     },
     7594: function (n, t, e) {
       'use strict'
@@ -103,13 +80,13 @@
       })
       var o = e(5893),
         r = e(1664),
-        a = e(2002),
-        c = e.n(a),
+        c = e(2002),
+        a = e.n(c),
         i = function (n) {
           return (0, o.jsx)(r.default, {
             href: '/posts/1?query='.concat(encodeURIComponent(n.tag)),
             children: (0, o.jsx)('a', {
-              children: (0, o.jsxs)('span', { className: 'clickable '.concat(c().tag), children: [n.tag, ' ', n.count && n.count] }),
+              children: (0, o.jsxs)('span', { className: 'clickable '.concat(a().tag), children: [n.tag, ' ', n.count && n.count] }),
             }),
           })
         },
@@ -128,9 +105,9 @@
       'use strict'
       var o = e(5893),
         r = e(7260),
-        a = e.n(r)
+        c = e.n(r)
       t.Z = function (n) {
-        var t = (0, o.jsxs)(o.Fragment, { children: [n.title, ' ', (0, o.jsxs)('span', { className: a().postCount, children: ['(', n.count, ')'] })] })
+        var t = (0, o.jsxs)(o.Fragment, { children: [n.title, ' ', (0, o.jsxs)('span', { className: c().postCount, children: ['(', n.count, ')'] })] })
         switch (n.level) {
           case 1:
           default:
@@ -206,8 +183,8 @@
         })
       var o = e(5893),
         r = e(6166),
-        a = e(3447),
-        c = e(7594),
+        c = e(2429),
+        a = e(7594),
         i = e(6545),
         s = e.n(i),
         u = function (n) {
@@ -222,7 +199,7 @@
                       return n.tagsByIndexes[t].length
                     })
                     .map(function (t, e) {
-                      return (0, o.jsxs)('li', { children: [(0, o.jsx)('h2', { id: t, children: t }), (0, o.jsx)(c.Z, { tags: n.tagsByIndexes[t] })] }, e)
+                      return (0, o.jsxs)('li', { children: [(0, o.jsx)('h2', { id: t, children: t }), (0, o.jsx)(a.Z, { tags: n.tagsByIndexes[t] })] }, e)
                     }),
                 },
                 e
@@ -266,7 +243,7 @@
                   return String.fromCharCode(t + 65)
                 }),
             ],
-            c = t.reduce(function (n, t) {
+            a = t.reduce(function (n, t) {
               var e = n.findIndex(function (n) {
                 return n.tag === t
               })
@@ -276,14 +253,14 @@
             s = i.reduce(function (n, t) {
               return (n[t] = []), n
             }, {})
-          c.forEach(function (n) {
+          a.forEach(function (n) {
             for (var t = n.tag.toUpperCase().charCodeAt(0), e = 0; e < i.length; e++) {
               var o = i[e],
                 r = i[e + 1],
-                a = o.toUpperCase().charCodeAt(0),
-                c = void 0
-              if ((r && (c = r.toUpperCase().charCodeAt(0)), void 0 !== c)) {
-                if (t >= a && t < c) {
+                c = o.toUpperCase().charCodeAt(0),
+                a = void 0
+              if ((r && (a = r.toUpperCase().charCodeAt(0)), void 0 !== a)) {
+                if (t >= c && t < a) {
                   s[o].push(n)
                   break
                 }
@@ -304,7 +281,7 @@
               (0, o.jsx)(p.Z, { level: 1, title: 'Tags', count: t.length }),
               (0, o.jsx)(g, { activatedIndexes: l, indexGroups: e }),
               (0, o.jsx)(u, { indexGroups: e, tagsByIndexes: s }),
-              (0, o.jsx)(a.Z, {}),
+              (0, o.jsx)(c.Z, {}),
             ],
           })
         }
@@ -318,16 +295,16 @@
           ;(o.enumerable = o.enumerable || !1), (o.configurable = !0), 'value' in o && (o.writable = !0), Object.defineProperty(n, o.key, o)
         }
       }
-      var a = (function () {
+      var c = (function () {
         function n() {
           !(function (n, t) {
             if (!(n instanceof t)) throw new TypeError('Cannot call a class as a function')
           })(this, n)
         }
-        var t, e, a
+        var t, e, c
         return (
           (t = n),
-          (a = [
+          (c = [
             {
               key: 'buildPageTitle',
               value: function (n) {
@@ -336,11 +313,11 @@
             },
           ]),
           (e = null) && r(t.prototype, e),
-          a && r(t, a),
+          c && r(t, c),
           n
         )
       })()
-      t.Z = a
+      t.Z = c
     },
     6545: function (n) {
       n.exports = { container: 'TagList_container__e_mLL' }
