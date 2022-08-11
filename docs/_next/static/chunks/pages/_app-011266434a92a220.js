@@ -2250,7 +2250,8 @@
       t.Z = {
         title: 'Code Logs',
         baseURL: 'https://code-logs.github.io',
-        pageLimit: 5,
+        pageLimit: 10,
+        recentPostsLimit: 5,
         author: 'Jay Lee',
         themeColor: '#fff',
         appleTouchIconPath: '/icons/icon-192x-192.png',

@@ -545,7 +545,7 @@
     "licenseUrl": "https://github.com/sindresorhus/callsites/raw/master/license",
     "parents": "code-logs"
   },
-  "caniuse-lite@1.0.30001312": {
+  "caniuse-lite@1.0.30001375": {
     "licenses": "CC-BY-4.0",
     "repository": "https://github.com/browserslist/caniuse-lite",
     "licenseUrl": "https://github.com/browserslist/caniuse-lite/raw/master/LICENSE",

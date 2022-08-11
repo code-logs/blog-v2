@@ -1,7 +1,7 @@
 {
   "pageProps": {
-    "page": 5,
-    "lastPage": 5,
+    "page": 3,
+    "lastPage": 3,
     "posts": [
       {
         "title": "Iterator and Generator",

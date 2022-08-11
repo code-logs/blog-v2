@@ -22,6 +22,13 @@
   font-style: italic;
   margin: 5px 0;
 }
+.Utterrances_utteranceContainer__qopWy {
+  display: flex;
+  flex-direction: column;
+}
+.Utterrances_utteranceContainer__qopWy > div {
+  max-width: inherit;
+}
 .PostDetail_thumbnailWrapper__oALCg {
   position: relative;
   margin: 0;
