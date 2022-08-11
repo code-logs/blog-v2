@@ -4,7 +4,6 @@ import Footer from '../components/footer/Footer'
 import GoogleAdsenseBanner from '../components/google-adsense/GoogleAdsenseBanner'
 import GTagScript from '../components/gtag-script/GTagScript'
 import Header from '../components/header/Header'
-import KakaoAdfitBanner from '../components/kakao-adfit/KakaoAdfitBanner'
 import KakaoAdfitScript from '../components/kakao-adfit/KakaoAdfitScript'
 import SWScript from '../components/sw-script/SWScript'
 import blogConfig from '../config/blog.config'
@@ -27,9 +26,9 @@ const MainApp = ({ Component, pageProps }: AppProps) => {
       </main>
 
       <aside>
-        <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.mainBannerAdClient} adSlot={blogConfig.googleAdsense.asideBannerAdClient} />
-        <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.mainBannerAdClient} adSlot={blogConfig.googleAdsense.asideBannerAdClient} />
-        <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.mainBannerAdClient} adSlot={blogConfig.googleAdsense.asideBannerAdClient} />
+        <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.mainBannerAdClient} adSlot="8825787758" />
+        <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.mainBannerAdClient} adSlot="8825787758" />
+        <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.mainBannerAdClient} adSlot="8825787758" />
         {/* <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.asideBannerID1} position="aside" />
         <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.asideBannerID2} position="aside" /> */}
       </aside>

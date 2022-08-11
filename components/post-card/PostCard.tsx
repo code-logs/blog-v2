@@ -38,7 +38,7 @@ const PostCard = ({ titleLevel = 3, post }: PostCardProps) => {
         <div className={styles.thumbnail}>
           <Link href={PostUtil.buildLinkURLByTitle(post.title)}>
             <a>
-              <img className={'thumbnail'} src={PathUtil.buildImagePath(post.thumbnailName)} alt={post.description} />
+              <img src={PathUtil.buildImagePath(post.thumbnailName)} alt={post.description} width="400" height="300" />
             </a>
           </Link>
         </div>
