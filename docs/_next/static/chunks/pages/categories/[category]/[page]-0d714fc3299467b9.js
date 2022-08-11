@@ -165,7 +165,7 @@
                 children: (0, n.jsx)(i.default, {
                   href: s.Z.buildLinkURLByTitle(u.title),
                   children: (0, n.jsx)('a', {
-                    children: (0, n.jsx)('img', { className: 'thumbnail', src: c.Z.buildImagePath(u.thumbnailName), alt: u.description }),
+                    children: (0, n.jsx)('img', { src: c.Z.buildImagePath(u.thumbnailName), alt: u.description, width: '400', height: '300' }),
                   }),
                 }),
               }),
@@ -214,7 +214,7 @@
         })
       var n = r(5893),
         i = r(6166),
-        o = r(3447),
+        o = r(4786),
         a = r(9337),
         c = r(7221),
         s = r(8145),
@@ -641,7 +641,7 @@
     },
   },
   function (e) {
-    e.O(0, [439, 774, 888, 179], function () {
+    e.O(0, [117, 774, 888, 179], function () {
       return (t = 2214), e((e.s = t))
       var t
     })

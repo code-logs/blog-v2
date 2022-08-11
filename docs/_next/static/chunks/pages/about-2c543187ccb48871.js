@@ -9,51 +9,65 @@
         },
       ])
     },
+    4786: function (e, n, t) {
+      'use strict'
+      var o = t(5893),
+        r = t(8145),
+        c = t(1780),
+        i = t(4104),
+        s = t.n(i)
+      n.Z = function () {
+        return (0, o.jsx)('section', {
+          className: s().container,
+          children: (0, o.jsx)(c.Z, { adClient: r.Z.googleAdsense.adClient, adSlot: r.Z.googleAdsense.mainBannerAdSlot }),
+        })
+      }
+    },
     6166: function (e, n, t) {
       'use strict'
       t.d(n, {
         Z: function () {
-          return s
+          return a
         },
       })
       var o = t(5893),
         r = t(9008),
-        i = t(8145),
-        c = t(7294),
-        a = function () {
-          ;(0, c.useEffect)(function () {
+        c = t(8145),
+        i = t(7294),
+        s = function () {
+          ;(0, i.useEffect)(function () {
             if (document.head) {
               var e = document.createElement('script')
               ;(e.async = !0),
-                (e.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='.concat(i.Z.googleAdsense.adClient)),
+                (e.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='.concat(c.Z.googleAdsense.mainBannerAdSlot)),
                 (e.crossOrigin = 'anonymous'),
                 document.head.appendChild(e)
             }
           }, [])
         },
-        s = function (e) {
+        a = function (e) {
           var n = e.title,
             t = e.description,
-            c = e.keywords,
-            s = e.url,
+            i = e.keywords,
+            a = e.url,
             u = e.imageURL,
             l = e.customMeta
           return (
-            a(),
+            s(),
             (0, o.jsxs)(r.default, {
               children: [
-                (0, o.jsx)('link', { rel: 'canonical', href: s }),
-                (0, o.jsx)('link', { rel: 'apple-touch-icon', href: i.Z.appleTouchIconPath }),
+                (0, o.jsx)('link', { rel: 'canonical', href: a }),
+                (0, o.jsx)('link', { rel: 'apple-touch-icon', href: c.Z.appleTouchIconPath }),
                 (0, o.jsx)('link', { rel: 'manifest', href: '/manifest.json' }),
-                (0, o.jsx)('meta', { name: 'theme-color', content: i.Z.themeColor }, 'theme-color'),
+                (0, o.jsx)('meta', { name: 'theme-color', content: c.Z.themeColor }, 'theme-color'),
                 (0, o.jsx)('meta', { property: 'og:type', content: 'website' }, 'og:type'),
-                (0, o.jsx)('meta', { property: 'og:site_name', content: i.Z.title }, 'og:site_name'),
-                (0, o.jsx)('meta', { name: 'author', content: i.Z.author }, 'author'),
-                (null === c || void 0 === c ? void 0 : c.length) && (0, o.jsx)('meta', { name: 'keyword', content: c.join(', ') }, 'keyword'),
+                (0, o.jsx)('meta', { property: 'og:site_name', content: c.Z.title }, 'og:site_name'),
+                (0, o.jsx)('meta', { name: 'author', content: c.Z.author }, 'author'),
+                (null === i || void 0 === i ? void 0 : i.length) && (0, o.jsx)('meta', { name: 'keyword', content: i.join(', ') }, 'keyword'),
                 (0, o.jsx)('meta', { name: 'description', content: t }, 'description'),
                 (0, o.jsx)('meta', { property: 'og:description', content: t }, 'og:description'),
                 (0, o.jsx)('meta', { property: 'og:title', content: n }, 'og:title'),
-                (0, o.jsx)('meta', { property: 'og:url', content: s }, 'og:url'),
+                (0, o.jsx)('meta', { property: 'og:url', content: a }, 'og:url'),
                 (0, o.jsx)('meta', { property: 'og:image', content: u }, 'og:image'),
                 l && l,
                 (0, o.jsx)('title', { children: n }),
@@ -62,54 +76,16 @@
           )
         }
     },
-    3447: function (e, n, t) {
-      'use strict'
-      t.d(n, {
-        Z: function () {
-          return s
-        },
-      })
-      var o = t(5893),
-        r = t(8145),
-        i = t(7294),
-        c = function (e) {
-          return (
-            (0, i.useEffect)(function () {
-              ;(window.adsbygoogle = window.adsbygoogle || []), window.adsbygoogle.push({})
-            }, []),
-            (0, o.jsx)('ins', {
-              className: 'adsbygoogle',
-              style: { display: 'block' },
-              'data-ad-client': e.adClient,
-              'data-ad-slot': e.adSlot,
-              'data-ad-format': 'auto',
-              'data-full-width-responsive': 'true',
-              onLoad: function () {
-                return console.log('loaded')
-              },
-            })
-          )
-        },
-        a = t(3589),
-        s = function () {
-          return (0, o.jsxs)('section', {
-            children: [
-              (0, o.jsx)(c, { adClient: r.Z.googleAdsense.adClient, adSlot: '5391522351' }),
-              (0, o.jsx)(a.Z, { adfitUnitID: r.Z.kakaoAdfitUnitIDs.mainBannerID, position: 'main' }),
-            ],
-          })
-        }
-    },
     1985: function (e, n, t) {
       'use strict'
       var o = t(5893),
         r = t(7294),
-        i = t(9401),
-        c = t.n(i)
-      function a(e, n, t) {
+        c = t(9401),
+        i = t.n(c)
+      function s(e, n, t) {
         return n in e ? Object.defineProperty(e, n, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : (e[n] = t), e
       }
-      function s(e, n) {
+      function a(e, n) {
         if (null == e) return {}
         var t,
           o,
@@ -118,25 +94,25 @@
             var t,
               o,
               r = {},
-              i = Object.keys(e)
-            for (o = 0; o < i.length; o++) (t = i[o]), n.indexOf(t) >= 0 || (r[t] = e[t])
+              c = Object.keys(e)
+            for (o = 0; o < c.length; o++) (t = c[o]), n.indexOf(t) >= 0 || (r[t] = e[t])
             return r
           })(e, n)
         if (Object.getOwnPropertySymbols) {
-          var i = Object.getOwnPropertySymbols(e)
-          for (o = 0; o < i.length; o++) (t = i[o]), n.indexOf(t) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]))
+          var c = Object.getOwnPropertySymbols(e)
+          for (o = 0; o < c.length; o++) (t = c[o]), n.indexOf(t) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]))
         }
         return r
       }
       n.Z = function (e) {
         var n = e.timeout,
           t = void 0 === n ? 500 : n,
-          i = e.children,
-          u = s(e, ['timeout', 'children']),
+          c = e.children,
+          u = a(e, ['timeout', 'children']),
           l = (0, r.useRef)(null),
-          d = (0, r.useState)(!1),
-          f = d[0],
-          p = d[1]
+          f = (0, r.useState)(!1),
+          d = f[0],
+          p = f[1]
         return (
           (0, r.useEffect)(
             function () {
@@ -159,11 +135,11 @@
                     })
                   )),
                   o.forEach(function (n) {
-                    a(e, n, t[n])
+                    s(e, n, t[n])
                   })
               }
               return e
-            })({ ref: l, className: ''.concat(c().section, ' ').concat(f && c().raise) }, u, { children: i })
+            })({ ref: l, className: ''.concat(i().section, ' ').concat(d && i().raise) }, u, { children: c })
           )
         )
       }
@@ -224,27 +200,27 @@
       t.r(n)
       var o = t(5893),
         r = t(6166),
-        i = t(3447),
-        c = t(1985),
-        a = t(8145),
-        s = t(6678),
+        c = t(4786),
+        i = t(1985),
+        s = t(8145),
+        a = t(6678),
         u = t(7427),
         l = t(9564),
-        d = t.n(l)
+        f = t.n(l)
       n.default = function () {
         return (0, o.jsxs)(o.Fragment, {
           children: [
             (0, o.jsx)(r.Z, {
-              title: u.Z.buildPageTitle(s.z.ABOUT.TITLE),
-              description: s.z.ABOUT.DESCRIPTION,
-              url: ''.concat(a.Z.baseURL, '/about'),
+              title: u.Z.buildPageTitle(a.z.ABOUT.TITLE),
+              description: a.z.ABOUT.DESCRIPTION,
+              url: ''.concat(s.Z.baseURL, '/about'),
               imageURL: '/icons/icon-512x512.png',
             }),
             (0, o.jsxs)('article', {
-              className: d().about,
+              className: f().about,
               children: [
                 (0, o.jsx)('h1', { children: 'About' }),
-                (0, o.jsxs)(c.Z, {
+                (0, o.jsxs)(i.Z, {
                   timeout: 300,
                   children: [
                     (0, o.jsx)('h2', { children: 'Here is...' }),
@@ -269,7 +245,7 @@
                     }),
                   ],
                 }),
-                (0, o.jsxs)(c.Z, {
+                (0, o.jsxs)(i.Z, {
                   timeout: 1350,
                   children: [
                     (0, o.jsx)('h2', { children: 'Licenses' }),
@@ -278,7 +254,7 @@
                 }),
               ],
             }),
-            (0, o.jsx)(i.Z, {}),
+            (0, o.jsx)(c.Z, {}),
           ],
         })
       }
@@ -292,16 +268,16 @@
           ;(o.enumerable = o.enumerable || !1), (o.configurable = !0), 'value' in o && (o.writable = !0), Object.defineProperty(e, o.key, o)
         }
       }
-      var i = (function () {
+      var c = (function () {
         function e() {
           !(function (e, n) {
             if (!(e instanceof n)) throw new TypeError('Cannot call a class as a function')
           })(this, e)
         }
-        var n, t, i
+        var n, t, c
         return (
           (n = e),
-          (i = [
+          (c = [
             {
               key: 'buildPageTitle',
               value: function (e) {
@@ -310,11 +286,14 @@
             },
           ]),
           (t = null) && r(n.prototype, t),
-          i && r(n, i),
+          c && r(n, c),
           e
         )
       })()
-      n.Z = i
+      n.Z = c
+    },
+    4104: function (e) {
+      e.exports = { container: 'MainAdsBanner_container__YWe5C' }
     },
     9401: function (e) {
       e.exports = { section: 'RaiseSection_section__FR7Qu', raise: 'RaiseSection_raise__5fbS6' }

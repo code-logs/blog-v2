@@ -6,9 +6,9 @@ import GoogleAdsenseBanner from '../components/google-adsense/GoogleAdsenseBanne
 import GTagScript from '../components/gtag-script/GTagScript'
 import Header from '../components/header/Header'
 import KakaoAdfitScript from '../components/kakao-adfit/KakaoAdfitScript'
+import NaverAnalyticsScript from '../components/naver-analytics-script/NaverAnalyticsScript'
 import SWScript from '../components/sw-script/SWScript'
 import blogConfig from '../config/blog.config'
-import gaConfig from '../config/ga.config'
 import menus from '../config/menu.config'
 import socialIcons from '../config/social.config'
 import '../styles/globals.scss'
@@ -17,7 +17,8 @@ import '../styles/highlight.scss'
 const MainApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
-      <GTagScript gaID={gaConfig.id} />
+      <GTagScript gaID={blogConfig.googleAnalytics.id} />
+      <NaverAnalyticsScript issuedId={blogConfig.naverAnalytics.id} />
       <KakaoAdfitScript />
       <SWScript />
       <Header title={blogConfig.title} socialIcons={socialIcons} menus={menus} />
