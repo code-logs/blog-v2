@@ -13,9 +13,14 @@
       'use strict'
       var r = t(5893),
         o = t(8145),
-        i = t(1780)
+        i = t(1780),
+        c = t(4104),
+        l = t.n(c)
       s.Z = function () {
-        return (0, r.jsx)('section', { children: (0, r.jsx)(i.Z, { adClient: o.Z.googleAdsense.adClient, adSlot: o.Z.googleAdsense.mainBannerAdSlot }) })
+        return (0, r.jsx)('section', {
+          className: l().container,
+          children: (0, r.jsx)(i.Z, { adClient: o.Z.googleAdsense.adClient, adSlot: o.Z.googleAdsense.mainBannerAdSlot }),
+        })
       }
     },
     1985: function (e, s, t) {
@@ -117,6 +122,9 @@
             ],
           })
         }
+    },
+    4104: function (e) {
+      e.exports = { container: 'MainAdsBanner_container__YWe5C' }
     },
     9401: function (e) {
       e.exports = { section: 'RaiseSection_section__FR7Qu', raise: 'RaiseSection_raise__5fbS6' }
