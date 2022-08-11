@@ -1,7 +1,7 @@
 ;(self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [197],
   {
-    9014: function (n, t, e) {
+    9014: function (t, n, e) {
       ;(window.__NEXT_P = window.__NEXT_P || []).push([
         '/404',
         function () {
@@ -9,79 +9,79 @@
         },
       ])
     },
-    6166: function (n, t, e) {
+    6166: function (t, n, e) {
       'use strict'
-      e.d(t, {
+      e.d(n, {
         Z: function () {
           return s
         },
       })
       var o = e(5893),
-        i = e(9008),
-        a = e(8145),
-        r = e(7294),
+        a = e(9008),
+        r = e(8145),
+        i = e(7294),
         c = function () {
-          ;(0, r.useEffect)(function () {
+          ;(0, i.useEffect)(function () {
             if (document.head) {
-              var n = document.createElement('script')
-              ;(n.async = !0),
-                (n.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='.concat(a.Z.googleAdsense.adClient)),
-                (n.crossOrigin = 'anonymous'),
-                document.head.appendChild(n)
+              var t = document.createElement('script')
+              ;(t.async = !0),
+                (t.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='.concat(r.Z.googleAdsense.adClient)),
+                (t.crossOrigin = 'anonymous'),
+                document.head.appendChild(t)
             }
           }, [])
         },
-        s = function (n) {
-          var t = n.title,
-            e = n.description,
-            r = n.keywords,
-            s = n.url,
-            u = n.imageURL,
-            l = n.customMeta
+        s = function (t) {
+          var n = t.title,
+            e = t.description,
+            i = t.keywords,
+            s = t.url,
+            u = t.imageURL,
+            l = t.customMeta
           return (
             c(),
-            (0, o.jsxs)(i.default, {
+            (0, o.jsxs)(a.default, {
               children: [
                 (0, o.jsx)('link', { rel: 'canonical', href: s }),
-                (0, o.jsx)('link', { rel: 'apple-touch-icon', href: a.Z.appleTouchIconPath }),
+                (0, o.jsx)('link', { rel: 'apple-touch-icon', href: r.Z.appleTouchIconPath }),
                 (0, o.jsx)('link', { rel: 'manifest', href: '/manifest.json' }),
-                (0, o.jsx)('meta', { name: 'theme-color', content: a.Z.themeColor }, 'theme-color'),
+                (0, o.jsx)('meta', { name: 'theme-color', content: r.Z.themeColor }, 'theme-color'),
                 (0, o.jsx)('meta', { property: 'og:type', content: 'website' }, 'og:type'),
-                (0, o.jsx)('meta', { property: 'og:site_name', content: a.Z.title }, 'og:site_name'),
-                (0, o.jsx)('meta', { name: 'author', content: a.Z.author }, 'author'),
-                (null === r || void 0 === r ? void 0 : r.length) && (0, o.jsx)('meta', { name: 'keyword', content: r.join(', ') }, 'keyword'),
+                (0, o.jsx)('meta', { property: 'og:site_name', content: r.Z.title }, 'og:site_name'),
+                (0, o.jsx)('meta', { name: 'author', content: r.Z.author }, 'author'),
+                (null === i || void 0 === i ? void 0 : i.length) && (0, o.jsx)('meta', { name: 'keyword', content: i.join(', ') }, 'keyword'),
                 (0, o.jsx)('meta', { name: 'description', content: e }, 'description'),
                 (0, o.jsx)('meta', { property: 'og:description', content: e }, 'og:description'),
-                (0, o.jsx)('meta', { property: 'og:title', content: t }, 'og:title'),
+                (0, o.jsx)('meta', { property: 'og:title', content: n }, 'og:title'),
                 (0, o.jsx)('meta', { property: 'og:url', content: s }, 'og:url'),
                 (0, o.jsx)('meta', { property: 'og:image', content: u }, 'og:image'),
                 l && l,
-                (0, o.jsx)('title', { children: t }),
+                (0, o.jsx)('title', { children: n }),
               ],
             })
           )
         }
     },
-    3447: function (n, t, e) {
+    3447: function (t, n, e) {
       'use strict'
-      e.d(t, {
+      e.d(n, {
         Z: function () {
-          return s
+          return c
         },
       })
       var o = e(5893),
-        i = e(8145),
-        a = e(7294),
-        r = function (n) {
+        a = e(8145),
+        r = e(7294),
+        i = function (t) {
           return (
-            (0, a.useEffect)(function () {
+            (0, r.useEffect)(function () {
               ;(window.adsbygoogle = window.adsbygoogle || []), window.adsbygoogle.push({})
             }, []),
             (0, o.jsx)('ins', {
               className: 'adsbygoogle',
               style: { display: 'block' },
-              'data-ad-client': n.adClient,
-              'data-ad-slot': n.adSlot,
+              'data-ad-client': t.adClient,
+              'data-ad-slot': t.adSlot,
               'data-ad-format': 'auto',
               'data-full-width-responsive': 'true',
               onLoad: function () {
@@ -90,19 +90,13 @@
             })
           )
         },
-        c = e(3589),
-        s = function () {
-          return (0, o.jsxs)('section', {
-            children: [
-              (0, o.jsx)(r, { adClient: i.Z.googleAdsense.adClient, adSlot: '5391522351' }),
-              (0, o.jsx)(c.Z, { adfitUnitID: i.Z.kakaoAdfitUnitIDs.mainBannerID, position: 'main' }),
-            ],
-          })
+        c = function () {
+          return (0, o.jsx)('section', { children: (0, o.jsx)(i, { adClient: a.Z.googleAdsense.adClient, adSlot: '5391522351' }) })
         }
     },
-    6678: function (n, t, e) {
+    6678: function (t, n, e) {
       'use strict'
-      e.d(t, {
+      e.d(n, {
         z: function () {
           return o
         },
@@ -115,24 +109,24 @@
         },
         POSTS: {
           TITLE: 'Posts',
-          DESCRIPTION: function (n) {
-            return 'Code Logs | \ud3ec\uc2a4\ud305 \ubaa9\ub85d '.concat(n, ' \ud398\uc774\uc9c0')
+          DESCRIPTION: function (t) {
+            return 'Code Logs | \ud3ec\uc2a4\ud305 \ubaa9\ub85d '.concat(t, ' \ud398\uc774\uc9c0')
           },
         },
         POST: {
-          TITLE: function (n) {
-            return n
+          TITLE: function (t) {
+            return t
           },
-          DESCRIPTION: function (n, t, e, o) {
-            return 'Code Logs '.concat(n, ' - ').concat(t, ' | ').concat(e, ', ').concat(o.join(', '))
+          DESCRIPTION: function (t, n, e, o) {
+            return 'Code Logs '.concat(t, ' - ').concat(n, ' | ').concat(e, ', ').concat(o.join(', '))
           },
         },
         CATEGORIES: {
-          TITLE: function (n) {
-            return n
+          TITLE: function (t) {
+            return t
           },
-          DESCRIPTION: function (n, t) {
-            return 'Code Logs | '.concat(n, ' \uc5f0\uad00 \ud3ec\uc2a4\ud305 \ubaa9\ub85d ').concat(t, ' \ud398\uc774\uc9c0')
+          DESCRIPTION: function (t, n) {
+            return 'Code Logs | '.concat(t, ' \uc5f0\uad00 \ud3ec\uc2a4\ud305 \ubaa9\ub85d ').concat(n, ' \ud398\uc774\uc9c0')
           },
         },
         TAGS: {
@@ -151,73 +145,73 @@
         },
       }
     },
-    5838: function (n, t, e) {
+    5838: function (t, n, e) {
       'use strict'
-      e.r(t)
+      e.r(n)
       var o = e(5893),
-        i = e(6166),
-        a = e(3447),
-        r = e(8145),
+        a = e(6166),
+        r = e(3447),
+        i = e(8145),
         c = e(6678),
         s = e(7427)
-      t.default = function () {
+      n.default = function () {
         return (0, o.jsxs)(o.Fragment, {
           children: [
-            (0, o.jsx)(i.Z, {
+            (0, o.jsx)(a.Z, {
               title: s.Z.buildPageTitle(c.z.NOT_FOUND.TITLE),
               description: c.z.NOT_FOUND.DESCRIPTION,
-              url: r.Z.baseURL,
+              url: i.Z.baseURL,
               imageURL: '/icons/icon-512x512.png',
             }),
             (0, o.jsx)('section', { children: (0, o.jsx)('h1', { children: 'Page Not Found' }) }),
-            (0, o.jsx)(a.Z, {}),
+            (0, o.jsx)(r.Z, {}),
           ],
         })
       }
     },
-    7427: function (n, t, e) {
+    7427: function (t, n, e) {
       'use strict'
       var o = e(8145)
-      function i(n, t) {
-        for (var e = 0; e < t.length; e++) {
-          var o = t[e]
-          ;(o.enumerable = o.enumerable || !1), (o.configurable = !0), 'value' in o && (o.writable = !0), Object.defineProperty(n, o.key, o)
+      function a(t, n) {
+        for (var e = 0; e < n.length; e++) {
+          var o = n[e]
+          ;(o.enumerable = o.enumerable || !1), (o.configurable = !0), 'value' in o && (o.writable = !0), Object.defineProperty(t, o.key, o)
         }
       }
-      var a = (function () {
-        function n() {
-          !(function (n, t) {
-            if (!(n instanceof t)) throw new TypeError('Cannot call a class as a function')
-          })(this, n)
+      var r = (function () {
+        function t() {
+          !(function (t, n) {
+            if (!(t instanceof n)) throw new TypeError('Cannot call a class as a function')
+          })(this, t)
         }
-        var t, e, a
+        var n, e, r
         return (
-          (t = n),
-          (a = [
+          (n = t),
+          (r = [
             {
               key: 'buildPageTitle',
-              value: function (n) {
-                return ''.concat(n, ' | ').concat(o.Z.title)
+              value: function (t) {
+                return ''.concat(t, ' | ').concat(o.Z.title)
               },
             },
           ]),
-          (e = null) && i(t.prototype, e),
-          a && i(t, a),
-          n
+          (e = null) && a(n.prototype, e),
+          r && a(n, r),
+          t
         )
       })()
-      t.Z = a
+      n.Z = r
     },
-    9008: function (n, t, e) {
-      n.exports = e(5443)
+    9008: function (t, n, e) {
+      t.exports = e(5443)
     },
   },
-  function (n) {
-    n.O(0, [774, 888, 179], function () {
-      return (t = 9014), n((n.s = t))
-      var t
+  function (t) {
+    t.O(0, [774, 888, 179], function () {
+      return (n = 9014), t((t.s = n))
+      var n
     })
-    var t = n.O()
-    _N_E = t
+    var n = t.O()
+    _N_E = n
   },
 ])

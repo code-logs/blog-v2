@@ -57,7 +57,7 @@
     3447: function (e, t, o) {
       o.d(t, {
         Z: function () {
-          return l
+          return s
         },
       })
       var n = o(5893),
@@ -81,14 +81,8 @@
             })
           )
         },
-        s = o(3589),
-        l = function () {
-          return (0, n.jsxs)('section', {
-            children: [
-              (0, n.jsx)(i, { adClient: a.Z.googleAdsense.adClient, adSlot: '5391522351' }),
-              (0, n.jsx)(s.Z, { adfitUnitID: a.Z.kakaoAdfitUnitIDs.mainBannerID, position: 'main' }),
-            ],
-          })
+        s = function () {
+          return (0, n.jsx)('section', { children: (0, n.jsx)(i, { adClient: a.Z.googleAdsense.adClient, adSlot: '5391522351' }) })
         }
     },
     6678: function (e, t, o) {

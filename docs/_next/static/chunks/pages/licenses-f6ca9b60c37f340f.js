@@ -13,7 +13,7 @@
       'use strict'
       t.d(s, {
         Z: function () {
-          return a
+          return l
         },
       })
       var r = t(5893),
@@ -37,14 +37,8 @@
             })
           )
         },
-        l = t(3589),
-        a = function () {
-          return (0, r.jsxs)('section', {
-            children: [
-              (0, r.jsx)(c, { adClient: o.Z.googleAdsense.adClient, adSlot: '5391522351' }),
-              (0, r.jsx)(l.Z, { adfitUnitID: o.Z.kakaoAdfitUnitIDs.mainBannerID, position: 'main' }),
-            ],
-          })
+        l = function () {
+          return (0, r.jsx)('section', { children: (0, r.jsx)(c, { adClient: o.Z.googleAdsense.adClient, adSlot: '5391522351' }) })
         }
     },
     1985: function (e, s, t) {

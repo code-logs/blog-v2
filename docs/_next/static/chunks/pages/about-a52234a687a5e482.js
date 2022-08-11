@@ -1,80 +1,80 @@
 ;(self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [521],
   {
-    5706: function (e, n, t) {
+    5706: function (e, t, n) {
       ;(window.__NEXT_P = window.__NEXT_P || []).push([
         '/about',
         function () {
-          return t(4178)
+          return n(4178)
         },
       ])
     },
-    6166: function (e, n, t) {
+    6166: function (e, t, n) {
       'use strict'
-      t.d(n, {
+      n.d(t, {
         Z: function () {
-          return s
+          return a
         },
       })
-      var o = t(5893),
-        r = t(9008),
-        i = t(8145),
-        c = t(7294),
-        a = function () {
-          ;(0, c.useEffect)(function () {
+      var o = n(5893),
+        r = n(9008),
+        c = n(8145),
+        i = n(7294),
+        s = function () {
+          ;(0, i.useEffect)(function () {
             if (document.head) {
               var e = document.createElement('script')
               ;(e.async = !0),
-                (e.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='.concat(i.Z.googleAdsense.adClient)),
+                (e.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='.concat(c.Z.googleAdsense.adClient)),
                 (e.crossOrigin = 'anonymous'),
                 document.head.appendChild(e)
             }
           }, [])
         },
-        s = function (e) {
-          var n = e.title,
-            t = e.description,
-            c = e.keywords,
-            s = e.url,
+        a = function (e) {
+          var t = e.title,
+            n = e.description,
+            i = e.keywords,
+            a = e.url,
             u = e.imageURL,
             l = e.customMeta
           return (
-            a(),
+            s(),
             (0, o.jsxs)(r.default, {
               children: [
-                (0, o.jsx)('link', { rel: 'canonical', href: s }),
-                (0, o.jsx)('link', { rel: 'apple-touch-icon', href: i.Z.appleTouchIconPath }),
+                (0, o.jsx)('link', { rel: 'canonical', href: a }),
+                (0, o.jsx)('link', { rel: 'apple-touch-icon', href: c.Z.appleTouchIconPath }),
                 (0, o.jsx)('link', { rel: 'manifest', href: '/manifest.json' }),
-                (0, o.jsx)('meta', { name: 'theme-color', content: i.Z.themeColor }, 'theme-color'),
+                (0, o.jsx)('meta', { name: 'theme-color', content: c.Z.themeColor }, 'theme-color'),
                 (0, o.jsx)('meta', { property: 'og:type', content: 'website' }, 'og:type'),
-                (0, o.jsx)('meta', { property: 'og:site_name', content: i.Z.title }, 'og:site_name'),
-                (0, o.jsx)('meta', { name: 'author', content: i.Z.author }, 'author'),
-                (null === c || void 0 === c ? void 0 : c.length) && (0, o.jsx)('meta', { name: 'keyword', content: c.join(', ') }, 'keyword'),
-                (0, o.jsx)('meta', { name: 'description', content: t }, 'description'),
-                (0, o.jsx)('meta', { property: 'og:description', content: t }, 'og:description'),
-                (0, o.jsx)('meta', { property: 'og:title', content: n }, 'og:title'),
-                (0, o.jsx)('meta', { property: 'og:url', content: s }, 'og:url'),
+                (0, o.jsx)('meta', { property: 'og:site_name', content: c.Z.title }, 'og:site_name'),
+                (0, o.jsx)('meta', { name: 'author', content: c.Z.author }, 'author'),
+                (null === i || void 0 === i ? void 0 : i.length) && (0, o.jsx)('meta', { name: 'keyword', content: i.join(', ') }, 'keyword'),
+                (0, o.jsx)('meta', { name: 'description', content: n }, 'description'),
+                (0, o.jsx)('meta', { property: 'og:description', content: n }, 'og:description'),
+                (0, o.jsx)('meta', { property: 'og:title', content: t }, 'og:title'),
+                (0, o.jsx)('meta', { property: 'og:url', content: a }, 'og:url'),
                 (0, o.jsx)('meta', { property: 'og:image', content: u }, 'og:image'),
                 l && l,
-                (0, o.jsx)('title', { children: n }),
+                (0, o.jsx)('title', { children: t }),
               ],
             })
           )
         }
     },
-    3447: function (e, n, t) {
+    3447: function (e, t, n) {
       'use strict'
-      t.d(n, {
+      n.d(t, {
         Z: function () {
           return s
         },
       })
-      var o = t(5893),
-        r = t(8145),
-        i = t(7294),
-        c = function (e) {
+      var o = n(5893),
+        r = n(8145),
+        c = n(7294),
+        i = function (e) {
           return (
-            (0, i.useEffect)(function () {
+            (0, c.useEffect)(function () {
               ;(window.adsbygoogle = window.adsbygoogle || []), window.adsbygoogle.push({})
             }, []),
             (0, o.jsx)('ins', {
@@ -90,87 +90,81 @@
             })
           )
         },
-        a = t(3589),
         s = function () {
-          return (0, o.jsxs)('section', {
-            children: [
-              (0, o.jsx)(c, { adClient: r.Z.googleAdsense.adClient, adSlot: '5391522351' }),
-              (0, o.jsx)(a.Z, { adfitUnitID: r.Z.kakaoAdfitUnitIDs.mainBannerID, position: 'main' }),
-            ],
-          })
+          return (0, o.jsx)('section', { children: (0, o.jsx)(i, { adClient: r.Z.googleAdsense.adClient, adSlot: '5391522351' }) })
         }
     },
-    1985: function (e, n, t) {
+    1985: function (e, t, n) {
       'use strict'
-      var o = t(5893),
-        r = t(7294),
-        i = t(9401),
-        c = t.n(i)
-      function a(e, n, t) {
-        return n in e ? Object.defineProperty(e, n, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : (e[n] = t), e
+      var o = n(5893),
+        r = n(7294),
+        c = n(9401),
+        i = n.n(c)
+      function s(e, t, n) {
+        return t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n), e
       }
-      function s(e, n) {
+      function a(e, t) {
         if (null == e) return {}
-        var t,
+        var n,
           o,
-          r = (function (e, n) {
+          r = (function (e, t) {
             if (null == e) return {}
-            var t,
+            var n,
               o,
               r = {},
-              i = Object.keys(e)
-            for (o = 0; o < i.length; o++) (t = i[o]), n.indexOf(t) >= 0 || (r[t] = e[t])
+              c = Object.keys(e)
+            for (o = 0; o < c.length; o++) (n = c[o]), t.indexOf(n) >= 0 || (r[n] = e[n])
             return r
-          })(e, n)
+          })(e, t)
         if (Object.getOwnPropertySymbols) {
-          var i = Object.getOwnPropertySymbols(e)
-          for (o = 0; o < i.length; o++) (t = i[o]), n.indexOf(t) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]))
+          var c = Object.getOwnPropertySymbols(e)
+          for (o = 0; o < c.length; o++) (n = c[o]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]))
         }
         return r
       }
-      n.Z = function (e) {
-        var n = e.timeout,
-          t = void 0 === n ? 500 : n,
-          i = e.children,
-          u = s(e, ['timeout', 'children']),
+      t.Z = function (e) {
+        var t = e.timeout,
+          n = void 0 === t ? 500 : t,
+          c = e.children,
+          u = a(e, ['timeout', 'children']),
           l = (0, r.useRef)(null),
           d = (0, r.useState)(!1),
           f = d[0],
-          p = d[1]
+          g = d[1]
         return (
           (0, r.useEffect)(
             function () {
               setTimeout(function () {
-                p(Boolean(l.current))
-              }, t)
+                g(Boolean(l.current))
+              }, n)
             },
-            [t]
+            [n]
           ),
           (0, o.jsx)(
             'section',
             (function (e) {
-              for (var n = 1; n < arguments.length; n++) {
-                var t = null != arguments[n] ? arguments[n] : {},
-                  o = Object.keys(t)
+              for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                  o = Object.keys(n)
                 'function' === typeof Object.getOwnPropertySymbols &&
                   (o = o.concat(
-                    Object.getOwnPropertySymbols(t).filter(function (e) {
-                      return Object.getOwnPropertyDescriptor(t, e).enumerable
+                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                      return Object.getOwnPropertyDescriptor(n, e).enumerable
                     })
                   )),
-                  o.forEach(function (n) {
-                    a(e, n, t[n])
+                  o.forEach(function (t) {
+                    s(e, t, n[t])
                   })
               }
               return e
-            })({ ref: l, className: ''.concat(c().section, ' ').concat(f && c().raise) }, u, { children: i })
+            })({ ref: l, className: ''.concat(i().section, ' ').concat(f && i().raise) }, u, { children: c })
           )
         )
       }
     },
-    6678: function (e, n, t) {
+    6678: function (e, t, n) {
       'use strict'
-      t.d(n, {
+      n.d(t, {
         z: function () {
           return o
         },
@@ -191,16 +185,16 @@
           TITLE: function (e) {
             return e
           },
-          DESCRIPTION: function (e, n, t, o) {
-            return 'Code Logs '.concat(e, ' - ').concat(n, ' | ').concat(t, ', ').concat(o.join(', '))
+          DESCRIPTION: function (e, t, n, o) {
+            return 'Code Logs '.concat(e, ' - ').concat(t, ' | ').concat(n, ', ').concat(o.join(', '))
           },
         },
         CATEGORIES: {
           TITLE: function (e) {
             return e
           },
-          DESCRIPTION: function (e, n) {
-            return 'Code Logs | '.concat(e, ' \uc5f0\uad00 \ud3ec\uc2a4\ud305 \ubaa9\ub85d ').concat(n, ' \ud398\uc774\uc9c0')
+          DESCRIPTION: function (e, t) {
+            return 'Code Logs | '.concat(e, ' \uc5f0\uad00 \ud3ec\uc2a4\ud305 \ubaa9\ub85d ').concat(t, ' \ud398\uc774\uc9c0')
           },
         },
         TAGS: {
@@ -219,32 +213,32 @@
         },
       }
     },
-    4178: function (e, n, t) {
+    4178: function (e, t, n) {
       'use strict'
-      t.r(n)
-      var o = t(5893),
-        r = t(6166),
-        i = t(3447),
-        c = t(1985),
-        a = t(8145),
-        s = t(6678),
-        u = t(7427),
-        l = t(9564),
-        d = t.n(l)
-      n.default = function () {
+      n.r(t)
+      var o = n(5893),
+        r = n(6166),
+        c = n(3447),
+        i = n(1985),
+        s = n(8145),
+        a = n(6678),
+        u = n(7427),
+        l = n(9564),
+        d = n.n(l)
+      t.default = function () {
         return (0, o.jsxs)(o.Fragment, {
           children: [
             (0, o.jsx)(r.Z, {
-              title: u.Z.buildPageTitle(s.z.ABOUT.TITLE),
-              description: s.z.ABOUT.DESCRIPTION,
-              url: ''.concat(a.Z.baseURL, '/about'),
+              title: u.Z.buildPageTitle(a.z.ABOUT.TITLE),
+              description: a.z.ABOUT.DESCRIPTION,
+              url: ''.concat(s.Z.baseURL, '/about'),
               imageURL: '/icons/icon-512x512.png',
             }),
             (0, o.jsxs)('article', {
               className: d().about,
               children: [
                 (0, o.jsx)('h1', { children: 'About' }),
-                (0, o.jsxs)(c.Z, {
+                (0, o.jsxs)(i.Z, {
                   timeout: 300,
                   children: [
                     (0, o.jsx)('h2', { children: 'Here is...' }),
@@ -269,7 +263,7 @@
                     }),
                   ],
                 }),
-                (0, o.jsxs)(c.Z, {
+                (0, o.jsxs)(i.Z, {
                   timeout: 1350,
                   children: [
                     (0, o.jsx)('h2', { children: 'Licenses' }),
@@ -278,30 +272,30 @@
                 }),
               ],
             }),
-            (0, o.jsx)(i.Z, {}),
+            (0, o.jsx)(c.Z, {}),
           ],
         })
       }
     },
-    7427: function (e, n, t) {
+    7427: function (e, t, n) {
       'use strict'
-      var o = t(8145)
-      function r(e, n) {
-        for (var t = 0; t < n.length; t++) {
-          var o = n[t]
+      var o = n(8145)
+      function r(e, t) {
+        for (var n = 0; n < t.length; n++) {
+          var o = t[n]
           ;(o.enumerable = o.enumerable || !1), (o.configurable = !0), 'value' in o && (o.writable = !0), Object.defineProperty(e, o.key, o)
         }
       }
-      var i = (function () {
+      var c = (function () {
         function e() {
-          !(function (e, n) {
-            if (!(e instanceof n)) throw new TypeError('Cannot call a class as a function')
+          !(function (e, t) {
+            if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
           })(this, e)
         }
-        var n, t, i
+        var t, n, c
         return (
-          (n = e),
-          (i = [
+          (t = e),
+          (c = [
             {
               key: 'buildPageTitle',
               value: function (e) {
@@ -309,12 +303,12 @@
               },
             },
           ]),
-          (t = null) && r(n.prototype, t),
-          i && r(n, i),
+          (n = null) && r(t.prototype, n),
+          c && r(t, c),
           e
         )
       })()
-      n.Z = i
+      t.Z = c
     },
     9401: function (e) {
       e.exports = { section: 'RaiseSection_section__FR7Qu', raise: 'RaiseSection_raise__5fbS6' }
@@ -322,16 +316,16 @@
     9564: function (e) {
       e.exports = { about: 'About_about__Dxcfy' }
     },
-    9008: function (e, n, t) {
-      e.exports = t(5443)
+    9008: function (e, t, n) {
+      e.exports = n(5443)
     },
   },
   function (e) {
     e.O(0, [774, 888, 179], function () {
-      return (n = 5706), e((e.s = n))
-      var n
+      return (t = 5706), e((e.s = t))
+      var t
     })
-    var n = e.O()
-    _N_E = n
+    var t = e.O()
+    _N_E = t
   },
 ])
