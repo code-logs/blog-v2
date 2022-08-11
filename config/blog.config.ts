@@ -12,8 +12,9 @@ interface BlogConfig {
     asideBannerID2: string
   }
   googleAdsense: {
-    mainBannerAdClient: string
-    asideBannerAdClient: string
+    adClient: string
+    mainBannerAdSlot: string
+    asideBannerAdSlot: string
   }
 }
 
@@ -31,8 +32,9 @@ const blogConfig: BlogConfig = {
     asideBannerID2: 'DAN-36TKfTwSMmZWVg3r',
   },
   googleAdsense: {
-    mainBannerAdClient: 'ca-pub-7134579063537339',
-    asideBannerAdClient: 'ca-pub-7134579063537339',
+    adClient: 'ca-pub-7134579063537339',
+    mainBannerAdSlot: '5391522351',
+    asideBannerAdSlot: '8825787758',
   },
 }
 

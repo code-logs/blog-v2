@@ -1,6 +1,6 @@
 import GoogleAdsenseBanner from '../../components/google-adsense/GoogleAdsenseBanner'
 import KakaoAdfitBanner from '../../components/kakao-adfit/KakaoAdfitBanner'
-import MainAdsBanner from '../../components/main-ads-banner/MainAdsBanner'
+import MainAdsBanner from '../../components/ads-banner/MainAdsBanner'
 import RaiseSection from '../../components/raise-section/RaiseSection'
 import blogConfig from '../../config/blog.config'
 import licenses from '../../public/licenses.json'

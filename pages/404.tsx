@@ -1,5 +1,5 @@
 import CommonMeta from '../components/common-meta/CommonMeta'
-import MainAdsBanner from '../components/main-ads-banner/MainAdsBanner'
+import MainAdsBanner from '../components/ads-banner/MainAdsBanner'
 import blogConfig from '../config/blog.config'
 import { META_CONTENTS } from '../config/meta-contents'
 import TitleUtil from '../utils/TitleUtil'

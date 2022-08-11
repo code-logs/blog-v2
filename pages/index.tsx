@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import CategoryIndexer from '../components/category-indexer/CategoryIndexer'
 import CommonMeta from '../components/common-meta/CommonMeta'
-import MainAdsBanner from '../components/main-ads-banner/MainAdsBanner'
+import MainAdsBanner from '../components/ads-banner/MainAdsBanner'
 import RecentPosts from '../components/recent-posts/RecentPosts'
 import TagIndexer, { TagWithCount } from '../components/tag-indexer/TagIndexer'
 import blogConfig from '../config/blog.config'

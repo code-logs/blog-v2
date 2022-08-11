@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app'
 import 'normalize.css'
+import AsideAdsBanner from '../components/ads-banner/AsideAdsBanner'
 import Footer from '../components/footer/Footer'
 import GoogleAdsenseBanner from '../components/google-adsense/GoogleAdsenseBanner'
 import GTagScript from '../components/gtag-script/GTagScript'
@@ -26,11 +27,7 @@ const MainApp = ({ Component, pageProps }: AppProps) => {
       </main>
 
       <aside>
-        <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.mainBannerAdClient} adSlot="8825787758" />
-        <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.mainBannerAdClient} adSlot="8825787758" />
-        <GoogleAdsenseBanner adClient={blogConfig.googleAdsense.mainBannerAdClient} adSlot="8825787758" />
-        {/* <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.asideBannerID1} position="aside" />
-        <KakaoAdfitBanner adfitUnitID={blogConfig.kakaoAdfitUnitIDs.asideBannerID2} position="aside" /> */}
+        <AsideAdsBanner />
       </aside>
 
       <Footer author={blogConfig.author} />
