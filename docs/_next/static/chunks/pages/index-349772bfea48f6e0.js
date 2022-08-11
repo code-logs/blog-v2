@@ -59,7 +59,7 @@
                 children: (0, r.jsx)(i.default, {
                   href: s.Z.buildLinkURLByTitle(l.title),
                   children: (0, r.jsx)('a', {
-                    children: (0, r.jsx)('img', { className: 'thumbnail', src: c.Z.buildImagePath(l.thumbnailName), alt: l.description }),
+                    children: (0, r.jsx)('img', { src: c.Z.buildImagePath(l.thumbnailName), alt: l.description, width: '400', height: '300' }),
                   }),
                 }),
               }),

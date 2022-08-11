@@ -165,7 +165,7 @@
                 children: (0, r.jsx)(o.default, {
                   href: u.Z.buildLinkURLByTitle(s.title),
                   children: (0, r.jsx)('a', {
-                    children: (0, r.jsx)('img', { className: 'thumbnail', src: c.Z.buildImagePath(s.thumbnailName), alt: s.description }),
+                    children: (0, r.jsx)('img', { src: c.Z.buildImagePath(s.thumbnailName), alt: s.description, width: '400', height: '300' }),
                   }),
                 }),
               }),
