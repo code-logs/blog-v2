@@ -29,6 +29,7 @@ const CommonMeta = (props: CommonMetaProps) => {
       <meta property="og:type" key="og:type" content="website" />
       <meta property="og:site_name" key="og:site_name" content={blogConfig.title} />
       <meta name="author" key="author" content={blogConfig.author} />
+      <meta name="viewport" content="width=device-width, user-scalable=no" />
 
       {/* Dynamic meta */}
       {keywords?.length && <meta name="keyword" key="keyword" content={keywords!.join(', ')} />}
