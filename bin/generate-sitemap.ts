@@ -8,7 +8,10 @@ const BASE_URL = 'https://code-logs.github.io'
 const DOCUMENT_PATH = path.join(__dirname, '../docs')
 const EXCLUDE_FILE_PATTERNS = [/^(google760f3a7b88ebe070|naver07d3a889618f31ffdab8dc562554ed65)/]
 
-const buildUrlSet = (loc: string, lastModified: string) => `<url><loc>${BASE_URL}${loc}</loc><lastmod>${lastModified}</lastmod></url>`
+const buildUrlSet = (loc: string, lastModified: string) => {
+  const location = `${BASE_URL.replace(/\/$/, '')}/${loc.replace(/^\//, '')}`
+  return `<url><loc>${location}</loc><lastmod>${lastModified}</lastmod></url>`
+}
 
 const sitemapGenerator = async () => {
   const htmlFullPathList = readDirectoryFiles(DOCUMENT_PATH, 'html')
