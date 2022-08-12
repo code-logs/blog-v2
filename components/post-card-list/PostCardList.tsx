@@ -10,7 +10,7 @@ export interface PostCardListProps {
   adsBlockCycle?: number
 }
 
-const PostCardList = ({ titleLevel, posts, adsBlockCycle = 2 }: PostCardListProps) => {
+const PostCardList = ({ titleLevel, posts, adsBlockCycle = 3 }: PostCardListProps) => {
   return Boolean(posts.length) ? (
     <ul className={styles.list}>
       {posts.map((post, idx) => (
