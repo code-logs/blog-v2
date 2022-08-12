@@ -21,7 +21,7 @@
       'use strict'
       r.d(t, {
         Z: function () {
-          return g
+          return d
         },
       })
       var n = r(5893),
@@ -44,30 +44,29 @@
           }),
           'ChevronRightRounded'
         ),
-        s = r(1664),
-        l = r(7294),
-        u = r(2256),
-        f = r.n(u)
-      function h(e, t) {
+        s = r(7294),
+        l = r(2256),
+        u = r.n(l)
+      function f(e, t) {
         ;(null == t || t > e.length) && (t = e.length)
         for (var r = 0, n = new Array(t); r < t; r++) n[r] = e[r]
         return n
       }
-      function d(e) {
+      function h(e) {
         return (
           (function (e) {
-            if (Array.isArray(e)) return h(e)
+            if (Array.isArray(e)) return f(e)
           })(e) ||
           (function (e) {
             if (('undefined' !== typeof Symbol && null != e[Symbol.iterator]) || null != e['@@iterator']) return Array.from(e)
           })(e) ||
           (function (e, t) {
             if (!e) return
-            if ('string' === typeof e) return h(e, t)
+            if ('string' === typeof e) return f(e, t)
             var r = Object.prototype.toString.call(e).slice(8, -1)
             'Object' === r && e.constructor && (r = e.constructor.name)
             if ('Map' === r || 'Set' === r) return Array.from(r)
-            if ('Arguments' === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)) return h(e, t)
+            if ('Arguments' === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)) return f(e, t)
           })(e) ||
           (function () {
             throw new TypeError(
@@ -76,48 +75,48 @@
           })()
         )
       }
-      var g = function (e) {
+      var d = function (e) {
         var t = e.page,
           r = e.lastPage,
           i = e.displayCount,
-          u = void 0 === i ? 5 : i,
-          h = e.query,
-          g = e.baseURL,
-          p = (0, l.useState)([]),
-          v = p[0],
-          m = p[1]
-        ;(0, l.useEffect)(
+          l = void 0 === i ? 5 : i,
+          f = e.query,
+          d = e.baseURL,
+          g = (0, s.useState)([]),
+          p = g[0],
+          v = g[1]
+        ;(0, s.useEffect)(
           function () {
-            for (var e = [], n = [], i = Math.floor(u / 2), o = 0; o < i; o++) {
+            for (var e = [], n = [], i = Math.floor(l / 2), o = 0; o < i; o++) {
               var a = t - i + o
               a > 0 && e.push(a)
               var c = t + 1 + o
               c <= r && n.push(c)
             }
-            m(d(e).concat([t], d(n)))
+            v(h(e).concat([t], h(n)))
           },
-          [t, r, u]
+          [t, r, l]
         ),
-          (0, l.useEffect)(function () {}, [])
-        var x = function (e) {
-          var t = ''.concat(g, '/').concat(e)
-          return h && (t += '?query='.concat(h)), t
+          (0, s.useEffect)(function () {}, [])
+        var m = function (e) {
+          var t = ''.concat(d, '/').concat(e)
+          return f && (t += '?query='.concat(f)), t
         }
         return (0, n.jsx)('div', {
-          className: f().container,
+          className: u().container,
           children: (0, n.jsxs)('ul', {
             children: [
-              t > 1 && (0, n.jsx)('li', { children: (0, n.jsx)(s.default, { href: x(t - 1), children: (0, n.jsx)('a', { children: (0, n.jsx)(o, {}) }) }) }),
+              t > 1 && (0, n.jsx)('li', { children: (0, n.jsx)('a', { href: m(t - 1), children: (0, n.jsx)(o, {}) }) }),
               t > 1 &&
-                !v.includes(1) &&
-                (0, n.jsxs)(n.Fragment, { children: [(0, n.jsx)('li', { children: (0, n.jsx)('a', { href: x(1), children: 1 }) }), (0, n.jsx)(a, {})] }),
-              v.map(function (e) {
-                return (0, n.jsx)('li', { children: (0, n.jsx)('a', { className: t === e ? f().currentPage : '', href: x(e), children: e }) }, e)
+                !p.includes(1) &&
+                (0, n.jsxs)(n.Fragment, { children: [(0, n.jsx)('li', { children: (0, n.jsx)('a', { href: m(1), children: 1 }) }), (0, n.jsx)(a, {})] }),
+              p.map(function (e) {
+                return (0, n.jsx)('li', { children: (0, n.jsx)('a', { className: t === e ? u().currentPage : '', href: m(e), children: e }) }, e)
               }),
               t < r &&
-                !v.includes(r) &&
-                (0, n.jsxs)(n.Fragment, { children: [(0, n.jsx)(a, {}), (0, n.jsx)('li', { children: (0, n.jsx)('a', { href: x(r), children: r }) })] }),
-              t < r && (0, n.jsx)('li', { children: (0, n.jsx)('a', { href: x(t + 1), children: (0, n.jsx)(c, {}) }) }),
+                !p.includes(r) &&
+                (0, n.jsxs)(n.Fragment, { children: [(0, n.jsx)(a, {}), (0, n.jsx)('li', { children: (0, n.jsx)('a', { href: m(r), children: r }) })] }),
+              t < r && (0, n.jsx)('li', { children: (0, n.jsx)('a', { href: m(t + 1), children: (0, n.jsx)(c, {}) }) }),
             ],
           }),
         })
