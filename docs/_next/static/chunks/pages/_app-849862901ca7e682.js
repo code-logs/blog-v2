@@ -2573,7 +2573,7 @@
             n = t[1]
           return (
             (0, a.useEffect)(function () {
-              n(window.screen.width <= 800)
+              n(document.body.clientWidth <= 800)
             }, []),
             r
           )
