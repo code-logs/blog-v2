@@ -5,10 +5,11 @@
     "dev": "next dev",
     "build": "next build",
     "export": "npm run build && next export",
-    "docs": "npm run build && next export -o ./docs && touch ./docs/.nojekyll && next-sitemap && prettier --write ./docs",
+    "docs": "npm run build && next export -o ./docs && touch ./docs/.nojekyll && npm run sitemap && prettier --write ./docs",
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
+    "sitemap": "ts-node bin/generate-sitemap.ts",
     "licenses": "npm-license-crawler --start ./ --production true --json ./public/licenses.json"
   },
   "dependencies": {
@@ -33,7 +34,6 @@
     "eslint-config-next": "12.0.10",
     "husky": "^7.0.0",
     "marked": "^4.0.12",
-    "next-sitemap": "^2.4.5",
     "npm-license-crawler": "^0.2.1",
     "prettier": "^2.7.1",
     "ts-node": "^10.5.0",
