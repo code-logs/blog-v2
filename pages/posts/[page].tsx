@@ -52,9 +52,9 @@ export async function getStaticProps(context: { params: { page: string } }) {
 
 const Posts: NextPage<PostsProps> = (props) => {
   const { page, totalCount } = props
-  const [lastPage, setLastPage] = useState(props.lastPage)
-  const [posts, setPosts] = useState(props.posts)
-  const [query, setQuery] = useState<string>()
+  const [lastPage, setLastPage] = useState<number | null>(null)
+  const [posts, setPosts] = useState<Post[]>([])
+  const [query, setQuery] = useState<string | null>(null)
   const route = useRouter()
 
   useEffect(() => {
