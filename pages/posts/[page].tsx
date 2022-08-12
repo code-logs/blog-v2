@@ -1,7 +1,6 @@
 import { NextPage } from 'next'
-import { useRouter } from 'next/router'
+import { Router, useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-import MainAdsBanner from '../../components/ads-banner/MainAdsBanner'
 import CommonMeta from '../../components/common-meta/CommonMeta'
 import Paginator from '../../components/paginator/Paginator'
 import PostCardList from '../../components/post-card-list/PostCardList'
@@ -56,10 +55,10 @@ const Posts: NextPage<PostsProps> = (props) => {
   const [lastPage, setLastPage] = useState(props.lastPage)
   const [posts, setPosts] = useState(props.posts)
   const [query, setQuery] = useState<string>()
-  const dynamicRoute = useRouter()
+  const route = useRouter()
 
   useEffect(() => {
-    const url = new URL(PathUtil.absolutePath(dynamicRoute.asPath))
+    const url = new URL(PathUtil.absolutePath(route.asPath))
 
     if (url.search) {
       const searchParams = new URLSearchParams(url.search)
@@ -76,7 +75,7 @@ const Posts: NextPage<PostsProps> = (props) => {
       setPosts(props.posts)
       setQuery(undefined)
     }
-  }, [page, dynamicRoute, props.lastPage, props.posts])
+  }, [page, route, props.lastPage, props.posts])
 
   return (
     <>
@@ -102,7 +101,7 @@ const Posts: NextPage<PostsProps> = (props) => {
           url.pathname = '/posts/1'
           url.search = `query=${encodeURIComponent(query.toString())}`
 
-          location.href = url.href
+          route.push(url.href)
         }}
       >
         <SearchInput placeholder="Search..." name="query" defaultValue={query && decodeURIComponent(query)} />
