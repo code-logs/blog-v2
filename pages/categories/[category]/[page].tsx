@@ -1,8 +1,8 @@
 import { NextPage } from 'next'
-import CommonMeta from '../../../components/common-meta/CommonMeta'
 import MainAdsBanner from '../../../components/ads-banner/MainAdsBanner'
+import CommonMeta from '../../../components/common-meta/CommonMeta'
 import Paginator from '../../../components/paginator/Paginator'
-import PostCard from '../../../components/post-card/PostCard'
+import PostCardList from '../../../components/post-card-list/PostCardList'
 import blogConfig from '../../../config/blog.config'
 import { META_CONTENTS } from '../../../config/meta-contents'
 import { CATEGORIES, Post } from '../../../config/posts.config'
@@ -73,7 +73,7 @@ const Category: NextPage<{
 
       <h1 className={styles.title}>{(CATEGORIES as any)[category]}</h1>
 
-      {Boolean(posts?.length) && posts.map((post, idx) => <PostCard titleLevel={2} key={idx} post={post} />)}
+      <PostCardList titleLevel={2} posts={posts} />
 
       <MainAdsBanner />
 

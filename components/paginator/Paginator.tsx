@@ -45,16 +45,20 @@ const Paginator = ({ page, lastPage, displayCount = 5, query, baseURL }: Paginat
       <ul>
         {page > 1 && (
           <li>
-            <a href={buildURL(page - 1)}>
-              <ChevronLeftRounded />
-            </a>
+            <Link href={buildURL(page - 1)}>
+              <a>
+                <ChevronLeftRounded />
+              </a>
+            </Link>
           </li>
         )}
 
         {page > 1 && !pageList.includes(1) && (
           <>
             <li>
-              <a href={buildURL(1)}>{1}</a>
+              <Link href={buildURL(1)}>
+                <a>{1}</a>
+              </Link>
             </li>
             <MoreHorizRounded />
           </>
@@ -62,9 +66,9 @@ const Paginator = ({ page, lastPage, displayCount = 5, query, baseURL }: Paginat
 
         {pageList.map((pageNum) => (
           <li key={pageNum}>
-            <a className={page === pageNum ? styles.currentPage : ''} href={buildURL(pageNum)}>
-              {pageNum}
-            </a>
+            <Link href={buildURL(pageNum)}>
+              <a className={page === pageNum ? styles.currentPage : ''}>{pageNum}</a>
+            </Link>
           </li>
         ))}
 
@@ -72,15 +76,19 @@ const Paginator = ({ page, lastPage, displayCount = 5, query, baseURL }: Paginat
           <>
             <MoreHorizRounded />
             <li>
-              <a href={buildURL(lastPage)}>{lastPage}</a>
+              <Link href={buildURL(lastPage)}>
+                <a>{lastPage}</a>
+              </Link>
             </li>
           </>
         )}
         {page < lastPage && (
           <li>
-            <a href={buildURL(page + 1)}>
-              <ChevronRightRounded />
-            </a>
+            <Link href={buildURL(page + 1)}>
+              <a>
+                <ChevronRightRounded />
+              </a>
+            </Link>
           </li>
         )}
       </ul>
