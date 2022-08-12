@@ -4,7 +4,7 @@ const useIsMobile = (initIsMobile: boolean) => {
   const [isMobile, setIsMobile] = useState<boolean>(initIsMobile)
 
   useEffect(() => {
-    setIsMobile(window.screen.width <= 800)
+    setIsMobile(document.body.clientWidth <= 800)
   }, [])
 
   return isMobile
