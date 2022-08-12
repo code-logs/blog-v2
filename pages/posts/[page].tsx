@@ -54,7 +54,7 @@ const Posts: NextPage<PostsProps> = (props) => {
   const { page, totalCount } = props
   const [lastPage, setLastPage] = useState<number | null>(null)
   const [posts, setPosts] = useState<Post[]>([])
-  const [query, setQuery] = useState<string | null>(null)
+  const [query, setQuery] = useState<string>()
   const route = useRouter()
 
   useEffect(() => {
