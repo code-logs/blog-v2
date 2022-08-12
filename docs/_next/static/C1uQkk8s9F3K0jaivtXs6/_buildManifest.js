@@ -6,7 +6,7 @@
     '/_error': ['static/chunks/pages/_error-2280fa386d040b66.js'],
     '/about': ['static/css/4eced8272ab7ced2.css', 'static/chunks/pages/about-2c543187ccb48871.js'],
     '/categories/[category]/[page]': [s, 'static/css/0170e2a7b1b17f54.css', 'static/chunks/pages/categories/[category]/[page]-0d714fc3299467b9.js'],
-    '/licenses': ['static/css/3d12b70ffe25961a.css', 'static/chunks/pages/licenses-0da126e8bf1aa69b.js'],
+    '/licenses': ['static/css/3d12b70ffe25961a.css', 'static/chunks/pages/licenses-16d85e7a4acf9241.js'],
     '/posts/[page]': [s, 'static/css/ba3195abb6980ac3.css', 'static/chunks/pages/posts/[page]-b853028940bc9170.js'],
     '/tags': ['static/css/a244cdd25b03b276.css', 'static/chunks/pages/tags-b3c0f343dcd14cb2.js'],
     '/[title]': ['static/chunks/294-6603e2d70ff7953e.js', s, 'static/css/c785de657bad8e94.css', 'static/chunks/pages/[title]-1b65786fbf5d0189.js'],

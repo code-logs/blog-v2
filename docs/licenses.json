@@ -53,10 +53,6 @@
     "licenseUrl": "https://github.com/babel/babel/raw/master/LICENSE",
     "parents": "code-logs"
   },
-  "@corex/deepmerge@2.6.148": {
-    "licenses": "MIT",
-    "parents": "code-logs"
-  },
   "@cspotcode/source-map-consumer@0.8.0": {
     "licenses": "BSD-3-Clause",
     "repository": "http://github.com/cspotcode/source-map",
@@ -1459,12 +1455,6 @@
     "licenses": "MIT",
     "repository": "https://github.com/litejs/natural-compare-lite",
     "licenseUrl": "https://github.com/litejs/natural-compare-lite",
-    "parents": "code-logs"
-  },
-  "next-sitemap@2.4.5": {
-    "licenses": "MIT",
-    "repository": "https://github.com/iamvishnusankar/next-sitemap",
-    "licenseUrl": "https://github.com/iamvishnusankar/next-sitemap",
     "parents": "code-logs"
   },
   "next@12.1.0": {
