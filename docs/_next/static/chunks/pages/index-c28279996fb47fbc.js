@@ -79,7 +79,7 @@
           var t = e.titleLevel,
             n = e.posts,
             o = e.adsBlockCycle,
-            a = void 0 === o ? 2 : o
+            a = void 0 === o ? 3 : o
           return Boolean(n.length)
             ? (0, r.jsx)('ul', {
                 className: p().list,
