@@ -66,6 +66,7 @@
                 (0, o.jsx)('meta', { property: 'og:type', content: 'website' }, 'og:type'),
                 (0, o.jsx)('meta', { property: 'og:site_name', content: c.Z.title }, 'og:site_name'),
                 (0, o.jsx)('meta', { name: 'author', content: c.Z.author }, 'author'),
+                (0, o.jsx)('meta', { name: 'viewport', content: 'width=device-width, user-scalable=no' }),
                 (null === i || void 0 === i ? void 0 : i.length) && (0, o.jsx)('meta', { name: 'keyword', content: i.join(', ') }, 'keyword'),
                 (0, o.jsx)('meta', { name: 'description', content: t }, 'description'),
                 (0, o.jsx)('meta', { property: 'og:description', content: t }, 'og:description'),
