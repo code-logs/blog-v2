@@ -34,16 +34,19 @@
         r = t(9008),
         c = t(8145),
         i = t(7294),
-        s = function () {
-          ;(0, i.useEffect)(function () {
-            if (document.head) {
-              var e = document.createElement('script')
-              ;(e.async = !0),
-                (e.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='.concat(c.Z.googleAdsense.mainBannerAdSlot)),
-                (e.crossOrigin = 'anonymous'),
-                document.head.appendChild(e)
-            }
-          }, [])
+        s = function (e) {
+          ;(0, i.useEffect)(
+            function () {
+              if (document.head) {
+                var n = document.createElement('script')
+                ;(n.async = !0),
+                  (n.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='.concat(e)),
+                  (n.crossOrigin = 'anonymous'),
+                  document.head.appendChild(n)
+              }
+            },
+            [e]
+          )
         },
         a = function (e) {
           var n = e.title,
@@ -53,7 +56,7 @@
             u = e.imageURL,
             l = e.customMeta
           return (
-            s(),
+            s(c.Z.googleAdsense.adClient),
             (0, o.jsxs)(r.default, {
               children: [
                 (0, o.jsx)('link', { rel: 'canonical', href: a }),
