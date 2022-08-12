@@ -52,6 +52,9 @@
 .PostDetail_container__Ma_26 {
   font-size: 0.9em;
 }
+.PostDetail_container__Ma_26 ins {
+  padding: 20px 0 !important;
+}
 @media (max-width: 800px) {
   .PostDetail_container__Ma_26 {
     font-size: 1em;

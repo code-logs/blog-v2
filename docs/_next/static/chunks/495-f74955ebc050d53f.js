@@ -194,7 +194,7 @@
                 className: p().list,
                 children: r.map(function (e, r) {
                   return (0,
-                  n.jsxs)(n.Fragment, { children: [(0, n.jsx)('li', { children: (0, n.jsx)(d, { titleLevel: t, post: e }) }, e.title), 0 !== a && (r + 1) % a === 0 && (0, n.jsx)(i.Z, {})] })
+                  n.jsxs)(n.Fragment, { children: [(0, n.jsx)('li', { children: (0, n.jsx)(d, { titleLevel: t, post: e }) }, e.title), 0 !== a && (r + 1) % a === 0 && (0, n.jsx)('li', { children: (0, n.jsx)(i.Z, {}) }, 'main-ads-'.concat(r))] })
                 }),
               })
             : (0, n.jsx)(n.Fragment, {})

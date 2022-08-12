@@ -85,7 +85,7 @@
                 className: p().list,
                 children: n.map(function (e, n) {
                   return (0,
-                  r.jsxs)(r.Fragment, { children: [(0, r.jsx)('li', { children: (0, r.jsx)(d, { titleLevel: t, post: e }) }, e.title), 0 !== a && (n + 1) % a === 0 && (0, r.jsx)(i.Z, {})] })
+                  r.jsxs)(r.Fragment, { children: [(0, r.jsx)('li', { children: (0, r.jsx)(d, { titleLevel: t, post: e }) }, e.title), 0 !== a && (n + 1) % a === 0 && (0, r.jsx)('li', { children: (0, r.jsx)(i.Z, {}) }, 'main-ads-'.concat(n))] })
                 }),
               })
             : (0, r.jsx)(r.Fragment, {})

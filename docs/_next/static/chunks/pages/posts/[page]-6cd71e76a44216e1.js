@@ -91,13 +91,13 @@
         u = a,
         c = n(8286),
         l = n(5500)
-      function f(t, e) {
+      function s(t, e) {
         for (var n = 0; n < e.length; n++) {
           var r = e[n]
           ;(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(t, r.key, r)
         }
       }
-      function s(t, e, n) {
+      function f(t, e, n) {
         return e in t ? Object.defineProperty(t, e, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (t[e] = n), t
       }
       function p(t) {
@@ -183,7 +183,7 @@
                           })
                         )),
                         r.forEach(function (e) {
-                          s(t, e, n[e])
+                          f(t, e, n[e])
                         })
                     }
                     return t
@@ -278,8 +278,8 @@
                 },
               },
             ]),
-            n && f(e.prototype, n),
-            r && f(e, r),
+            n && s(e.prototype, n),
+            r && s(e, r),
             i
           )
         })(u),
@@ -308,8 +308,8 @@
           }),
           'SearchRounded'
         ),
-        f = n(3337),
-        s = n.n(f)
+        s = n(3337),
+        f = n.n(s)
       function p(t, e, n) {
         return e in t ? Object.defineProperty(t, e, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (t[e] = n), t
       }
@@ -331,8 +331,8 @@
       }
       var d = function (t) {
           return (0, r.jsxs)('label', {
-            className: s().label,
-            children: [(0, r.jsx)(l, { className: s().icon }), (0, r.jsx)('input', y({ className: s().input }, t))],
+            className: f().label,
+            children: [(0, r.jsx)(l, { className: f().icon }), (0, r.jsx)('input', y({ className: f().input }, t))],
           })
         },
         h = n(8145),
@@ -375,8 +375,8 @@
           var e = t.page,
             n = t.totalCount,
             l = (0, i.useState)(t.lastPage),
-            f = l[0],
-            s = l[1],
+            s = l[0],
+            f = l[1],
             p = (0, i.useState)(t.posts),
             y = p[0],
             O = p[1],
@@ -394,9 +394,9 @@
                     P(encodeURIComponent(r))
                     var o = h.Z.pageLimit,
                       i = (e - 1) * o
-                    O(v.Z.query(r, o, i)), s(Math.ceil(v.Z.query(r).length / o))
+                    O(v.Z.query(r, o, i)), f(Math.ceil(v.Z.query(r).length / o))
                   }
-                } else s(t.lastPage), O(t.posts), P(void 0)
+                } else f(t.lastPage), O(t.posts), P(void 0)
               },
               [e, x, t.lastPage, t.posts]
             ),
@@ -422,13 +422,13 @@
                       n = new FormData(e).get('query')
                     if (n) {
                       var r = new URL(location.href)
-                      ;(r.pathname = '/posts/1'), (r.search = 'query='.concat(encodeURIComponent(n.toString()))), (location.href = r.href)
+                      ;(r.pathname = '/posts/1'), (r.search = 'query='.concat(encodeURIComponent(n.toString()))), x.push(r.href)
                     }
                   },
                   children: (0, r.jsx)(d, { placeholder: 'Search...', name: 'query', defaultValue: j && decodeURIComponent(j) }),
                 }),
                 (0, r.jsx)(c.Z, { titleLevel: 2, posts: y }),
-                (0, r.jsx)(u.Z, { page: e, lastPage: f, query: j, baseURL: ''.concat(h.Z.baseURL, '/posts') }),
+                (0, r.jsx)(u.Z, { page: e, lastPage: s, query: j, baseURL: ''.concat(h.Z.baseURL, '/posts') }),
               ],
             })
           )
