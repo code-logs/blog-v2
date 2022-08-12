@@ -47,10 +47,10 @@
       }
       n.d(e, {
         Z: function () {
-          return g
+          return m
         },
       })
-      var a = (function () {
+      var u = (function () {
           function t(e) {
             !(function (t, e) {
               if (!(t instanceof e)) throw new TypeError('Cannot call a class as a function')
@@ -88,16 +88,16 @@
             t
           )
         })(),
-        u = a,
+        a = u,
         c = n(8286),
         l = n(5500)
-      function s(t, e) {
+      function f(t, e) {
         for (var n = 0; n < e.length; n++) {
           var r = e[n]
           ;(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(t, r.key, r)
         }
       }
-      function f(t, e, n) {
+      function s(t, e, n) {
         return e in t ? Object.defineProperty(t, e, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (t[e] = n), t
       }
       function p(t) {
@@ -183,7 +183,7 @@
                           })
                         )),
                         r.forEach(function (e) {
-                          f(t, e, n[e])
+                          s(t, e, n[e])
                         })
                     }
                     return t
@@ -278,12 +278,12 @@
                 },
               },
             ]),
-            n && s(e.prototype, n),
-            r && s(e, r),
+            n && f(e.prototype, n),
+            r && f(e, r),
             i
           )
-        })(u),
-        g = new v()
+        })(a),
+        m = new v()
     },
     8118: function (t, e, n) {
       'use strict'
@@ -299,8 +299,8 @@
       var r = n(5893),
         o = n(1163),
         i = n(7294),
-        a = n(6166),
-        u = n(9337),
+        u = n(6166),
+        a = n(9337),
         c = n(4351),
         l = (0, n(7026).Z)(
           (0, r.jsx)('path', {
@@ -308,8 +308,8 @@
           }),
           'SearchRounded'
         ),
-        s = n(3337),
-        f = n.n(s)
+        f = n(3337),
+        s = n.n(f)
       function p(t, e, n) {
         return e in t ? Object.defineProperty(t, e, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (t[e] = n), t
       }
@@ -331,15 +331,15 @@
       }
       var d = function (t) {
           return (0, r.jsxs)('label', {
-            className: f().label,
-            children: [(0, r.jsx)(l, { className: f().icon }), (0, r.jsx)('input', y({ className: f().input }, t))],
+            className: s().label,
+            children: [(0, r.jsx)(l, { className: s().icon }), (0, r.jsx)('input', y({ className: s().input }, t))],
           })
         },
         h = n(8145),
         b = n(6678),
         v = n(7192),
-        g = n(9443),
-        m = n(7427),
+        m = n(9443),
+        g = n(7427),
         O = n(7498),
         w = n.n(O)
       function S(t, e) {
@@ -374,10 +374,10 @@
         P = function (t) {
           var e = t.page,
             n = t.totalCount,
-            l = (0, i.useState)(t.lastPage),
-            s = l[0],
-            f = l[1],
-            p = (0, i.useState)(t.posts),
+            l = (0, i.useState)(1),
+            f = l[0],
+            s = l[1],
+            p = (0, i.useState)([]),
             y = p[0],
             O = p[1],
             S = (0, i.useState)(),
@@ -387,23 +387,23 @@
           return (
             (0, i.useEffect)(
               function () {
-                var n = new URL(g.Z.absolutePath(x.asPath))
+                var n = new URL(m.Z.absolutePath(x.asPath))
                 if (n.search) {
                   var r = new URLSearchParams(n.search).get('query')
                   if (r) {
                     P(encodeURIComponent(r))
                     var o = h.Z.pageLimit,
                       i = (e - 1) * o
-                    O(v.Z.query(r, o, i)), f(Math.ceil(v.Z.query(r).length / o))
+                    O(v.Z.query(r, o, i)), s(Math.ceil(v.Z.query(r).length / o))
                   }
-                } else f(t.lastPage), O(t.posts), P(void 0)
+                } else s(t.lastPage), O(t.posts), P(void 0)
               },
               [e, x, t.lastPage, t.posts]
             ),
             (0, r.jsxs)(r.Fragment, {
               children: [
-                (0, r.jsx)(a.Z, {
-                  title: m.Z.buildPageTitle(b.z.POSTS.TITLE),
+                (0, r.jsx)(u.Z, {
+                  title: g.Z.buildPageTitle(b.z.POSTS.TITLE),
                   description: b.z.POSTS.DESCRIPTION(e),
                   url: ''.concat(h.Z.baseURL, '/posts/').concat(e),
                   imageURL: '/icons/icon-512x512.png',
@@ -428,7 +428,7 @@
                   children: (0, r.jsx)(d, { placeholder: 'Search...', name: 'query', defaultValue: j && decodeURIComponent(j) }),
                 }),
                 (0, r.jsx)(c.Z, { titleLevel: 2, posts: y }),
-                (0, r.jsx)(u.Z, { page: e, lastPage: s, query: j, baseURL: ''.concat(h.Z.baseURL, '/posts') }),
+                (0, r.jsx)(a.Z, { page: e, lastPage: f, query: j, baseURL: ''.concat(h.Z.baseURL, '/posts') }),
               ],
             })
           )

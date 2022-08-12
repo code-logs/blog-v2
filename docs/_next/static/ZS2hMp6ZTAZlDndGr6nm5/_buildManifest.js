@@ -7,7 +7,7 @@
     '/about': ['static/css/4eced8272ab7ced2.css', 'static/chunks/pages/about-bab30e584ca50235.js'],
     '/categories/[category]/[page]': [s, c, 'static/css/b170d5dbbd4128dc.css', 'static/chunks/pages/categories/[category]/[page]-2f3005bcc29ba4f9.js'],
     '/licenses': ['static/css/3d12b70ffe25961a.css', 'static/chunks/pages/licenses-16d85e7a4acf9241.js'],
-    '/posts/[page]': [s, c, 'static/css/cffdfdd8fb48d1ea.css', 'static/chunks/pages/posts/[page]-6cd71e76a44216e1.js'],
+    '/posts/[page]': [s, c, 'static/css/cffdfdd8fb48d1ea.css', 'static/chunks/pages/posts/[page]-29107e8f2449634e.js'],
     '/tags': ['static/css/a244cdd25b03b276.css', 'static/chunks/pages/tags-127a8495782c7f62.js'],
     '/[title]': ['static/chunks/294-6603e2d70ff7953e.js', s, 'static/css/a8d1921a822eb47e.css', 'static/chunks/pages/[title]-215cb6570aa47998.js'],
     sortedPages: ['/', '/404', '/_app', '/_error', '/about', '/categories/[category]/[page]', '/licenses', '/posts/[page]', '/tags', '/[title]'],
