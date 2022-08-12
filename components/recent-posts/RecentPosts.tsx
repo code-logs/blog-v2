@@ -1,19 +1,17 @@
 import { Post } from '../../config/posts.config'
-import PostCard from '../post-card/PostCard'
+import PostCardList from '../post-card-list/PostCardList'
 import TitleWithCount from '../title-with-count/TitleWithCount'
 
 export interface RecentPostsProps {
   posts: Post[]
 }
 
-const RecentPosts = (props: RecentPostsProps) => {
+const RecentPosts = ({ posts }: RecentPostsProps) => {
   return (
     <section>
-      <TitleWithCount level={2} count={props.posts.length} title="Recent posts" />
+      <TitleWithCount level={2} count={posts.length} title="Recent posts" />
 
-      {props.posts.map((post, idx) => (
-        <PostCard key={idx} post={post} />
-      ))}
+      <PostCardList posts={posts} />
     </section>
   )
 }
