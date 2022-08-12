@@ -9,7 +9,7 @@
     '/licenses': ['static/css/3d12b70ffe25961a.css', 'static/chunks/pages/licenses-16d85e7a4acf9241.js'],
     '/posts/[page]': [s, c, 'static/css/cffdfdd8fb48d1ea.css', 'static/chunks/pages/posts/[page]-29107e8f2449634e.js'],
     '/tags': ['static/css/a244cdd25b03b276.css', 'static/chunks/pages/tags-65a9215aa3595394.js'],
-    '/[title]': ['static/chunks/294-6603e2d70ff7953e.js', s, 'static/css/a8d1921a822eb47e.css', 'static/chunks/pages/[title]-215cb6570aa47998.js'],
+    '/[title]': ['static/chunks/294-6603e2d70ff7953e.js', s, 'static/css/5ee6c788dce195db.css', 'static/chunks/pages/[title]-215cb6570aa47998.js'],
     sortedPages: ['/', '/404', '/_app', '/_error', '/about', '/categories/[category]/[page]', '/licenses', '/posts/[page]', '/tags', '/[title]'],
   }
 })('static/chunks/117-d35cede103fa43e1.js', 'static/chunks/495-ee6c283ec9db1239.js')),
