@@ -45,11 +45,9 @@ const Paginator = ({ page, lastPage, displayCount = 5, query, baseURL }: Paginat
       <ul>
         {page > 1 && (
           <li>
-            <Link href={buildURL(page - 1)}>
-              <a>
-                <ChevronLeftRounded />
-              </a>
-            </Link>
+            <a href={buildURL(page - 1)}>
+              <ChevronLeftRounded />
+            </a>
           </li>
         )}
 
