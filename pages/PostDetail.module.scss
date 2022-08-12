@@ -18,6 +18,10 @@
 .container {
   font-size: 0.9em;
 
+  & ins {
+    padding: 20px 0 !important
+  }
+
   @media (max-width: 800px) {
     font-size: 1em;
   }
