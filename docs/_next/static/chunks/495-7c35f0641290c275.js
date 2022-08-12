@@ -1,5 +1,5 @@
 ;(self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [643],
+  [495],
   {
     3454: function (e, t, r) {
       'use strict'
@@ -9,19 +9,11 @@
           ? r.g.process
           : r(7663)
     },
-    2214: function (e, t, r) {
-      ;(window.__NEXT_P = window.__NEXT_P || []).push([
-        '/categories/[category]/[page]',
-        function () {
-          return r(8899)
-        },
-      ])
-    },
     9337: function (e, t, r) {
       'use strict'
       r.d(t, {
         Z: function () {
-          return d
+          return g
         },
       })
       var n = r(5893),
@@ -44,15 +36,16 @@
           }),
           'ChevronRightRounded'
         ),
-        s = r(7294),
-        l = r(2256),
-        u = r.n(l)
+        s = r(1664),
+        l = r(7294),
+        u = r(2256),
+        h = r.n(u)
       function f(e, t) {
         ;(null == t || t > e.length) && (t = e.length)
         for (var r = 0, n = new Array(t); r < t; r++) n[r] = e[r]
         return n
       }
-      function h(e) {
+      function d(e) {
         return (
           (function (e) {
             if (Array.isArray(e)) return f(e)
@@ -75,103 +68,137 @@
           })()
         )
       }
-      var d = function (e) {
+      var g = function (e) {
         var t = e.page,
           r = e.lastPage,
           i = e.displayCount,
-          l = void 0 === i ? 5 : i,
+          u = void 0 === i ? 5 : i,
           f = e.query,
-          d = e.baseURL,
-          g = (0, s.useState)([]),
-          p = g[0],
-          v = g[1]
-        ;(0, s.useEffect)(
+          g = e.baseURL,
+          p = (0, l.useState)([]),
+          v = p[0],
+          x = p[1]
+        ;(0, l.useEffect)(
           function () {
-            for (var e = [], n = [], i = Math.floor(l / 2), o = 0; o < i; o++) {
+            for (var e = [], n = [], i = Math.floor(u / 2), o = 0; o < i; o++) {
               var a = t - i + o
               a > 0 && e.push(a)
               var c = t + 1 + o
               c <= r && n.push(c)
             }
-            v(h(e).concat([t], h(n)))
+            x(d(e).concat([t], d(n)))
           },
-          [t, r, l]
+          [t, r, u]
         ),
-          (0, s.useEffect)(function () {}, [])
+          (0, l.useEffect)(function () {}, [])
         var m = function (e) {
-          var t = ''.concat(d, '/').concat(e)
+          var t = ''.concat(g, '/').concat(e)
           return f && (t += '?query='.concat(f)), t
         }
         return (0, n.jsx)('div', {
-          className: u().container,
+          className: h().container,
           children: (0, n.jsxs)('ul', {
             children: [
-              t > 1 && (0, n.jsx)('li', { children: (0, n.jsx)('a', { href: m(t - 1), children: (0, n.jsx)(o, {}) }) }),
+              t > 1 && (0, n.jsx)('li', { children: (0, n.jsx)(s.default, { href: m(t - 1), children: (0, n.jsx)('a', { children: (0, n.jsx)(o, {}) }) }) }),
               t > 1 &&
-                !p.includes(1) &&
-                (0, n.jsxs)(n.Fragment, { children: [(0, n.jsx)('li', { children: (0, n.jsx)('a', { href: m(1), children: 1 }) }), (0, n.jsx)(a, {})] }),
-              p.map(function (e) {
-                return (0, n.jsx)('li', { children: (0, n.jsx)('a', { className: t === e ? u().currentPage : '', href: m(e), children: e }) }, e)
+                !v.includes(1) &&
+                (0, n.jsxs)(n.Fragment, {
+                  children: [
+                    (0, n.jsx)('li', { children: (0, n.jsx)(s.default, { href: m(1), children: (0, n.jsx)('a', { children: 1 }) }) }),
+                    (0, n.jsx)(a, {}),
+                  ],
+                }),
+              v.map(function (e) {
+                return (0,
+                n.jsx)('li', { children: (0, n.jsx)(s.default, { href: m(e), children: (0, n.jsx)('a', { className: t === e ? h().currentPage : '', children: e }) }) }, e)
               }),
               t < r &&
-                !p.includes(r) &&
-                (0, n.jsxs)(n.Fragment, { children: [(0, n.jsx)(a, {}), (0, n.jsx)('li', { children: (0, n.jsx)('a', { href: m(r), children: r }) })] }),
-              t < r && (0, n.jsx)('li', { children: (0, n.jsx)('a', { href: m(t + 1), children: (0, n.jsx)(c, {}) }) }),
+                !v.includes(r) &&
+                (0, n.jsxs)(n.Fragment, {
+                  children: [
+                    (0, n.jsx)(a, {}),
+                    (0, n.jsx)('li', { children: (0, n.jsx)(s.default, { href: m(r), children: (0, n.jsx)('a', { children: r }) }) }),
+                  ],
+                }),
+              t < r && (0, n.jsx)('li', { children: (0, n.jsx)(s.default, { href: m(t + 1), children: (0, n.jsx)('a', { children: (0, n.jsx)(c, {}) }) }) }),
             ],
           }),
         })
       }
     },
-    7221: function (e, t, r) {
+    4351: function (e, t, r) {
       'use strict'
+      r.d(t, {
+        Z: function () {
+          return v
+        },
+      })
       var n = r(5893),
-        i = r(1664),
-        o = r(5500),
-        a = r(4111),
-        c = r(9443),
-        s = r(8286),
-        l = r(7594),
-        u = r(7828),
-        f = r.n(u)
-      t.Z = function (e) {
-        var t = e.titleLevel,
-          r = void 0 === t ? 3 : t,
-          u = e.post,
-          h = (0, a.Z)(new Date(u.publishedAt))
-        return (0, n.jsxs)('article', {
-          className: 'clickable '.concat(f().card),
-          children: [
-            (0, n.jsx)(i.default, {
-              href: s.Z.buildLinkURLByTitle(u.title),
-              children: (0, n.jsxs)('a', {
-                className: f().title,
-                children: [
-                  1 === r && (0, n.jsx)('h1', { children: u.title }),
-                  2 === r && (0, n.jsx)('h2', { children: u.title }),
-                  3 === r && (0, n.jsx)('h3', { children: u.title }),
-                ],
-              }),
-            }),
-            (0, n.jsx)('span', { className: f().category, children: o.aA[u.category] }),
-            (0, n.jsx)('span', { className: f().publishedAt, children: h }),
-            (0, n.jsx)(i.default, {
-              href: s.Z.buildLinkURLByTitle(u.title),
-              children: (0, n.jsx)('a', { className: f().description, children: (0, n.jsx)('p', { children: u.description }) }),
-            }),
-            u.thumbnailName &&
-              (0, n.jsx)('div', {
-                className: f().thumbnail,
-                children: (0, n.jsx)(i.default, {
-                  href: s.Z.buildLinkURLByTitle(u.title),
-                  children: (0, n.jsx)('a', {
-                    children: (0, n.jsx)('img', { src: c.Z.buildImagePath(u.thumbnailName), alt: u.description, width: '400', height: '300' }),
-                  }),
+        i = r(4786),
+        o = r(1664),
+        a = r(5500),
+        c = r(4111),
+        s = r(9443),
+        l = r(8286),
+        u = r(7594),
+        h = r(7828),
+        f = r.n(h),
+        d = function (e) {
+          var t = e.titleLevel,
+            r = void 0 === t ? 3 : t,
+            i = e.post,
+            h = (0, c.Z)(new Date(i.publishedAt))
+          return (0, n.jsxs)('article', {
+            className: 'clickable '.concat(f().card),
+            children: [
+              (0, n.jsx)(o.default, {
+                href: l.Z.buildLinkURLByTitle(i.title),
+                children: (0, n.jsxs)('a', {
+                  className: f().title,
+                  children: [
+                    1 === r && (0, n.jsx)('h1', { children: i.title }),
+                    2 === r && (0, n.jsx)('h2', { children: i.title }),
+                    3 === r && (0, n.jsx)('h3', { children: i.title }),
+                  ],
                 }),
               }),
-            (0, n.jsx)('section', { className: f().tags, children: (0, n.jsx)(l.Z, { tags: u.tags }) }),
-          ],
-        })
-      }
+              (0, n.jsx)('span', { className: f().category, children: a.aA[i.category] }),
+              (0, n.jsx)('span', { className: f().publishedAt, children: h }),
+              (0, n.jsx)(o.default, {
+                href: l.Z.buildLinkURLByTitle(i.title),
+                children: (0, n.jsx)('a', { className: f().description, children: (0, n.jsx)('p', { children: i.description }) }),
+              }),
+              i.thumbnailName &&
+                (0, n.jsx)('div', {
+                  className: f().thumbnail,
+                  children: (0, n.jsx)(o.default, {
+                    href: l.Z.buildLinkURLByTitle(i.title),
+                    children: (0, n.jsx)('a', {
+                      children: (0, n.jsx)('img', { src: s.Z.buildImagePath(i.thumbnailName), alt: i.description, width: '400', height: '300' }),
+                    }),
+                  }),
+                }),
+              (0, n.jsx)('section', { className: f().tags, children: (0, n.jsx)(u.Z, { tags: i.tags }) }),
+            ],
+          })
+        },
+        g = r(3950),
+        p = r.n(g),
+        v = function (e) {
+          var t = e.titleLevel,
+            r = e.posts,
+            o = e.adsBlockCycle,
+            a = void 0 === o ? 2 : o
+          return Boolean(r.length)
+            ? (0, n.jsx)('ul', {
+                className: p().list,
+                children: r.map(function (e, r) {
+                  return (0,
+                  n.jsxs)(n.Fragment, { children: [(0, n.jsx)('li', { children: (0, n.jsx)(d, { titleLevel: t, post: e }) }, e.title), 0 !== a && (r + 1) % a === 0 && (0, n.jsx)(i.Z, {})] })
+                }),
+              })
+            : (0, n.jsx)(n.Fragment, {})
+        }
     },
     7594: function (e, t, r) {
       'use strict'
@@ -203,85 +230,11 @@
           })
         }
     },
-    8899: function (e, t, r) {
-      'use strict'
-      r.r(t),
-        r.d(t, {
-          __N_SSG: function () {
-            return v
-          },
-        })
-      var n = r(5893),
-        i = r(6166),
-        o = r(4786),
-        a = r(9337),
-        c = r(7221),
-        s = r(8145),
-        l = r(6678),
-        u = r(5500),
-        f = r(7427),
-        h = r(5866),
-        d = r.n(h)
-      function g(e, t) {
-        ;(null == t || t > e.length) && (t = e.length)
-        for (var r = 0, n = new Array(t); r < t; r++) n[r] = e[r]
-        return n
-      }
-      function p(e) {
-        return (
-          (function (e) {
-            if (Array.isArray(e)) return g(e)
-          })(e) ||
-          (function (e) {
-            if (('undefined' !== typeof Symbol && null != e[Symbol.iterator]) || null != e['@@iterator']) return Array.from(e)
-          })(e) ||
-          (function (e, t) {
-            if (!e) return
-            if ('string' === typeof e) return g(e, t)
-            var r = Object.prototype.toString.call(e).slice(8, -1)
-            'Object' === r && e.constructor && (r = e.constructor.name)
-            if ('Map' === r || 'Set' === r) return Array.from(r)
-            if ('Arguments' === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)) return g(e, t)
-          })(e) ||
-          (function () {
-            throw new TypeError(
-              'Invalid attempt to spread non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
-            )
-          })()
-        )
-      }
-      var v = !0
-      t.default = function (e) {
-        var t = e.page,
-          r = e.lastPage,
-          h = e.posts,
-          g = e.category
-        return (0, n.jsxs)(n.Fragment, {
-          children: [
-            (0, n.jsx)(i.Z, {
-              title: f.Z.buildPageTitle(l.z.CATEGORIES.TITLE(g)),
-              description: l.z.CATEGORIES.DESCRIPTION(g, t),
-              url: 'categories/'.concat(g, '/').concat(t, '}'),
-              imageURL: '/icons/icon-512x512.png',
-              keywords: h
-                .map(function (e) {
-                  return p(e.tags).concat([e.title, e.category, e.description])
-                })
-                .flat(),
-            }),
-            (0, n.jsx)('h1', { className: d().title, children: u.aA[g] }),
-            Boolean(null === h || void 0 === h ? void 0 : h.length) &&
-              h.map(function (e, t) {
-                return (0, n.jsx)(c.Z, { titleLevel: 2, post: e }, t)
-              }),
-            (0, n.jsx)(o.Z, {}),
-            (0, n.jsx)(a.Z, { page: t, lastPage: r, baseURL: ''.concat(s.Z.baseURL, '/categories/').concat(g) }),
-          ],
-        })
-      }
-    },
     2256: function (e) {
       e.exports = { container: 'Paginator_container__Jyd6p', currentPage: 'Paginator_currentPage__uykCS' }
+    },
+    3950: function (e) {
+      e.exports = { list: 'PostCardList_list__0P9EG' }
     },
     7828: function (e) {
       e.exports = {
@@ -299,9 +252,6 @@
     },
     8193: function (e) {
       e.exports = { tags: 'Tags_tags__mhykw' }
-    },
-    5866: function (e) {
-      e.exports = { title: 'Categories_title__UTw08' }
     },
     1864: function (e, t, r) {
       var n = r(3454)
@@ -372,20 +322,20 @@
                   if ((e = i.resolve(e)) === (r = i.resolve(r))) return ''
                   for (var n = 1; n < e.length && 47 === e.charCodeAt(n); ++n);
                   for (var o = e.length, a = o - n, c = 1; c < r.length && 47 === r.charCodeAt(c); ++c);
-                  for (var s = r.length - c, l = a < s ? a : s, u = -1, f = 0; f <= l; ++f) {
-                    if (f === l) {
+                  for (var s = r.length - c, l = a < s ? a : s, u = -1, h = 0; h <= l; ++h) {
+                    if (h === l) {
                       if (s > l) {
-                        if (47 === r.charCodeAt(c + f)) return r.slice(c + f + 1)
-                        if (0 === f) return r.slice(c + f)
-                      } else a > l && (47 === e.charCodeAt(n + f) ? (u = f) : 0 === f && (u = 0))
+                        if (47 === r.charCodeAt(c + h)) return r.slice(c + h + 1)
+                        if (0 === h) return r.slice(c + h)
+                      } else a > l && (47 === e.charCodeAt(n + h) ? (u = h) : 0 === h && (u = 0))
                       break
                     }
-                    var h = e.charCodeAt(n + f)
-                    if (h !== r.charCodeAt(c + f)) break
-                    47 === h && (u = f)
+                    var f = e.charCodeAt(n + h)
+                    if (f !== r.charCodeAt(c + h)) break
+                    47 === f && (u = h)
                   }
                   var d = ''
-                  for (f = n + u + 1; f <= o; ++f) (f !== o && 47 !== e.charCodeAt(f)) || (0 === d.length ? (d += '..') : (d += '/..'))
+                  for (h = n + u + 1; h <= o; ++h) (h !== o && 47 !== e.charCodeAt(h)) || (0 === d.length ? (d += '..') : (d += '/..'))
                   return d.length > 0 ? d + r.slice(c + u) : ((c += u), 47 === r.charCodeAt(c) && ++c, r.slice(c))
                 },
                 _makeLong: function (e) {
@@ -461,15 +411,15 @@
                     i = e.charCodeAt(0),
                     o = 47 === i
                   o ? ((r.root = '/'), (n = 1)) : (n = 0)
-                  for (var a = -1, c = 0, s = -1, l = !0, u = e.length - 1, f = 0; u >= n; --u)
+                  for (var a = -1, c = 0, s = -1, l = !0, u = e.length - 1, h = 0; u >= n; --u)
                     if (47 !== (i = e.charCodeAt(u)))
-                      -1 === s && ((l = !1), (s = u + 1)), 46 === i ? (-1 === a ? (a = u) : 1 !== f && (f = 1)) : -1 !== a && (f = -1)
+                      -1 === s && ((l = !1), (s = u + 1)), 46 === i ? (-1 === a ? (a = u) : 1 !== h && (h = 1)) : -1 !== a && (h = -1)
                     else if (!l) {
                       c = u + 1
                       break
                     }
                   return (
-                    -1 === a || -1 === s || 0 === f || (1 === f && a === s - 1 && a === c + 1)
+                    -1 === a || -1 === s || 0 === h || (1 === h && a === s - 1 && a === c + 1)
                       ? -1 !== s && (r.base = r.name = 0 === c && o ? e.slice(1, s) : e.slice(c, s))
                       : (0 === c && o ? ((r.name = e.slice(1, a)), (r.base = e.slice(1, s))) : ((r.name = e.slice(c, a)), (r.base = e.slice(c, s))),
                         (r.ext = e.slice(a, s))),
@@ -545,12 +495,12 @@
                 s = [],
                 l = !1,
                 u = -1
-              function f() {
-                l && c && ((l = !1), c.length ? (s = c.concat(s)) : (u = -1), s.length && h())
-              }
               function h() {
+                l && c && ((l = !1), c.length ? (s = c.concat(s)) : (u = -1), s.length && f())
+              }
+              function f() {
                 if (!l) {
-                  var e = a(f)
+                  var e = a(h)
                   l = !0
                   for (var t = s.length; t; ) {
                     for (c = s, s = []; ++u < t; ) c && c[u].run()
@@ -580,7 +530,7 @@
               ;(n.nextTick = function (e) {
                 var t = new Array(arguments.length - 1)
                 if (arguments.length > 1) for (var r = 1; r < arguments.length; r++) t[r - 1] = arguments[r]
-                s.push(new d(e, t)), 1 !== s.length || l || a(h)
+                s.push(new d(e, t)), 1 !== s.length || l || a(f)
               }),
                 (d.prototype.run = function () {
                   this.fun.apply(null, this.array)
@@ -638,13 +588,5 @@
     9008: function (e, t, r) {
       e.exports = r(5443)
     },
-  },
-  function (e) {
-    e.O(0, [117, 774, 888, 179], function () {
-      return (t = 2214), e((e.s = t))
-      var t
-    })
-    var t = e.O()
-    _N_E = t
   },
 ])

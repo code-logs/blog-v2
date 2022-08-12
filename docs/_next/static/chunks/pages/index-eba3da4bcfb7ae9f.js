@@ -17,56 +17,79 @@
         },
       ])
     },
-    7221: function (e, t, n) {
+    4351: function (e, t, n) {
       'use strict'
+      n.d(t, {
+        Z: function () {
+          return v
+        },
+      })
       var r = n(5893),
-        i = n(1664),
-        o = n(5500),
-        a = n(4111),
-        c = n(9443),
-        s = n(8286),
-        u = n(7594),
-        l = n(7828),
-        f = n.n(l)
-      t.Z = function (e) {
-        var t = e.titleLevel,
-          n = void 0 === t ? 3 : t,
-          l = e.post,
-          h = (0, a.Z)(new Date(l.publishedAt))
-        return (0, r.jsxs)('article', {
-          className: 'clickable '.concat(f().card),
-          children: [
-            (0, r.jsx)(i.default, {
-              href: s.Z.buildLinkURLByTitle(l.title),
-              children: (0, r.jsxs)('a', {
-                className: f().title,
-                children: [
-                  1 === n && (0, r.jsx)('h1', { children: l.title }),
-                  2 === n && (0, r.jsx)('h2', { children: l.title }),
-                  3 === n && (0, r.jsx)('h3', { children: l.title }),
-                ],
-              }),
-            }),
-            (0, r.jsx)('span', { className: f().category, children: o.aA[l.category] }),
-            (0, r.jsx)('span', { className: f().publishedAt, children: h }),
-            (0, r.jsx)(i.default, {
-              href: s.Z.buildLinkURLByTitle(l.title),
-              children: (0, r.jsx)('a', { className: f().description, children: (0, r.jsx)('p', { children: l.description }) }),
-            }),
-            l.thumbnailName &&
-              (0, r.jsx)('div', {
-                className: f().thumbnail,
-                children: (0, r.jsx)(i.default, {
-                  href: s.Z.buildLinkURLByTitle(l.title),
-                  children: (0, r.jsx)('a', {
-                    children: (0, r.jsx)('img', { src: c.Z.buildImagePath(l.thumbnailName), alt: l.description, width: '400', height: '300' }),
-                  }),
+        i = n(4786),
+        o = n(1664),
+        a = n(5500),
+        c = n(4111),
+        s = n(9443),
+        u = n(8286),
+        l = n(7594),
+        f = n(7828),
+        h = n.n(f),
+        d = function (e) {
+          var t = e.titleLevel,
+            n = void 0 === t ? 3 : t,
+            i = e.post,
+            f = (0, c.Z)(new Date(i.publishedAt))
+          return (0, r.jsxs)('article', {
+            className: 'clickable '.concat(h().card),
+            children: [
+              (0, r.jsx)(o.default, {
+                href: u.Z.buildLinkURLByTitle(i.title),
+                children: (0, r.jsxs)('a', {
+                  className: h().title,
+                  children: [
+                    1 === n && (0, r.jsx)('h1', { children: i.title }),
+                    2 === n && (0, r.jsx)('h2', { children: i.title }),
+                    3 === n && (0, r.jsx)('h3', { children: i.title }),
+                  ],
                 }),
               }),
-            (0, r.jsx)('section', { className: f().tags, children: (0, r.jsx)(u.Z, { tags: l.tags }) }),
-          ],
-        })
-      }
+              (0, r.jsx)('span', { className: h().category, children: a.aA[i.category] }),
+              (0, r.jsx)('span', { className: h().publishedAt, children: f }),
+              (0, r.jsx)(o.default, {
+                href: u.Z.buildLinkURLByTitle(i.title),
+                children: (0, r.jsx)('a', { className: h().description, children: (0, r.jsx)('p', { children: i.description }) }),
+              }),
+              i.thumbnailName &&
+                (0, r.jsx)('div', {
+                  className: h().thumbnail,
+                  children: (0, r.jsx)(o.default, {
+                    href: u.Z.buildLinkURLByTitle(i.title),
+                    children: (0, r.jsx)('a', {
+                      children: (0, r.jsx)('img', { src: s.Z.buildImagePath(i.thumbnailName), alt: i.description, width: '400', height: '300' }),
+                    }),
+                  }),
+                }),
+              (0, r.jsx)('section', { className: h().tags, children: (0, r.jsx)(l.Z, { tags: i.tags }) }),
+            ],
+          })
+        },
+        g = n(3950),
+        p = n.n(g),
+        v = function (e) {
+          var t = e.titleLevel,
+            n = e.posts,
+            o = e.adsBlockCycle,
+            a = void 0 === o ? 2 : o
+          return Boolean(n.length)
+            ? (0, r.jsx)('ul', {
+                className: p().list,
+                children: n.map(function (e, n) {
+                  return (0,
+                  r.jsxs)(r.Fragment, { children: [(0, r.jsx)('li', { children: (0, r.jsx)(d, { titleLevel: t, post: e }) }, e.title), 0 !== a && (n + 1) % a === 0 && (0, r.jsx)(i.Z, {})] })
+                }),
+              })
+            : (0, r.jsx)(r.Fragment, {})
+        }
     },
     7594: function (e, t, n) {
       'use strict'
@@ -154,7 +177,7 @@
       }
       n.d(t, {
         Z: function () {
-          return m
+          return x
         },
       })
       var a = (function () {
@@ -390,7 +413,7 @@
             o
           )
         })(c),
-        m = new y()
+        x = new y()
     },
     1739: function (e, t, n) {
       'use strict'
@@ -425,22 +448,16 @@
         },
         l = n(6166),
         f = n(4786),
-        h = n(7221),
+        h = n(4351),
         d = n(5505),
         g = function (e) {
-          return (0, r.jsxs)('section', {
-            children: [
-              (0, r.jsx)(d.Z, { level: 2, count: e.posts.length, title: 'Recent posts' }),
-              e.posts.map(function (e, t) {
-                return (0, r.jsx)(h.Z, { post: e }, t)
-              }),
-            ],
-          })
+          var t = e.posts
+          return (0, r.jsxs)('section', { children: [(0, r.jsx)(d.Z, { level: 2, count: t.length, title: 'Recent posts' }), (0, r.jsx)(h.Z, { posts: t })] })
         },
         p = n(7594),
         v = n(9284),
         y = n.n(v),
-        m = function (e) {
+        x = function (e) {
           var t = e.tagsWithCount,
             n = e.limit,
             o = void 0 === n ? 10 : n
@@ -464,7 +481,7 @@
             })
           )
         },
-        x = n(8145),
+        m = n(8145),
         b = n(6678),
         j = n(7427),
         _ = n(3447),
@@ -477,16 +494,16 @@
                 title: j.Z.buildPageTitle(b.z.MAIN.TITLE),
                 description: b.z.MAIN.DESCRIPTION,
                 keywords: e.categories,
-                url: x.Z.baseURL,
+                url: m.Z.baseURL,
                 imageURL: '/icons/icon-512x512.png',
               }),
               (0, r.jsx)('h1', { children: 'Home' }),
               (0, r.jsx)(g, { posts: e.recentPosts }),
+              (0, r.jsx)(f.Z, {}),
               (0, r.jsxs)('div', {
                 className: w().index,
-                children: [(0, r.jsx)(u, { categories: e.categories }), (0, r.jsx)(m, { tagsWithCount: e.tagsWithCount, limit: 20 })],
+                children: [(0, r.jsx)(u, { categories: e.categories }), (0, r.jsx)(x, { tagsWithCount: e.tagsWithCount, limit: 20 })],
               }),
-              (0, r.jsx)(f.Z, {}),
             ],
           })
         }
@@ -498,6 +515,9 @@
         newTag: 'CategoryIndexer_newTag__Lgzq_',
         count: 'CategoryIndexer_count__QQ7wP',
       }
+    },
+    3950: function (e) {
+      e.exports = { list: 'PostCardList_list__0P9EG' }
     },
     7828: function (e) {
       e.exports = {

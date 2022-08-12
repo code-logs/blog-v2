@@ -199,28 +199,29 @@
       'use strict'
       t.r(n)
       var o = t(5893),
-        r = t(6166),
+        r = t(1664),
         c = t(4786),
-        i = t(1985),
-        s = t(8145),
-        a = t(6678),
-        u = t(7427),
-        l = t(9564),
-        f = t.n(l)
+        i = t(6166),
+        s = t(1985),
+        a = t(8145),
+        u = t(6678),
+        l = t(7427),
+        f = t(9564),
+        d = t.n(f)
       n.default = function () {
         return (0, o.jsxs)(o.Fragment, {
           children: [
-            (0, o.jsx)(r.Z, {
-              title: u.Z.buildPageTitle(a.z.ABOUT.TITLE),
-              description: a.z.ABOUT.DESCRIPTION,
-              url: ''.concat(s.Z.baseURL, '/about'),
+            (0, o.jsx)(i.Z, {
+              title: l.Z.buildPageTitle(u.z.ABOUT.TITLE),
+              description: u.z.ABOUT.DESCRIPTION,
+              url: ''.concat(a.Z.baseURL, '/about'),
               imageURL: '/icons/icon-512x512.png',
             }),
             (0, o.jsxs)('article', {
-              className: f().about,
+              className: d().about,
               children: [
                 (0, o.jsx)('h1', { children: 'About' }),
-                (0, o.jsxs)(i.Z, {
+                (0, o.jsxs)(s.Z, {
                   timeout: 300,
                   children: [
                     (0, o.jsx)('h2', { children: 'Here is...' }),
@@ -245,11 +246,11 @@
                     }),
                   ],
                 }),
-                (0, o.jsxs)(i.Z, {
+                (0, o.jsxs)(s.Z, {
                   timeout: 1350,
                   children: [
                     (0, o.jsx)('h2', { children: 'Licenses' }),
-                    (0, o.jsx)('p', { children: (0, o.jsx)('a', { href: 'licenses', children: 'Link to license info' }) }),
+                    (0, o.jsx)('p', { children: (0, o.jsx)(r.default, { href: 'licenses', children: (0, o.jsx)('a', { children: 'Link to license info' }) }) }),
                   ],
                 }),
               ],

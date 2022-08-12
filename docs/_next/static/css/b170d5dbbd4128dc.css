@@ -118,6 +118,10 @@
 .PostCard_tags__H0ViL {
   grid-area: tags;
 }
+.PostCardList_list__0P9EG {
+  margin: 0;
+  padding: 0;
+}
 .Categories_title__UTw08 {
   text-transform: capitalize;
 }
