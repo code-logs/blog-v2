@@ -52,13 +52,13 @@ const Home: NextPage<{
 
       <RecentPosts posts={props.recentPosts} />
 
+      <MainAdsBanner />
+
       <div className={styles.index}>
         <CategoryIndexer categories={props.categories} />
 
         <TagIndexer tagsWithCount={props.tagsWithCount} limit={20} />
       </div>
-
-      <MainAdsBanner />
     </>
   )
 }

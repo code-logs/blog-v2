@@ -110,8 +110,6 @@ const Posts: NextPage<PostsProps> = (props) => {
 
       <PostCardList titleLevel={2} posts={posts} />
 
-      <MainAdsBanner />
-
       <Paginator page={page} lastPage={lastPage} query={query} baseURL={`${blogConfig.baseURL}/posts`} />
     </>
   )
