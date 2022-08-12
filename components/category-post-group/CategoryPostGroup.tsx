@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { Post } from '../../config/posts.config'
 import PostUtil from '../../utils/PostUtil'
@@ -24,7 +25,9 @@ const CategoryPostGroup = ({ posts }: CategoryPostGroupProps) => {
         {recentPosts.map((post) => (
           <li key={post.fileName}>
             <h3>{post.title}</h3>
-            <a href={PostUtil.buildLinkURLByTitle(post.title)}>{post.description}</a>
+            <Link href={PostUtil.buildLinkURLByTitle(post.title)}>
+              <a>{post.description}</a>
+            </Link>
           </li>
         ))}
       </ul>
@@ -36,7 +39,9 @@ const CategoryPostGroup = ({ posts }: CategoryPostGroupProps) => {
             {posts.map((post) => (
               <li key={post.fileName}>
                 <h3>{post.title}</h3>
-                <a href={PostUtil.buildLinkURLByTitle(post.title)}>{post.description}</a>
+                <Link href={PostUtil.buildLinkURLByTitle(post.title)}>
+                  <a>{post.description}</a>
+                </Link>
               </li>
             ))}
           </ul>

@@ -1,5 +1,6 @@
-import CommonMeta from '../../components/common-meta/CommonMeta'
+import Link from 'next/link'
 import MainAdsBanner from '../../components/ads-banner/MainAdsBanner'
+import CommonMeta from '../../components/common-meta/CommonMeta'
 import RaiseSection from '../../components/raise-section/RaiseSection'
 import blogConfig from '../../config/blog.config'
 import { META_CONTENTS } from '../../config/meta-contents'
@@ -28,13 +29,17 @@ const About = () => {
           <p>올바른 정보를 공유하는 것을 목적으로 하지만 경우에 따라 유언비어(?)를 노출 할 수 있습니다.</p>
           <p>잘못된 정보의 공유나 바르지 않은 개인의견에 대한 피드백은 주시면 감사히 수용합니다.</p>
           <br />
-          <p><strong>정보 공유를 통해 저와 참여자 분들의 긍정적인 발전을 기원합니다.</strong></p>
+          <p>
+            <strong>정보 공유를 통해 저와 참여자 분들의 긍정적인 발전을 기원합니다.</strong>
+          </p>
         </RaiseSection>
 
         <RaiseSection timeout={standardTimeout * ratio * 3}>
           <h2>Licenses</h2>
           <p>
-            <a href="licenses">Link to license info</a>
+            <Link href="licenses">
+              <a>Link to license info</a>
+            </Link>
           </p>
         </RaiseSection>
       </article>

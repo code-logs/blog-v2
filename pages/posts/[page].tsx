@@ -1,10 +1,10 @@
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-import CommonMeta from '../../components/common-meta/CommonMeta'
 import MainAdsBanner from '../../components/ads-banner/MainAdsBanner'
+import CommonMeta from '../../components/common-meta/CommonMeta'
 import Paginator from '../../components/paginator/Paginator'
-import PostCard from '../../components/post-card/PostCard'
+import PostCardList from '../../components/post-card-list/PostCardList'
 import SearchInput from '../../components/search-input/SearchInput'
 import blogConfig from '../../config/blog.config'
 import { META_CONTENTS } from '../../config/meta-contents'
@@ -56,10 +56,10 @@ const Posts: NextPage<PostsProps> = (props) => {
   const [lastPage, setLastPage] = useState(props.lastPage)
   const [posts, setPosts] = useState(props.posts)
   const [query, setQuery] = useState<string>()
-  const router = useRouter()
+  const dynamicRoute = useRouter()
 
   useEffect(() => {
-    const url = new URL(PathUtil.absolutePath(router.asPath))
+    const url = new URL(PathUtil.absolutePath(dynamicRoute.asPath))
 
     if (url.search) {
       const searchParams = new URLSearchParams(url.search)
@@ -71,8 +71,12 @@ const Posts: NextPage<PostsProps> = (props) => {
         setPosts(postsDatabase.query(query, pageLimit, skip))
         setLastPage(Math.ceil(postsDatabase.query(query).length / pageLimit))
       }
+    } else {
+      setLastPage(props.lastPage)
+      setPosts(props.posts)
+      setQuery(undefined)
     }
-  }, [page, router.asPath])
+  }, [page, dynamicRoute, props.lastPage, props.posts])
 
   return (
     <>
@@ -101,12 +105,10 @@ const Posts: NextPage<PostsProps> = (props) => {
           location.href = url.href
         }}
       >
-        <SearchInput placeholder="Search..." name="query" />
+        <SearchInput placeholder="Search..." name="query" defaultValue={query && decodeURIComponent(query)} />
       </form>
 
-      {Boolean(posts?.length) && posts.map((post, idx) => <PostCard titleLevel={2} key={idx} post={post} />)}
-
-      <MainAdsBanner />
+      <PostCardList titleLevel={2} posts={posts} />
 
       <Paginator page={page} lastPage={lastPage} query={query} baseURL={`${blogConfig.baseURL}/posts`} />
     </>
