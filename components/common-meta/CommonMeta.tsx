@@ -13,7 +13,7 @@ export interface CommonMetaProps {
 
 const CommonMeta = (props: CommonMetaProps) => {
   const { title, description, keywords, url, imageURL, customMeta } = props
-  useAdsense()
+  useAdsense(blogConfig.googleAdsense.adClient)
 
   return (
     <Head>
