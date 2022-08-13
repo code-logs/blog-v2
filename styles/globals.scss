@@ -98,7 +98,7 @@ li {
 header {
   grid-area: header;
   height: var(--header-height);
-  position: fixed;
+  position: sticky;
   left: 0;
   right: 0;
   top: 0;
