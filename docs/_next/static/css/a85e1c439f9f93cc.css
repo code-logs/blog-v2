@@ -1,3 +1,6 @@
+.MainAdsBanner_container__YWe5C {
+  padding: 20px 0;
+}
 .NoFoundPosting_noFoundPosting__n8wte h2 {
   font-size: 1.4rem;
 }
@@ -37,9 +40,6 @@
   padding: var(--narrow-spacing) var(--common-spacing);
   border-radius: 4px;
   color: #fff;
-}
-.MainAdsBanner_container__YWe5C {
-  padding: 20px 0;
 }
 .Tag_tag__tXphA {
   display: block;

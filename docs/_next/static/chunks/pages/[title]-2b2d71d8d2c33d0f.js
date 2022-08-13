@@ -290,38 +290,39 @@
       n.r(t),
         n.d(t, {
           __N_SSG: function () {
-            return k
+            return N
           },
           default: function () {
-            return C
+            return k
           },
         })
       var r = n(5893),
         i = n(637),
         o = n(7294),
-        s = n(8286),
-        a = n(6778),
-        l = n.n(a)
-      function c(e, t) {
+        s = n(4786),
+        a = n(8286),
+        l = n(6778),
+        c = n.n(l)
+      function u(e, t) {
         ;(null == t || t > e.length) && (t = e.length)
         for (var n = 0, r = new Array(t); n < t; n++) r[n] = e[n]
         return r
       }
-      function u(e) {
+      function f(e) {
         return (
           (function (e) {
-            if (Array.isArray(e)) return c(e)
+            if (Array.isArray(e)) return u(e)
           })(e) ||
           (function (e) {
             if (('undefined' !== typeof Symbol && null != e[Symbol.iterator]) || null != e['@@iterator']) return Array.from(e)
           })(e) ||
           (function (e, t) {
             if (!e) return
-            if ('string' === typeof e) return c(e, t)
+            if ('string' === typeof e) return u(e, t)
             var n = Object.prototype.toString.call(e).slice(8, -1)
             'Object' === n && e.constructor && (n = e.constructor.name)
             if ('Map' === n || 'Set' === n) return Array.from(n)
-            if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return c(e, t)
+            if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return u(e, t)
           })(e) ||
           (function () {
             throw new TypeError(
@@ -330,41 +331,41 @@
           })()
         )
       }
-      var f = function (e) {
+      var d = function (e) {
           var t = e.posts,
             n = (0, o.useState)([]),
             i = n[0],
-            a = n[1],
-            c = (0, o.useState)([]),
-            f = c[0],
-            d = c[1]
+            s = n[1],
+            l = (0, o.useState)([]),
+            u = l[0],
+            d = l[1]
           return (
             (0, o.useEffect)(
               function () {
-                var e = u(t)
-                a(e.slice(0, 3)), d(e.slice(3))
+                var e = f(t)
+                s(e.slice(0, 3)), d(e.slice(3))
               },
               [t]
             ),
             (0, r.jsxs)(r.Fragment, {
               children: [
                 (0, r.jsx)('ul', {
-                  className: l().container,
+                  className: c().container,
                   children: i.map(function (e) {
                     return (0,
-                    r.jsxs)('li', { children: [(0, r.jsx)('h3', { children: e.title }), (0, r.jsx)('a', { href: s.Z.buildLinkURLByTitle(e.title), children: e.description })] }, e.fileName)
+                    r.jsxs)('li', { children: [(0, r.jsx)('h3', { children: e.title }), (0, r.jsx)('a', { href: a.Z.buildLinkURLByTitle(e.title), children: e.description })] }, e.fileName)
                   }),
                 }),
-                !!f.length &&
+                !!u.length &&
                   (0, r.jsxs)('details', {
-                    className: l().details,
+                    className: c().details,
                     children: [
                       (0, r.jsx)('summary', { children: '\ub354\ubcf4\uae30' }),
                       (0, r.jsx)('ul', {
-                        className: l().container,
+                        className: c().container,
                         children: t.map(function (e) {
                           return (0,
-                          r.jsxs)('li', { children: [(0, r.jsx)('h3', { children: e.title }), (0, r.jsx)('a', { href: s.Z.buildLinkURLByTitle(e.title), children: e.description })] }, e.fileName)
+                          r.jsxs)('li', { children: [(0, r.jsx)('h3', { children: e.title }), (0, r.jsx)('a', { href: a.Z.buildLinkURLByTitle(e.title), children: e.description })] }, e.fileName)
                         }),
                       }),
                     ],
@@ -373,8 +374,7 @@
             })
           )
         },
-        d = n(6166),
-        h = n(4786),
+        h = n(6166),
         p = n(7192),
         y = n(5114),
         m = n.n(y),
@@ -383,7 +383,7 @@
             n,
             i,
             o,
-            a,
+            s,
             l,
             c = e.post
           return (0, r.jsxs)('ol', {
@@ -394,7 +394,7 @@
                   children: [
                     (0, r.jsxs)('h3', { children: [(0, r.jsx)('span', { children: '\uc774\uc804\uae00 - ' }), c.series.prevPostTitle] }),
                     (0, r.jsx)('a', {
-                      href: s.Z.buildLinkURLByTitle(c.series.prevPostTitle),
+                      href: a.Z.buildLinkURLByTitle(c.series.prevPostTitle),
                       children:
                         (null === (i = p.Z.findByTitle(null === (n = c.series) || void 0 === n ? void 0 : n.prevPostTitle)) || void 0 === i
                           ? void 0
@@ -407,9 +407,9 @@
                   children: [
                     (0, r.jsxs)('h3', { children: [(0, r.jsx)('span', { children: '\ub2e4\uc74c\uae00 - ' }), c.series.nextPostTitle] }),
                     (0, r.jsx)('a', {
-                      href: s.Z.buildLinkURLByTitle(c.series.nextPostTitle),
+                      href: a.Z.buildLinkURLByTitle(c.series.nextPostTitle),
                       children:
-                        (null === (l = p.Z.findByTitle(null === (a = c.series) || void 0 === a ? void 0 : a.nextPostTitle)) || void 0 === l
+                        (null === (l = p.Z.findByTitle(null === (s = c.series) || void 0 === s ? void 0 : s.nextPostTitle)) || void 0 === l
                           ? void 0
                           : l.description) || '',
                     }),
@@ -448,31 +448,30 @@
         },
         _ = n(8145),
         x = n(6678),
-        P = n(4111),
-        w = n(9443),
-        O = n(7427),
-        T = n(3494),
-        A = n.n(T)
-      function S(e, t) {
+        P = n(9443),
+        w = n(7427),
+        O = n(3494),
+        T = n.n(O)
+      function A(e, t) {
         ;(null == t || t > e.length) && (t = e.length)
         for (var n = 0, r = new Array(t); n < t; n++) r[n] = e[n]
         return r
       }
-      function N(e) {
+      function S(e) {
         return (
           (function (e) {
-            if (Array.isArray(e)) return S(e)
+            if (Array.isArray(e)) return A(e)
           })(e) ||
           (function (e) {
             if (('undefined' !== typeof Symbol && null != e[Symbol.iterator]) || null != e['@@iterator']) return Array.from(e)
           })(e) ||
           (function (e, t) {
             if (!e) return
-            if ('string' === typeof e) return S(e, t)
+            if ('string' === typeof e) return A(e, t)
             var n = Object.prototype.toString.call(e).slice(8, -1)
             'Object' === n && e.constructor && (n = e.constructor.name)
             if ('Map' === n || 'Set' === n) return Array.from(n)
-            if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return S(e, t)
+            if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return A(e, t)
           })(e) ||
           (function () {
             throw new TypeError(
@@ -481,58 +480,57 @@
           })()
         )
       }
-      var k = !0,
-        C = function (e) {
+      var N = !0,
+        k = function (e) {
           var t,
             n = e.post,
-            a = e.content,
-            l = e.postsByCategory,
-            c = (0, P.Z)(new Date(n.publishedAt))
+            l = e.content,
+            c = e.postsByCategory
           return (
             (0, o.useEffect)(function () {
               i.Z.highlightAll()
             }, []),
             (0, r.jsxs)(r.Fragment, {
               children: [
-                (0, r.jsx)(d.Z, {
-                  title: O.Z.buildPageTitle(x.z.POST.TITLE(n.title)),
+                (0, r.jsx)(h.Z, {
+                  title: w.Z.buildPageTitle(x.z.POST.TITLE(n.title)),
                   description: x.z.POST.DESCRIPTION(n.title, n.description, n.category, n.tags),
-                  url: ''.concat(_.Z.baseURL, '/').concat(s.Z.normalizeTitle(n.title)),
-                  imageURL: w.Z.buildImagePath(n.thumbnailName),
-                  keywords: N(n.tags).concat([n.title, n.description, n.category]),
+                  url: ''.concat(_.Z.baseURL, '/').concat(a.Z.normalizeTitle(n.title)),
+                  imageURL: P.Z.buildImagePath(n.thumbnailName),
+                  keywords: S(n.tags).concat([n.title, n.description, n.category]),
                 }),
                 (0, r.jsxs)('article', {
-                  className: A().container,
+                  className: T().container,
                   children: [
-                    (0, r.jsx)('p', { className: A().publishedAt, children: (0, r.jsx)('span', { children: c }) }),
+                    (0, r.jsx)('p', { className: T().publishedAt, children: (0, r.jsx)('span', { children: a.Z.readablePublishedAt(n) }) }),
                     (0, r.jsx)('section', {
-                      className: A().thumbnailWrapper,
-                      children: (0, r.jsx)('img', { src: w.Z.buildImagePath(n.thumbnailName), alt: n.description }),
+                      className: T().thumbnailWrapper,
+                      children: (0, r.jsx)('img', { src: P.Z.buildImagePath(n.thumbnailName), alt: n.description, width: '400', height: '300' }),
                     }),
                     (0, r.jsxs)('section', {
-                      children: [(0, r.jsx)('h1', { children: n.title }), (0, r.jsx)('p', { className: A().description, children: n.description })],
+                      children: [(0, r.jsx)('h1', { children: n.title }), (0, r.jsx)('p', { className: T().description, children: n.description })],
                     }),
-                    (0, r.jsx)('section', { dangerouslySetInnerHTML: { __html: a } }),
+                    (0, r.jsx)('section', { dangerouslySetInnerHTML: { __html: l } }),
                   ],
                 }),
-                (0, r.jsx)(h.Z, {}),
+                (0, r.jsx)(s.Z, {}),
                 n.series &&
                   (0, r.jsxs)('section', {
-                    className: A().relatedPosting,
+                    className: T().relatedPosting,
                     children: [(0, r.jsx)('h2', { children: '\uc5f0\uad00 \ud3ec\uc2a4\ud305' }), (0, r.jsx)(b, { post: n })],
                   }),
-                !!l.length &&
+                !!c.length &&
                   (0, r.jsxs)('section', {
-                    className: A().categoryGroup,
-                    children: [(0, r.jsx)('h2', { children: '\uce74\ud14c\uace0\ub9ac \ub354\ubcf4\uae30' }), (0, r.jsx)(f, { posts: l })],
+                    className: T().categoryGroup,
+                    children: [(0, r.jsx)('h2', { children: '\uce74\ud14c\uace0\ub9ac \ub354\ubcf4\uae30' }), (0, r.jsx)(d, { posts: c })],
                   }),
                 !!(null === (t = n.references) || void 0 === t ? void 0 : t.length) &&
                   (0, r.jsxs)('section', {
-                    className: A().references,
+                    className: T().references,
                     children: [
                       (0, r.jsx)('h2', { children: '\ucc38\uace0' }),
                       (0, r.jsx)('ul', {
-                        className: A().references,
+                        className: T().references,
                         children: n.references.map(function (e, t) {
                           return (0,
                           r.jsx)('li', { children: (0, r.jsx)('a', { href: encodeURIComponent(e.url), target: '_blank', rel: 'noreferrer', children: e.title }) }, t)
@@ -541,7 +539,7 @@
                     ],
                   }),
                 (0, r.jsxs)('section', {
-                  className: A().utterances,
+                  className: T().utterances,
                   children: [
                     (0, r.jsx)('h2', { children: '\ub313\uae00' }),
                     (0, r.jsx)(j, { repo: 'code-logs/code-logs.github.io', theme: 'preferred-color-scheme', issueTerm: 'title', issueLabel: 'Comment' }),
@@ -575,7 +573,7 @@
     },
   },
   function (e) {
-    e.O(0, [294, 117, 774, 888, 179], function () {
+    e.O(0, [294, 867, 774, 888, 179], function () {
       return (t = 3201), e((e.s = t))
       var t
     })

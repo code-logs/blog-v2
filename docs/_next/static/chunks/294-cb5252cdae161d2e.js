@@ -1340,7 +1340,7 @@
         n.registerLanguage('isbl', a(4664)),
         n.registerLanguage('java', a(8257)),
         n.registerLanguage('javascript', a(978)),
-        n.registerLanguage('jboss-cli', a(132)),
+        n.registerLanguage('jboss-cli', a(4111)),
         n.registerLanguage('json', a(14)),
         n.registerLanguage('julia', a(4629)),
         n.registerLanguage('julia-repl', a(5850)),
@@ -13408,7 +13408,7 @@
         }
       }
     },
-    132: function (e) {
+    4111: function (e) {
       e.exports = function (e) {
         const t = {
           className: 'params',

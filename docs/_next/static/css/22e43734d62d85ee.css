@@ -1,3 +1,6 @@
+.MainAdsBanner_container__YWe5C {
+  padding: 20px 0;
+}
 .CategoryPostGroup_container__MDFUe {
   -webkit-padding-start: 20px;
   padding-inline-start: 20px;
@@ -9,9 +12,6 @@
 .CategoryPostGroup_container__MDFUe h3 {
   font-style: italic;
   margin: 5px 0;
-}
-.MainAdsBanner_container__YWe5C {
-  padding: 20px 0;
 }
 .PostSeriesLink_container__jtRUh {
   -webkit-padding-start: 20px;
@@ -136,7 +136,7 @@
 .PostDetail_publishedAt__7GOQm {
   font-size: 0.9em;
   color: var(--theme-color);
-  margin-bottom: 0;
+  margin: 0;
   text-align: right;
 }
 .PostDetail_description__l6wHC {

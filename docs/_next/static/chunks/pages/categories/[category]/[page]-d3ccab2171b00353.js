@@ -126,64 +126,62 @@
       'use strict'
       r.d(t, {
         Z: function () {
-          return v
+          return p
         },
       })
       var n = r(5893),
         i = r(7294),
         o = r(4786),
         a = r(5500),
-        c = r(4111),
-        s = r(9443),
-        l = r(8286),
-        u = r(7594),
-        f = r(7828),
-        h = r.n(f),
-        d = function (e) {
+        c = r(9443),
+        s = r(8286),
+        l = r(7594),
+        u = r(7828),
+        f = r.n(u),
+        h = function (e) {
           var t = e.titleLevel,
             r = void 0 === t ? 3 : t,
-            i = e.post,
-            o = (0, c.Z)(new Date(i.publishedAt))
+            i = e.post
           return (0, n.jsxs)('article', {
-            className: 'clickable '.concat(h().card),
+            className: 'clickable '.concat(f().card),
             children: [
               (0, n.jsxs)('a', {
-                href: l.Z.buildLinkURLByTitle(i.title),
-                className: h().title,
+                href: s.Z.buildLinkURLByTitle(i.title),
+                className: f().title,
                 children: [
                   1 === r && (0, n.jsx)('h1', { children: i.title }),
                   2 === r && (0, n.jsx)('h2', { children: i.title }),
                   3 === r && (0, n.jsx)('h3', { children: i.title }),
                 ],
               }),
-              (0, n.jsx)('span', { className: h().category, children: a.aA[i.category] }),
-              (0, n.jsx)('span', { className: h().publishedAt, children: o }),
-              (0, n.jsx)('a', { href: l.Z.buildLinkURLByTitle(i.title), className: h().description, children: (0, n.jsx)('p', { children: i.description }) }),
+              (0, n.jsx)('span', { className: f().category, children: a.aA[i.category] }),
+              (0, n.jsx)('span', { className: f().publishedAt, children: s.Z.readablePublishedAt(i) }),
+              (0, n.jsx)('a', { href: s.Z.buildLinkURLByTitle(i.title), className: f().description, children: (0, n.jsx)('p', { children: i.description }) }),
               i.thumbnailName &&
                 (0, n.jsx)('div', {
-                  className: h().thumbnail,
+                  className: f().thumbnail,
                   children: (0, n.jsx)('a', {
-                    href: l.Z.buildLinkURLByTitle(i.title),
-                    children: (0, n.jsx)('img', { src: s.Z.buildImagePath(i.thumbnailName), alt: i.description, width: '400', height: '300' }),
+                    href: s.Z.buildLinkURLByTitle(i.title),
+                    children: (0, n.jsx)('img', { src: c.Z.buildImagePath(i.thumbnailName), alt: i.description, width: '400', height: '300' }),
                   }),
                 }),
-              (0, n.jsx)('section', { className: h().tags, children: (0, n.jsx)(u.Z, { tags: i.tags }) }),
+              (0, n.jsx)('section', { className: f().tags, children: (0, n.jsx)(l.Z, { tags: i.tags }) }),
             ],
           })
         },
-        g = r(3950),
-        p = r.n(g),
-        v = function (e) {
+        d = r(3950),
+        g = r.n(d),
+        p = function (e) {
           var t = e.titleLevel,
             r = e.posts,
             a = e.adsBlockCycle,
             c = void 0 === a ? 3 : a
           return r.length
             ? (0, n.jsx)('ul', {
-                className: p().list,
+                className: g().list,
                 children: r.map(function (e, r) {
                   return (0,
-                  n.jsxs)(i.Fragment, { children: [(0, n.jsx)('li', { children: (0, n.jsx)(d, { titleLevel: t, post: e }) }, e.title), 0 !== c && (r + 1) % c === 0 && (0, n.jsx)('li', { children: (0, n.jsx)(o.Z, {}) }, 'main-ads-'.concat(r))] }, e.title)
+                  n.jsxs)(i.Fragment, { children: [(0, n.jsx)('li', { children: (0, n.jsx)(h, { titleLevel: t, post: e }) }, e.title), 0 !== c && (r + 1) % c === 0 && (0, n.jsx)('li', { children: (0, n.jsx)(o.Z, {}) }, 'main-ads-'.concat(r))] }, e.title)
                 }),
               })
             : (0, n.jsx)(n.Fragment, {})
@@ -653,7 +651,7 @@
     },
   },
   function (e) {
-    e.O(0, [117, 774, 888, 179], function () {
+    e.O(0, [867, 774, 888, 179], function () {
       return (t = 2214), e((e.s = t))
       var t
     })

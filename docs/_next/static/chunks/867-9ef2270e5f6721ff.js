@@ -1,5 +1,5 @@
 ;(self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [117],
+  [867],
   {
     4786: function (e, t, n) {
       'use strict'
@@ -486,28 +486,6 @@
         },
       ]
     },
-    4111: function (e, t, n) {
-      'use strict'
-      var o = n(7294)
-      t.Z = function (e) {
-        var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : '.',
-          n = (0, o.useState)(''),
-          a = n[0],
-          r = n[1]
-        return (
-          (0, o.useEffect)(
-            function () {
-              var n = String(e.getFullYear()).slice(2),
-                o = String(e.getMonth() + 1).padStart(2, '0'),
-                a = String(e.getDate()).padStart(2, '0')
-              r([n, o, a].join(t))
-            },
-            [e, t]
-          ),
-          a
-        )
-      }
-    },
     9443: function (e, t, n) {
       'use strict'
       var o = n(8145)
@@ -583,6 +561,18 @@
               key: 'buildLinkURLByTitle',
               value: function (e) {
                 return '/'.concat(encodeURIComponent(this.normalizeTitle(e)))
+              },
+            },
+            {
+              key: 'readablePublishedAt',
+              value: function (e) {
+                var t = e.publishedAt,
+                  n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : '.',
+                  o = new Date(t),
+                  a = String(o.getFullYear()).slice(2),
+                  r = String(o.getMonth() + 1).padStart(2, '0'),
+                  i = String(o.getDate()).padStart(2, '0')
+                return [a, r, i].join(n)
               },
             },
           ]),
