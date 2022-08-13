@@ -58,9 +58,10 @@ const Posts: NextPage<PostsProps> = (props) => {
   const [query, setQuery] = useState<string>()
   const route = useRouter()
 
+  const [pageInitialized, setPageInitialized] = useState(false)
+
   useEffect(() => {
     const url = new URL(PathUtil.absolutePath(route.asPath))
-    debugger
 
     if (url.search) {
       const searchParams = new URLSearchParams(url.search)
@@ -77,7 +78,25 @@ const Posts: NextPage<PostsProps> = (props) => {
       setPosts(props.posts)
       setQuery(undefined)
     }
-  }, [page, route, props.lastPage, props.posts])
+
+    setPageInitialized(true)
+  }, [page, route, props])
+
+  if (!pageInitialized)
+    return (
+      <>
+        <CommonMeta
+          title={TitleUtil.buildPageTitle(META_CONTENTS.POSTS.TITLE)}
+          description={META_CONTENTS.POSTS.DESCRIPTION(page)}
+          url={`${blogConfig.baseURL}/posts/${page}`}
+          imageURL={'/icons/icon-512x512.png'}
+          keywords={posts.map((post) => [...post.tags, post.title, post.description]).flat()}
+        />
+
+        <span className={styles.postingCount}>{query ? `Found posts ${posts.length}` : `Total posts ${totalCount}`}</span>
+        <h1>Posts </h1>
+      </>
+    )
 
   return (
     <>
@@ -91,6 +110,7 @@ const Posts: NextPage<PostsProps> = (props) => {
 
       <span className={styles.postingCount}>{query ? `Found posts ${posts.length}` : `Total posts ${totalCount}`}</span>
       <h1>Posts </h1>
+
       <form
         role="search"
         onSubmit={(event) => {
