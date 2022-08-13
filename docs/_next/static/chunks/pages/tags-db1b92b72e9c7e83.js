@@ -84,28 +84,25 @@
       'use strict'
       e.d(t, {
         Z: function () {
-          return l
+          return u
         },
       })
       var o = e(5893),
-        r = e(1664),
-        c = e(2002),
-        a = e.n(c),
-        i = function (n) {
-          return (0, o.jsx)(r.default, {
+        r = e(2002),
+        c = e.n(r),
+        a = function (n) {
+          return (0, o.jsx)('a', {
             href: '/posts/1?query='.concat(encodeURIComponent(n.tag)),
-            children: (0, o.jsx)('a', {
-              children: (0, o.jsxs)('span', { className: 'clickable '.concat(a().tag), children: [n.tag, ' ', n.count && n.count] }),
-            }),
+            children: (0, o.jsxs)('span', { className: 'clickable '.concat(c().tag), children: [n.tag, ' ', n.count && n.count] }),
           })
         },
-        s = e(8193),
-        u = e.n(s),
-        l = function (n) {
+        i = e(8193),
+        s = e.n(i),
+        u = function (n) {
           return (0, o.jsx)('ul', {
-            className: u().tags,
+            className: s().tags,
             children: n.tags.map(function (n, t) {
-              return (0, o.jsx)('li', { children: 'string' === typeof n ? (0, o.jsx)(i, { tag: n }) : (0, o.jsx)(i, { tag: n.tag, count: n.count }) }, t)
+              return (0, o.jsx)('li', { children: 'string' === typeof n ? (0, o.jsx)(a, { tag: n }) : (0, o.jsx)(a, { tag: n.tag, count: n.count }) }, t)
             }),
           })
         }
@@ -184,10 +181,10 @@
       e.r(t),
         e.d(t, {
           __N_SSG: function () {
-            return j
+            return m
           },
           default: function () {
-            return T
+            return j
           },
         })
       var o = e(5893),
@@ -216,20 +213,18 @@
             }),
           })
         },
-        l = e(1664),
-        d = e(327),
-        f = e.n(d),
-        g = function (n) {
+        l = e(327),
+        d = e.n(l),
+        f = function (n) {
           var t = new Set(n.activatedIndexes)
           return (0, o.jsx)('div', {
-            className: f().container,
+            className: d().container,
             children: n.indexGroups.map(function (n, e) {
               return (0, o.jsx)(
                 'ol',
                 {
                   children: n.map(function (n) {
-                    return (0,
-                    o.jsx)(l.default, { href: '#'.concat(n), children: (0, o.jsx)('a', { className: t.has(n) ? f().active : '', children: (0, o.jsx)('li', { children: n }) }) }, n)
+                    return (0, o.jsx)('li', { children: (0, o.jsx)('a', { href: '#'.concat(n), className: t.has(n) ? d().active : '', children: n }) }, n)
                   }),
                 },
                 e
@@ -237,12 +232,12 @@
             }),
           })
         },
-        p = e(5505),
-        h = e(8145),
-        x = e(6678),
-        m = e(7427),
-        j = !0,
-        T = function (n) {
+        g = e(5505),
+        p = e(8145),
+        h = e(6678),
+        x = e(7427),
+        m = !0,
+        j = function (n) {
           var t = n.tags,
             e = [
               ['\uac00', '\ub098', '\ub2e4', '\ub77c', '\ub9c8', '\ubc14', '\uc0ac', '\uc544', '\uc790', '\ucc28', '\uce74', '\ud0c0', '\ud558'],
@@ -282,13 +277,13 @@
           return (0, o.jsxs)('section', {
             children: [
               (0, o.jsx)(r.Z, {
-                title: m.Z.buildPageTitle(x.z.TAGS.TITLE),
-                description: x.z.TAGS.DESCRIPTION,
-                url: ''.concat(h.Z.baseURL, '/tags'),
+                title: x.Z.buildPageTitle(h.z.TAGS.TITLE),
+                description: h.z.TAGS.DESCRIPTION,
+                url: ''.concat(p.Z.baseURL, '/tags'),
                 imageURL: '/icons/icon-512x512.png',
               }),
-              (0, o.jsx)(p.Z, { level: 1, title: 'Tags', count: t.length }),
-              (0, o.jsx)(g, { activatedIndexes: l, indexGroups: e }),
+              (0, o.jsx)(g.Z, { level: 1, title: 'Tags', count: t.length }),
+              (0, o.jsx)(f, { activatedIndexes: l, indexGroups: e }),
               (0, o.jsx)(u, { indexGroups: e, tagsByIndexes: s }),
               (0, o.jsx)(c.Z, {}),
             ],

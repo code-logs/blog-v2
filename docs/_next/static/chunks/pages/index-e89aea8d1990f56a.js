@@ -25,8 +25,8 @@
         },
       })
       var r = n(5893),
-        i = n(4786),
-        o = n(1664),
+        i = n(7294),
+        o = n(4786),
         a = n(5500),
         c = n(4111),
         s = n(9443),
@@ -38,35 +38,28 @@
           var t = e.titleLevel,
             n = void 0 === t ? 3 : t,
             i = e.post,
-            f = (0, c.Z)(new Date(i.publishedAt))
+            o = (0, c.Z)(new Date(i.publishedAt))
           return (0, r.jsxs)('article', {
             className: 'clickable '.concat(h().card),
             children: [
-              (0, r.jsx)(o.default, {
+              (0, r.jsxs)('a', {
                 href: u.Z.buildLinkURLByTitle(i.title),
-                children: (0, r.jsxs)('a', {
-                  className: h().title,
-                  children: [
-                    1 === n && (0, r.jsx)('h1', { children: i.title }),
-                    2 === n && (0, r.jsx)('h2', { children: i.title }),
-                    3 === n && (0, r.jsx)('h3', { children: i.title }),
-                  ],
-                }),
+                className: h().title,
+                children: [
+                  1 === n && (0, r.jsx)('h1', { children: i.title }),
+                  2 === n && (0, r.jsx)('h2', { children: i.title }),
+                  3 === n && (0, r.jsx)('h3', { children: i.title }),
+                ],
               }),
               (0, r.jsx)('span', { className: h().category, children: a.aA[i.category] }),
-              (0, r.jsx)('span', { className: h().publishedAt, children: f }),
-              (0, r.jsx)(o.default, {
-                href: u.Z.buildLinkURLByTitle(i.title),
-                children: (0, r.jsx)('a', { className: h().description, children: (0, r.jsx)('p', { children: i.description }) }),
-              }),
+              (0, r.jsx)('span', { className: h().publishedAt, children: o }),
+              (0, r.jsx)('a', { href: u.Z.buildLinkURLByTitle(i.title), className: h().description, children: (0, r.jsx)('p', { children: i.description }) }),
               i.thumbnailName &&
                 (0, r.jsx)('div', {
                   className: h().thumbnail,
-                  children: (0, r.jsx)(o.default, {
+                  children: (0, r.jsx)('a', {
                     href: u.Z.buildLinkURLByTitle(i.title),
-                    children: (0, r.jsx)('a', {
-                      children: (0, r.jsx)('img', { src: s.Z.buildImagePath(i.thumbnailName), alt: i.description, width: '400', height: '300' }),
-                    }),
+                    children: (0, r.jsx)('img', { src: s.Z.buildImagePath(i.thumbnailName), alt: i.description, width: '400', height: '300' }),
                   }),
                 }),
               (0, r.jsx)('section', { className: h().tags, children: (0, r.jsx)(l.Z, { tags: i.tags }) }),
@@ -78,14 +71,14 @@
         v = function (e) {
           var t = e.titleLevel,
             n = e.posts,
-            o = e.adsBlockCycle,
-            a = void 0 === o ? 3 : o
-          return Boolean(n.length)
+            a = e.adsBlockCycle,
+            c = void 0 === a ? 3 : a
+          return n.length
             ? (0, r.jsx)('ul', {
                 className: p().list,
                 children: n.map(function (e, n) {
                   return (0,
-                  r.jsxs)(r.Fragment, { children: [(0, r.jsx)('li', { children: (0, r.jsx)(d, { titleLevel: t, post: e }) }, e.title), 0 !== a && (n + 1) % a === 0 && (0, r.jsx)('li', { children: (0, r.jsx)(i.Z, {}) }, 'main-ads-'.concat(n))] })
+                  r.jsxs)(i.Fragment, { children: [(0, r.jsx)('li', { children: (0, r.jsx)(d, { titleLevel: t, post: e }) }, e.title), 0 !== c && (n + 1) % c === 0 && (0, r.jsx)('li', { children: (0, r.jsx)(o.Z, {}) }, 'main-ads-'.concat(n))] }, e.title)
                 }),
               })
             : (0, r.jsx)(r.Fragment, {})
@@ -95,28 +88,25 @@
       'use strict'
       n.d(t, {
         Z: function () {
-          return l
+          return u
         },
       })
       var r = n(5893),
-        i = n(1664),
-        o = n(2002),
-        a = n.n(o),
-        c = function (e) {
-          return (0, r.jsx)(i.default, {
+        i = n(2002),
+        o = n.n(i),
+        a = function (e) {
+          return (0, r.jsx)('a', {
             href: '/posts/1?query='.concat(encodeURIComponent(e.tag)),
-            children: (0, r.jsx)('a', {
-              children: (0, r.jsxs)('span', { className: 'clickable '.concat(a().tag), children: [e.tag, ' ', e.count && e.count] }),
-            }),
+            children: (0, r.jsxs)('span', { className: 'clickable '.concat(o().tag), children: [e.tag, ' ', e.count && e.count] }),
           })
         },
-        s = n(8193),
-        u = n.n(s),
-        l = function (e) {
+        c = n(8193),
+        s = n.n(c),
+        u = function (e) {
           return (0, r.jsx)('ul', {
-            className: u().tags,
+            className: s().tags,
             children: e.tags.map(function (e, t) {
-              return (0, r.jsx)('li', { children: 'string' === typeof e ? (0, r.jsx)(c, { tag: e }) : (0, r.jsx)(c, { tag: e.tag, count: e.count }) }, t)
+              return (0, r.jsx)('li', { children: 'string' === typeof e ? (0, r.jsx)(a, { tag: e }) : (0, r.jsx)(a, { tag: e.tag, count: e.count }) }, t)
             }),
           })
         }
@@ -177,7 +167,7 @@
       }
       n.d(t, {
         Z: function () {
-          return x
+          return m
         },
       })
       var a = (function () {
@@ -413,54 +403,53 @@
             o
           )
         })(c),
-        x = new y()
+        m = new y()
     },
     1739: function (e, t, n) {
       'use strict'
       n.r(t),
         n.d(t, {
           __N_SSG: function () {
-            return C
+            return w
           },
           default: function () {
-            return A
+            return C
           },
         })
       var r = n(5893),
-        i = n(1664),
-        o = n(5500),
-        a = n(7192),
-        c = n(2631),
-        s = n.n(c),
-        u = function (e) {
+        i = n(5500),
+        o = n(7192),
+        a = n(2631),
+        c = n.n(a),
+        s = function (e) {
           return (0, r.jsxs)('section', {
-            className: s().container,
+            className: c().container,
             children: [
               (0, r.jsx)('h2', { children: 'Categories' }),
               (0, r.jsx)('ul', {
                 children: e.categories.map(function (e, t) {
                   return (0,
-                  r.jsx)('li', { children: (0, r.jsx)(i.default, { href: '/categories/'.concat(encodeURIComponent(e), '/1'), children: (0, r.jsxs)('a', { children: [a.Z.hasNewByCategory(e) && (0, r.jsx)('span', { className: s().newTag, children: 'New' }), (0, r.jsx)('span', { className: s().category, children: o.aA[e] }), (0, r.jsx)('span', { className: s().count, children: (0, r.jsx)('span', { children: a.Z.countByCategory(e) }) })] }) }) }, t)
+                  r.jsx)('li', { children: (0, r.jsxs)('a', { href: '/categories/'.concat(encodeURIComponent(e), '/1'), children: [o.Z.hasNewByCategory(e) && (0, r.jsx)('span', { className: c().newTag, children: 'New' }), (0, r.jsx)('span', { className: c().category, children: i.aA[e] }), (0, r.jsx)('span', { className: c().count, children: (0, r.jsx)('span', { children: o.Z.countByCategory(e) }) })] }) }, t)
                 }),
               }),
             ],
           })
         },
-        l = n(6166),
-        f = n(4786),
-        h = n(4351),
-        d = n(5505),
-        g = function (e) {
+        u = n(6166),
+        l = n(4786),
+        f = n(4351),
+        h = n(5505),
+        d = function (e) {
           var t = e.posts
-          return (0, r.jsxs)('section', { children: [(0, r.jsx)(d.Z, { level: 2, count: t.length, title: 'Recent posts' }), (0, r.jsx)(h.Z, { posts: t })] })
+          return (0, r.jsxs)('section', { children: [(0, r.jsx)(h.Z, { level: 2, count: t.length, title: 'Recent posts' }), (0, r.jsx)(f.Z, { posts: t })] })
         },
-        p = n(7594),
-        v = n(9284),
-        y = n.n(v),
-        x = function (e) {
+        g = n(7594),
+        p = n(9284),
+        v = n.n(p),
+        y = function (e) {
           var t = e.tagsWithCount,
             n = e.limit,
-            o = void 0 === n ? 10 : n
+            i = void 0 === n ? 10 : n
           return (
             t.sort(function (e, t) {
               return t.count - e.count
@@ -468,41 +457,35 @@
             (0, r.jsxs)('section', {
               children: [
                 (0, r.jsxs)('h2', {
-                  children: [
-                    'Tags',
-                    (0, r.jsx)(i.default, {
-                      href: '/tags',
-                      children: (0, r.jsx)('a', { className: y().seeMore, children: (0, r.jsx)('span', { children: 'See more tags' }) }),
-                    }),
-                  ],
+                  children: ['Tags', (0, r.jsx)('a', { href: 'tags', className: v().seeMore, children: (0, r.jsx)('span', { children: 'See more tags' }) })],
                 }),
-                (0, r.jsx)('div', { className: y().container, children: (0, r.jsx)(p.Z, { tags: t.slice(0, o) }) }),
+                (0, r.jsx)('div', { className: v().container, children: (0, r.jsx)(g.Z, { tags: t.slice(0, i) }) }),
               ],
             })
           )
         },
         m = n(8145),
-        b = n(6678),
-        j = n(7427),
-        _ = n(3447),
-        w = n.n(_),
-        C = !0,
-        A = function (e) {
+        x = n(6678),
+        b = n(7427),
+        j = n(3447),
+        _ = n.n(j),
+        w = !0,
+        C = function (e) {
           return (0, r.jsxs)(r.Fragment, {
             children: [
-              (0, r.jsx)(l.Z, {
-                title: j.Z.buildPageTitle(b.z.MAIN.TITLE),
-                description: b.z.MAIN.DESCRIPTION,
+              (0, r.jsx)(u.Z, {
+                title: b.Z.buildPageTitle(x.z.MAIN.TITLE),
+                description: x.z.MAIN.DESCRIPTION,
                 keywords: e.categories,
                 url: m.Z.baseURL,
                 imageURL: '/icons/icon-512x512.png',
               }),
               (0, r.jsx)('h1', { children: 'Home' }),
-              (0, r.jsx)(g, { posts: e.recentPosts }),
-              (0, r.jsx)(f.Z, {}),
+              (0, r.jsx)(d, { posts: e.recentPosts }),
+              (0, r.jsx)(l.Z, {}),
               (0, r.jsxs)('div', {
-                className: w().index,
-                children: [(0, r.jsx)(u, { categories: e.categories }), (0, r.jsx)(x, { tagsWithCount: e.tagsWithCount, limit: 20 })],
+                className: _().index,
+                children: [(0, r.jsx)(s, { categories: e.categories }), (0, r.jsx)(y, { tagsWithCount: e.tagsWithCount, limit: 20 })],
               }),
             ],
           })
