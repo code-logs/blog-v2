@@ -1,7 +1,8 @@
 import { NextPage } from 'next'
-import { Router, useRouter } from 'next/router'
+import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import CommonMeta from '../../components/common-meta/CommonMeta'
+import NoFoundPosting from '../../components/no-found-posting/NoFoundPosting'
 import Paginator from '../../components/paginator/Paginator'
 import PostCardList from '../../components/post-card-list/PostCardList'
 import SearchInput from '../../components/search-input/SearchInput'
@@ -59,6 +60,7 @@ const Posts: NextPage<PostsProps> = (props) => {
 
   useEffect(() => {
     const url = new URL(PathUtil.absolutePath(route.asPath))
+    debugger
 
     if (url.search) {
       const searchParams = new URLSearchParams(url.search)
@@ -87,29 +89,34 @@ const Posts: NextPage<PostsProps> = (props) => {
         keywords={posts.map((post) => [...post.tags, post.title, post.description]).flat()}
       />
 
-      <span className={styles.totalCount}>Total posts {totalCount}</span>
+      <span className={styles.postingCount}>{query ? `Found posts ${posts.length}` : `Total posts ${totalCount}`}</span>
       <h1>Posts </h1>
       <form
+        role="search"
         onSubmit={(event) => {
           event.preventDefault()
 
           const form = event.currentTarget
           const query = new FormData(form).get('query')
-          if (!query) return
 
           const url = new URL(location.href)
           url.pathname = '/posts/1'
-          url.search = `query=${encodeURIComponent(query.toString())}`
+          url.search = query ? `query=${encodeURIComponent(query.toString())}` : ''
 
-          route.push(url.href)
+          location.href = url.href
         }}
       >
         <SearchInput placeholder="Search..." name="query" defaultValue={query && decodeURIComponent(query)} />
       </form>
 
-      <PostCardList titleLevel={2} posts={posts} />
+      {!!posts.length && (
+        <>
+          <PostCardList titleLevel={2} posts={posts} />
+          <Paginator page={page} lastPage={lastPage} query={query} baseURL={`${blogConfig.baseURL}/posts`} />
+        </>
+      )}
 
-      <Paginator page={page} lastPage={lastPage} query={query} baseURL={`${blogConfig.baseURL}/posts`} />
+      {query && !posts.length && <NoFoundPosting condition={query} />}
     </>
   )
 }

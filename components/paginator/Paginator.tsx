@@ -1,5 +1,4 @@
 import { ChevronLeftRounded, ChevronRightRounded, MoreHorizRounded } from '@mui/icons-material'
-import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import styles from './Paginator.module.scss'
 
@@ -45,20 +44,16 @@ const Paginator = ({ page, lastPage, displayCount = 5, query, baseURL }: Paginat
       <ul>
         {page > 1 && (
           <li>
-            <Link href={buildURL(page - 1)}>
-              <a>
-                <ChevronLeftRounded />
-              </a>
-            </Link>
+            <a href={buildURL(page - 1)}>
+              <ChevronLeftRounded />
+            </a>
           </li>
         )}
 
         {page > 1 && !pageList.includes(1) && (
           <>
             <li>
-              <Link href={buildURL(1)}>
-                <a>{1}</a>
-              </Link>
+              <a href={buildURL(1)}>{1}</a>
             </li>
             <MoreHorizRounded />
           </>
@@ -66,9 +61,9 @@ const Paginator = ({ page, lastPage, displayCount = 5, query, baseURL }: Paginat
 
         {pageList.map((pageNum) => (
           <li key={pageNum}>
-            <Link href={buildURL(pageNum)}>
-              <a className={page === pageNum ? styles.currentPage : ''}>{pageNum}</a>
-            </Link>
+            <a href={buildURL(pageNum)} className={page === pageNum ? styles.currentPage : ''}>
+              {pageNum}
+            </a>
           </li>
         ))}
 
@@ -76,19 +71,15 @@ const Paginator = ({ page, lastPage, displayCount = 5, query, baseURL }: Paginat
           <>
             <MoreHorizRounded />
             <li>
-              <Link href={buildURL(lastPage)}>
-                <a>{lastPage}</a>
-              </Link>
+              <a href={buildURL(lastPage)}>{lastPage}</a>
             </li>
           </>
         )}
         {page < lastPage && (
           <li>
-            <Link href={buildURL(page + 1)}>
-              <a>
-                <ChevronRightRounded />
-              </a>
-            </Link>
+            <a href={buildURL(page + 1)}>
+              <ChevronRightRounded />
+            </a>
           </li>
         )}
       </ul>

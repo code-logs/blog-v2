@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { CATEGORIES } from '../../config/posts.config'
 import postsDatabase from '../../database/post-database'
 import styles from './CategoryIndexer.module.scss'
@@ -14,15 +13,13 @@ const CategoryIndexer = (props: CategoryIndexerProps) => {
       <ul>
         {props.categories.map((category, idx) => (
           <li key={idx}>
-            <Link href={`/categories/${encodeURIComponent(category)}/1`}>
-              <a>
-                {postsDatabase.hasNewByCategory(category) && <span className={styles.newTag}>New</span>}
-                <span className={styles.category}>{(CATEGORIES as any)[category]}</span>
-                <span className={styles.count}>
-                  <span>{postsDatabase.countByCategory(category)}</span>
-                </span>
-              </a>
-            </Link>
+            <a href={`/categories/${encodeURIComponent(category)}/1`}>
+              {postsDatabase.hasNewByCategory(category) && <span className={styles.newTag}>New</span>}
+              <span className={styles.category}>{(CATEGORIES as any)[category]}</span>
+              <span className={styles.count}>
+                <span>{postsDatabase.countByCategory(category)}</span>
+              </span>
+            </a>
           </li>
         ))}
       </ul>

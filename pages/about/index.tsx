@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import MainAdsBanner from '../../components/ads-banner/MainAdsBanner'
 import CommonMeta from '../../components/common-meta/CommonMeta'
 import RaiseSection from '../../components/raise-section/RaiseSection'
@@ -37,9 +36,7 @@ const About = () => {
         <RaiseSection timeout={standardTimeout * ratio * 3}>
           <h2>Licenses</h2>
           <p>
-            <Link href="licenses">
-              <a>Link to license info</a>
-            </Link>
+            <a href="licenses">Link to license info</a>
           </p>
         </RaiseSection>
       </article>

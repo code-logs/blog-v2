@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import styles from './MarkedAnchor.module.scss'
 
 export interface MarkedAnchorProps {
@@ -8,9 +7,9 @@ export interface MarkedAnchorProps {
 }
 
 const MarkedAnchor = (props: MarkedAnchorProps) => (
-  <Link href={props.href}>
-    <a className={props.matched ? `${styles.matched} ${styles.anchor}` : styles.anchor}>{props.display}</a>
-  </Link>
+  <a href={props.href} className={props.matched ? `${styles.matched} ${styles.anchor}` : styles.anchor}>
+    {props.display}
+  </a>
 )
 
 export default MarkedAnchor

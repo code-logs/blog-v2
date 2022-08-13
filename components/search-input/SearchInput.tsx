@@ -7,7 +7,7 @@ const SearchInput = (props: SearchInputProps) => {
   return (
     <label className={styles.label}>
       <SearchRounded className={styles.icon} />
-      <input className={styles.input} {...props} />
+      <input className={styles.input} {...props} spellCheck={false} />
     </label>
   )
 }

@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import { Post } from '../../config/posts.config'
 import MainAdsBanner from '../ads-banner/MainAdsBanner'
 import PostCard, { PostCardProps } from '../post-card/PostCard'
@@ -10,11 +10,11 @@ export interface PostCardListProps {
   adsBlockCycle?: number
 }
 
-const PostCardList = ({ titleLevel, posts, adsBlockCycle = 3 }: PostCardListProps) => {
-  return Boolean(posts.length) ? (
+const PostCardList = ({ titleLevel, posts, adsBlockCycle = 3 }: PostCardListProps) =>
+  !!posts.length ? (
     <ul className={styles.list}>
       {posts.map((post, idx) => (
-        <>
+        <React.Fragment key={post.title}>
           <li key={post.title}>
             <PostCard titleLevel={titleLevel} post={post} />
           </li>
@@ -24,12 +24,11 @@ const PostCardList = ({ titleLevel, posts, adsBlockCycle = 3 }: PostCardListProp
               <MainAdsBanner />
             </li>
           )}
-        </>
+        </React.Fragment>
       ))}
     </ul>
   ) : (
     <></>
   )
-}
 
 export default PostCardList
