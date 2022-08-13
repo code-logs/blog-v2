@@ -109,12 +109,13 @@ main {
   grid-area: main;
   width: 60vw;
   margin: 0 0 0 20vw;
+  padding-top: 0;
   padding-bottom: var(--footer-height);
 }
 
 aside {
   grid-area: aside;
-  margin-top: var(--header-height);
+  margin-top: 0;
   margin-bottom: var(--footer-height);
 }
 
