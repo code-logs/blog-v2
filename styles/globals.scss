@@ -109,7 +109,7 @@ main {
   grid-area: main;
   width: 60vw;
   margin: 0 0 0 20vw;
-  padding-top: 0;
+  padding-top: var(--wide-spacing);
   padding-bottom: var(--footer-height);
 }
 
@@ -142,7 +142,7 @@ footer {
   main {
     margin: 0;
     width: 100%;
-    padding: var(--header-height) var(--wide-spacing) var(--footer-height) var(--wide-spacing);
+    padding: var(--common-spacing) var(--wide-spacing) var(--footer-height);
   }
 
   aside {
@@ -154,6 +154,6 @@ footer {
   transition: transform 0.2s ease-in-out 0s;
 
   &:active {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 }

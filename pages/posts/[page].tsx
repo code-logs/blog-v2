@@ -1,6 +1,6 @@
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import CommonMeta from '../../components/common-meta/CommonMeta'
 import NoFoundPosting from '../../components/no-found-posting/NoFoundPosting'
 import Paginator from '../../components/paginator/Paginator'
@@ -82,8 +82,8 @@ const Posts: NextPage<PostsProps> = (props) => {
     setPageInitialized(true)
   }, [page, route, props])
 
-  if (!pageInitialized)
-    return (
+  const renderCommonFragment = useCallback(
+    () => (
       <>
         <CommonMeta
           title={TitleUtil.buildPageTitle(META_CONTENTS.POSTS.TITLE)}
@@ -93,23 +93,18 @@ const Posts: NextPage<PostsProps> = (props) => {
           keywords={posts.map((post) => [...post.tags, post.title, post.description]).flat()}
         />
 
-        <span className={styles.postingCount}>{query ? `Found posts ${posts.length}` : `Total posts ${totalCount}`}</span>
+        <span className={styles.postingCount}>{query ? `Found ${posts.length}` : `Total ${totalCount}`}</span>
         <h1>Posts </h1>
       </>
-    )
+    ),
+    [page, posts, query, totalCount]
+  )
+
+  if (!pageInitialized) return renderCommonFragment()
 
   return (
     <>
-      <CommonMeta
-        title={TitleUtil.buildPageTitle(META_CONTENTS.POSTS.TITLE)}
-        description={META_CONTENTS.POSTS.DESCRIPTION(page)}
-        url={`${blogConfig.baseURL}/posts/${page}`}
-        imageURL={'/icons/icon-512x512.png'}
-        keywords={posts.map((post) => [...post.tags, post.title, post.description]).flat()}
-      />
-
-      <span className={styles.postingCount}>{query ? `Found posts ${posts.length}` : `Total posts ${totalCount}`}</span>
-      <h1>Posts </h1>
+      {renderCommonFragment()}
 
       <form
         role="search"

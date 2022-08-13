@@ -1,16 +1,15 @@
 import hljs from 'highlight.js'
 import { NextPage } from 'next'
 import { useEffect } from 'react'
+import MainAdsBanner from '../components/ads-banner/MainAdsBanner'
 import CategoryPostGroup from '../components/category-post-group/CategoryPostGroup'
 import CommonMeta from '../components/common-meta/CommonMeta'
-import MainAdsBanner from '../components/ads-banner/MainAdsBanner'
 import PostSeriesLink from '../components/post-series-link/PostSeriesLink'
 import Utterances from '../components/utterrances/Utterrances'
 import blogConfig from '../config/blog.config'
 import { META_CONTENTS } from '../config/meta-contents'
 import { Post } from '../config/posts.config'
 import postsDatabase from '../database/post-database'
-import useHumanReadableDate from '../hooks/useHumanReadableDate'
 import { MarkdownUtil } from '../utils/MarkdownUtil'
 import PathUtil from '../utils/PathUtil'
 import PostUtil from '../utils/PostUtil'
@@ -44,8 +43,6 @@ export async function getStaticProps(context: { params: { title: string } }) {
 }
 
 const PostDetail: NextPage<PostDetailPageProps> = ({ post, content, postsByCategory }: PostDetailPageProps) => {
-  const publishedAt = useHumanReadableDate(new Date(post.publishedAt))
-
   useEffect(() => {
     hljs.highlightAll()
   }, [])
@@ -62,10 +59,10 @@ const PostDetail: NextPage<PostDetailPageProps> = ({ post, content, postsByCateg
 
       <article className={styles.container}>
         <p className={styles.publishedAt}>
-          <span>{publishedAt}</span>
+          <span>{PostUtil.readablePublishedAt(post)}</span>
         </p>
         <section className={styles.thumbnailWrapper}>
-          <img src={PathUtil.buildImagePath(post.thumbnailName)} alt={post.description} />
+          <img src={PathUtil.buildImagePath(post.thumbnailName)} alt={post.description} width="400" height="300" />
         </section>
 
         <section>
