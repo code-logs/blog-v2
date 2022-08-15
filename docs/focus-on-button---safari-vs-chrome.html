@@ -2,12 +2,35 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="next-head-count" content="2" />
+    <link rel="canonical" href="https://code-logs.github.io/focus-on-button---safari-vs-chrome" />
+    <link rel="apple-touch-icon" href="/icons/icon-192x-192.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#fff" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Code Logs" />
+    <meta name="author" content="Jay Lee" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta
+      name="keyword"
+      content="CSS, browser, chrome, focus, focus-visible, focus-within, safari, 브라우저, 사파리, 크롬, Focus on Button - Safari VS Chrome, Safari, Chrome 브라우저에 따라 달라지는 button의 focus 속성, css"
+    />
+    <meta
+      name="description"
+      content="Code Logs Focus on Button - Safari VS Chrome - Safari, Chrome 브라우저에 따라 달라지는 button의 focus 속성 | css, CSS, browser, chrome, focus, focus-visible, focus-within, safari, 브라우저, 사파리, 크롬"
+    />
+    <meta
+      property="og:description"
+      content="Code Logs Focus on Button - Safari VS Chrome - Safari, Chrome 브라우저에 따라 달라지는 button의 focus 속성 | css, CSS, browser, chrome, focus, focus-visible, focus-within, safari, 브라우저, 사파리, 크롬"
+    />
+    <meta property="og:title" content="Focus on Button - Safari VS Chrome | Code Logs" />
+    <meta property="og:url" content="https://code-logs.github.io/focus-on-button---safari-vs-chrome" />
+    <meta property="og:image" content="/assets/images/focus-on-button.png" />
+    <title>Focus on Button - Safari VS Chrome | Code Logs</title>
+    <meta name="next-head-count" content="16" />
     <link rel="preload" href="/_next/static/css/733ccf6aecd78772.css" as="style" />
     <link rel="stylesheet" href="/_next/static/css/733ccf6aecd78772.css" data-n-g="" />
-    <link rel="preload" href="/_next/static/css/22e43734d62d85ee.css" as="style" />
-    <link rel="stylesheet" href="/_next/static/css/22e43734d62d85ee.css" data-n-p="" />
+    <link rel="preload" href="/_next/static/css/f6249b8f2c8c9b1c.css" as="style" />
+    <link rel="stylesheet" href="/_next/static/css/f6249b8f2c8c9b1c.css" data-n-p="" />
     <noscript data-n-css=""></noscript>
     <script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script>
     <script src="/_next/static/chunks/webpack-2e51481b1d484a05.js" defer=""></script>
@@ -16,10 +39,10 @@
     <script src="/_next/static/chunks/pages/_app-8b1c655d67dc7e3d.js" defer=""></script>
     <script src="/_next/static/chunks/294-cb5252cdae161d2e.js" defer=""></script>
     <script src="/_next/static/chunks/867-9ef2270e5f6721ff.js" defer=""></script>
-    <script src="/_next/static/chunks/pages/%5Btitle%5D-1745a6642ae23c32.js" defer=""></script>
-    <script src="/_next/static/WSfQIAHMGpRBHxfU6K07B/_buildManifest.js" defer=""></script>
-    <script src="/_next/static/WSfQIAHMGpRBHxfU6K07B/_ssgManifest.js" defer=""></script>
-    <script src="/_next/static/WSfQIAHMGpRBHxfU6K07B/_middlewareManifest.js" defer=""></script>
+    <script src="/_next/static/chunks/pages/%5Btitle%5D-15a46a40c200d92d.js" defer=""></script>
+    <script src="/_next/static/D5mLcJu6AN1AK0OIpU0ne/_buildManifest.js" defer=""></script>
+    <script src="/_next/static/D5mLcJu6AN1AK0OIpU0ne/_ssgManifest.js" defer=""></script>
+    <script src="/_next/static/D5mLcJu6AN1AK0OIpU0ne/_middlewareManifest.js" defer=""></script>
   </head>
   <body>
     <div id="__next" data-reactroot="">
@@ -66,7 +89,69 @@
           </ul>
         </nav>
       </header>
-      <main></main>
+      <main>
+        <article class="PostDetail_container__Ma_26">
+          <p class="PostDetail_publishedAt__7GOQm"><span>22.02.28</span></p>
+          <section class="PostDetail_thumbnailWrapper__oALCg">
+            <img src="/assets/images/focus-on-button.png" alt="Safari, Chrome 브라우저에 따라 달라지는 button의 focus 속성" width="400" height="300" />
+          </section>
+          <section>
+            <h1>Focus on Button - Safari VS Chrome</h1>
+            <p class="PostDetail_description__l6wHC">Safari, Chrome 브라우저에 따라 달라지는 button의 focus 속성</p>
+          </section>
+          <section class="PostDetail_content__uVlbQ false">
+            <p><code>focus</code> 속성은 브라우저와 OS 환경에 따라 약간의 차이를 보이는데 정리하자면 다음과 같다.</p>
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#clicking_and_focus">Clicking and focus - MDN Web Docs</a></p>
+            <p>
+              표에서 보는바와 같이 <code>Safari</code>는 <code>&lt;button&gt;</code>, <code>&lt;input type=”button” /&gt;</code>,
+              <code>&lt;input type=&quot;submit&quot; /&gt;</code> 의 <code>focus</code> 속성을 지원하지 않는다.
+            </p>
+            <pre><code class="language-html">&lt;button id=&quot;button&quot;&gt;Button&lt;/button&gt;
+
+&lt;script&gt;
+  const button = document.querySelector(&#39;#button&#39;)
+  button.addEventListener(&#39;click&#39;, () =&gt; console.log(&#39;Click on button&#39;))
+  button.addEventListener(&#39;focus&#39;, () =&gt; console.log(&#39;Focus on button&#39;))
+&lt;/script&gt;
+</code></pre>
+            <p>위 <code>html</code> 을 통해 생성된 <code>&lt;button /&gt;</code>을 클릭하고 개발자 도구의 <code>console</code>을 확인하면</p>
+            <p><code>Chrome</code>의 경우 - Focus on button 과 Click on button 을 번갈아 가며 출력하는 반면</p>
+            <p><code>Safari</code>의 경우 - Click on button 만 출력하게 된다.</p>
+            <p>
+              이러한 특성에 기인하여 <code>focus</code>, <code>focus-within</code> , <code>focus-visible</code> 등의 의사 클래스를 통한 DOM 조작이 예상치 못한
+              방향으로 흘러 갈 수 있으니 주의해야 한다.
+            </p>
+          </section>
+        </article>
+        <section class="MainAdsBanner_container__YWe5C">
+          <ins
+            class="adsbygoogle"
+            style="display: block"
+            data-ad-client="ca-pub-7134579063537339"
+            data-ad-slot="5391522351"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
+        </section>
+        <section class="PostDetail_categoryGroup___S2ib">
+          <h2>카테고리 더보기</h2>
+          <ul class="CategoryPostGroup_container__MDFUe"></ul>
+        </section>
+        <section class="PostDetail_references__EU_hH">
+          <h2>참고</h2>
+          <ul class="PostDetail_references__EU_hH">
+            <li>
+              <a href="https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FHTML%2FElement%2Fbutton%23clicking_and_focus" target="_blank" rel="noreferrer"
+                >Clicking and focus - MDN Web Docs</a
+              >
+            </li>
+          </ul>
+        </section>
+        <section class="PostDetail_utterances__jZeOm">
+          <h2>댓글</h2>
+          <div class="Utterrances_utteranceContainer__qopWy"></div>
+        </section>
+      </main>
       <aside></aside>
       <footer class="Footer_footer__GLL0J"><p>ⓒ 2021. Jay Lee all rights reserved.</p></footer>
     </div>
@@ -107,7 +192,7 @@
         },
         "page": "/[title]",
         "query": { "title": "focus-on-button---safari-vs-chrome" },
-        "buildId": "WSfQIAHMGpRBHxfU6K07B",
+        "buildId": "D5mLcJu6AN1AK0OIpU0ne",
         "isFallback": false,
         "gsp": true,
         "scriptLoader": []

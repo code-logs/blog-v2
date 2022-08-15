@@ -2,12 +2,35 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="next-head-count" content="2" />
+    <link rel="canonical" href="https://code-logs.github.io/css-position" />
+    <link rel="apple-touch-icon" href="/icons/icon-192x-192.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#fff" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Code Logs" />
+    <meta name="author" content="Jay Lee" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta
+      name="keyword"
+      content="absolute, css, fixed, header, position, static, sticky, style, 스타일, 포지션, 헤더, CSS Position, CSS Position (Static, Absolute, Fixed, Sticky)에 따른 고정 헤더 스타일, css"
+    />
+    <meta
+      name="description"
+      content="Code Logs CSS Position - CSS Position (Static, Absolute, Fixed, Sticky)에 따른 고정 헤더 스타일 | css, absolute, css, fixed, header, position, static, sticky, style, 스타일, 포지션, 헤더"
+    />
+    <meta
+      property="og:description"
+      content="Code Logs CSS Position - CSS Position (Static, Absolute, Fixed, Sticky)에 따른 고정 헤더 스타일 | css, absolute, css, fixed, header, position, static, sticky, style, 스타일, 포지션, 헤더"
+    />
+    <meta property="og:title" content="CSS Position | Code Logs" />
+    <meta property="og:url" content="https://code-logs.github.io/css-position" />
+    <meta property="og:image" content="/assets/images/css-position.png" />
+    <title>CSS Position | Code Logs</title>
+    <meta name="next-head-count" content="16" />
     <link rel="preload" href="/_next/static/css/733ccf6aecd78772.css" as="style" />
     <link rel="stylesheet" href="/_next/static/css/733ccf6aecd78772.css" data-n-g="" />
-    <link rel="preload" href="/_next/static/css/22e43734d62d85ee.css" as="style" />
-    <link rel="stylesheet" href="/_next/static/css/22e43734d62d85ee.css" data-n-p="" />
+    <link rel="preload" href="/_next/static/css/f6249b8f2c8c9b1c.css" as="style" />
+    <link rel="stylesheet" href="/_next/static/css/f6249b8f2c8c9b1c.css" data-n-p="" />
     <noscript data-n-css=""></noscript>
     <script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script>
     <script src="/_next/static/chunks/webpack-2e51481b1d484a05.js" defer=""></script>
@@ -16,10 +39,10 @@
     <script src="/_next/static/chunks/pages/_app-8b1c655d67dc7e3d.js" defer=""></script>
     <script src="/_next/static/chunks/294-cb5252cdae161d2e.js" defer=""></script>
     <script src="/_next/static/chunks/867-9ef2270e5f6721ff.js" defer=""></script>
-    <script src="/_next/static/chunks/pages/%5Btitle%5D-1745a6642ae23c32.js" defer=""></script>
-    <script src="/_next/static/WSfQIAHMGpRBHxfU6K07B/_buildManifest.js" defer=""></script>
-    <script src="/_next/static/WSfQIAHMGpRBHxfU6K07B/_ssgManifest.js" defer=""></script>
-    <script src="/_next/static/WSfQIAHMGpRBHxfU6K07B/_middlewareManifest.js" defer=""></script>
+    <script src="/_next/static/chunks/pages/%5Btitle%5D-15a46a40c200d92d.js" defer=""></script>
+    <script src="/_next/static/D5mLcJu6AN1AK0OIpU0ne/_buildManifest.js" defer=""></script>
+    <script src="/_next/static/D5mLcJu6AN1AK0OIpU0ne/_ssgManifest.js" defer=""></script>
+    <script src="/_next/static/D5mLcJu6AN1AK0OIpU0ne/_middlewareManifest.js" defer=""></script>
   </head>
   <body>
     <div id="__next" data-reactroot="">
@@ -66,7 +89,228 @@
           </ul>
         </nav>
       </header>
-      <main></main>
+      <main>
+        <article class="PostDetail_container__Ma_26">
+          <p class="PostDetail_publishedAt__7GOQm"><span>21.10.26</span></p>
+          <section class="PostDetail_thumbnailWrapper__oALCg">
+            <img src="/assets/images/css-position.png" alt="CSS Position (Static, Absolute, Fixed, Sticky)에 따른 고정 헤더 스타일" width="400" height="300" />
+          </section>
+          <section>
+            <h1>CSS Position</h1>
+            <p class="PostDetail_description__l6wHC">CSS Position (Static, Absolute, Fixed, Sticky)에 따른 고정 헤더 스타일</p>
+          </section>
+          <section class="PostDetail_content__uVlbQ false">
+            <h2 id="table-of-contents">Table of contents</h2>
+            <ol>
+              <li>
+                <a href="#css%EC%9D%98-position-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0">CSS의 Position 프로퍼티</a>
+                <ol>
+                  <li><a href="#static">Static</a></li>
+                  <li><a href="#relative">Relative</a></li>
+                  <li><a href="#absolute">Absolute</a></li>
+                  <li><a href="#fixed">Fixed</a></li>
+                  <li><a href="#sticky">Sticky</a></li>
+                </ol>
+              </li>
+              <li><a href="#absolute%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EA%B3%A0%EC%A0%95-%ED%97%A4%EB%8D%94">Absolute를 이용한 고정 헤더</a></li>
+              <li><a href="#fixed%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EA%B3%A0%EC%A0%95-%ED%97%A4%EB%8D%94">Fixed를 이용한 고정 헤더</a></li>
+              <li><a href="#sticky%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EA%B3%A0%EC%A0%95-%ED%97%A4%EB%8D%94">Sticky를 이용한 고정 헤더</a></li>
+            </ol>
+            <h2 id="css의-position-프로퍼티">CSS의 Position 프로퍼티</h2>
+            <p>CSS의 <code>Position</code> 속성은 문서상의 요소를 배치하는 방법을 지정한다. <code>Position</code> 속성의 값은 아래와 같다.</p>
+            <ul>
+              <li>Static</li>
+              <li>Relative</li>
+              <li>Fixed</li>
+              <li>Sticky</li>
+            </ul>
+            <h3 id="static">Static</h3>
+            <p>
+              요소를 일반적인 문서 흐름에 따라 배치한다. <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>,
+              <code>z-index</code> 속성에 영향을 받지 않는다. <em>(기본값)</em>
+            </p>
+            <h3 id="relative">Relative</h3>
+            <p>대상 엘리먼트의 <code>position</code>이 <code>static</code>일 경우의 위치로 부터 상대적 위치를 갖는다.</p>
+            <h3 id="absolute">Absolute</h3>
+            <p>
+              <code>position</code>이 지정된 <em>(static이 아닌 경우)</em> 부모 요소를 기준으로 상대적인 위치를 갖는다. 다시말해 <code>position</code>이 지정된
+              부모 요소 내부에서 자유롭게 배치 할 수 있다. 만약 상위 요소중 <code>position</code>이 지정된 요소가 존재하지 않는다면 <code>body</code>를 기준으로
+              배치된다.
+            </p>
+            <h3 id="fixed">Fixed</h3>
+            <p>상위 요소를 기준으로 하는 것이 아닌 <code>viewport</code>를 기준으로 상대적인 위치에 배치된다.</p>
+            <h3 id="sticky">Sticky</h3>
+            <p>
+              부모 요소 내부에서 상대적인 위치에 배치된다. 부모요소의 스크롤이 변경됨에 따라 더이상 본래 위치를 유지할 수 없을 경우 부모 요소 내부에서 설장한
+              offset (left, right, top, bottom)을 기준으로 상대적인 위치를 유지한다.
+            </p>
+            <h2 id="absolute를-이용한-고정-헤더">Absolute를 이용한 고정 헤더</h2>
+            <pre><code class="language-html">&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      html,
+      body {
+        margin: 0px;
+        overflow: hidden;
+        color: #fff;
+      }
+      #container {
+        background-color: #999;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+      }
+      #header {
+        background-color: #333;
+        position: absolute;
+        width: inherit;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;container&quot;&gt;
+      &lt;div id=&quot;header&quot;&gt;Header&lt;/div&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            <iframe src="/examples/css-position/absolute-header.html"></iframe>
+
+            <h2 id="fixed를-이용한-고정-헤더">Fixed를 이용한 고정 헤더</h2>
+            <pre><code class="language-html">&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      html,
+      body {
+        margin: 0px;
+        overflow: hidden;
+        color: #fff;
+      }
+      #container {
+        background-color: #999;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+      }
+      #header {
+        background-color: #333;
+        position: fixed;
+        width: inherit;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;container&quot;&gt;
+      &lt;div id=&quot;header&quot;&gt;Header&lt;/div&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            <iframe src="/examples/css-position/fixed-header.html"></iframe>
+
+            <h2 id="sticky를-이용한-고정-헤더">Sticky를 이용한 고정 헤더</h2>
+            <pre><code class="language-html">&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      html,
+      body {
+        margin: 0px;
+        overflow: hidden;
+        color: #fff;
+      }
+      #container {
+        background-color: #999;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+      }
+      #header {
+        background-color: #333;
+        position: sticky;
+        top: 0px;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;container&quot;&gt;
+      &lt;div id=&quot;header&quot;&gt;Header&lt;/div&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+        &lt;li&gt;Item&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            <iframe src="/examples/css-position/sticky-header.html"></iframe>
+          </section>
+        </article>
+        <section class="MainAdsBanner_container__YWe5C">
+          <ins
+            class="adsbygoogle"
+            style="display: block"
+            data-ad-client="ca-pub-7134579063537339"
+            data-ad-slot="5391522351"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
+        </section>
+        <section class="PostDetail_categoryGroup___S2ib">
+          <h2>카테고리 더보기</h2>
+          <ul class="CategoryPostGroup_container__MDFUe"></ul>
+        </section>
+        <section class="PostDetail_utterances__jZeOm">
+          <h2>댓글</h2>
+          <div class="Utterrances_utteranceContainer__qopWy"></div>
+        </section>
+      </main>
       <aside></aside>
       <footer class="Footer_footer__GLL0J"><p>ⓒ 2021. Jay Lee all rights reserved.</p></footer>
     </div>
@@ -107,7 +351,7 @@
         },
         "page": "/[title]",
         "query": { "title": "css-position" },
-        "buildId": "WSfQIAHMGpRBHxfU6K07B",
+        "buildId": "D5mLcJu6AN1AK0OIpU0ne",
         "isFallback": false,
         "gsp": true,
         "scriptLoader": []
