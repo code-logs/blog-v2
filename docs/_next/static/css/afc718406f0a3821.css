@@ -357,20 +357,17 @@ footer {
 .clickable:active {
   transform: scale(1.05);
 }
-pre code.hljs {
+pre code {
   display: block;
   overflow-x: auto;
   padding: 1em;
-}
-code.hljs {
-  padding: 3px 5px;
+  line-height: var(--wide-spacing);
 }
 .hljs {
   background: var(--code-bg-color);
   color: #fff;
   border-radius: 4px;
   box-shadow: var(--common-shadow);
-  line-height: var(--wide-spacing);
 }
 @media (prefers-color-scheme: dark) {
   .hljs {

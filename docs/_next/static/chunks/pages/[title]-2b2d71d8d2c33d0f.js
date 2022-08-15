@@ -89,8 +89,8 @@
           )
         })(),
         a = s,
-        c = n(8286),
-        l = n(5500)
+        l = n(8286),
+        c = n(5500)
       function u(e, t) {
         for (var n = 0; n < t.length; n++) {
           var r = t[n]
@@ -169,7 +169,7 @@
               })(this, o),
               (e = i.call(
                 this,
-                l.ZP.filter(function (e) {
+                c.ZP.filter(function (e) {
                   return e.published
                 }).map(function (e, t) {
                   return (function (e) {
@@ -203,7 +203,7 @@
                 key: 'findByTitle',
                 value: function (e) {
                   return this.dataset.find(function (t) {
-                    return c.Z.normalizeTitle(t.title) === e || t.title === e
+                    return l.Z.normalizeTitle(t.title) === e || t.title === e
                   })
                 },
               },
@@ -273,7 +273,7 @@
                 key: 'findByNormalizedTitle',
                 value: function (e) {
                   return this.dataset.find(function (t) {
-                    return c.Z.normalizeTitle(t.title) === e
+                    return l.Z.normalizeTitle(t.title) === e
                   })
                 },
               },
@@ -301,8 +301,8 @@
         o = n(7294),
         s = n(4786),
         a = n(8286),
-        c = n(6778),
-        l = n.n(c)
+        l = n(6778),
+        c = n.n(l)
       function u(e, t) {
         ;(null == t || t > e.length) && (t = e.length)
         for (var n = 0, r = new Array(t); n < t; n++) r[n] = e[n]
@@ -336,9 +336,9 @@
             n = (0, o.useState)([]),
             i = n[0],
             s = n[1],
-            c = (0, o.useState)([]),
-            u = c[0],
-            d = c[1]
+            l = (0, o.useState)([]),
+            u = l[0],
+            d = l[1]
           return (
             (0, o.useEffect)(
               function () {
@@ -350,7 +350,7 @@
             (0, r.jsxs)(r.Fragment, {
               children: [
                 (0, r.jsx)('ul', {
-                  className: l().container,
+                  className: c().container,
                   children: i.map(function (e) {
                     return (0,
                     r.jsxs)('li', { children: [(0, r.jsx)('h3', { children: e.title }), (0, r.jsx)('a', { href: a.Z.buildLinkURLByTitle(e.title), children: e.description })] }, e.fileName)
@@ -358,11 +358,11 @@
                 }),
                 !!u.length &&
                   (0, r.jsxs)('details', {
-                    className: l().details,
+                    className: c().details,
                     children: [
                       (0, r.jsx)('summary', { children: '\ub354\ubcf4\uae30' }),
                       (0, r.jsx)('ul', {
-                        className: l().container,
+                        className: c().container,
                         children: t.map(function (e) {
                           return (0,
                           r.jsxs)('li', { children: [(0, r.jsx)('h3', { children: e.title }), (0, r.jsx)('a', { href: a.Z.buildLinkURLByTitle(e.title), children: e.description })] }, e.fileName)
@@ -384,34 +384,34 @@
             i,
             o,
             s,
-            c,
-            l = e.post
+            l,
+            c = e.post
           return (0, r.jsxs)('ol', {
             className: m().container,
             children: [
-              (null === (t = l.series) || void 0 === t ? void 0 : t.prevPostTitle) &&
+              (null === (t = c.series) || void 0 === t ? void 0 : t.prevPostTitle) &&
                 (0, r.jsxs)('li', {
                   children: [
-                    (0, r.jsxs)('h3', { children: [(0, r.jsx)('span', { children: '\uc774\uc804\uae00 - ' }), l.series.prevPostTitle] }),
+                    (0, r.jsxs)('h3', { children: [(0, r.jsx)('span', { children: '\uc774\uc804\uae00 - ' }), c.series.prevPostTitle] }),
                     (0, r.jsx)('a', {
-                      href: a.Z.buildLinkURLByTitle(l.series.prevPostTitle),
+                      href: a.Z.buildLinkURLByTitle(c.series.prevPostTitle),
                       children:
-                        (null === (i = p.Z.findByTitle(null === (n = l.series) || void 0 === n ? void 0 : n.prevPostTitle)) || void 0 === i
+                        (null === (i = p.Z.findByTitle(null === (n = c.series) || void 0 === n ? void 0 : n.prevPostTitle)) || void 0 === i
                           ? void 0
                           : i.description) || '',
                     }),
                   ],
                 }),
-              (null === (o = l.series) || void 0 === o ? void 0 : o.nextPostTitle) &&
+              (null === (o = c.series) || void 0 === o ? void 0 : o.nextPostTitle) &&
                 (0, r.jsxs)('li', {
                   children: [
-                    (0, r.jsxs)('h3', { children: [(0, r.jsx)('span', { children: '\ub2e4\uc74c\uae00 - ' }), l.series.nextPostTitle] }),
+                    (0, r.jsxs)('h3', { children: [(0, r.jsx)('span', { children: '\ub2e4\uc74c\uae00 - ' }), c.series.nextPostTitle] }),
                     (0, r.jsx)('a', {
-                      href: a.Z.buildLinkURLByTitle(l.series.nextPostTitle),
+                      href: a.Z.buildLinkURLByTitle(c.series.nextPostTitle),
                       children:
-                        (null === (c = p.Z.findByTitle(null === (s = l.series) || void 0 === s ? void 0 : s.nextPostTitle)) || void 0 === c
+                        (null === (l = p.Z.findByTitle(null === (s = c.series) || void 0 === s ? void 0 : s.nextPostTitle)) || void 0 === l
                           ? void 0
-                          : c.description) || '',
+                          : l.description) || '',
                     }),
                   ],
                 }),
@@ -484,14 +484,11 @@
         k = function (e) {
           var t,
             n = e.post,
-            c = e.content,
-            l = e.postsByCategory,
-            u = (0, o.useState)(!1),
-            f = u[0],
-            p = u[1]
+            l = e.content,
+            c = e.postsByCategory
           return (
             (0, o.useEffect)(function () {
-              i.Z.highlightAll(), p(!0)
+              i.Z.highlightAll()
             }, []),
             (0, r.jsxs)(r.Fragment, {
               children: [
@@ -513,7 +510,7 @@
                     (0, r.jsxs)('section', {
                       children: [(0, r.jsx)('h1', { children: n.title }), (0, r.jsx)('p', { className: T().description, children: n.description })],
                     }),
-                    (0, r.jsx)('section', { className: ''.concat(T().content, ' ').concat(f && T().contentReady), dangerouslySetInnerHTML: { __html: c } }),
+                    (0, r.jsx)('section', { dangerouslySetInnerHTML: { __html: l } }),
                   ],
                 }),
                 (0, r.jsx)(s.Z, {}),
@@ -522,10 +519,10 @@
                     className: T().relatedPosting,
                     children: [(0, r.jsx)('h2', { children: '\uc5f0\uad00 \ud3ec\uc2a4\ud305' }), (0, r.jsx)(b, { post: n })],
                   }),
-                !!l.length &&
+                !!c.length &&
                   (0, r.jsxs)('section', {
                     className: T().categoryGroup,
-                    children: [(0, r.jsx)('h2', { children: '\uce74\ud14c\uace0\ub9ac \ub354\ubcf4\uae30' }), (0, r.jsx)(d, { posts: l })],
+                    children: [(0, r.jsx)('h2', { children: '\uce74\ud14c\uace0\ub9ac \ub354\ubcf4\uae30' }), (0, r.jsx)(d, { posts: c })],
                   }),
                 !!(null === (t = n.references) || void 0 === t ? void 0 : t.length) &&
                   (0, r.jsxs)('section', {
@@ -566,8 +563,6 @@
       e.exports = {
         thumbnailWrapper: 'PostDetail_thumbnailWrapper__oALCg',
         container: 'PostDetail_container__Ma_26',
-        content: 'PostDetail_content__uVlbQ',
-        contentReady: 'PostDetail_contentReady__J4dn7',
         publishedAt: 'PostDetail_publishedAt__7GOQm',
         description: 'PostDetail_description__l6wHC',
         relatedPosting: 'PostDetail_relatedPosting__VlXXV',
