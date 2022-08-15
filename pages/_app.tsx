@@ -2,10 +2,8 @@ import type { AppProps } from 'next/app'
 import 'normalize.css'
 import AsideAdsBanner from '../components/ads-banner/AsideAdsBanner'
 import Footer from '../components/footer/Footer'
-import GoogleAdsenseBanner from '../components/google-adsense/GoogleAdsenseBanner'
 import GTagScript from '../components/gtag-script/GTagScript'
 import Header from '../components/header/Header'
-import KakaoAdfitScript from '../components/kakao-adfit/KakaoAdfitScript'
 import NaverAnalyticsScript from '../components/naver-analytics-script/NaverAnalyticsScript'
 import SWScript from '../components/sw-script/SWScript'
 import blogConfig from '../config/blog.config'
@@ -19,7 +17,6 @@ const MainApp = ({ Component, pageProps }: AppProps) => {
     <>
       <GTagScript gaID={blogConfig.googleAnalytics.id} />
       <NaverAnalyticsScript issuedId={blogConfig.naverAnalytics.id} />
-      <KakaoAdfitScript />
       <SWScript />
       <Header title={blogConfig.title} socialIcons={socialIcons} menus={menus} />
 
