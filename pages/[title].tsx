@@ -1,6 +1,6 @@
 import hljs from 'highlight.js'
 import { NextPage } from 'next'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import MainAdsBanner from '../components/ads-banner/MainAdsBanner'
 import CategoryPostGroup from '../components/category-post-group/CategoryPostGroup'
 import CommonMeta from '../components/common-meta/CommonMeta'
@@ -43,9 +43,14 @@ export async function getStaticProps(context: { params: { title: string } }) {
 }
 
 const PostDetail: NextPage<PostDetailPageProps> = ({ post, content, postsByCategory }: PostDetailPageProps) => {
+  const [isContentReady, setIsContentReady] = useState(false)
+
   useEffect(() => {
     hljs.highlightAll()
+    setIsContentReady(true)
   }, [])
+
+  if (!isContentReady) return <></>
 
   return (
     <>
