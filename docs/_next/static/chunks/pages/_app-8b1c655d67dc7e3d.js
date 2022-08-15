@@ -2241,7 +2241,7 @@
       ;(window.__NEXT_P = window.__NEXT_P || []).push([
         '/_app',
         function () {
-          return r(8228)
+          return r(7685)
         },
       ])
     },
@@ -2281,12 +2281,12 @@
         naverAnalytics: { id: '3803c322918e5' },
       }
     },
-    8228: function (e, t, r) {
+    7685: function (e, t, r) {
       'use strict'
       r.r(t),
         r.d(t, {
           default: function () {
-            return E
+            return I
           },
         })
       var n = r(5893),
@@ -2385,10 +2385,7 @@
             ],
           })
         },
-        j = function () {
-          return (0, n.jsx)(h.default, { async: !0, src: '//t1.daumcdn.net/kas/static/ba.min.js' })
-        },
-        _ = function (e) {
+        j = function (e) {
           return (0, n.jsxs)(n.Fragment, {
             children: [
               (0, n.jsx)(h.default, { type: 'text/javascript', src: '//wcs.naver.net/wcslog.js' }),
@@ -2403,7 +2400,7 @@
             ],
           })
         },
-        C = function (e) {
+        _ = function (e) {
           var t = e.serviceWorkerPath || '/service-worker.js'
           return (0, n.jsx)(h.default, {
             id: 'service-worker-script',
@@ -2414,23 +2411,23 @@
             ),
           })
         },
-        P = [
+        C = [
           { display: 'Home', route: '/' },
           { display: 'Posts', route: '/posts/1' },
           { display: 'About', route: '/about' },
         ],
-        $ = (0, r(7026).Z)(
+        P = (0, r(7026).Z)(
           (0, n.jsx)('path', {
             d: 'M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.28.73-.55v-1.84c-3.03.64-3.67-1.46-3.67-1.46-.55-1.29-1.28-1.65-1.28-1.65-.92-.65.1-.65.1-.65 1.1 0 1.73 1.1 1.73 1.1.92 1.65 2.57 1.2 3.21.92a2 2 0 01.64-1.47c-2.47-.27-5.04-1.19-5.04-5.5 0-1.1.46-2.1 1.2-2.84a3.76 3.76 0 010-2.93s.91-.28 3.11 1.1c1.8-.49 3.7-.49 5.5 0 2.1-1.38 3.02-1.1 3.02-1.1a3.76 3.76 0 010 2.93c.83.74 1.2 1.74 1.2 2.94 0 4.21-2.57 5.13-5.04 5.4.45.37.82.92.82 2.02v3.03c0 .27.1.64.73.55A11 11 0 0012 1.27',
           }),
           'GitHub'
         ),
-        T = [{ href: 'https://github.com/possible819', icon: (0, n.jsx)($, {}), label: 'My Github' }]
+        $ = [{ href: 'https://github.com/possible819', icon: (0, n.jsx)(P, {}), label: 'My Github' }]
       r(4831), r(4881)
-      function R(e, t, r) {
+      function T(e, t, r) {
         return t in e ? Object.defineProperty(e, t, { value: r, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = r), e
       }
-      function I(e) {
+      function R(e) {
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r)
@@ -2441,22 +2438,21 @@
               })
             )),
             n.forEach(function (t) {
-              R(e, t, r[t])
+              T(e, t, r[t])
             })
         }
         return e
       }
-      var E = function (e) {
+      var I = function (e) {
         var t = e.Component,
           r = e.pageProps
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsx)(m, { gaID: o.Z.googleAnalytics.id }),
-            (0, n.jsx)(_, { issuedId: o.Z.naverAnalytics.id }),
-            (0, n.jsx)(j, {}),
-            (0, n.jsx)(C, {}),
-            (0, n.jsx)(O, { title: o.Z.title, socialIcons: T, menus: P }),
-            (0, n.jsx)('main', { children: (0, n.jsx)(t, I({}, r)) }),
+            (0, n.jsx)(j, { issuedId: o.Z.naverAnalytics.id }),
+            (0, n.jsx)(_, {}),
+            (0, n.jsx)(O, { title: o.Z.title, socialIcons: $, menus: C }),
+            (0, n.jsx)('main', { children: (0, n.jsx)(t, R({}, r)) }),
             (0, n.jsx)('aside', { children: (0, n.jsx)(u, {}) }),
             (0, n.jsx)(d, { author: o.Z.author }),
           ],
