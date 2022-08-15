@@ -112,18 +112,6 @@
   }
 }
 
-.content {
-  opacity: 0;
-  transition: all 0.5s ease-in-out 0s;
-  transition-property: opacity, transform;
-  transform: translateY(40px);
-}
-
-.contentReady {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .publishedAt {
   font-size: 0.9em;
   color: var(--theme-color);
