@@ -2,37 +2,8 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
-    <link rel="canonical" href="https://code-logs.github.io/how-https-works---roadmap.sh" />
-    <link rel="apple-touch-icon" href="/icons/icon-192x-192.png" />
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="theme-color" content="#fff" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Code Logs" />
-    <meta name="author" content="Jay Lee" />
-    <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <meta
-      name="keyword"
-      content="https, internet, protocol, roadmap, roadmap.sh, 인터넷, 프로토콜, How HTTPS works - Roadmap.sh, How HTTPS works? - Roadmap.sh
-Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 3
-, roadmap-frontend"
-    />
-    <meta
-      name="description"
-      content="Code Logs How HTTPS works - Roadmap.sh - How HTTPS works? - Roadmap.sh
-Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 3
- | roadmap-frontend, https, internet, protocol, roadmap, roadmap.sh, 인터넷, 프로토콜"
-    />
-    <meta
-      property="og:description"
-      content="Code Logs How HTTPS works - Roadmap.sh - How HTTPS works? - Roadmap.sh
-Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 3
- | roadmap-frontend, https, internet, protocol, roadmap, roadmap.sh, 인터넷, 프로토콜"
-    />
-    <meta property="og:title" content="How HTTPS works - Roadmap.sh | Code Logs" />
-    <meta property="og:url" content="https://code-logs.github.io/how-https-works---roadmap.sh" />
-    <meta property="og:image" content="/assets/images/9579caef343bd3ac65b89ea5b798eb66" />
-    <title>How HTTPS works - Roadmap.sh | Code Logs</title>
-    <meta name="next-head-count" content="16" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="next-head-count" content="2" />
     <link rel="preload" href="/_next/static/css/733ccf6aecd78772.css" as="style" />
     <link rel="stylesheet" href="/_next/static/css/733ccf6aecd78772.css" data-n-g="" />
     <link rel="preload" href="/_next/static/css/22e43734d62d85ee.css" as="style" />
@@ -45,10 +16,10 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 3
     <script src="/_next/static/chunks/pages/_app-179eda94ba87778a.js" defer=""></script>
     <script src="/_next/static/chunks/294-cb5252cdae161d2e.js" defer=""></script>
     <script src="/_next/static/chunks/867-9ef2270e5f6721ff.js" defer=""></script>
-    <script src="/_next/static/chunks/pages/%5Btitle%5D-2b2d71d8d2c33d0f.js" defer=""></script>
-    <script src="/_next/static/nJmgUC-Ar7yaua1fG_d-_/_buildManifest.js" defer=""></script>
-    <script src="/_next/static/nJmgUC-Ar7yaua1fG_d-_/_ssgManifest.js" defer=""></script>
-    <script src="/_next/static/nJmgUC-Ar7yaua1fG_d-_/_middlewareManifest.js" defer=""></script>
+    <script src="/_next/static/chunks/pages/%5Btitle%5D-1745a6642ae23c32.js" defer=""></script>
+    <script src="/_next/static/sspprzGpunNErDV_134A9/_buildManifest.js" defer=""></script>
+    <script src="/_next/static/sspprzGpunNErDV_134A9/_ssgManifest.js" defer=""></script>
+    <script src="/_next/static/sspprzGpunNErDV_134A9/_middlewareManifest.js" defer=""></script>
   </head>
   <body>
     <div id="__next" data-reactroot="">
@@ -95,176 +66,7 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 3
           </ul>
         </nav>
       </header>
-      <main>
-        <article class="PostDetail_container__Ma_26">
-          <p class="PostDetail_publishedAt__7GOQm"><span>22.08.08</span></p>
-          <section class="PostDetail_thumbnailWrapper__oALCg">
-            <img
-              src="/assets/images/9579caef343bd3ac65b89ea5b798eb66"
-              alt="How HTTPS works? - Roadmap.sh
-Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 3
-"
-              width="400"
-              height="300"
-            />
-          </section>
-          <section>
-            <h1>How HTTPS works - Roadmap.sh</h1>
-            <p class="PostDetail_description__l6wHC">How HTTPS works? - Roadmap.sh Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 3</p>
-          </section>
-          <section>
-            <blockquote>
-              <p>본 포스팅 시리즈는 <a href="https://roadmap.sh/frontend">roadmap.sh</a>의 학습 순서에 따라 정리한 글 입니다.</p>
-            </blockquote>
-            <h2 id="table-of-contents">Table of contents</h2>
-            <ol>
-              <li>
-                <a href="#https%EA%B0%80-%ED%95%84%EC%9A%94%ED%95%9C-%EC%9D%B4%EC%9C%A0">HTTPS가 필요한 이유?</a>
-                <ol>
-                  <li><a href="#%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4-%EB%B3%B4%ED%98%B8">개인정보 보호</a></li>
-                  <li><a href="#%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AC%B4%EA%B2%B0%EC%84%B1">데이터 무결성</a></li>
-                  <li><a href="#%EC%8B%A0%EC%9B%90%EC%A6%9D%EB%AA%85">신원증명</a></li>
-                </ol>
-              </li>
-              <li>
-                <a href="#https%EC%9D%98-%EB%8F%99%EC%9E%91-%EC%9B%90%EB%A6%AC">HTTPS의 동작 원리</a>
-                <ol>
-                  <li>
-                    <a href="#%EB%8C%80%EC%B9%AD%ED%82%A4-symmetric-%EC%95%94%ED%98%B8%ED%99%94-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98"
-                      >대칭키 (symmetric) 암호화 알고리즘</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#%EB%B9%84%EB%8C%80%EC%B9%AD%ED%82%A4-asymmetric-%EC%95%94%ED%98%B8%ED%99%94-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98"
-                      >비대칭키 (asymmetric) 암호화 알고리즘</a
-                    >
-                  </li>
-                  <li><a href="#the-handshake">The Handshake</a></li>
-                  <li><a href="#client-hello">Client Hello</a></li>
-                  <li><a href="#server-hello">Server Hello</a></li>
-                  <li><a href="#server-key-exchange">Server key exchange</a></li>
-                  <li><a href="#client-key-exchange">Client key exchange</a></li>
-                  <li><a href="#change-cipher-spec--finished">Change Cipher spec / Finished</a></li>
-                </ol>
-              </li>
-            </ol>
-            <h2 id="https가-필요한-이유">HTTPS가 필요한 이유?</h2>
-            <ol>
-              <li>개인정보 보호</li>
-              <li>데이터 무결성</li>
-              <li>신원증명</li>
-            </ol>
-            <h3 id="개인정보-보호">개인정보 보호</h3>
-            <p>
-              <code>HTTP</code> 프로토콜은 네트워크를 통해 전송되는 데이터 패킷을 암호화 하지 않는다 그로인해
-              <a href="https://www.wireshark.org/"><code>Wireshark</code></a
-              >와 같은 패킷 분석 툴을 통해 <code>클라이언트 - 서버</code>간 전송되는 데이터가 외부로 유출 될 수 있다. 반면에 <code>HTTPS</code>를 통해 전송되는
-              패킷은 암호화를 통해 패킷에 포함된 데이터를 암호화 하기 때문에 패킷이 중간에 외부로 유출 되더라도 원문의 내용을 확인 할 수 없다.
-            </p>
-            <h3 id="데이터-무결성">데이터 무결성</h3>
-            <p>
-              <code>HTTP</code> 프로토콜을 통해 전송되는 데이터 패킷은 중간에 패킷에 대한 변형을 가 할 수 있는 위험 <code>(man-in-the-middle attack)</code>에
-              노출되어 있다. 이는 네트워크간 전송/수신하는 데이터의 무결성을 헤치게 된다. 반면 <code>HTTPS</code>를 통해 전달되는 패킷은 중간자에 의해 패킷의
-              내용이 조작되지 않도록 보호한다.
-            </p>
-            <h3 id="신원증명">신원증명</h3>
-            <p>
-              <code>HTTPS</code> 프로토콜을 사용하는 웹사이트는 인증된 기관으로 부터 발급 받은 <code>certification</code>을 가지고 있다. 방문자는
-              <code>certification</code>의 존재 여부를 통해 신뢰할 수 있는 사이트인지 여부를 검증 할 수 있다.
-            </p>
-            <h2 id="https의-동작-원리">HTTPS의 동작 원리</h2>
-            <h3 id="대칭키-symmetric-암호화-알고리즘">대칭키 (symmetric) 암호화 알고리즘</h3>
-            <p>대칭키 암호화 알고리즘은 하나의 키를 통해 암호화/복호화가 모두 가능한 알고리즘이다.</p>
-            <h3 id="비대칭키-asymmetric-암호화-알고리즘">비대칭키 (asymmetric) 암호화 알고리즘</h3>
-            <p>
-              비대칭키 암호화 알고리즘은 공개키와 비공개키, 두개의 키로 구성된다. 공개키는 암호화를 하는데 사용되며 비공개키를 통해서만 공개키로 암호화된
-              데이터를 복호화 할 수 있다.
-            </p>
-            <h3 id="the-handshake">The Handshake</h3>
-            <p>
-              <code>3 way handshake</code>는 <code>SYN (client)</code> → <code>SYN ACK (server)</code> → <code>ACK (client)</code> 의 순으로 진행되는 TCP 연결
-              생성을 위한 핸드쉐이크이다.
-            </p>
-            <blockquote>
-              <p>SYN synchronize sequence numbers ACK Acknowledgement</p>
-            </blockquote>
-            <p>
-              TCP 연결을 위한 <code>3 way handshake</code>가 정상적으로 완료되면 <code>HTTPS</code> 통신을 위한 <code>SSL Handshake (TLS Handshake)</code>를
-              수행한다.
-            </p>
-            <p><code>SSL Handshake</code>는 아래의 순서로 진행된다.</p>
-            <ol>
-              <li>Client Hello</li>
-              <li>
-                Server Hello
-                <ol>
-                  <li>Server key exchange</li>
-                </ol>
-              </li>
-              <li>Client key exchange</li>
-              <li>Change Cipher spec / Finished</li>
-            </ol>
-            <h3 id="client-hello">Client Hello</h3>
-            <p>클라이언트는 서버로 사용가능한 암호와 알고리즘 (<code>cipher suite</code>) 과 <code>SSL/TLS</code> 버전을 서버로 전송한다.</p>
-            <h3 id="server-hello">Server Hello</h3>
-            <p>
-              서버는 전달 받은 <code>cipher suite</code> 중 사용할 알고리즘 (서버의 선호에 따라 결정됨)과 인증서를 전송한다. 이때 인증서에
-              <code>서버의 공개키</code>가 포함될 수 있다.
-            </p>
-            <h3 id="server-key-exchange">Server key exchange</h3>
-            <p>
-              <code>Server Hello</code> 단계에서 클라이언트로 전달되는 인증서에 서버의 공개키가 포함되지 않을 경우 <code>Server key exchange</code> 과정을
-              거치며 서버가 클라이언트로 공개키를 전송한다. 인증서에 서버의 공개키가 포함되어 있는 경우 이 과정은 생략될 수 있다.
-            </p>
-            <h3 id="client-key-exchange">Client key exchange</h3>
-            <p>클라이언트의 대칭키를 <code>서버로 부터 제공 받은 공개키로 암호화</code>한 뒤 서버로 전송한다.</p>
-            <h3 id="change-cipher-spec--finished">Change Cipher spec / Finished</h3>
-            <p>
-              서버는 자신이 가지고 있는 비공개키 (비대칭키)를 통해 클라이언트로 부터 전달 받은 암호화된 클라이언트의 공개키를 복호화 한다. 이를 통해
-              클라이언트와 서버는 동일한 대칭키를 가질 수 있게되며 이 대칭키를 통해 데이터를 암호화/복호화 하여 전송/수신한다.
-            </p>
-          </section>
-        </article>
-        <section class="MainAdsBanner_container__YWe5C">
-          <ins
-            class="adsbygoogle"
-            style="display: block"
-            data-ad-client="ca-pub-7134579063537339"
-            data-ad-slot="5391522351"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-          ></ins>
-        </section>
-        <section class="PostDetail_relatedPosting__VlXXV">
-          <h2>연관 포스팅</h2>
-          <ol class="PostSeriesLink_container__jtRUh">
-            <li>
-              <h3><span>이전글 - </span>HTTP - Roadmap.sh</h3>
-              <a href="/http---roadmap.sh">HTTP - Roadmap.sh Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 2</a>
-            </li>
-            <li>
-              <h3><span>다음글 - </span>The differences between HTTPS, SSL and TLS - Roadmap.sh</h3>
-              <a href="/the-differences-between-https%2C-ssl-and-tls---roadmap.sh"
-                >The differences between HTTPS, SSL and TLS - Roadmap.sh Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 4</a
-              >
-            </li>
-          </ol>
-        </section>
-        <section class="PostDetail_categoryGroup___S2ib">
-          <h2>카테고리 더보기</h2>
-          <ul class="CategoryPostGroup_container__MDFUe"></ul>
-        </section>
-        <section class="PostDetail_references__EU_hH">
-          <h2>참고</h2>
-          <ul class="PostDetail_references__EU_hH">
-            <li><a href="https%3A%2F%2Froadmap.sh%2Ffrontend" target="_blank" rel="noreferrer">roadmap.sh</a></li>
-          </ul>
-        </section>
-        <section class="PostDetail_utterances__jZeOm">
-          <h2>댓글</h2>
-          <div class="Utterrances_utteranceContainer__qopWy"></div>
-        </section>
-      </main>
+      <main></main>
       <aside></aside>
       <footer class="Footer_footer__GLL0J"><p>ⓒ 2021. Jay Lee all rights reserved.</p></footer>
     </div>
@@ -335,7 +137,7 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 3
         },
         "page": "/[title]",
         "query": { "title": "how-https-works---roadmap.sh" },
-        "buildId": "nJmgUC-Ar7yaua1fG_d-_",
+        "buildId": "sspprzGpunNErDV_134A9",
         "isFallback": false,
         "gsp": true,
         "scriptLoader": []
