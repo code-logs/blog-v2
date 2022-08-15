@@ -50,8 +50,6 @@ const PostDetail: NextPage<PostDetailPageProps> = ({ post, content, postsByCateg
     setIsContentReady(true)
   }, [])
 
-  if (!isContentReady) return <></>
-
   return (
     <>
       <CommonMeta
@@ -75,7 +73,7 @@ const PostDetail: NextPage<PostDetailPageProps> = ({ post, content, postsByCateg
           <p className={styles.description}>{post.description}</p>
         </section>
 
-        <section dangerouslySetInnerHTML={{ __html: content }}></section>
+        <section className={`${styles.content} ${isContentReady && styles.contentReady}`} dangerouslySetInnerHTML={{ __html: content }}></section>
       </article>
 
       <MainAdsBanner />
