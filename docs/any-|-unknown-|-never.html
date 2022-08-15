@@ -2,28 +2,8 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
-    <link rel="canonical" href="https://code-logs.github.io/any-|-unknown-|-never" />
-    <link rel="apple-touch-icon" href="/icons/icon-192x-192.png" />
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="theme-color" content="#fff" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Code Logs" />
-    <meta name="author" content="Jay Lee" />
-    <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <meta name="keyword" content="any, never, typescript, unknown, 타입스크립트, Any | Unknown | Never, TypeScript - Any | Unknown | Never, typescript" />
-    <meta
-      name="description"
-      content="Code Logs Any | Unknown | Never - TypeScript - Any | Unknown | Never | typescript, any, never, typescript, unknown, 타입스크립트"
-    />
-    <meta
-      property="og:description"
-      content="Code Logs Any | Unknown | Never - TypeScript - Any | Unknown | Never | typescript, any, never, typescript, unknown, 타입스크립트"
-    />
-    <meta property="og:title" content="Any | Unknown | Never | Code Logs" />
-    <meta property="og:url" content="https://code-logs.github.io/any-|-unknown-|-never" />
-    <meta property="og:image" content="/assets/images/ts-any-unknown-never.png" />
-    <title>Any | Unknown | Never | Code Logs</title>
-    <meta name="next-head-count" content="16" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="next-head-count" content="2" />
     <link rel="preload" href="/_next/static/css/733ccf6aecd78772.css" as="style" />
     <link rel="stylesheet" href="/_next/static/css/733ccf6aecd78772.css" data-n-g="" />
     <link rel="preload" href="/_next/static/css/22e43734d62d85ee.css" as="style" />
@@ -36,10 +16,10 @@
     <script src="/_next/static/chunks/pages/_app-179eda94ba87778a.js" defer=""></script>
     <script src="/_next/static/chunks/294-cb5252cdae161d2e.js" defer=""></script>
     <script src="/_next/static/chunks/867-9ef2270e5f6721ff.js" defer=""></script>
-    <script src="/_next/static/chunks/pages/%5Btitle%5D-2b2d71d8d2c33d0f.js" defer=""></script>
-    <script src="/_next/static/nJmgUC-Ar7yaua1fG_d-_/_buildManifest.js" defer=""></script>
-    <script src="/_next/static/nJmgUC-Ar7yaua1fG_d-_/_ssgManifest.js" defer=""></script>
-    <script src="/_next/static/nJmgUC-Ar7yaua1fG_d-_/_middlewareManifest.js" defer=""></script>
+    <script src="/_next/static/chunks/pages/%5Btitle%5D-1745a6642ae23c32.js" defer=""></script>
+    <script src="/_next/static/sspprzGpunNErDV_134A9/_buildManifest.js" defer=""></script>
+    <script src="/_next/static/sspprzGpunNErDV_134A9/_ssgManifest.js" defer=""></script>
+    <script src="/_next/static/sspprzGpunNErDV_134A9/_middlewareManifest.js" defer=""></script>
   </head>
   <body>
     <div id="__next" data-reactroot="">
@@ -86,246 +66,7 @@
           </ul>
         </nav>
       </header>
-      <main>
-        <article class="PostDetail_container__Ma_26">
-          <p class="PostDetail_publishedAt__7GOQm"><span>21.11.15</span></p>
-          <section class="PostDetail_thumbnailWrapper__oALCg">
-            <img src="/assets/images/ts-any-unknown-never.png" alt="TypeScript - Any | Unknown | Never" width="400" height="300" />
-          </section>
-          <section>
-            <h1>Any | Unknown | Never</h1>
-            <p class="PostDetail_description__l6wHC">TypeScript - Any | Unknown | Never</p>
-          </section>
-          <section>
-            <h2 id="table-of-contents">Table of contents</h2>
-            <ol>
-              <li>
-                <a href="#any">Any</a>
-                <ol>
-                  <li><a href="#any-%ED%83%80%EC%9E%85%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80">Any 타입은 무엇인가?</a></li>
-                </ol>
-              </li>
-              <li>
-                <a href="#unknown">Unknown</a>
-                <ol>
-                  <li><a href="#unknown-%ED%83%80%EC%9E%85%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80">Unknown 타입은 무엇인가?</a></li>
-                  <li>
-                    <a href="#any-%ED%83%80%EC%9E%85%EA%B3%BC-unknown-%ED%83%80%EC%9E%85%EC%9D%98-%EC%B0%A8%EC%9D%B4%EB%8A%94"
-                      >Any 타입과 Unknown 타입의 차이는?</a
-                    >
-                  </li>
-                  <li><a href="#unknown-%ED%83%80%EC%9E%85-%EC%9D%91%EC%9A%A9%ED%95%98%EA%B8%B0">Unknown 타입 응용하기</a></li>
-                </ol>
-              </li>
-              <li>
-                <a href="#never">Never</a>
-                <ol>
-                  <li><a href="#never-%ED%83%80%EC%9E%85%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80">Never 타입은 무엇인가?</a></li>
-                  <li><a href="#never-%ED%83%80%EC%9E%85-%EC%9D%91%EC%9A%A9%ED%95%98%EA%B8%B0">Never 타입 응용하기</a></li>
-                </ol>
-              </li>
-            </ol>
-            <h2 id="any">Any</h2>
-            <h3 id="any-타입은-무엇인가">Any 타입은 무엇인가?</h3>
-            <p>
-              처음 JavaScript 코드를 TypeScript로 마이그레이션 할 때 필살기 처럼 사용했던 타입이다. 이러면 안된다는걸 직감적으로 알고 있으면서도 당시에는 당장
-              마이그레이션 하는게 우선이였기 때문에 묻어두고 넘어 갔고 당연히 시간이 지남에 따라 발목을 잡는 결과를 초래했다.
-            </p>
-            <p>
-              <code>any</code> 타입은 말 그대로 &#39;무엇이든지 가능한&#39; 타입 유형이다. 사실상 무엇이든 가능한 JavaScript 세계에서의 기본적인 타입 규칙을
-              따르는 것과 다름이 없기 때문에 모든 변수의 타입을 <code>any</code>로 잡는 것은 확장자만 ts인 js를 사용하는 것이다.
-              <del>컴파일을 해야하는 불편함 까지 가지고 있는 JavaScript가 완성된다.</del>
-            </p>
-            <p>
-              TypeScript는 정적인 타입을 보장하는 것을 통해 코드의 안정성을 확보하고 개발자가 인지하지 못하는 에러나 케이스 누락을 보장해주는 것인데 이런
-              장점들을 모두 사라지게 만드는 무분별한 <code>any</code>의 사용은 당연히 권장되는 방법은 아니다.
-            </p>
-            <p>
-              <code>any</code> 타입은 <code>TypeScript</code> 타입 생태계의 가장 최상위에 있는 <code>Super type</code>으로 모든 종류의 type을 포함한다. 다시
-              말하면 어떤 값도 <code>any</code> 타입이 될 수 있다는 것이다.
-            </p>
-            <pre><code class="language-typescript">let iAmAny: any
-iAmAny.hello.i.am.any.type.that.is.why.you.can.access.any.properties.of.mine()
-
-let iAmBoolean: boolean = iAmAny
-</code></pre>
-            <p>예제에서 볼 수 있든 정의되지 않은 프로퍼티에 접근하려고 해도 컴파일 에러를 발생시키지 않는다. 심지어 값의 할당이 되기도 한다.</p>
-            <h2 id="unknown">Unknown</h2>
-            <h3 id="unknown-타입은-무엇인가">Unknown 타입은 무엇인가?</h3>
-            <p>
-              <code>unknown</code> 타입은 말그대로 타입을 알 수 없는 것이다. <code>any</code> 타입과 비슷한 의미로 기억 될 수 있고 어떤 부분에서는
-              <code>any</code> 타입과도 닮아 있다. 하지만 <code>unknown</code> 타입은 <code>any</code> 타입과 분명한 차이점을 가지고 있으며 이 차이점에 대해서
-              이해하고 있다면 유연하면서도 TypeScript의 정적 타이핑을 잘 이용한 코드를 작성 할 수 있다.
-            </p>
-            <pre><code class="language-typescript">let iAmUnknown: unknown = &#39;Hello&#39;
-iAmUnknown = [&#39;I&#39;, &#39;can&#39;, &#39;be&#39;, &#39;anything&#39;, &#39;because&#39;, &#39;I&#39;, &#39;am&#39;, &#39;unknonw&#39;]
-iAmUnknown = 12345
-</code></pre>
-            <p>
-              예제에서 보는 것과 같이 <code>unknown</code> 타입의 경우도 <code>any</code> 타입과 같이 타입체크에 따른 컴파일 에러가 발생하지 않는 것을 볼 수
-              있다.
-            </p>
-            <p>하지만 아래의 경우는 조금 차이가 있다.</p>
-            <pre><code class="language-typescript">let iAmUnknown: unknown = &#39;Hello&#39;
-iAmUnknown.split(&#39; &#39;) // Property &#39;split&#39; does not exist on type &#39;unknown&#39;.ts(2339)
-iAmUnknown.join(&#39;&#39;) // Property &#39;join&#39; does not exist on type &#39;unknown&#39;.ts(2339)
-</code></pre>
-            <p>
-              위의 예제에서 처럼 unknown 타입에는 split, join과 같은 속성이 없다는 컴파일 에러가 발생한다. 이런 에러를 방지하기 위해 반드시
-              <code>type guard</code>가 필요하다.
-            </p>
-            <blockquote>
-              <p>Type Guard</p>
-              <p>객체의 타입을 좁혀 나가는 것을 통해 특정 변수의 타입을 보장하는 것</p>
-            </blockquote>
-            <pre><code class="language-typescript">let iAmUnknown: unknown = &#39;Hello&#39;
-
-if (typeof iAmUnknown === &#39;string&#39;) {
-  iAmUnknown.split(&#39; &#39;)
-} else if (Array.isArray(iAmUnknown)) {
-  iAmUnknown.join(&#39;&#39;)
-}
-</code></pre>
-            <p>이런식으로 <code>unknown</code> 타입의 변수는 <code>type guard</code>를 통해 안정적인 코드로 변경 할 수 있다.</p>
-            <h3 id="any-타입과-unknown-타입의-차이는">Any 타입과 Unknown 타입의 차이는?</h3>
-            <p>결과적으로 <code>any</code> 타입과 <code>unknown</code> 타입의 차이점은 사용시 타입을 명시해야하는데 있다.</p>
-            <h3 id="unknown-타입-응용하기">Unknown 타입 응용하기</h3>
-            <p>
-              <code>unknown</code> 타입은 타입 정의가 명확하게 되어 있지 않은 코드를 사용 할 때 유용히 쓰일 수 있다. 예를들어 아래와 같은 코드 블럭이 있다고
-              가정 했을때
-            </p>
-            <pre><code class="language-typescript">const someResult = doSomething()
-someResult.split(&#39;&#39;)
-</code></pre>
-            <p>
-              코드를 통해 충분히 유추할 수 있듯 <code>doSomething</code>이란 함수는 <code>string</code> 타입을 리턴하는 것으로 보인다. 그런데 예상과 달리
-              <code>number</code> 타입이나 <code>split</code>을 메소드로 가지고 있지 않은 유형의 데이터를 리턴하게 된다면 런타임에 에러가 발생하게 된다.
-            </p>
-            <p>
-              <code>doSomething</code>의 호출 결과인 <code>someResult</code>는 기본적으로 any 타입을 갖게 된다. 이것을 <code>unknown</code> 타입으로 변경하면
-              타입 가드를 반드시 만들어줘야하고 결과적으로 런타임에 발생하게 되는 에러를 미연에 방지 할 수 있다.
-            </p>
-            <pre><code class="language-typescript">const someResult: unknown = doSomething()
-
-if (typeof someResult === &#39;string&#39;) {
-  someResult.split(&#39;&#39;)
-}
-</code></pre>
-            <h2 id="never">Never</h2>
-            <h3 id="never-타입은-무엇인가">Never 타입은 무엇인가?</h3>
-            <p>
-              never 타입은 절대로 발생하지 않는 값의 타입이다. 절대로 발생하지 않는 값의 타입이라는 말이 무언가 모순적인데 아래의 예제 코드를 통해 조금 명확히
-              해야겠다.
-            </p>
-            <pre><code class="language-typescript">const neverPass = (): never =&gt; {
-  throw new Error(`You can&#39;t pass through this function`)
-}
-</code></pre>
-            <p>
-              <code>neverPass</code>라는 함수의 리턴 값이 <code>never</code>로 설정 했다 당연히 <code>neverPass</code> 함수는 절대로 값을 리턴할 수 없기
-              때문이다. 또다른 예제는 아래와 같다
-            </p>
-            <pre><code class="language-typescript">const infiniteLoop = (): never =&gt; {
-  while (true) {
-    console.log(&#39;You are in infinite loop function&#39;)
-  }
-}
-</code></pre>
-            <p>
-              <code>infiniteLoop</code>라는 함수의 리턴 타입 또한 <code>never</code>로 설정 됐다. 이 예제의 함수 또한 절대로 어떠한 값도 리턴 할 수 없기
-              때문이다.
-            </p>
-            <p><code>never</code> 타입의 몇가지 특징에 대해서 이야기해 보면 아래와 같다.</p>
-            <ul>
-              <li><code>never</code> 타입은 모든 타입의 하위 타입이다. 다시 말해 어떠한 유형의 값에도 <code>never</code> 타입의 값은 할당 될 수 있다.</li>
-              <li>
-                어떠한 타입도 <code>never</code> 타입의 하위 타입이 될 수 없다. <code>never</code> 타입에는 <code>never</code> 그 자체만을 할당 할 수 있고 다른
-                어떤 값도 <code>never</code> 타입에 할당 될 수 없다.
-              </li>
-            </ul>
-            <h3 id="never-타입-응용하기">Never 타입 응용하기</h3>
-            <p>앞서 살펴본 <code>never</code> 타입에는 <code>never</code> 타입만 할당 할 수 있다는 특징의 응용을 통해 런타임 에러를 방지 할 수 있다.</p>
-            <p>우선 서로 다른 두개의 <code>type</code>을 정의한다.</p>
-            <pre><code class="language-typescript">type CustomType1 = { name: &#39;custom type 1&#39; }
-type CustomType2 = { name: &#39;custom type 2&#39; }
-</code></pre>
-            <p>그리고 두 타입의 유니언 타입을 정의한다.</p>
-            <pre><code class="language-typescript">type CustomType1 = { name: &#39;custom type 1&#39; }
-type CustomType2 = { name: &#39;custom type 2&#39; }
-
-type CustomUnionType = CustomType1 | CustomType2
-</code></pre>
-            <p>그리고 <code>CustomUnionType</code>을 매개변수로 갖는 함수를 정의한다.</p>
-            <pre><code class="language-typescript">function doSomething(param: CustomUnionType) {
-  if (param.name === &#39;custom type 1&#39;) {
-    return &#39;This is custom type 1&#39;
-  } else if (param.name === &#39;custom type 2&#39;) {
-    return &#39;This is custom type 2&#39;
-  }
-}
-</code></pre>
-            <p>
-              예제의 코드는 상당히 간단하기 때문에 <code>doSomething</code> 함수 내부에서 다루어져야 하는 모든 케이스에 대한 처리가 되었음을 확인 할 수 있다.
-            </p>
-            <p>그런데 만약 <code>CustomUnionType</code>이 변경되어 새롭게 고려해야 할 케이스가 발생한다면 어떨까?</p>
-            <p>결론부터 이야기하면 현재 상태로는 새롭게 추가되는 타입이 생기더라도 이것을 쉽게 알 수 없다.</p>
-            <p>
-              이때 <code>never</code>는 <code>never</code> 자체에만 할당 가능하다는 것을 이용하면 <code>doSomething</code> 내에서 모든 케이스가 다루어지고
-              있는지 여부를 손쉽게 확인 할 수 있다.
-            </p>
-            <pre><code class="language-typescript">function doSomething(param: CustomUnionType) {
-  if (param.name === &#39;custom type 1&#39;) {
-    return &#39;This is custom type 1&#39;
-  } else if (param.name === &#39;custom type 2&#39;) {
-    return &#39;This is custom type 2&#39;
-  }
-
-  const isNever: never = param
-}
-</code></pre>
-            <p>
-              코드를 통해 확인 할 수 있듯이 전달받은 <code>param</code>은 <code>CustomType1</code> 또는 <code>CustomType2</code>인 경우 함수 실행이 종료되게
-              되고 마지막 라인인 <code>const isNever: never = param</code>에 도달 했을 경우 <code>param</code>은 <code>CustomType1</code>도
-              <code>CustomType2</code>도 아닌 <code>never</code> 타입이기 때문에 컴파일 에러가 발생하지 않는다.
-            </p>
-            <p>
-              그런데 만약 <code>CustomUnionType</code>에 <code>CustomType3</code>라는 새로운 타입이 포함된다면 마지막 라인에서 <code>param</code>의 유형이
-              <code>CustomType3</code>가 되고 결과적으로 <code>isNever</code>에 <code>param</code>을 할당 할 수 없게된다.
-            </p>
-            <pre><code class="language-typescript">type CustomType1 = { name: &#39;custom type 1&#39; }
-type CustomType2 = { name: &#39;custom type 2&#39; }
-type CustomType3 = { name: &#39;custom type 3&#39; }
-
-type CustomUnionType = CustomType1 | CustomType2 | CustomType3
-
-function doSomething(param: CustomUnionType) {
-  if (param.name === &#39;custom type 1&#39;) {
-    return &#39;This is custom type 1&#39;
-  } else if (param.name === &#39;custom type 2&#39;) {
-    return &#39;This is custom type 2&#39;
-  }
-
-  const isNever: never = param // &#39;isNever&#39; is declared but its value is never read.ts(6133)
-}
-</code></pre>
-            <p>이런 장치를 함수 내부의 포함시키는 것을 통해 타입별 처리를 누락 없이 수행 할 수 있다.</p>
-          </section>
-        </article>
-        <section class="MainAdsBanner_container__YWe5C">
-          <ins
-            class="adsbygoogle"
-            style="display: block"
-            data-ad-client="ca-pub-7134579063537339"
-            data-ad-slot="5391522351"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-          ></ins>
-        </section>
-        <section class="PostDetail_utterances__jZeOm">
-          <h2>댓글</h2>
-          <div class="Utterrances_utteranceContainer__qopWy"></div>
-        </section>
-      </main>
+      <main></main>
       <aside></aside>
       <footer class="Footer_footer__GLL0J"><p>ⓒ 2021. Jay Lee all rights reserved.</p></footer>
     </div>
@@ -351,7 +92,7 @@ function doSomething(param: CustomUnionType) {
         },
         "page": "/[title]",
         "query": { "title": "any-|-unknown-|-never" },
-        "buildId": "nJmgUC-Ar7yaua1fG_d-_",
+        "buildId": "sspprzGpunNErDV_134A9",
         "isFallback": false,
         "gsp": true,
         "scriptLoader": []
