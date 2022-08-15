@@ -43,11 +43,8 @@ export async function getStaticProps(context: { params: { title: string } }) {
 }
 
 const PostDetail: NextPage<PostDetailPageProps> = ({ post, content, postsByCategory }: PostDetailPageProps) => {
-  const [isContentReady, setIsContentReady] = useState(false)
-
   useEffect(() => {
     hljs.highlightAll()
-    setIsContentReady(true)
   }, [])
 
   return (
@@ -73,7 +70,7 @@ const PostDetail: NextPage<PostDetailPageProps> = ({ post, content, postsByCateg
           <p className={styles.description}>{post.description}</p>
         </section>
 
-        <section className={`${styles.content} ${isContentReady && styles.contentReady}`} dangerouslySetInnerHTML={{ __html: content }}></section>
+        <section dangerouslySetInnerHTML={{ __html: content }}></section>
       </article>
 
       <MainAdsBanner />
