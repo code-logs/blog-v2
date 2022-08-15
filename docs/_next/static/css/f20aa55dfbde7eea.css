@@ -134,16 +134,12 @@
   overflow-x: auto;
 }
 .PostDetail_content__uVlbQ {
-  max-height: 0;
-  overflow: hidden;
   opacity: 0;
   transition: all 0.5s ease-in-out 0s;
   transition-property: opacity, transform;
   transform: translateY(40px);
 }
 .PostDetail_contentReady__J4dn7 {
-  max-height: none;
-  overflow: auto;
   opacity: 1;
   transform: translateY(0);
 }
