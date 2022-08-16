@@ -21,6 +21,7 @@ export interface PostDetailPageProps {
   post: Post
   content: string
   postsByCategory: Post[]
+  enableContentExplorer: boolean
 }
 
 export async function getStaticPaths() {
@@ -39,7 +40,7 @@ export async function getStaticProps(context: { params: { title: string } }) {
   const postsByCategory = postsDatabase.findByCategory(post.category).filter((foundPost) => foundPost.title !== post.title)
 
   return {
-    props: { post, content, postsByCategory },
+    props: { post, content, postsByCategory, enableContentExplorer: true },
   }
 }
 
@@ -49,24 +50,6 @@ const PostDetail: NextPage<PostDetailPageProps> = ({ post, content, postsByCateg
   useEffect(() => {
     hljs.highlightAll()
   }, [])
-
-  // useScroll(() => {
-  //   if (!containerRef.current) return
-  //   const container = containerRef.current
-  //   const headings = Array.from(container.querySelectorAll<HTMLHeadingElement>('h2, h3, h4'))
-
-  //   let targetHeading = null
-  //   if (window.scrollY >= headings[headings.length - 1].offsetTop - 140) {
-  //     targetHeading = headings[headings.length - 1]
-  //   } else {
-  //     targetHeading = headings.find((heading, index) => {
-  //       const nextHeading = headings[index + 1]
-  //       return window.scrollY >= heading.offsetTop - 140 && window.scrollY < nextHeading.offsetTop - 140
-  //     })
-  //   }
-
-  //   console.log(targetHeading)
-  // })
 
   return (
     <>
@@ -91,7 +74,7 @@ const PostDetail: NextPage<PostDetailPageProps> = ({ post, content, postsByCateg
           <p className={styles.description}>{post.description}</p>
         </section>
 
-        <section dangerouslySetInnerHTML={{ __html: content }}></section>
+        <section id="content" dangerouslySetInnerHTML={{ __html: content }}></section>
       </article>
 
       <MainAdsBanner />
