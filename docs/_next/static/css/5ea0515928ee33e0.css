@@ -160,6 +160,7 @@ template {
   padding: 20px;
   font-size: 0.9rem;
   z-index: 2;
+  background-color: var(--theme-bg-color);
 }
 .ContentExplorer_container__tpMjV > ol {
   border-left: 1px solid var(--theme-anchor-color);
