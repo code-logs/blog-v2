@@ -91,8 +91,8 @@ li {
 
 #__next {
   display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-areas: 'header header' 'main aside' 'footer footer';
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 'header header header' '. main aside' 'footer footer footer';
 }
 
 header {
@@ -107,8 +107,7 @@ header {
 
 main {
   grid-area: main;
-  width: 60vw;
-  margin: 0 0 0 20vw;
+  width: 768px;
   padding-top: var(--wide-spacing);
   padding-bottom: var(--footer-height);
 }
@@ -128,7 +127,7 @@ footer {
   bottom: 0;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   :root {
     font-size: 12px;
     --header-height: 48px;

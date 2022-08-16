@@ -1,6 +1,6 @@
 import hljs from 'highlight.js'
 import { NextPage } from 'next'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import MainAdsBanner from '../components/ads-banner/MainAdsBanner'
 import CategoryPostGroup from '../components/category-post-group/CategoryPostGroup'
 import CommonMeta from '../components/common-meta/CommonMeta'
@@ -10,6 +10,7 @@ import blogConfig from '../config/blog.config'
 import { META_CONTENTS } from '../config/meta-contents'
 import { Post } from '../config/posts.config'
 import postsDatabase from '../database/post-database'
+import useScroll from '../hooks/useScroll'
 import { MarkdownUtil } from '../utils/MarkdownUtil'
 import PathUtil from '../utils/PathUtil'
 import PostUtil from '../utils/PostUtil'
@@ -43,9 +44,29 @@ export async function getStaticProps(context: { params: { title: string } }) {
 }
 
 const PostDetail: NextPage<PostDetailPageProps> = ({ post, content, postsByCategory }: PostDetailPageProps) => {
+  const containerRef = useRef<HTMLElement>(null)
+
   useEffect(() => {
     hljs.highlightAll()
   }, [])
+
+  // useScroll(() => {
+  //   if (!containerRef.current) return
+  //   const container = containerRef.current
+  //   const headings = Array.from(container.querySelectorAll<HTMLHeadingElement>('h2, h3, h4'))
+
+  //   let targetHeading = null
+  //   if (window.scrollY >= headings[headings.length - 1].offsetTop - 140) {
+  //     targetHeading = headings[headings.length - 1]
+  //   } else {
+  //     targetHeading = headings.find((heading, index) => {
+  //       const nextHeading = headings[index + 1]
+  //       return window.scrollY >= heading.offsetTop - 140 && window.scrollY < nextHeading.offsetTop - 140
+  //     })
+  //   }
+
+  //   console.log(targetHeading)
+  // })
 
   return (
     <>
@@ -57,7 +78,7 @@ const PostDetail: NextPage<PostDetailPageProps> = ({ post, content, postsByCateg
         keywords={[...post.tags, post.title, post.description, post.category]}
       />
 
-      <article className={styles.container}>
+      <article className={styles.container} ref={containerRef}>
         <p className={styles.publishedAt}>
           <span>{PostUtil.readablePublishedAt(post)}</span>
         </p>
