@@ -485,7 +485,8 @@
           var t,
             n = e.post,
             l = e.content,
-            c = e.postsByCategory
+            c = e.postsByCategory,
+            u = (0, o.useRef)(null)
           return (
             (0, o.useEffect)(function () {
               i.Z.highlightAll()
@@ -501,6 +502,7 @@
                 }),
                 (0, r.jsxs)('article', {
                   className: T().container,
+                  ref: u,
                   children: [
                     (0, r.jsx)('p', { className: T().publishedAt, children: (0, r.jsx)('span', { children: a.Z.readablePublishedAt(n) }) }),
                     (0, r.jsx)('section', {
