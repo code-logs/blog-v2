@@ -57,7 +57,8 @@
         "series": { "nextPostTitle": "HTTP - Roadmap.sh" },
         "order": 17
       }
-    ]
+    ],
+    "enableContentExplorer": true
   },
   "__N_SSG": true
 }

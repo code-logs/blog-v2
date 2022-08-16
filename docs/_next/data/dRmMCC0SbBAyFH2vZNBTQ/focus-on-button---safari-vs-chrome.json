@@ -27,7 +27,8 @@
         "tags": ["absolute", "css", "fixed", "header", "position", "static", "sticky", "style", "스타일", "포지션", "헤더"],
         "order": 4
       }
-    ]
+    ],
+    "enableContentExplorer": true
   },
   "__N_SSG": true
 }

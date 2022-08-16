@@ -57,7 +57,8 @@
         "series": { "prevPostTitle": "How does internet work - Roadmap.sh", "nextPostTitle": "How HTTPS works - Roadmap.sh" },
         "order": 19
       }
-    ]
+    ],
+    "enableContentExplorer": true
   },
   "__N_SSG": true
 }

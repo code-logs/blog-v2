@@ -35,7 +35,8 @@
         "tags": ["es6", "javascript", "tagged template", "tagged template literal"],
         "order": 1
       }
-    ]
+    ],
+    "enableContentExplorer": true
   },
   "__N_SSG": true
 }

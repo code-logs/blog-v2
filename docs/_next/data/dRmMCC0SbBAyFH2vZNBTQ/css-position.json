@@ -27,7 +27,8 @@
         ],
         "order": 12
       }
-    ]
+    ],
+    "enableContentExplorer": true
   },
   "__N_SSG": true
 }

@@ -35,7 +35,8 @@
         "tags": ["es6", "function*", "generator", "iterable", "iterator", "javascript", "yield"],
         "order": 2
       }
-    ]
+    ],
+    "enableContentExplorer": true
   },
   "__N_SSG": true
 }

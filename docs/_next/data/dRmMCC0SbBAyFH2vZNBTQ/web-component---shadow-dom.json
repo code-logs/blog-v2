@@ -48,7 +48,8 @@
         "series": { "nextPostTitle": "Web component - Shadow DOM" },
         "order": 18
       }
-    ]
+    ],
+    "enableContentExplorer": true
   },
   "__N_SSG": true
 }

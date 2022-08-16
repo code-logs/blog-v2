@@ -27,7 +27,8 @@
         "series": { "prevPostTitle": "Nx build system 맛보기" },
         "order": 10
       }
-    ]
+    ],
+    "enableContentExplorer": true
   },
   "__N_SSG": true
 }

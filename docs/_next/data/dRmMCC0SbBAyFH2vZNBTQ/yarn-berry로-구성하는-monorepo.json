@@ -27,7 +27,8 @@
         "series": { "prevPostTitle": "Nx build system 맛보기", "nextPostTitle": "yarn berry로 구성하는 monorepo" },
         "order": 9
       }
-    ]
+    ],
+    "enableContentExplorer": true
   },
   "__N_SSG": true
 }

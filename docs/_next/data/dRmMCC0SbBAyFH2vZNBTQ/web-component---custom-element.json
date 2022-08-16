@@ -48,7 +48,8 @@
         "series": { "prevPostTitle": "Web component - custom element" },
         "order": 22
       }
-    ]
+    ],
+    "enableContentExplorer": true
   },
   "__N_SSG": true
 }

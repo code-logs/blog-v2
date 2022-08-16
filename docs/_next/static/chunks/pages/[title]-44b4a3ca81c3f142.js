@@ -512,7 +512,7 @@
                     (0, r.jsxs)('section', {
                       children: [(0, r.jsx)('h1', { children: n.title }), (0, r.jsx)('p', { className: T().description, children: n.description })],
                     }),
-                    (0, r.jsx)('section', { dangerouslySetInnerHTML: { __html: l } }),
+                    (0, r.jsx)('section', { id: 'content', dangerouslySetInnerHTML: { __html: l } }),
                   ],
                 }),
                 (0, r.jsx)(s.Z, {}),
