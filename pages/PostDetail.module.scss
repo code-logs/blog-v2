@@ -46,6 +46,7 @@
   h3,
   h4 {
     margin-top: 40px;
+    scroll-margin-top: calc(var(--header-height) + 20px);
   }
 
   h1 {

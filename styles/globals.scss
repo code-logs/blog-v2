@@ -53,6 +53,8 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: var(--theme-bg-color);
+  scroll-margin-top: var(--header-height);
+  scroll-behavior: smooth;
 }
 
 * {
