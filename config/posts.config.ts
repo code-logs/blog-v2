@@ -292,7 +292,7 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 1`,
     category: 'roadmap-frontend',
     published: true,
     publishedAt: `2022-07-20`,
-    thumbnailName: `5e6bc461ba3d54cc6ec0f75c9333845b`,
+    thumbnailName: `8f9addf2ea4c66ed60b8989c8fc537dc`,
     tags: [`internet`, `network`, `packet`, `routing`, `네트워크`, `라우팅`, `인터넷`, `패킷`],
     references: [
       {
@@ -312,7 +312,7 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 1`,
     category: 'web-component',
     published: true,
     publishedAt: `2022-07-31`,
-    thumbnailName: `e0e40e28cf11f896033c8650f19188b7`,
+    thumbnailName: `2f79f2d16fb8886f9261320a76ed24ba`,
     tags: [`Shadow DOM`, `custom element`, `shadow`, `web component`, `웹 컴포넌트`, `커스텀 엘리먼트`],
     references: [
       {
@@ -334,6 +334,29 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 1`,
     },
   },
   {
+    title: `How HTTPS works - Roadmap.sh`,
+    description: `How HTTPS works? - Roadmap.sh
+Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 3
+`,
+    fileName: 'roadmap-frontend-how-https-works---roadmap.sh.md',
+    category: 'roadmap-frontend',
+    published: true,
+    publishedAt: `2022-08-08`,
+    thumbnailName: `f3702044e1663b02ce927069f9e7553f`,
+    tags: [`https`, `internet`, `protocol`, `roadmap`, `roadmap.sh`, `인터넷`, `프로토콜`],
+    references: [
+      {
+        title: `roadmap.sh`,
+        url: `https://roadmap.sh/frontend`,
+      },
+    ],
+
+    series: {
+      prevPostTitle: `HTTP - Roadmap.sh`,
+      nextPostTitle: `The differences between HTTPS, SSL and TLS - Roadmap.sh`,
+    },
+  },
+  {
     title: `HTTP - Roadmap.sh`,
     description: `HTTP - Roadmap.sh
 Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 2`,
@@ -341,7 +364,7 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 2`,
     category: 'roadmap-frontend',
     published: true,
     publishedAt: `2022-08-08`,
-    thumbnailName: `0484e0ea37a2f4d031579ac7d479f8f7`,
+    thumbnailName: `f6fbea21688b383dae1962023159a9ae`,
     tags: [`http`, `internet`, `protocol`, `roadmap`, `roadmap.sh`, `인터넷`],
     references: [
       {
@@ -360,29 +383,6 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 2`,
     },
   },
   {
-    title: `How HTTPS works - Roadmap.sh`,
-    description: `How HTTPS works? - Roadmap.sh
-Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 3
-`,
-    fileName: 'roadmap-frontend-how-https-works---roadmap.sh.md',
-    category: 'roadmap-frontend',
-    published: true,
-    publishedAt: `2022-08-08`,
-    thumbnailName: `9579caef343bd3ac65b89ea5b798eb66`,
-    tags: [`https`, `internet`, `protocol`, `roadmap`, `roadmap.sh`, `인터넷`, `프로토콜`],
-    references: [
-      {
-        title: `roadmap.sh`,
-        url: `https://roadmap.sh/frontend`,
-      },
-    ],
-
-    series: {
-      prevPostTitle: `HTTP - Roadmap.sh`,
-      nextPostTitle: `The differences between HTTPS, SSL and TLS - Roadmap.sh`,
-    },
-  },
-  {
     title: `The differences between HTTPS, SSL and TLS - Roadmap.sh`,
     description: `The differences between HTTPS, SSL and TLS - Roadmap.sh
 Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 4`,
@@ -390,7 +390,7 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 4`,
     category: 'roadmap-frontend',
     published: true,
     publishedAt: `2022-08-08`,
-    thumbnailName: `87b69aaa3237b93f7f1fffe7796d0535`,
+    thumbnailName: `5e72230d754a480cf5218eeba9dd15fb`,
     tags: [`internet`, `protocol`, `roadmap`, `roadmap.sh`, `security`, `인터넷`, `프로토콜`],
     references: [
       {
@@ -411,7 +411,7 @@ Shadow DOM의 이해`,
     category: 'web-component',
     published: true,
     publishedAt: `2022-08-10`,
-    thumbnailName: `ab751eb302db9d348765b3134068a6aa`,
+    thumbnailName: `752fbf06b172dc96f8f10c87b1d91872`,
     tags: [
       `Shadow DOM`,
       `custom element`,
