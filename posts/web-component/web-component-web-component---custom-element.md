@@ -179,7 +179,7 @@ window.customElements.define('counter-button', CounterButton)
 ```javascript
 class CounterButton extends HTMLElement {
   constructor() {
-    super()
+    super()    
     this.attachShadow({ mode: 'open' })
     this.shadowRoot.innerHTML = `
       <style>
@@ -319,3 +319,8 @@ window.customElements.define('counter-button', CounterButton)
 
 ...
 ```
+
+## 마치며
+
+커스텀 엘리먼트를 만드는 방법에 대해 간단하게 정리했다. Web Component의 주요 개념을 이해하기 위해서는 `shadow dom`에 대한 이해도 필요하다고 생각한다.
+다른 포스팅을 통해 `shadow dom`에 대해 정리해야겠다.
