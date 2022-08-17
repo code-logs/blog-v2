@@ -313,7 +313,7 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 1`,
     published: true,
     publishedAt: `2022-07-31`,
     thumbnailName: `e0e40e28cf11f896033c8650f19188b7`,
-    tags: [],
+    tags: [`Shadow DOM`, `custom element`, `shadow`, `web component`, `웹 컴포넌트`, `커스텀 엘리먼트`],
     references: [
       {
         title: `Custom element naming convention`,
