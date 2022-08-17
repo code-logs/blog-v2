@@ -180,8 +180,8 @@ window.customElements.define('counter-button', CounterButton)
 class CounterButton extends HTMLElement {
   constructor() {
     super()
-    const template = document.createElement('template')
-    template.innerHTML = `
+    this.attachShadow({ mode: 'open' })
+    this.shadowRoot.innerHTML = `
       <style>
         span {
           font-size: 20px;
@@ -191,9 +191,6 @@ class CounterButton extends HTMLElement {
       <span id="display"></span>
       <button id="button">+</button>
     `
-
-    const shadowRoot = this.attachShadow({ mode: 'open' })
-    shadowRoot.append(template.content.cloneNode(true))
   }
 }
 
@@ -207,8 +204,8 @@ window.customElements.define('counter-button', CounterButton)
 class CounterButton extends HTMLElement {
   constructor() {
     super()
-    const template = document.createElement('template')
-    template.innerHTML = `
+    this.attachShadow({ mode: 'open' })
+    this.shadowRoot.innerHTML = `
       <style>
         span {
           font-size: 20px;
@@ -218,9 +215,6 @@ class CounterButton extends HTMLElement {
       <span id="display"></span>
       <button id="button">+</button>
     `
-
-    const shadowRoot = this.attachShadow({ mode: 'open' })
-    shadowRoot.append(template.content.cloneNode(true))
   }
 
   get display() {
@@ -254,8 +248,8 @@ window.customElements.define('counter-button', CounterButton)
 class CounterButton extends HTMLElement {
   constructor() {
     super()
-    const template = document.createElement('template')
-    template.innerHTML = `
+    this.attachShadow({ mode: 'open' })
+    this.shadowRoot.innerHTML = `
       <style>
         span {
           font-size: 20px;
@@ -265,9 +259,6 @@ class CounterButton extends HTMLElement {
       <span id="display"></span>
       <button id="button">+</button>
     `
-
-    const shadowRoot = this.attachShadow({ mode: 'open' })
-    shadowRoot.append(template.content.cloneNode(true))
   }
 
   get display() {
@@ -328,8 +319,3 @@ window.customElements.define('counter-button', CounterButton)
 
 ...
 ```
-
-## 마치며
-
-커스텀 엘리먼트를 만드는 방법에 대해 간단하게 정리했다. Web Component의 주요 개념을 이해하기 위해서는 `shadow dom`과 `template tag`에 대한 이해도 필요하다고 생각한다.
-다른 포스팅을 통해 `shadow dom`과 `template tag` 정리해야겠다.
