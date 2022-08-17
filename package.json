@@ -6,7 +6,7 @@
     "build": "next build",
     "export": "npm run build && next export",
     "docs:clean": "rm -rf ./docs",
-    "docs": "npm run docs:clean && npm run build && next export -o ./docs && touch ./docs/.nojekyll && npm run sitemap && prettier --write ./docs",
+    "docs": "npm run docs:clean && npm run build && next export -o ./docs && touch ./docs/.nojekyll && npm run sitemap",
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
