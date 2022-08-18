@@ -463,7 +463,7 @@ Shadow DOM의 이해`,
         url: `https://developer.mozilla.org/ko/docs/Web/HTML/Element/slot`,
       },
       {
-        title: `pseudo-elements`,
+        title: `MDN - pseudo-elements`,
         url: `https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements`,
       },
     ],
