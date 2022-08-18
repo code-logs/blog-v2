@@ -16,7 +16,7 @@
   }
 }
 .container {
-  font-size: 0.9em;
+  font-size: 0.9rem;
 
   & ins {
     margin-top: 20px !important;
@@ -24,7 +24,7 @@
   }
 
   @media (max-width: 800px) {
-    font-size: 1em;
+    font-size: 1rem;
   }
 
   ul,
@@ -50,11 +50,11 @@
   }
 
   h1 {
-    font-size: 2em;
+    font-size: 2rem;
   }
 
   h2 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 
   h2,
@@ -80,9 +80,9 @@
   }
 
   blockquote {
-    padding: 0.8em 1em;
+    padding: 0.8rem 1rem;
     margin: 0;
-    border-left: 0.25em solid var(--theme-light-color);
+    border-left: 0.25rem solid var(--theme-light-color);
     background-color: #f7f6f3;
 
     > p {
@@ -114,7 +114,7 @@
 }
 
 .publishedAt {
-  font-size: 0.9em;
+  font-size: 0.9rem;
   color: var(--theme-color);
   margin: 0;
   text-align: right;
@@ -135,7 +135,7 @@
   h2 {
     margin-top: 40px;
     margin-bottom: 0;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     padding-bottom: var(--common-spacing);
     border-bottom: 1px solid var(--theme-light-color);
   }

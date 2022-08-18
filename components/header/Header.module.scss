@@ -17,7 +17,7 @@
 .title {
   grid-area: title;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 2rem;
   text-align: center;
   margin: auto;
   color: var(--theme-font-color);
@@ -49,7 +49,7 @@
     }
 
     .title {
-      font-size: 1.5em;
+      font-size: 1.5rem;
       text-align: left;
       margin: auto 0;
       padding: var(--common-spacing);

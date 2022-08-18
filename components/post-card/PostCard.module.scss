@@ -21,14 +21,14 @@
   h2,
   h3 {
     color: var(--theme-dark-color);
-    font-size: 1.5em;
+    font-size: 1.5rem;
     margin: var(--common-spacing) 0;
   }
 }
 
 .category {
   grid-area: category;
-  font-size: 0.9em;
+  font-size: 0.9rem;
   font-weight: 300;
   text-transform: capitalize;
   font-style: italic;
@@ -38,7 +38,7 @@
 .publishedAt {
   grid-area: publishedAt;
   text-align: right;
-  font-size: 0.9em;
+  font-size: 0.9rem;
   font-weight: 300;
   color: var(--theme-color);
 }
