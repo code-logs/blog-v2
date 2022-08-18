@@ -1,7 +1,8 @@
 .container {
   position: sticky;
   top: var(--header-height);
-  padding: 20px;
+  margin: 0 20px;
+  padding: 20px 0;
   font-size: 0.9rem;
   z-index: 2;
   background-color: var(--theme-bg-color);
@@ -12,7 +13,6 @@
 
   & ol {
     padding-inline-start: 20px;
-    margin-inline-start: 20px;
   }
 
   & li {
@@ -27,6 +27,8 @@
       transform: translateX(-10px);
       color: var(--theme-light-blue);
       font-weight: 600;
+      font-style: italic;
+      text-decoration: underline;
     }
   }
 }
@@ -35,4 +37,6 @@
   transform: translateX(-10px);
   color: var(--theme-light-blue);
   font-weight: 600;
+  font-style: italic;
+  text-decoration: underline;
 }
