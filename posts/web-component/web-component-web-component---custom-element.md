@@ -179,7 +179,7 @@ window.customElements.define('counter-button', CounterButton)
 ```javascript
 class CounterButton extends HTMLElement {
   constructor() {
-    super()    
+    super()
     this.attachShadow({ mode: 'open' })
     this.shadowRoot.innerHTML = `
       <style>
