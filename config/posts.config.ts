@@ -313,7 +313,7 @@ Roadmap.sh frontend 학습 순서에 따라 정리하는 포스팅 1`,
     published: true,
     publishedAt: `2022-07-31`,
     thumbnailName: `1b85d15d3e19b99e3d6350d8b69cc39a`,
-    tags: [`Shadow DOM`, `custom element`, `shadow`, `web component`, `웹 컴포넌트`, `커스텀 엘리먼트`],
+    tags: [`Shadow DOM`, `shadow`],
     references: [
       {
         title: `Custom element naming convention`,
@@ -439,6 +439,37 @@ Shadow DOM의 이해`,
 
     series: {
       prevPostTitle: `Web component - custom element`,
+      nextPostTitle: `Web component - slot`,
+    },
+  },
+  {
+    title: `Web component - slot`,
+    description: `<slot> 태그를 이용해 커스텀 엘리먼트에 자식 엘리먼트를 주입할 수 있는 방법을 소개 합니다.
+<slot> 태그를 이용해 조금더 유연한 형태의 dialog 커스텀 엘리먼트를 만들기
+`,
+    fileName: 'web-component-web-component---slot.md',
+    category: 'web-component',
+    published: true,
+    publishedAt: `2022-08-18`,
+    thumbnailName: `c96f4eff2512178b9b4e02d5aad66827`,
+    tags: [`custom dialog`, `custom element`, `dialog`, `slot`, `web component`, `웹 컴포넌트`, `커스텀 엘리먼트`],
+    references: [
+      {
+        title: `MDN - Using templates and slots`,
+        url: `https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots`,
+      },
+      {
+        title: `MDN - slot`,
+        url: `https://developer.mozilla.org/ko/docs/Web/HTML/Element/slot`,
+      },
+      {
+        title: `pseudo-elements`,
+        url: `https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements`,
+      },
+    ],
+
+    series: {
+      prevPostTitle: `Web component - Shadow DOM`,
     },
   },
 ]
