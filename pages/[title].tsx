@@ -1,6 +1,6 @@
 import hljs from 'highlight.js'
 import { NextPage } from 'next'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import MainAdsBanner from '../components/ads-banner/MainAdsBanner'
 import CategoryPostGroup from '../components/category-post-group/CategoryPostGroup'
 import CommonMeta from '../components/common-meta/CommonMeta'
@@ -10,7 +10,6 @@ import blogConfig from '../config/blog.config'
 import { META_CONTENTS } from '../config/meta-contents'
 import { Post } from '../config/posts.config'
 import postsDatabase from '../database/post-database'
-import useScroll from '../hooks/useScroll'
 import { MarkdownUtil } from '../utils/MarkdownUtil'
 import PathUtil from '../utils/PathUtil'
 import PostUtil from '../utils/PostUtil'
@@ -99,7 +98,7 @@ const PostDetail: NextPage<PostDetailPageProps> = ({ post, content, postsByCateg
           <ul className={styles.references}>
             {post.references.map((ref, idx) => (
               <li key={idx}>
-                <a href={encodeURIComponent(ref.url)} target="_blank" rel="noreferrer">
+                <a href={ref.url} target="_blank" rel="noreferrer">
                   {ref.title}
                 </a>
               </li>
