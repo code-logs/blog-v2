@@ -472,6 +472,22 @@ Shadow DOM의 이해`,
       prevPostTitle: `Web component - Shadow DOM`,
     },
   },
+  {
+    title: `Turbo repo (pnpm) 환경에서 Next.js Dockerizing`,
+    description: `Turbo repo와 pnpm 환경에서 Next.js Dockerizing 하기`,
+    fileName: 'turbo-repo-nextjs-dockerizing.md',
+    category: CATEGORIES.infrastructure,
+    published: true,
+    publishedAt: `2023-05-01`,
+    thumbnailName: `turbo-pnpm-nextjs-dockerizing.webp`,
+    tags: ['docker', 'dockerizing', 'monorepo', 'next.js', 'pnpm', 'turbo', 'turbo repo', '개발환경', '모노리포', '빌드', '빌드 시스템'],
+    references: [
+      {
+        title: 'Turbo - Deploying with Docker',
+        url: 'https://turbo.build/repo/docs/handbook/deploying-with-docker'
+      }
+    ]
+  }
 ]
 
 export default posts
