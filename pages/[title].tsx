@@ -15,6 +15,8 @@ import PathUtil from '../utils/PathUtil'
 import PostUtil from '../utils/PostUtil'
 import TitleUtil from '../utils/TitleUtil'
 import styles from './PostDetail.module.scss'
+import CarouselBanner from '../components/carousel-banner'
+import bannerConfig from '../config/banner.config'
 
 export interface PostDetailPageProps {
   post: Post
@@ -67,6 +69,8 @@ const PostDetail: NextPage<PostDetailPageProps> = ({ post, content, postsByCateg
         <section className={styles.thumbnailWrapper}>
           <img src={PathUtil.buildImagePath(post.thumbnailName)} alt={post.description} width="400" height="300" />
         </section>
+
+        <CarouselBanner banners={bannerConfig} />
 
         <section>
           <h1>{post.title}</h1>
