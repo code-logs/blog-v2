@@ -1,7 +1,5 @@
-import Image from 'next/image'
-import styles from './style.module.scss'
-import GTagScript from '../gtag-script/GTagScript'
 import { GtagEventName, GTagUtil } from '../../utils/GTagUtil'
+import styles from './style.module.scss'
 
 export interface Banner {
   title: string
@@ -29,7 +27,7 @@ export default function CarouselBanner({ banners }: CarouselBannerProps) {
             })
           }}
         >
-          <Image src={bannerSrc} alt={title} width={400} height={133} />
+          <img src={bannerSrc} alt={title} width={400} height={131} />
         </a>
       ))}
     </div>
