@@ -1,11 +1,12 @@
 import hljs from 'highlight.js'
-import { NextPage } from 'next'
 import { useEffect, useRef } from 'react'
 import MainAdsBanner from '../components/ads-banner/MainAdsBanner'
+import CarouselBanner from '../components/carousel-banner'
 import CategoryPostGroup from '../components/category-post-group/CategoryPostGroup'
 import CommonMeta from '../components/common-meta/CommonMeta'
 import PostSeriesLink from '../components/post-series-link/PostSeriesLink'
 import Utterances from '../components/utterrances/Utterrances'
+import bannerConfig from '../config/banner.config'
 import blogConfig from '../config/blog.config'
 import { META_CONTENTS } from '../config/meta-contents'
 import { Post } from '../config/posts.config'
@@ -14,11 +15,9 @@ import { MarkdownUtil } from '../utils/MarkdownUtil'
 import PathUtil from '../utils/PathUtil'
 import PostUtil from '../utils/PostUtil'
 import TitleUtil from '../utils/TitleUtil'
-import styles from './PostDetail.module.scss'
-import CarouselBanner from '../components/carousel-banner'
-import bannerConfig from '../config/banner.config'
+import style from './PostDetail.module.scss'
 
-export interface PostDetailPageProps {
+export interface PostDetailProps {
   post: Post
   content: string
   postsByCategory: Post[]
@@ -37,7 +36,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context: { params: { title: string } }) {
   const post = postsDatabase.findByTitle(context.params.title)!
-  const content = MarkdownUtil.getMarkdownContent(PostUtil.getMarkdownFilePath(post))
+  const content = MarkdownUtil.getMarkdownContent(PostUtil.getMarkdownFilePath('post', post))
   const postsByCategory = postsDatabase.findByCategory(post.category).filter((foundPost) => foundPost.title !== post.title)
 
   return {
@@ -45,7 +44,7 @@ export async function getStaticProps(context: { params: { title: string } }) {
   }
 }
 
-const PostDetail: NextPage<PostDetailPageProps> = ({ post, content, postsByCategory }: PostDetailPageProps) => {
+export default function PostDetail({ post, content, postsByCategory }: PostDetailProps) {
   const containerRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
@@ -62,11 +61,11 @@ const PostDetail: NextPage<PostDetailPageProps> = ({ post, content, postsByCateg
         keywords={[...post.tags, post.title, post.description, post.category]}
       />
 
-      <article className={styles.container} ref={containerRef}>
-        <p className={styles.publishedAt}>
+      <article className={style.container} ref={containerRef}>
+        <p className={style.publishedAt}>
           <span>{PostUtil.readablePublishedAt(post)}</span>
         </p>
-        <section className={styles.thumbnailWrapper}>
+        <section className={style.thumbnailWrapper}>
           <img src={PathUtil.buildImagePath(post.thumbnailName)} alt={post.description} width="400" height="300" />
         </section>
 
@@ -74,7 +73,7 @@ const PostDetail: NextPage<PostDetailPageProps> = ({ post, content, postsByCateg
 
         <section>
           <h1>{post.title}</h1>
-          <p className={styles.description}>{post.description}</p>
+          <p className={style.description}>{post.description}</p>
         </section>
 
         <section id="content" dangerouslySetInnerHTML={{ __html: content }}></section>
@@ -83,23 +82,23 @@ const PostDetail: NextPage<PostDetailPageProps> = ({ post, content, postsByCateg
       <MainAdsBanner />
 
       {post.series && (
-        <section className={styles.relatedPosting}>
+        <section className={style.relatedPosting}>
           <h2>연관 포스팅</h2>
           <PostSeriesLink post={post} />
         </section>
       )}
 
       {!!postsByCategory.length && (
-        <section className={styles.categoryGroup}>
+        <section className={style.categoryGroup}>
           <h2>카테고리 더보기</h2>
           <CategoryPostGroup posts={postsByCategory} />
         </section>
       )}
 
       {!!post.references?.length && (
-        <section className={styles.references}>
+        <section className={style.references}>
           <h2>참고</h2>
-          <ul className={styles.references}>
+          <ul className={style.references}>
             {post.references.map((ref, idx) => (
               <li key={idx}>
                 <a href={ref.url} target="_blank" rel="noreferrer">
@@ -111,12 +110,10 @@ const PostDetail: NextPage<PostDetailPageProps> = ({ post, content, postsByCateg
         </section>
       )}
 
-      <section className={styles.utterances}>
+      <section className={style.utterances}>
         <h2>댓글</h2>
         <Utterances repo={'code-logs/code-logs.github.io'} theme={'preferred-color-scheme'} issueTerm={'title'} issueLabel={'Comment'} />
       </section>
     </>
   )
 }
-
-export default PostDetail

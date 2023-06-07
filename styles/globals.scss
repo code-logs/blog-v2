@@ -1,3 +1,5 @@
+$viewport-max-width: 768px;
+
 :root {
   --narrow-spacing: 5px;
   --common-spacing: 10px;
@@ -27,6 +29,8 @@
 
   --header-height: 140px;
   --footer-height: 50px;
+
+  --viewport-max-width: $viewport-max-width;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -109,7 +113,7 @@ header {
 
 main {
   grid-area: main;
-  width: 768px;
+  width: $viewport-max-width;
   padding-top: var(--wide-spacing);
   padding-bottom: var(--footer-height);
 }
@@ -129,7 +133,7 @@ footer {
   bottom: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: $viewport-max-width) {
   :root {
     font-size: 12px;
     --header-height: 48px;

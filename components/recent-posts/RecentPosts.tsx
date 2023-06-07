@@ -1,5 +1,5 @@
 import { Post } from '../../config/posts.config'
-import PostCardList from '../post-card-list/PostCardList'
+import CardList from '../card-list/CardList'
 import TitleWithCount from '../title-with-count/TitleWithCount'
 
 export interface RecentPostsProps {
@@ -11,7 +11,7 @@ const RecentPosts = ({ posts }: RecentPostsProps) => {
     <section>
       <TitleWithCount level={2} count={posts.length} title="Recent posts" />
 
-      <PostCardList posts={posts} />
+      <CardList items={posts} />
     </section>
   )
 }

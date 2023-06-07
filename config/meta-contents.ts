@@ -7,14 +7,23 @@ export const META_CONTENTS = {
     TITLE: 'Posts',
     DESCRIPTION: (page: number) => `Code Logs | 포스팅 목록 ${page} 페이지`,
   },
+  PROJECTS: {
+    TITLE: 'Projects',
+    DESCRIPTION: (page: number) => `Code Logs | 프로젝트 목록 ${page} 페이지`,
+  },
   POST: {
+    TITLE: (title: string) => title,
+    DESCRIPTION: (title: string, description: string, category: string, tags: string[]) =>
+      `Code Logs ${title} - ${description} | ${category}, ${tags.join(', ')}`,
+  },
+  PROJECT: {
     TITLE: (title: string) => title,
     DESCRIPTION: (title: string, description: string, category: string, tags: string[]) =>
       `Code Logs ${title} - ${description} | ${category}, ${tags.join(', ')}`,
   },
   CATEGORIES: {
     TITLE: (category: string) => category,
-    DESCRIPTION: (category: string, page: number) => `Code Logs | ${category} 연관 포스팅 목록 ${page} 페이지`
+    DESCRIPTION: (category: string, page: number) => `Code Logs | ${category} 연관 포스팅 목록 ${page} 페이지`,
   },
   TAGS: {
     TITLE: 'Tags 목록',
@@ -22,7 +31,7 @@ export const META_CONTENTS = {
   },
   ABOUT: {
     TITLE: 'About',
-    DESCRIPTION: 'Code Logs | 웹개발과 관련된 정보를 기록하고 공유하는 개인공간 입니다.'
+    DESCRIPTION: 'Code Logs | 웹개발과 관련된 정보를 기록하고 공유하는 개인공간 입니다.',
   },
   NOT_FOUND: {
     TITLE: '페이지를 찾을 수 없음',

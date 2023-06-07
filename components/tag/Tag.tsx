@@ -1,16 +1,27 @@
+import { useMemo } from 'react'
+import { ArticleType } from '../../types'
 import styles from './Tag.module.scss'
 
 export interface TagProps {
   tag: string
   count?: number
+  articleType: ArticleType
 }
 
-const Tag = (props: TagProps) => (
-  <a href={`/posts/1?query=${encodeURIComponent(props.tag)}`}>
-    <span className={`clickable ${styles.tag}`}>
-      {props.tag} {props.count && props.count}
-    </span>
-  </a>
-)
+export default function Tag({ tag, count, articleType }: TagProps) {
+  const link = useMemo(() => {
+    if (articleType === 'post') {
+      return `/posts/1?query=${encodeURIComponent(tag)}`
+    } else {
+      return `/projects/1?query=${encodeURIComponent(tag)}`
+    }
+  }, [articleType, tag])
 
-export default Tag
+  return (
+    <a href={link}>
+      <span className={`clickable ${styles.tag}`}>
+        {tag} {count && count}
+      </span>
+    </a>
+  )
+}

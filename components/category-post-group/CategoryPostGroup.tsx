@@ -2,14 +2,15 @@ import { useEffect, useState } from 'react'
 import { Post } from '../../config/posts.config'
 import PostUtil from '../../utils/PostUtil'
 import styles from './CategoryPostGroup.module.scss'
+import { Project } from '../../config/projects.config'
 
 export interface CategoryPostGroupProps {
-  posts: Post[]
+  posts: (Post | Project)[]
 }
 
-const CategoryPostGroup = ({ posts }: CategoryPostGroupProps) => {
-  const [recentPosts, setRecentPosts] = useState<Post[]>([])
-  const [remainPosts, setRemainPosts] = useState<Post[]>([])
+export default function CategoryPostGroup({ posts }: CategoryPostGroupProps) {
+  const [recentPosts, setRecentPosts] = useState<(Post | Project)[]>([])
+  const [remainPosts, setRemainPosts] = useState<(Post | Project)[]>([])
 
   useEffect(() => {
     const recentPostLimit = 3
@@ -45,5 +46,3 @@ const CategoryPostGroup = ({ posts }: CategoryPostGroupProps) => {
     </>
   )
 }
-
-export default CategoryPostGroup

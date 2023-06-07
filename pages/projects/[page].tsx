@@ -1,34 +1,33 @@
-import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { useCallback, useEffect, useState } from 'react'
+import CardList from '../../components/card-list/CardList'
 import CommonMeta from '../../components/common-meta/CommonMeta'
 import ContentCount from '../../components/content-count'
 import NotFound from '../../components/not-found/NotFound'
 import Paginator from '../../components/paginator/Paginator'
-import CardList from '../../components/card-list/CardList'
 import SearchInput from '../../components/search-input/SearchInput'
 import blogConfig from '../../config/blog.config'
 import { META_CONTENTS } from '../../config/meta-contents'
-import { Post } from '../../config/posts.config'
-import postsDatabase from '../../database/post-database'
+import { Project } from '../../config/projects.config'
+import projectDatabase from '../../database/project-database'
 import PathUtil from '../../utils/PathUtil'
 import TitleUtil from '../../utils/TitleUtil'
 
-interface PostsProps {
+interface ProjectsProps {
   page: number
   lastPage: number
-  posts: Post[]
+  projects: Project[]
   totalCount: number
 }
 
 export async function getStaticPaths() {
-  const posts = postsDatabase.find()
-  const lastPage = Math.ceil(posts.length / blogConfig.pageLimit)
+  const projects = projectDatabase.find()
+  const lastPage = Math.ceil(projects.length / blogConfig.pageLimit)
 
   return {
     paths: Array(lastPage)
       .fill('')
-      .map((_, idx) => `/posts/${idx + 1}`),
+      .map((_, idx) => `/projects/${idx + 1}`),
     fallback: false,
   }
 }
@@ -37,24 +36,24 @@ export async function getStaticProps(context: { params: { page: string } }) {
   const page = Number(context.params.page)
   const pageLimit = blogConfig.pageLimit
   const skip = (page - 1) * pageLimit
-  const lastPage = Math.ceil(postsDatabase.find().length / pageLimit)
-  const posts = postsDatabase.find(pageLimit, skip)
-  const totalCount = postsDatabase.count()
+  const lastPage = Math.ceil(projectDatabase.find().length / pageLimit)
+  const projects = projectDatabase.find(pageLimit, skip)
+  const totalCount = projectDatabase.count()
 
   return {
     props: {
       page,
       lastPage,
-      posts,
+      projects,
       totalCount,
     },
   }
 }
 
-const Posts: NextPage<PostsProps> = (props) => {
+export default function Projects(props: ProjectsProps) {
   const { page, totalCount } = props
   const [lastPage, setLastPage] = useState(1)
-  const [posts, setPosts] = useState<Post[]>([])
+  const [projects, setProjects] = useState<Project[]>([])
   const [query, setQuery] = useState<string>()
   const route = useRouter()
 
@@ -70,12 +69,12 @@ const Posts: NextPage<PostsProps> = (props) => {
         setQuery(encodeURIComponent(query))
         const pageLimit = blogConfig.pageLimit
         const skip = (page - 1) * pageLimit
-        setPosts(postsDatabase.query(query, pageLimit, skip))
-        setLastPage(Math.ceil(postsDatabase.query(query).length / pageLimit))
+        setProjects(projectDatabase.query(query, pageLimit, skip))
+        setLastPage(Math.ceil(projectDatabase.query(query).length / pageLimit))
       }
     } else {
       setLastPage(props.lastPage)
-      setPosts(props.posts)
+      setProjects(props.projects)
       setQuery(undefined)
     }
 
@@ -86,18 +85,18 @@ const Posts: NextPage<PostsProps> = (props) => {
     () => (
       <>
         <CommonMeta
-          title={TitleUtil.buildPageTitle(META_CONTENTS.POSTS.TITLE)}
-          description={META_CONTENTS.POSTS.DESCRIPTION(page)}
-          url={`${blogConfig.baseURL}/posts/${page}`}
+          title={TitleUtil.buildPageTitle(META_CONTENTS.PROJECTS.TITLE)}
+          description={META_CONTENTS.PROJECTS.DESCRIPTION(page)}
+          url={`${blogConfig.baseURL}/projects/${page}`}
           imageURL={'/icons/icon-512x512.png'}
-          keywords={posts.map((post) => [...post.tags, post.title, post.description]).flat()}
+          keywords={projects.map((project) => [...project.tags, project.title, project.description]).flat()}
         />
 
-        <ContentCount mode={query ? 'query' : 'list'} count={query ? posts.length : totalCount} />
-        <h1>Posts</h1>
+        <ContentCount mode={query ? 'query' : 'list'} count={query ? projects.length : totalCount} />
+        <h1>Projects</h1>
       </>
     ),
-    [page, posts, query, totalCount]
+    [page, projects, query, totalCount]
   )
 
   if (!pageInitialized) return renderCommonFragment()
@@ -115,7 +114,7 @@ const Posts: NextPage<PostsProps> = (props) => {
           const query = new FormData(form).get('query')
 
           const url = new URL(location.href)
-          url.pathname = '/posts/1'
+          url.pathname = '/projects/1'
           url.search = query ? `query=${encodeURIComponent(query.toString())}` : ''
 
           location.href = url.href
@@ -124,16 +123,14 @@ const Posts: NextPage<PostsProps> = (props) => {
         <SearchInput placeholder="Search..." name="query" defaultValue={query && decodeURIComponent(query)} />
       </form>
 
-      {!!posts.length && (
+      {!!projects.length && (
         <>
-          <CardList articleType="post" titleLevel={2} items={posts} />
-          <Paginator page={page} lastPage={lastPage} query={query} baseURL={`${blogConfig.baseURL}/posts`} />
+          <CardList articleType="project" titleLevel={2} items={projects} />
+          <Paginator page={page} lastPage={lastPage} query={query} baseURL={`${blogConfig.baseURL}/projects`} />
         </>
       )}
 
-      {query && !posts.length && <NotFound condition={query} />}
+      {query && !projects.length && <NotFound condition={query} />}
     </>
   )
 }
-
-export default Posts

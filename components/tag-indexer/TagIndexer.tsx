@@ -1,4 +1,4 @@
-import Tags from '../tags/Tags'
+import Tags from '../tags'
 import styles from './TagIndexer.module.scss'
 
 export interface TagWithCount {

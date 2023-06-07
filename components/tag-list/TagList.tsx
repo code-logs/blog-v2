@@ -1,5 +1,5 @@
 import { TagWithCount } from '../tag-indexer/TagIndexer'
-import Tags from '../tags/Tags'
+import Tags from '../tags'
 import styles from './TagList.module.scss'
 
 export type TagsByIndexes = { [tag: string]: TagWithCount[] }
