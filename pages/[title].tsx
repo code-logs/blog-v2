@@ -35,7 +35,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context: { params: { title: string } }) {
-  const post = postsDatabase.findByTitle(context.params.title)!
+  const post = postsDatabase.findByTitle(context.params.title)
+  if (!post) throw new Error('Failed to find post by title')
+
   const content = MarkdownUtil.getMarkdownContent(PostUtil.getMarkdownFilePath('post', post))
   const postsByCategory = postsDatabase.findByCategory(post.category).filter((foundPost) => foundPost.title !== post.title)
 

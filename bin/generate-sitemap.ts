@@ -3,6 +3,7 @@ import path from 'path'
 import { exit } from 'process'
 import { Post } from '../config/posts.config'
 import PostUtil from '../utils/PostUtil'
+import { Project } from '../config/projects.config'
 
 const BASE_URL = 'https://code-logs.github.io'
 const DOCUMENT_PATH = path.join(__dirname, '../docs')
@@ -15,8 +16,9 @@ const buildUrlSet = (loc: string, lastModified: string) => {
 
 const sitemapGenerator = async () => {
   const htmlFullPathList = readDirectoryFiles(DOCUMENT_PATH, 'html')
-  const { posts } = await import(path.join(__dirname, '../config/posts.config.ts'))
-  const normalizedPostTiles = new Set(posts.map((post: Post) => `${PostUtil.normalizeTitle(post.title)}`))
+  const posts = await import(path.join(__dirname, '../config/posts.config.ts'))
+  const projects = await import(path.join(__dirname, '../config/projects.config.ts'))
+  const normalizedPostTiles = new Set([...posts, ...projects].map((post: Post | Project) => `${PostUtil.normalizeTitle(post.title)}`))
 
   const urlSets = htmlFullPathList.map((htmlFullPath) => {
     const basePath = path.join(__dirname, '../docs')
