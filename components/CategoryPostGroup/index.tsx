@@ -1,0 +1,47 @@
+import { useEffect, useState } from 'react'
+import { Post } from '../../config/posts.config'
+import PostUtil from '../../utils/PostUtil'
+import style from './style.module.scss'
+
+export interface CategoryPostGroupProps {
+  posts: Post[]
+}
+
+export default function CategoryPostGroup({ posts }: CategoryPostGroupProps) {
+  const [recentPosts, setRecentPosts] = useState<Post[]>([])
+  const [remainPosts, setRemainPosts] = useState<Post[]>([])
+
+  useEffect(() => {
+    const recentPostLimit = 3
+    const copied = [...posts]
+    setRecentPosts(copied.slice(0, recentPostLimit))
+    setRemainPosts(copied.slice(recentPostLimit))
+  }, [posts])
+
+  return (
+    <>
+      <ul className={style.container}>
+        {recentPosts.map((post) => (
+          <li key={post.fileName}>
+            <h3>{post.title}</h3>
+            <a href={PostUtil.buildLinkURLByTitle(post.title)}>{post.description}</a>
+          </li>
+        ))}
+      </ul>
+
+      {!!remainPosts.length && (
+        <details className={style.details}>
+          <summary>더보기</summary>
+          <ul className={style.container}>
+            {posts.map((post) => (
+              <li key={post.fileName}>
+                <h3>{post.title}</h3>
+                <a href={PostUtil.buildLinkURLByTitle(post.title)}>{post.description}</a>
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
+    </>
+  )
+}

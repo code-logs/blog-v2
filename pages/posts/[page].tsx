@@ -1,18 +1,17 @@
-import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { useCallback, useEffect, useState } from 'react'
-import CommonMeta from '../../components/common-meta/CommonMeta'
-import NoFoundPosting from '../../components/no-found-posting/NoFoundPosting'
-import Paginator from '../../components/paginator/Paginator'
-import PostCardList from '../../components/post-card-list/PostCardList'
-import SearchInput from '../../components/search-input/SearchInput'
+import CardList from '../../components/CardList'
+import CommonMeta from '../../components/CommonMeta'
+import ContentCount from '../../components/ContentCount'
+import NotFound from '../../components/NotFound'
+import Paginator from '../../components/Paginator'
+import SearchInput from '../../components/SearchInput'
 import blogConfig from '../../config/blog.config'
 import { META_CONTENTS } from '../../config/meta-contents'
 import { Post } from '../../config/posts.config'
 import postsDatabase from '../../database/post-database'
 import PathUtil from '../../utils/PathUtil'
 import TitleUtil from '../../utils/TitleUtil'
-import styles from './Posts.module.scss'
 
 interface PostsProps {
   page: number
@@ -51,14 +50,13 @@ export async function getStaticProps(context: { params: { page: string } }) {
   }
 }
 
-const Posts: NextPage<PostsProps> = (props) => {
-  const { page, totalCount } = props
+export default function Posts({ page, totalCount, posts: defaultPosts }: PostsProps) {
   const [lastPage, setLastPage] = useState(1)
-  const [posts, setPosts] = useState<Post[]>([])
+  const [posts, setPosts] = useState<Post[]>(defaultPosts)
   const [query, setQuery] = useState<string>()
-  const route = useRouter()
-
   const [pageInitialized, setPageInitialized] = useState(false)
+
+  const route = useRouter()
 
   useEffect(() => {
     const url = new URL(PathUtil.absolutePath(route.asPath))
@@ -66,6 +64,7 @@ const Posts: NextPage<PostsProps> = (props) => {
     if (url.search) {
       const searchParams = new URLSearchParams(url.search)
       const query = searchParams.get('query')
+      
       if (query) {
         setQuery(encodeURIComponent(query))
         const pageLimit = blogConfig.pageLimit
@@ -73,14 +72,10 @@ const Posts: NextPage<PostsProps> = (props) => {
         setPosts(postsDatabase.query(query, pageLimit, skip))
         setLastPage(Math.ceil(postsDatabase.query(query).length / pageLimit))
       }
-    } else {
-      setLastPage(props.lastPage)
-      setPosts(props.posts)
-      setQuery(undefined)
     }
 
     setPageInitialized(true)
-  }, [page, route, props])
+  }, [lastPage, page, route.asPath])
 
   const renderCommonFragment = useCallback(
     () => (
@@ -93,8 +88,8 @@ const Posts: NextPage<PostsProps> = (props) => {
           keywords={posts.map((post) => [...post.tags, post.title, post.description]).flat()}
         />
 
-        <span className={styles.postingCount}>{query ? `Found ${posts.length}` : `Total ${totalCount}`}</span>
-        <h1>Posts </h1>
+        <ContentCount mode={query ? 'query' : 'list'} count={query ? posts.length : totalCount} />
+        <h1>Posts</h1>
       </>
     ),
     [page, posts, query, totalCount]
@@ -126,14 +121,12 @@ const Posts: NextPage<PostsProps> = (props) => {
 
       {!!posts.length && (
         <>
-          <PostCardList titleLevel={2} posts={posts} />
+          <CardList articleType="post" titleLevel={2} items={posts} />
           <Paginator page={page} lastPage={lastPage} query={query} baseURL={`${blogConfig.baseURL}/posts`} />
         </>
       )}
 
-      {query && !posts.length && <NoFoundPosting condition={query} />}
+      {query && !posts.length && <NotFound condition={query} />}
     </>
   )
 }
-
-export default Posts

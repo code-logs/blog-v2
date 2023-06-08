@@ -1,6 +1,6 @@
 import { GitHub, LinkedIn } from '@mui/icons-material'
 
-import { SocialIcon } from '../components/header/Header'
+import { SocialIcon } from '../components/Header'
 
 const socialIcons: SocialIcon[] = [
   {

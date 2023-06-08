@@ -1,10 +1,10 @@
-import { NextPage } from 'next'
-import CommonMeta from '../../components/common-meta/CommonMeta'
+import CommonMeta from '../../components/CommonMeta'
+import { TagWithCount } from '../../components/TagIndexer'
+import TagList, { TagsByIndexes } from '../../components/TagList'
+import TagNavigator from '../../components/TagNavigator'
+import { TagsProps } from '../../components/Tags'
+import TitleWithCount from '../../components/TitleWithCount'
 import MainAdsBanner from '../../components/ads-banner/MainAdsBanner'
-import { TagWithCount } from '../../components/tag-indexer/TagIndexer'
-import TagList, { TagsByIndexes } from '../../components/tag-list/TagList'
-import TagNavigator from '../../components/tag-navigator/TagNavigator'
-import TitleWithCount from '../../components/title-with-count/TitleWithCount'
 import blogConfig from '../../config/blog.config'
 import { META_CONTENTS } from '../../config/meta-contents'
 import postsDatabase from '../../database/post-database'
@@ -24,7 +24,7 @@ export async function getStaticProps() {
   }
 }
 
-const Tags: NextPage<{ tags: string[] }> = ({ tags }) => {
+export default function Tags({ tags }: TagsProps) {
   const indexGroups = [
     ['가', '나', '다', '라', '마', '바', '사', '아', '자', '차', '카', '타', '하'],
     Array(26)
@@ -37,7 +37,7 @@ const Tags: NextPage<{ tags: string[] }> = ({ tags }) => {
 
     if (targetIndex >= 0) {
       tagsWithCount[targetIndex].count++
-    } else {
+    } else if (typeof tag === 'string') {
       tagsWithCount.push({ tag, count: 1 })
     }
 
@@ -95,5 +95,3 @@ const Tags: NextPage<{ tags: string[] }> = ({ tags }) => {
     </section>
   )
 }
-
-export default Tags

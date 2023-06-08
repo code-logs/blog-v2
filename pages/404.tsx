@@ -1,10 +1,10 @@
-import CommonMeta from '../components/common-meta/CommonMeta'
+import CommonMeta from '../components/CommonMeta'
 import MainAdsBanner from '../components/ads-banner/MainAdsBanner'
 import blogConfig from '../config/blog.config'
 import { META_CONTENTS } from '../config/meta-contents'
 import TitleUtil from '../utils/TitleUtil'
 
-const NotFound = () => {
+export default function NotFound() {
   return (
     <>
       <CommonMeta
@@ -14,12 +14,10 @@ const NotFound = () => {
         imageURL={'/icons/icon-512x512.png'}
       />
       <section>
-        <h1>Page Not Found</h1>
+        <h1>페이지를 찾을 수 없습니다.</h1>
       </section>
-      
+
       <MainAdsBanner />
     </>
   )
 }
-
-export default NotFound

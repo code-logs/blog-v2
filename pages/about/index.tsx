@@ -1,10 +1,10 @@
 import MainAdsBanner from '../../components/ads-banner/MainAdsBanner'
-import CommonMeta from '../../components/common-meta/CommonMeta'
-import RaiseSection from '../../components/raise-section/RaiseSection'
+import CommonMeta from '../../components/CommonMeta'
+import RaiseSection from '../../components/RaiseSection'
 import blogConfig from '../../config/blog.config'
 import { META_CONTENTS } from '../../config/meta-contents'
 import TitleUtil from '../../utils/TitleUtil'
-import styles from './About.module.scss'
+import style from './style.module.scss'
 
 const standardTimeout = 300
 const ratio = 1.5
@@ -19,7 +19,7 @@ const About = () => {
         imageURL={'/icons/icon-512x512.png'}
       />
 
-      <article className={styles.about}>
+      <article className={style.about}>
         <h1>About</h1>
 
         <RaiseSection timeout={standardTimeout}>
