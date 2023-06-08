@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import blogConfig from '../config/blog.config'
 
-const useAdsense = (adClient: typeof blogConfig.googleAdsense.adClient) => {
+export default function useAdsense(adClient: typeof blogConfig.googleAdsense.adClient) {
   useEffect(() => {
     if (document.head) {
       const script = document.createElement('script')
@@ -12,5 +12,3 @@ const useAdsense = (adClient: typeof blogConfig.googleAdsense.adClient) => {
     }
   }, [adClient])
 }
-
-export default useAdsense

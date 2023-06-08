@@ -1,15 +1,15 @@
 import type { NextPage } from 'next'
-import CategoryIndexer from '../components/category-indexer/CategoryIndexer'
-import CommonMeta from '../components/common-meta/CommonMeta'
+import CategoryIndexer from '../components/CategoryIndexer'
+import CommonMeta from '../components/CommonMeta'
 import MainAdsBanner from '../components/ads-banner/MainAdsBanner'
-import RecentPosts from '../components/recent-posts/RecentPosts'
-import TagIndexer, { TagWithCount } from '../components/tag-indexer/TagIndexer'
+import RecentPosts from '../components/RecentPosts'
+import TagIndexer, { TagWithCount } from '../components/TagIndexer'
 import blogConfig from '../config/blog.config'
 import { META_CONTENTS } from '../config/meta-contents'
 import { Post } from '../config/posts.config'
 import postsDatabase from '../database/post-database'
 import TitleUtil from '../utils/TitleUtil'
-import styles from './Home.module.scss'
+import style from './Home.module.scss'
 
 export async function getStaticProps() {
   const posts = postsDatabase.find()
@@ -54,7 +54,7 @@ const Home: NextPage<{
 
       <MainAdsBanner />
 
-      <div className={styles.index}>
+      <div className={style.index}>
         <CategoryIndexer categories={props.categories} />
 
         <TagIndexer tagsWithCount={props.tagsWithCount} limit={20} />

@@ -1,4 +1,4 @@
-import { Menu } from '../components/nav-bar/NavBar'
+import { Menu } from '../components/NavBar'
 
 const menus: Menu[] = [
   { display: 'Home', route: '/' },

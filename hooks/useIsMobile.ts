@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const useIsMobile = (initIsMobile: boolean) => {
+export default function useIsMobile(initIsMobile: boolean) {
   const [isMobile, setIsMobile] = useState<boolean>(initIsMobile)
 
   useEffect(() => {
@@ -9,5 +9,3 @@ const useIsMobile = (initIsMobile: boolean) => {
 
   return isMobile
 }
-
-export default useIsMobile

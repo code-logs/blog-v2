@@ -1,12 +1,11 @@
-import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { useCallback, useEffect, useState } from 'react'
-import CommonMeta from '../../components/common-meta/CommonMeta'
-import ContentCount from '../../components/content-count'
-import NotFound from '../../components/not-found/NotFound'
-import Paginator from '../../components/paginator/Paginator'
-import CardList from '../../components/card-list/CardList'
-import SearchInput from '../../components/search-input/SearchInput'
+import CardList from '../../components/CardList'
+import CommonMeta from '../../components/CommonMeta'
+import ContentCount from '../../components/ContentCount'
+import NotFound from '../../components/NotFound'
+import Paginator from '../../components/Paginator'
+import SearchInput from '../../components/SearchInput'
 import blogConfig from '../../config/blog.config'
 import { META_CONTENTS } from '../../config/meta-contents'
 import { Post } from '../../config/posts.config'
@@ -51,8 +50,7 @@ export async function getStaticProps(context: { params: { page: string } }) {
   }
 }
 
-const Posts: NextPage<PostsProps> = (props) => {
-  const { page, totalCount } = props
+export default function Posts({ page, totalCount }: PostsProps) {
   const [lastPage, setLastPage] = useState(1)
   const [posts, setPosts] = useState<Post[]>([])
   const [query, setQuery] = useState<string>()
@@ -135,5 +133,3 @@ const Posts: NextPage<PostsProps> = (props) => {
     </>
   )
 }
-
-export default Posts

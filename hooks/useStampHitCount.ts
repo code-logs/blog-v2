@@ -6,7 +6,7 @@ export interface HitCount {
   pathname: string
 }
 
-const useStampHitCount = (pathname: string) => {
+export default function useStampHitCount(pathname: string) {
   const [hitCount, setHitCount] = useState<HitCount>({ totalHitCount: 0, pageHitCount: 0, pathname: '' })
 
   useEffect(() => {
@@ -28,5 +28,3 @@ const useStampHitCount = (pathname: string) => {
 
   return hitCount
 }
-
-export default useStampHitCount

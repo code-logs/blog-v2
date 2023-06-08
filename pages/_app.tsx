@@ -1,12 +1,12 @@
 import type { AppProps } from 'next/app'
 import 'normalize.css'
+import ContentExplorer from '../components/ContentExplorer'
+import Footer from '../components/Footer'
+import GTagScript from '../components/GtagScript'
+import Header from '../components/Header'
+import NaverAnalyticsScript from '../components/NaverAnalyticsScript'
+import SWScript from '../components/SWScript'
 import AsideAdsBanner from '../components/ads-banner/AsideAdsBanner'
-import ContentExplorer from '../components/content-explorer/ContentExplorer'
-import Footer from '../components/footer/Footer'
-import GTagScript from '../components/gtag-script/GTagScript'
-import Header from '../components/header/Header'
-import NaverAnalyticsScript from '../components/naver-analytics-script/NaverAnalyticsScript'
-import SWScript from '../components/sw-script/SWScript'
 import blogConfig from '../config/blog.config'
 import menus from '../config/menu.config'
 import socialIcons from '../config/social.config'
@@ -14,7 +14,7 @@ import useIsMobile from '../hooks/useIsMobile'
 import '../styles/globals.scss'
 import '../styles/highlight.scss'
 
-const MainApp = ({ Component, pageProps }: AppProps) => {
+export default function MainApp({ Component, pageProps }: AppProps) {
   const isMobile = useIsMobile(true)
 
   return (
@@ -37,5 +37,3 @@ const MainApp = ({ Component, pageProps }: AppProps) => {
     </>
   )
 }
-
-export default MainApp

@@ -1,16 +1,15 @@
 import { useMemo } from 'react'
-import { CATEGORIES, Post } from '../../config/posts.config'
-import { Project } from '../../config/projects.config'
-import { ArticleType } from '../../types'
+import { CATEGORIES } from '../../config/posts.config'
+import { Article, ArticleType } from '../../types'
 import PathUtil from '../../utils/PathUtil'
 import PostUtil from '../../utils/PostUtil'
-import Tags from '../tags'
+import Tags from '../Tags'
 import style from './style.module.scss'
 
 export interface PostCardProps {
   articleType: ArticleType
   titleLevel?: 1 | 2 | 3
-  content: Post | Project
+  content: Article
 }
 
 export default function Card({ articleType, titleLevel = 3, content }: PostCardProps) {

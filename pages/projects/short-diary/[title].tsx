@@ -1,10 +1,10 @@
 import hljs from 'highlight.js'
 import { useEffect, useRef } from 'react'
 import MainAdsBanner from '../../../components/ads-banner/MainAdsBanner'
-import CarouselBanner from '../../../components/carousel-banner'
-import CategoryPostGroup from '../../../components/category-post-group/CategoryPostGroup'
-import CommonMeta from '../../../components/common-meta/CommonMeta'
-import Utterances from '../../../components/utterrances/Utterrances'
+import CarouselBanner from '../../../components/CarouselBanner'
+import CategoryPostGroup from '../../../components/CategoryPostGroup'
+import CommonMeta from '../../../components/CommonMeta'
+import Utterances from '../../../components/Utterrances'
 import bannerConfig from '../../../config/banner.config'
 import blogConfig from '../../../config/blog.config'
 import { META_CONTENTS } from '../../../config/meta-contents'
@@ -82,7 +82,6 @@ export default function ProjectDetailPage({ project, content, projectsByCategory
       {!!projectsByCategory.length && (
         <section className={style.categoryGroup}>
           <h2>시리즈 더보기</h2>
-          <CategoryPostGroup posts={projectsByCategory} />
         </section>
       )}
 

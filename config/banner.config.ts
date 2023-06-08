@@ -1,4 +1,4 @@
-import { CarouselBannerProps } from '../components/carousel-banner'
+import { CarouselBannerProps } from '../components/CarouselBanner'
 
 const bannerConfig: CarouselBannerProps['banners'] = [
   {

@@ -1,6 +1,6 @@
 import { ArticleType } from '../../types'
-import { TagWithCount } from '../tag-indexer/TagIndexer'
-import Tag from '../tag/Tag'
+import Tag from '../Tag'
+import { TagWithCount } from '../TagIndexer'
 import style from './style.module.scss'
 
 export interface TagsProps {
