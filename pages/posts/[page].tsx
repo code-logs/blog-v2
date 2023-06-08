@@ -50,13 +50,13 @@ export async function getStaticProps(context: { params: { page: string } }) {
   }
 }
 
-export default function Posts({ page, totalCount }: PostsProps) {
+export default function Posts({ page, totalCount, posts: defaultPosts }: PostsProps) {
   const [lastPage, setLastPage] = useState(1)
-  const [posts, setPosts] = useState<Post[]>([])
+  const [posts, setPosts] = useState<Post[]>(defaultPosts)
   const [query, setQuery] = useState<string>()
-  const route = useRouter()
-
   const [pageInitialized, setPageInitialized] = useState(false)
+
+  const route = useRouter()
 
   useEffect(() => {
     const url = new URL(PathUtil.absolutePath(route.asPath))
@@ -64,6 +64,7 @@ export default function Posts({ page, totalCount }: PostsProps) {
     if (url.search) {
       const searchParams = new URLSearchParams(url.search)
       const query = searchParams.get('query')
+      
       if (query) {
         setQuery(encodeURIComponent(query))
         const pageLimit = blogConfig.pageLimit
@@ -71,14 +72,10 @@ export default function Posts({ page, totalCount }: PostsProps) {
         setPosts(postsDatabase.query(query, pageLimit, skip))
         setLastPage(Math.ceil(postsDatabase.query(query).length / pageLimit))
       }
-    } else {
-      setLastPage(props.lastPage)
-      setPosts(props.posts)
-      setQuery(undefined)
     }
 
     setPageInitialized(true)
-  }, [page, route, props])
+  }, [lastPage, page, route.asPath])
 
   const renderCommonFragment = useCallback(
     () => (

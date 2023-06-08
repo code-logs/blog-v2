@@ -17,6 +17,8 @@ export default function GoogleAdsenseBanner({ adClient, adSlot }: GoogleAdsenseB
     window.adsbygoogle.push({})
   }, [])
 
+  if (process.env.NODE_ENV === 'development') return <></>
+
   return (
     <ins
       className="adsbygoogle"

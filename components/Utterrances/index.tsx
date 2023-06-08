@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import style from './Utterrances.module.scss'
+import style from './style.module.scss'
 
 type UtterancesIssueTerms = 'pathname' | 'url' | 'title' | 'og:title'
 

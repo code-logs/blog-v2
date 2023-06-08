@@ -1,7 +1,7 @@
 import { Post } from '../../config/posts.config'
 import postsDatabase from '../../database/post-database'
 import PostUtil from '../../utils/PostUtil'
-import styles from './PostSeriesLink.module.scss'
+import style from './style.module.scss'
 
 export interface PostSeriesLinkProps {
   post: Post
@@ -9,7 +9,7 @@ export interface PostSeriesLinkProps {
 
 export default function PostSeriesLink({ post }: PostSeriesLinkProps) {
   return (
-    <ol className={styles.container}>
+    <ol className={style.container}>
       {post.series?.prevPostTitle && (
         <li>
           <h3>

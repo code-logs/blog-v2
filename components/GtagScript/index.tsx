@@ -5,6 +5,8 @@ export interface GTagScriptProps {
 }
 
 export default function GTagScript({ gaID }: GTagScriptProps) {
+  if (process.env.NODE_ENV === 'development') return <></>
+
   return (
     <>
       <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaID}`} strategy="lazyOnload" />

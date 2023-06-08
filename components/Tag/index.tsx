@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { ArticleType } from '../../types'
-import styles from './Tag.module.scss'
+import style from './style.module.scss'
 
 export interface TagProps {
   tag: string
@@ -19,7 +19,7 @@ export default function Tag({ tag, count, articleType }: TagProps) {
 
   return (
     <a href={link}>
-      <span className={`clickable ${styles.tag}`}>
+      <span className={`clickable ${style.tag}`}>
         {tag} {count && count}
       </span>
     </a>

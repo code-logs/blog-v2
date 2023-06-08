@@ -15,5 +15,7 @@ export default function KakaoAdfitBanner(props: KakaoAdfitProps) {
     height = 600
   }
 
+  if (process.env.NODE_ENV === 'development') return <></>
+
   return <ins className="kakao_ad_area" style={{ display: 'none' }} data-ad-unit={props.adfitUnitID} data-ad-width={width} data-ad-height={height}></ins>
 }
