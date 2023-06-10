@@ -23,11 +23,9 @@ class ProjectDatabase extends Database<Project & { order: number }> {
   query(condition: string, limit?: number, skip: number = 0) {
     const normalizedConditions = condition.split(/\s/).map((cond) => cond.toLowerCase())
 
-    const foundProjects = this.dataset.filter(({ title, description, category: project, tags }) => {
-      return normalizedConditions.some((cond) => {
-        return title.indexOf(cond) >= 0 || description.indexOf(cond) >= 0 || project.indexOf(cond) >= 0 || tags.join('').indexOf(cond) >= 0
-      })
-    })
+    const foundProjects = this.dataset.filter(({ title, description, category: project }) =>
+      normalizedConditions.some((cond) => title.indexOf(cond) >= 0 || description.indexOf(cond) >= 0 || project.indexOf(cond) >= 0)
+    )
 
     if (limit !== undefined) return foundProjects.slice(skip, skip + limit)
     return foundProjects

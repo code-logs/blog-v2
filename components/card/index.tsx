@@ -45,9 +45,11 @@ export default function Card({ articleType, titleLevel = 3, content }: PostCardP
         </div>
       )}
 
-      <section className={style.tags}>
-        <Tags articleType={articleType} tags={content.tags} />
-      </section>
+      {'tags' in content && (
+        <section className={style.tags}>
+          <Tags articleType={articleType} tags={content.tags} />
+        </section>
+      )}
     </article>
   )
 }

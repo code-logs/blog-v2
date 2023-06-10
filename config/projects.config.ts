@@ -13,7 +13,6 @@ export interface Project {
   publishedAt: string
   thumbnailName: string
   references?: Reference[]
-  tags: string[]
   series?: {
     prevPostTitle?: string
     nextPostTitle?: string
@@ -29,7 +28,6 @@ const projects: Project[] = [
     published: true,
     publishedAt: '2023-06-06',
     thumbnailName: 'short-diary.webp',
-    tags: ['react native', '일기', '생산성'],
   },
 ]
 

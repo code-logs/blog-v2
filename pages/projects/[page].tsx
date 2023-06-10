@@ -89,7 +89,7 @@ export default function Projects(props: ProjectsProps) {
           description={META_CONTENTS.PROJECTS.DESCRIPTION(page)}
           url={`${blogConfig.baseURL}/projects/${page}`}
           imageURL={'/icons/icon-512x512.png'}
-          keywords={projects.map((project) => [...project.tags, project.title, project.description]).flat()}
+          keywords={projects.map((project) => [project.title, project.description]).flat()}
         />
 
         <ContentCount mode={query ? 'query' : 'list'} count={query ? projects.length : totalCount} />
