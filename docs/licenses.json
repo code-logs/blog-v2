@@ -1,4 +1,8 @@
 {
+    "@": {
+        "licenses": "UNKNOWN",
+        "parents": "UNDEFINED"
+    },
     "@babel/code-frame@7.16.7": {
         "licenses": "MIT",
         "repository": "https://github.com/babel/babel",
@@ -51,6 +55,10 @@
         "licenses": "MIT",
         "repository": "https://github.com/babel/babel",
         "licenseUrl": "https://github.com/babel/babel/raw/master/LICENSE",
+        "parents": "code-logs"
+    },
+    "@corex/deepmerge@2.6.148": {
+        "licenses": "MIT",
         "parents": "code-logs"
     },
     "@cspotcode/source-map-consumer@0.8.0": {
@@ -215,11 +223,7 @@
         "licenseUrl": "https://github.com/vercel/next.js/raw/master/license.md",
         "parents": "code-logs"
     },
-    "@next/swc-linux-x64-gnu@12.1.0": {
-        "licenses": "MIT",
-        "parents": "code-logs"
-    },
-    "@next/swc-linux-x64-musl@12.1.0": {
+    "@next/swc-darwin-arm64@12.1.0": {
         "licenses": "MIT",
         "parents": "code-logs"
     },
@@ -481,7 +485,7 @@
         "licenseUrl": "https://github.com/kyldvs/ast-types-flow",
         "parents": "code-logs"
     },
-    "async@2.6.4": {
+    "async@2.6.3": {
         "licenses": "MIT",
         "repository": "https://github.com/caolan/async",
         "licenseUrl": "https://github.com/caolan/async/raw/master/LICENSE",
@@ -541,7 +545,7 @@
         "licenseUrl": "https://github.com/sindresorhus/callsites/raw/master/license",
         "parents": "code-logs"
     },
-    "caniuse-lite@1.0.30001487": {
+    "caniuse-lite@1.0.30001312": {
         "licenses": "CC-BY-4.0",
         "repository": "https://github.com/browserslist/caniuse-lite",
         "licenseUrl": "https://github.com/browserslist/caniuse-lite/raw/master/LICENSE",
@@ -945,6 +949,12 @@
         "licenses": "ISC",
         "repository": "https://github.com/isaacs/fs.realpath",
         "licenseUrl": "https://github.com/isaacs/fs.realpath/raw/master/LICENSE",
+        "parents": "code-logs"
+    },
+    "fsevents@2.3.2": {
+        "licenses": "MIT",
+        "repository": "https://github.com/fsevents/fsevents",
+        "licenseUrl": "https://github.com/fsevents/fsevents/raw/master/LICENSE",
         "parents": "code-logs"
     },
     "function-bind@1.1.1": {
@@ -1455,6 +1465,12 @@
         "licenses": "MIT",
         "repository": "https://github.com/litejs/natural-compare-lite",
         "licenseUrl": "https://github.com/litejs/natural-compare-lite",
+        "parents": "code-logs"
+    },
+    "next-sitemap@2.4.5": {
+        "licenses": "MIT",
+        "repository": "https://github.com/iamvishnusankar/next-sitemap",
+        "licenseUrl": "https://github.com/iamvishnusankar/next-sitemap",
         "parents": "code-logs"
     },
     "next@12.1.0": {

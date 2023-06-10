@@ -53,10 +53,10 @@ export default function ProjectDetailPage({ project, content, projectsByCategory
     <>
       <CommonMeta
         title={TitleUtil.buildPageTitle(META_CONTENTS.POST.TITLE(project.title))}
-        description={META_CONTENTS.PROJECT.DESCRIPTION(project.title, project.description, project.category, project.tags)}
+        description={META_CONTENTS.PROJECT.DESCRIPTION(project.title, project.description, project.category)}
         url={`${blogConfig.baseURL}/projects/${project.category}/${PostUtil.normalizeTitle(project.title)}`}
         imageURL={PathUtil.buildImagePath(project.thumbnailName)}
-        keywords={[...project.tags, project.title, project.description, project.category]}
+        keywords={[project.title, project.description, project.category]}
       />
 
       <article className={style.container} ref={containerRef}>

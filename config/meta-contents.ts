@@ -18,8 +18,8 @@ export const META_CONTENTS = {
   },
   PROJECT: {
     TITLE: (title: string) => title,
-    DESCRIPTION: (title: string, description: string, category: string, tags: string[]) =>
-      `Code Logs ${title} - ${description} | ${category}, ${tags.join(', ')}`,
+    DESCRIPTION: (title: string, description: string, category: string) =>
+      `Code Logs ${title} - ${description} | ${category}`,
   },
   CATEGORIES: {
     TITLE: (category: string) => category,
